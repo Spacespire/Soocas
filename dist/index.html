@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soocas</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style type="text/css">
+      body.page-is-load ._preload-body {
+          opacity: 0;
+          visibility: hidden;
+      }
+      
+      body.page-is-load ._preload-body:before {
+          display: none;
+      }
+      
+      ._preload-body {
+          background-color: #fff;
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: 999;
+          transition: all .6s ease .2s;
+      }
+      
+      ._preload-body:before {
+          position: absolute;
+          content: '';
+          z-index: 999;
+          top: 50%;
+          left: 50%;
+          height: 50px;
+          width: 50px;
+          border-radius: 50%;
+          border: 4px solid #6e6e6e;
+          border-right: 4px solid #fff;
+          transform: translate(-50%, -50%);
+          animation: preloadBody 2s linear infinite;
+      }
+      
+      @keyframes preloadBody {
+          from {
+              transform: translate(-50%, -50%) rotate(0);
+          }
+      
+          to {
+              transform: translate(-50%, -50%) rotate(360deg);
+          }
+      }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/vendors.js"></script>
+    <script src="js/app.js"></script>
+  </head>
+  <body>
+    <div class="_preload-body"></div>
+    <header class="header " data-header data-popup="add-right-padding"><a class="top-line-message" href="#"><!-- use class .top-line-message--show -->
+        <p>Рождественская скидка 20% на все товары!</p></a>
+      <div class="container"> 
+        <div class="header__body">
+          <div class="header__logo"><a href="/"> <img src="img/logo/logo.svg" alt=""></a></div>
+          <nav class="header__menu menu"> 
+            <ul class="menu__list">
+              <li class="menu__list-item menu__list-item--has-sab-menu"><a class="menu__link menu__link--with-chevron" href="#">Продукты <!-- use class .menu__link--active --></a>
+                <div class="menu__sub-menu-wrap">
+                  <ul class="sub-menu">
+                    <li><a class="sub-menu__link" href="#">Бритвы и триммеры  <!-- use class .sub-menu__link--active --></a></li>
+                    <li><a class="sub-menu__link" href="#">Зубные щетки и ирригаторы</a></li>
+                    <li><a class="sub-menu__link" href="#">Фены для волос </a></li>
+                    <li><a class="sub-menu__link" href="#">Аксессуары</a></li>
+                    <li><a class="sub-menu__link" href="#">Акции</a></li>
+                  </ul>
+                  <div class="menu__img"><a href="#"> <img src="img/photo/sub-menu-img.png" alt=""></a></div>
+                </div>
+              </li>
+              <li class="menu__list-item"><a class="menu__link" href="#">Доставка и оплата</a></li>
+              <li class="menu__list-item menu__list-item--has-sab-menu"><a class="menu__link menu__link--with-chevron" href="#">Сервис</a>
+                <div class="menu__sub-menu-wrap">
+                  <ul class="sub-menu">
+                    <li><a class="sub-menu__link" href="#">Сервисные услуги</a></li>
+                    <li><a class="sub-menu__link" href="#">Возврат и обмен</a></li>
+                    <li><a class="sub-menu__link" href="#">Инструкции</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="menu__list-item menu__list-item--has-sab-menu"><a class="menu__link menu__link--with-chevron" href="#">О нас</a>
+                <div class="menu__sub-menu-wrap">
+                  <ul class="sub-menu">
+                    <li><a class="sub-menu__link" href="#">О бренде</a></li>
+                    <li><a class="sub-menu__link" href="#">Новости</a></li>
+                    <li><a class="sub-menu__link" href="#">Наши партнеры</a></li>
+                    <li><a class="sub-menu__link" href="#">Контакты</a></li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </nav>
+          <div class="header__contact-info">
+            <div class="contact-info"> <a class="contact-info__phone" href="tel:74957777777">+7 (495) 777-77-77</a><a class="contact-info__mail" href="mailto:info@di-house.ru">info@di-house.ru</a></div>
+          </div>
+          <div class="header__actions">
+            <div class="header-actions">
+              <div class="header-actions__item header-actions__item--search"><a class="header-actions__link" href="#popupSerch" data-popup="open-popup"><i class="icon-search"></i></a></div>
+              <div class="header-actions__item"><a class="header-actions__link" href="#"><i class="icon-user"></i></a></div>
+              <div class="header-actions__item"><a class="header-actions__link" href="#"><i class="icon-bag"></i><span class="header-actions__num-products">2</span></a></div>
+            </div>
+          </div>
+          <div class="header__burger burger" data-action="toggle-menu-mobile"> <span class="burger__cross"></span><span class="burger__cross"></span><span class="burger__cross"></span><span class="burger__cross"></span></div>
+        </div>
+      </div>
+    </header>
+    <div class="menu-mobile" data-menu-mobile> 
+      <ul class="menu-mobile__list">
+        <li class="menu-mobile__list-item" data-toggle-sab><a class="menu-mobile__link menu-mobile__link--with-chevron menu-mobile__link" href="#">Продукты <!-- use .menu-mobile__link --></a>
+          <ul class="sub-menu">
+            <li><a class="sub-menu__link" href="#">Бритвы и триммеры  <!-- use class .sub-menu__link--active --></a></li>
+            <li><a class="sub-menu__link" href="#">Зубные щетки и ирригаторы</a></li>
+            <li><a class="sub-menu__link" href="#">Фены для волос </a></li>
+            <li><a class="sub-menu__link" href="#">Аксессуары</a></li>
+            <li><a class="sub-menu__link" href="#">Акции</a></li>
+          </ul>
+        </li>
+        <li class="menu-mobile__list-item"><a class="menu-mobile__link" href="#">Доставка и оплата</a></li>
+        <li class="menu-mobile__list-item" data-toggle-sab><a class="menu-mobile__link menu-mobile__link--with-chevron" href="#">Сервис</a>
+          <ul class="sub-menu">
+            <li><a class="sub-menu__link" href="#">Сервисные услуги</a></li>
+            <li><a class="sub-menu__link" href="#">Возврат и обмен</a></li>
+            <li><a class="sub-menu__link" href="#">Инструкции</a></li>
+          </ul>
+        </li>
+        <li class="menu-mobile__list-item" data-toggle-sab><a class="menu-mobile__link menu-mobile__link--with-chevron" href="#">О нас</a>
+          <ul class="sub-menu">
+            <li><a class="sub-menu__link" href="#">О бренде</a></li>
+            <li><a class="sub-menu__link" href="#">Новости</a></li>
+            <li><a class="sub-menu__link" href="#">Наши партнеры</a></li>
+            <li><a class="sub-menu__link" href="#">Контакты</a></li>
+          </ul>
+        </li>
+      </ul>
+      <div class="menu-mobile__search">
+        <form class="menu-mobile-search">
+          <input class="menu-mobile-search__field" type="text" placeholder="Поиск…">
+          <button class="menu-mobile-search__submit"> <i class="icon-search"></i></button>
+        </form>
+      </div>
+      <div class="menu-mobile__contact-info">
+        <div class="contact-info"> <a class="contact-info__phone" href="tel:74957777777">+7 (495) 777-77-77</a><a class="contact-info__mail" href="mailto:info@di-house.ru">info@di-house.ru</a></div>
+      </div>
+      <div class="menu-mobile__social">
+        <ul class="social"> 
+          <li class="social__item"> <a href="#"> <i class="icon-vk"></i></a></li>
+        </ul>
+      </div>
+    </div>
+    <main class="_page home-page">
+      <section class="promo-header" data-promo-header>
+        <div class="promo-header__bg"> 
+          <div class="promo-header__images-slider swiper" data-slider="promo-header-images-slider">
+            <div class="swiper-wrapper"> 
+              <div class="swiper-slide promo-header__images-slider-item ibg">
+                <picture>
+                  <source class="swiper-lazy" data-srcset="img/photo/promo-header-img-1.jpg" media="(min-width: 576px)"><img class="swiper-lazy" data-src="img/photo/promo-header-img-1-mob.jpg" alt="img">
+                </picture>
+              </div>
+              <div class="swiper-slide promo-header__images-slider-item ibg">
+                <picture>
+                  <source class="swiper-lazy" data-srcset="img/photo/promo-header-img-2.jpg" media="(min-width: 576px)"><img class="swiper-lazy" data-src="img/photo//promo-header-img-2-mob.jpg" alt="img">
+                </picture>
+              </div>
+              <div class="swiper-slide promo-header__images-slider-item ibg">
+                <picture>
+                  <source class="swiper-lazy" data-srcset="img/photo/promo-header-img-3.jpg" media="(min-width: 576px)"><img class="swiper-lazy" data-src="img/photo//promo-header-img-3-mob.jpg" alt="img">
+                </picture>
+              </div>
+              <div class="swiper-slide promo-header__images-slider-item ibg">
+                <picture>
+                  <source class="swiper-lazy" data-srcset="img/photo/promo-header-img-4.jpg" media="(min-width: 576px)"><img class="swiper-lazy" data-src="img/photo/promo-header-img-4.jpg" alt="img">
+                </picture>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="promo-header__body container"> 
+          <div class="promo-header__text-slider swiper" data-slider="promo-header-text-slider"> 
+            <div class="swiper-wrapper"> 
+              <div class="swiper-slide promo-header__text-sider-item">
+                <h2 class="promo-header__title">Мультифункциональная электробритва 4в1</h2>
+                <p class="promo-header__subtitle">Одна бритва решает много задач <br> Одна бритва — решение всех задач </p><a class="btn promo-header__btn" href="#">Подробнее </a>
+              </div>
+              <div class="swiper-slide promo-header__text-sider-item">
+                <h2 class="promo-header__title">Уход <br> за Полостью рта </h2>
+                <p class="promo-header__subtitle">Технологии нового поколения на страже <br> чистоты и здоровья ваших зубов </p><a class="btn promo-header__btn btn--light" href="#">Подробнее </a>
+              </div>
+              <div class="swiper-slide promo-header__text-sider-item">
+                <h2 class="promo-header__title">Уход <br> за волосами</h2>
+                <p class="promo-header__subtitle" style="color: #000000;">Гладкие, блестящие <br> и послушные волосы всегда! </p><a class="btn promo-header__btn btn--light" href="#">Подробнее </a>
+              </div>
+              <div class="swiper-slide promo-header__text-sider-item">
+                <h2 class="promo-header__title" style="color: #493C8C;">Уход <br> за Полостью <br> рта </h2>
+                <p class="promo-header__subtitle" style="color: #493C8C;">Технологии нового поколения на страже <br> чистоты и здоровья ваших зубов  </p><a class="btn promo-header__btn btn--light" href="#">Подробнее </a>
+              </div>
+            </div>
+          </div>
+          <div class="promo-header__bottom">
+            <div class="promo-header__links-slider swiper d-md-none" data-slider="promo-header-links-slider">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide promo-header__links-slider-item"> <a class="promo-header__link" href="#"><span class="promo-header__link-desk-text">Смотреть все увлажнители воздуха</span><span class="promo-header__link-mob-text">Смотреть все</span><i class="icon-arrow-right"> </i></a></div>
+                <div class="swiper-slide promo-header__links-slider-item"> <a class="promo-header__link" href="#"><span class="promo-header__link-desk-text">Смотреть все обогреватели</span><span class="promo-header__link-mob-text">Смотреть все</span><i class="icon-arrow-right"> </i></a></div>
+                <div class="swiper-slide promo-header__links-slider-item"> <a class="promo-header__link" href="#"><span class="promo-header__link-desk-text">Подробнее</span><span class="promo-header__link-mob-text">Смотреть все</span><i class="icon-arrow-right"> </i></a></div>
+                <div class="swiper-slide promo-header__links-slider-item"> <a class="promo-header__link" href="#"><span class="promo-header__link-desk-text">Подробнее</span><span class="promo-header__link-mob-text">Смотреть все</span><i class="icon-arrow-right"> </i></a></div>
+              </div>
+            </div>
+            <div class="promo-header__slider-dots">
+              <div class="slider-dots" data-slider-dots></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="padding-wrap pt-0-mob">
+        <section class="product-classes">
+          <div class="product-classes__body container">
+            <div class="product-classes__nav">
+              <div class="product-classes__nav-item wow fadeInUp" data-wow-duration="0.8s"> <a class="product-classes-nav-card" href="#">
+                  <div class="product-classes-nav-card__layer-1">
+                    <div class="product-classes-nav-card__bg ibg"> 
+                      <picture>
+                        <source srcset="img/photo/classes-img-bg-1.jpg" media="(min-width: 576px)"><img src="img/photo/classes-img-bg-mob-1-x2.jpg" alt="img">
+                      </picture>
+                    </div>
+                    <div class="product-classes-nav-card__inner">
+                      <div class="product-classes-nav-card__title">Бритвы и триммеры</div>
+                      <div class="product-classes-nav-card__arrow"><i class="icon-arrow-right"></i></div>
+                    </div>
+                  </div>
+                  <div class="product-classes-nav-card__layer-2">
+                    <div class="product-classes-nav-card__img"><img src="img/photo/classes-img-1.jpg" alt=""></div>
+                    <div class="product-classes-nav-card__title">Бритвы и триммеры</div>
+                  </div></a></div>
+              <div class="product-classes__nav-item wow fadeInUp" data-wow-duration="0.8s"> <a class="product-classes-nav-card" href="#">
+                  <div class="product-classes-nav-card__layer-1">
+                    <div class="product-classes-nav-card__bg ibg"> 
+                      <picture>
+                        <source srcset="img/photo/classes-img-bg-2.jpg" media="(min-width: 576px)"><img src="img/photo/classes-img-bg-mob-2-x2.jpg" alt="img">
+                      </picture>
+                    </div>
+                    <div class="product-classes-nav-card__inner">
+                      <div class="product-classes-nav-card__title">Зубные щетки и ирригаторы</div>
+                      <div class="product-classes-nav-card__arrow"><i class="icon-arrow-right"></i></div>
+                    </div>
+                  </div>
+                  <div class="product-classes-nav-card__layer-2">
+                    <div class="product-classes-nav-card__img"><img src="img/photo/classes-img-2.jpg" alt=""></div>
+                    <div class="product-classes-nav-card__title">Зубные щетки и ирригаторы</div>
+                  </div></a></div>
+              <div class="product-classes__nav-item wow fadeInUp" data-wow-duration="0.8s"> <a class="product-classes-nav-card" href="#">
+                  <div class="product-classes-nav-card__layer-1">
+                    <div class="product-classes-nav-card__bg ibg"> 
+                      <picture>
+                        <source srcset="img/photo/classes-img-bg-3.jpg" media="(min-width: 576px)"><img src="img/photo/classes-img-bg-mob-3-x2.jpg" alt="img">
+                      </picture>
+                    </div>
+                    <div class="product-classes-nav-card__inner">
+                      <div class="product-classes-nav-card__title">Фены для волос </div>
+                      <div class="product-classes-nav-card__arrow"><i class="icon-arrow-right"></i></div>
+                    </div>
+                  </div>
+                  <div class="product-classes-nav-card__layer-2">
+                    <div class="product-classes-nav-card__img"><img src="img/photo/classes-img-3.jpg" alt=""></div>
+                    <div class="product-classes-nav-card__title">Фены для волос </div>
+                  </div></a></div>
+              <div class="product-classes__nav-item wow fadeInUp" data-wow-duration="0.8s"> <a class="product-classes-nav-card" href="#">
+                  <div class="product-classes-nav-card__layer-1">
+                    <div class="product-classes-nav-card__bg ibg"> 
+                      <picture>
+                        <source srcset="img/photo/classes-img-bg-4.jpg" media="(min-width: 576px)"><img src="img/photo/classes-img-bg-mob-4-x2.jpg" alt="img">
+                      </picture>
+                    </div>
+                    <div class="product-classes-nav-card__inner">
+                      <div class="product-classes-nav-card__title">Акссессуары</div>
+                      <div class="product-classes-nav-card__arrow"><i class="icon-arrow-right"></i></div>
+                    </div>
+                  </div>
+                  <div class="product-classes-nav-card__layer-2">
+                    <div class="product-classes-nav-card__img"><img src="img/photo/classes-img-4.jpg" alt=""></div>
+                    <div class="product-classes-nav-card__title">Акссессуары</div>
+                  </div></a></div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="padding-wrap"> 
+        <div class="container">
+          <div class="head"> 
+            <h2 class="head__title text-center wow fadeInUp" data-wow-duration="0.8s">Выбери свой SOOCAS</h2>
+          </div>
+        </div>
+        <div class="grid-banner grid-banner--first">
+          <div class="container">
+            <h3 class="grid-banner__title text-uppercase text-center wow fadeInUp" data-wow-duration="0.8s"> <strong>Бритвы Soocas:</strong>стиль, качество, многофункциональность</h3>
+            <div class="grid-banner__inner wow fadeInUp" data-wow-duration="0.8s"> 
+              <div class="grid-banner__card-wrap"> 
+                <div class="card card--preview">
+                  <div class="card__img-wrap"><a href="#">
+                      <div class="card__img"> <img src="img/photo/card-preview-img-1.jpg" alt=""></div></a></div>
+                  <div class="card__text-wrap">
+                    <div class="card__title text"> <a href="#">Электробритва Soocas S5 4 в 1 </a></div>
+                    <div class="card__bottom"> 
+                      <div class="card__price">1999 ₽</div><a class="btn card__btn" href="#">купить </a>
+                    </div><a class="card__link-all-products" href="" style="color: #004922;">Все электробритвыи триммеры</a>
+                  </div>
+                </div>
+              </div>
+              <div class="grid-banner__grid swiper" data-slider="grid-banner" data-mobile="false">
+                <div class="swiper-wrapper"> 
+                  <div class="swiper-slide grid-banner__item grid-banner__item--1"><a class="grid-banner__item-inner not-hover" href="#">
+                      <div class="grid-banner__img ibg"> 
+                        <picture>
+                          <source srcset="img/photo/grid-banner-img-1.jpg" media="(min-width: 768px)"><img src="img/photo/grid-banner-img-mob-1.jpg" alt="img">
+                        </picture>
+                      </div>
+                      <div class="grid-banner__text"> 
+                        <p>Плавное <br> вращение <br> на 360°</p>
+                      </div></a></div>
+                  <div class="swiper-slide grid-banner__item grid-banner__item--2"><a class="grid-banner__item-inner not-hover" href="#">
+                      <div class="grid-banner__img ibg"> 
+                        <picture>
+                          <source srcset="img/photo/grid-banner-img-2.jpg" media="(min-width: 768px)"><img src="img/photo/grid-banner-img-mob-2.jpg" alt="img">
+                        </picture>
+                      </div>
+                      <div class="grid-banner__text"> 
+                        <p>Влагозащита IPX7: <br> доступно влажное <br> и сухое бритье</p>
+                      </div></a></div>
+                  <div class="swiper-slide grid-banner__item grid-banner__item--3"><a class="grid-banner__item-inner not-hover" href="#">
+                      <div class="grid-banner__img ibg"> 
+                        <picture>
+                          <source srcset="img/photo/grid-banner-img-3.jpg" media="(min-width: 768px)"><img src="img/photo/grid-banner-img-mob-3.jpg" alt="img">
+                        </picture>
+                      </div>
+                      <div class="grid-banner__text"> 
+                        <h5>4 в 1: </h5>
+                        <p>электробритва, <br> два триммера <br> и щетка для чистки лица</p>
+                      </div></a></div>
+                </div>
+                <div class="grid-banner__slider-dots">
+                  <div class="slider-dots" data-slider-dots></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="grid-banner grid-banner--second">
+          <div class="container">
+            <h3 class="grid-banner__title text-uppercase text-center wow fadeInUp" data-wow-duration="0.8s"><strong>Зубные щетки Soocas:</strong>безупречный уход за зубами и деснами</h3>
+            <div class="grid-banner__inner wow fadeInUp" data-wow-duration="0.8s"> 
+              <div class="grid-banner__card-wrap"> 
+                <div class="card card--preview">
+                  <div class="card__img-wrap"><a href="#">
+                      <div class="card__img"> <img src="img/photo/card-preview-img-2.jpg" alt=""></div></a></div>
+                  <div class="card__text-wrap">
+                    <div class="card__title text"> <a href="#">Soocas X3PRO UVC Sanitizer Sonic Toothbrush Purple</a></div>
+                    <div class="card__bottom"> 
+                      <div class="card__price">1999 ₽</div><a class="btn card__btn" href="#">купить </a>
+                    </div><a class="card__link-all-products" href="" style="color: rgba(73, 60, 139, 0.77);">Все ЗУБНЫЕ ЩЕТКИ</a>
+                  </div>
+                </div>
+              </div>
+              <div class="grid-banner__grid swiper" data-slider="grid-banner" data-mobile="false">
+                <div class="swiper-wrapper"> 
+                  <div class="swiper-slide grid-banner__item grid-banner__item--1"><a class="grid-banner__item-inner not-hover" href="#">
+                      <div class="grid-banner__img ibg"> 
+                        <picture>
+                          <source srcset="img/photo/grid-banner-img-4.jpg" media="(min-width: 768px)"><img src="img/photo/grid-banner-img-mob-1.jpg" alt="img">
+                        </picture>
+                      </div>
+                      <div class="grid-banner__text"> 
+                        <p>
+                          Электрическая зубная <br>щетка со стерилизатором <br>
+                          Soocas X3PRO UVC <br>
+                          Sanitizer Sonic <br>
+                          Toothbrush Purple
+                        </p>
+                      </div></a></div>
+                  <div class="swiper-slide grid-banner__item grid-banner__item--2"><a class="grid-banner__item-inner not-hover" href="#">
+                      <div class="grid-banner__img ibg"> 
+                        <picture>
+                          <source srcset="img/photo/grid-banner-img-5.jpg" media="(min-width: 768px)"><img src="img/photo/grid-banner-img-mob-2.jpg" alt="img">
+                        </picture>
+                      </div>
+                      <div class="grid-banner__text"> 
+                        <p>
+                          УФ-стерилизатор <br>в комплекте: уничтожает <br>
+                          до <b><strong>99,99</strong> %</b> <br>
+                          бактерий
+                        </p>
+                      </div></a></div>
+                  <div class="swiper-slide grid-banner__item grid-banner__item--3"><a class="grid-banner__item-inner not-hover" href="#">
+                      <div class="grid-banner__img ibg"> 
+                        <picture>
+                          <source srcset="img/photo/grid-banner-img-6.jpg" media="(min-width: 768px)"><img src="img/photo/grid-banner-img-mob-3.jpg" alt="img">
+                        </picture>
+                      </div>
+                      <div class="grid-banner__text"> 
+                        <p>
+                          Стильный <br>водонепроницаемый <br>
+                          корпус IPX7 
+                        </p>
+                      </div></a></div>
+                  <div class="swiper-slide grid-banner__item grid-banner__item--4"><a class="grid-banner__item-inner not-hover" href="#">
+                      <div class="grid-banner__img ibg"> 
+                        <picture>
+                          <source srcset="img/photo/grid-banner-img-7.jpg" media="(min-width: 768px)"><img src="img/photo/grid-banner-img-mob-3.jpg" alt="img">
+                        </picture>
+                      </div>
+                      <div class="grid-banner__text"> 
+                        <p>
+                          Работает <br>до 6 месяцев <br>
+                          на одном заряде
+                        </p>
+                      </div></a></div>
+                </div>
+                <div class="grid-banner__slider-dots">
+                  <div class="slider-dots" data-slider-dots></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="grid-banner grid-banner--third">
+          <div class="container">
+            <h3 class="grid-banner__title text-uppercase text-center wow fadeInUp" data-wow-duration="0.8s"><strong>Мощные фены Soocas:</strong>всегда красивые и ухоженные волосы</h3>
+            <div class="grid-banner__inner wow fadeInUp" data-wow-duration="0.8s"> 
+              <div class="grid-banner__card-wrap"> 
+                <div class="card card--preview">
+                  <div class="card__img-wrap"><a href="#">
+                      <div class="card__img"> <img src="img/photo/card-preview-img-3.jpg" alt=""></div></a></div>
+                  <div class="card__text-wrap">
+                    <div class="card__title text"> <a href="#">Фен для волос Soocas H5 Ionic Hair Dryer Red</a></div>
+                    <div class="card__bottom"> 
+                      <div class="card__price">1999 ₽</div><a class="btn card__btn" href="#">купить </a>
+                    </div><a class="card__link-all-products" href="" style="color: #9C2235;">Все фены</a>
+                  </div>
+                </div>
+              </div>
+              <div class="grid-banner__grid swiper" data-slider="grid-banner" data-mobile="false">
+                <div class="swiper-wrapper"> 
+                  <div class="swiper-slide grid-banner__item grid-banner__item--1"><a class="grid-banner__item-inner not-hover" href="#">
+                      <div class="grid-banner__img ibg"> 
+                        <picture>
+                          <source srcset="img/photo/grid-banner-img-8.jpg" media="(min-width: 768px)"><img src="img/photo/grid-banner-img-mob-1.jpg" alt="img">
+                        </picture>
+                      </div>
+                      <div class="grid-banner__text"> 
+                        <p>Мощный мотор <br> 1800 Вт</p>
+                      </div></a></div>
+                  <div class="swiper-slide grid-banner__item grid-banner__item--2"><a class="grid-banner__item-inner not-hover" href="#">
+                      <div class="grid-banner__img ibg"> 
+                        <picture>
+                          <source srcset="img/photo/grid-banner-img-9.jpg" media="(min-width: 768px)"><img src="img/photo/grid-banner-img-mob-2.jpg" alt="img">
+                        </picture>
+                      </div>
+                      <div class="grid-banner__text"> 
+                        <p>
+                          Интеллектуальная <br>система <br>
+                          контроля <br>
+                          температуры
+                        </p>
+                      </div></a></div>
+                  <div class="swiper-slide grid-banner__item grid-banner__item--3"><a class="grid-banner__item-inner not-hover" href="#">
+                      <div class="grid-banner__img ibg"> 
+                        <picture>
+                          <source srcset="img/photo/grid-banner-img-10.jpg" media="(min-width: 768px)"><img src="img/photo/grid-banner-img-mob-3.jpg" alt="img">
+                        </picture>
+                      </div>
+                      <div class="grid-banner__text"> 
+                        <p>Функция ионизации нейтрализует <br> статическое электричество</p>
+                      </div></a></div>
+                </div>
+                <div class="grid-banner__slider-dots">
+                  <div class="slider-dots" data-slider-dots></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="padding-wrap"> 
+        <div class="container"> 
+          <div class="head"> 
+            <h3 class="head__title text-center text-uppercase text-primary wow fadeInUp" data-wow-duration="0.8s">AWARD & RECOGNITION</h3>
+          </div>
+          <ul class="logos-list">
+            <li class="logos-list__item wow fadeInUp" data-wow-duration="0.8s"> 
+              <div class="logos-list__img"><img src="img/photo/logo-list-1.png" alt=""></div>
+              <div class="logos-list__text">Germany Red Dot Design Award</div>
+            </li>
+            <li class="logos-list__item wow fadeInUp" data-wow-duration="0.8s"> 
+              <div class="logos-list__img"><img src="img/photo/logo-list-2.png" alt=""></div>
+              <div class="logos-list__text">Japan Good Design Award</div>
+            </li>
+            <li class="logos-list__item wow fadeInUp" data-wow-duration="0.8s"> 
+              <div class="logos-list__img"><img src="img/photo/logo-list-3.png" alt=""></div>
+              <div class="logos-list__text">Germany iF Product Design Award</div>
+            </li>
+            <li class="logos-list__item wow fadeInUp" data-wow-duration="0.8s"> 
+              <div class="logos-list__img"><img src="img/photo/logo-list-4.png" alt=""></div>
+              <div class="logos-list__text">Europe Product Design Award</div>
+            </li>
+            <li class="logos-list__item wow fadeInUp" data-wow-duration="0.8s"> 
+              <div class="logos-list__img"><img src="img/photo/logo-list-5.png" alt=""></div>
+              <div class="logos-list__text">South Korea  Good Design Award</div>
+            </li>
+          </ul>
+          <div class="padding-wrap pb-0 text-center"><a class="btn" href="#">О БРЕНДЕ </a>
+          </div>
+        </div>
+      </div>
+      <div class="padding-wrap pb-0">
+        <section class="cta">
+          <div class="cta__decor"><img src="img/photo/cta-decor.png" alt=""></div>
+          <div class="container"> 
+            <div class="cta__head head">
+              <h3 class="head__title text-center wow fadeInUp" data-wow-duration="0.8s">Хотите узнать больше?</h3>
+              <p class="head__subtitle text text-center wow fadeInUp" data-wow-duration="0.8s">Оставьте ваш номер, и мы перезвоним вам в ближайшее время. </p>
+            </div>
+            <form class="cta__form wow fadeInUp" action="/" data-wow-duration="0.8s"> 
+              <div class="cta__form-input input" data-mask="+7 (999) 999-99-99">
+                <input class="input__field" type="text" placeholder="+7 (___) ___-__-__">
+              </div>
+              <button class="cta__form-submit btn btn--light-secondary"> <span>Перезвоните</span></button>
+            </form>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="container"> 
+        <div class="footer__body"> 
+          <div class="footer__col footer__col--1">
+            <div class="footer__logo"> <a href="#"><img src="img/logo/logo-white.svg" alt=""></a></div>
+            <div class="footer__copy" data-da=".footer__col--4,767.98,last">© 2022 diHouse <br> Все права защищены.</div>
+          </div>
+          <div class="footer__col footer__col--2">
+            <ul class="footer__list"> 
+              <li> <a class="footer__link" href="#">Бритвы и триммеры </a></li>
+              <li> <a class="footer__link" href="#">Зубные щетки и ирригаторы</a></li>
+              <li> <a class="footer__link" href="#">Фены для волос </a></li>
+              <li> <a class="footer__link" href="#">Аксессуары</a></li>
+            </ul>
+          </div>
+          <div class="footer__col footer__col--3">
+            <ul class="footer__list"> 
+              <li> <a class="footer__link" href="#">Сервис</a></li>
+              <li> <a class="footer__link" href="#">Наши партнеры</a></li>
+              <li> <a class="footer__link" href="#">Доставка и оплата</a></li>
+              <li> <a class="footer__link" href="#">Пользовательское соглашение</a></li>
+              <li> <a class="footer__link" href="#">Политика конфиденциальности</a></li>
+            </ul>
+          </div>
+          <div class="footer__col footer__col--4">
+            <div class="footer__contact-info">
+              <div class="contact-info"> <a class="contact-info__phone" href="tel:74957777777">+7 (495) 777-77-77</a><a class="contact-info__mail" href="mailto:info@di-house.ru">info@di-house.ru</a></div>
+            </div>
+            <div class="footer__social">
+              <ul class="social"> 
+                <li class="social__item"> <a href="#"> <i class="icon-vk"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="popup" id="popupSerch">
+      <div class="popup__body"> 
+        <div class="popup__close-btn" data-popup="close-popup"><span> </span></div>
+        <div class="popup__content popup__content--search">
+          <form action="/"> 
+            <div class="popup-search">
+              <div class="popup-search__input input">
+                <input class="input__field" type="text" placeholder="Поиск товаров">
+              </div>
+              <button class="popup-search__submit btn">Искать</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="popup" id="popupMessage"><!-- API   popup.open('#popupMessage')  popup.close('#popupMessage') -->
+      <div class="popup__body"> 
+        <div class="popup__content">
+          <div class="popup__close-btn popup__close-btn--dark" data-popup="close-popup"><span> </span></div>
+          <div class="popup-message text-center">
+            <div class="popup-message__icon"> <img src="img/icons/check-circle.svg" alt=""></div>
+            <h3 class="popup-message__title">Спасибо за ваш заказ! </h3>
+            <div class="popup-message__text text-content"> 
+              <p>Наш специалист свяжется с вами в течение дня для подтверждения заказа и уточнения деталей доставки.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="popup" id="popupOrder">
+      <div class="popup__body"> 
+        <div class="popup__content">
+          <div class="popup__close-btn popup__close-btn--dark" data-popup="close-popup"><span> </span></div>
+          <div class="popup-order">
+            <h5 class="popup-order__title">Ваш заказ:</h5>
+            <div class="popup-order__body"> 
+              <div class="popup-order__colo-1">
+                <div class="popup-order-product">
+                  <div class="popup-order-product__img"> <img src="img/photo/product.webp" alt=""></div>
+                  <div class="popup-order-product__inner">
+                    <div class="popup-order-product__title">Мощный электровелосипед <span class="text-nowrap">ADO A20F</span></div>
+                    <ul class="popup-order-product__list"> 
+                      <li>Цвет: Черный</li>
+                      <li>Количество: 1 шт.</li>
+                    </ul>
+                    <div class="popup-order-product__price">19 999 ₽</div>
+                  </div>
+                </div>
+              </div>
+              <div class="popup-order__colo-2">
+                <form class="popup-form">
+                  <div class="popup-form__items">
+                    <div class="popup-form__item form-error"> 
+                      <label class="form-label">Ваше имя <span>*</span></label>
+                      <input class="form-control" type="text" placeholder="Введите ваше имя" required>
+                      <div class="form-error-message">Пожалуйста, проверьте корректность ввода данных</div>
+                    </div>
+                    <div class="popup-form__item form-error"> 
+                      <label class="form-label">Ваш Email <span>*</span></label>
+                      <input class="form-control" type="text" placeholder="name@email.com" required>
+                    </div>
+                    <div class="popup-form__item" data-mask="+7 (999) 999-99-99">
+                      <label class="form-label">Ваш телефон <span>*</span></label>
+                      <input class="form-control" type="text" placeholder="+7 ХХХ ХХХ-ХХ-ХХ" required>
+                    </div>
+                    <div class="popup-form__item">
+                          <label class="checkbox-radio">
+                            <input type="checkbox" name="politics" data-politics-checkbox>
+                            <div class="checkbox-radio__square"></div>
+                            <div class="checkbox-radio__text">Согласен с <a href="#">условиями использования</a> сервиса ADO и <a href="#">обработки персональных данных</a></div>
+                          </label>
+                    </div>
+                  </div>
+                  <button class="popup-form__submit btn btn--secondary"> <span>Подтвердить заказ</span></button>
+                  <p class="popup-form__continue" data-popup="close-popup">Продолжить покупки</p>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="popup" id="popupMessageRefund"><!-- API   popup.open('#popupMessageRefund')  popup.close('#popupMessageRefund') -->
+      <div class="popup__body"> 
+        <div class="popup__content">
+          <div class="popup__close-btn popup__close-btn--dark" data-popup="close-popup"><span> </span></div>
+          <div class="popup-message text-center">
+            <div class="popup-message__icon"> <img src="img/icons/check-circle.svg" alt=""></div>
+            <h3 class="popup-message__title">Ваша заявка на возврат отправлена.</h3>
+            <div class="popup-message__text text-content"> 
+              <p>Наш специалист свяжется с вами в течение дня для уточнения деталей.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="popup" id="popupRefund">
+      <div class="popup__body"> 
+        <div class="popup__content">
+          <div class="popup__close-btn popup__close-btn--dark" data-popup="close-popup"><span> </span></div>
+          <h5 class="popup__title">Заявка на возврат</h5>
+          <form class="popup-form">
+            <div class="popup-form__items">
+              <div class="popup-form__item form-error"> 
+                <label class="form-label">Полное имя <span>*</span></label>
+                <input class="form-control" type="text" placeholder="Введите ваше имя" required>
+                <div class="form-error-message">Пожалуйста, проверьте корректность ввода данных</div>
+              </div>
+              <div class="popup-form__item"> 
+                <label class="form-label">Ваш Email <span>*</span></label>
+                <input class="form-control" type="text" placeholder="name@email.com" required>
+              </div>
+              <div class="popup-form__item" data-mask="+7 (999) 999-99-99">
+                <label class="form-label">Ваш телефон <span>*</span></label>
+                <input class="form-control" type="text" placeholder="+7 ХХХ ХХХ-ХХ-ХХ" required>
+              </div>
+              <div class="popup-form__item"> 
+                <label class="form-label">Наименование товара <span>*</span></label>
+                <input class="form-control" type="text" placeholder="ADO A20F" required>
+              </div>
+              <div class="popup-form__item">
+                <label class="form-label">Магазин, где куплен товар? <span>*</span></label>
+                <div class="select-wrap"> 
+                  <select class="form-select" data-show-element-by-id="select">
+                    <option value="1" selected>на сайте adoebike.ru</option>
+                    <option value="3" data-show-element-by-id="element-3">В другом магазине</option>
+                  </select>
+                </div>
+              </div>
+              <div class="popup-form__item d-none" data-show-element-by-id="element" data-id="element-3"> 
+                <label class="form-label">Название магазина <span>*</span></label>
+                <input class="form-control" type="text" placeholder="Пожалуйста, укажите название магазина" required>
+              </div>
+              <div class="popup-form__item" data-mask="99.99.9999">
+                <label class="form-label">Дата покупки <span>*</span></label>
+                <input class="form-control" type="text" placeholder="06.04.2022" required>
+              </div>
+              <div class="popup-form__item" data-mask="99.99.9999">
+                <label class="form-label">Дата получения заказа <span>*</span></label>
+                <input class="form-control" type="text" placeholder="06.04.2022" required>
+              </div>
+              <div class="popup-form__item" data-mask="9{*}">
+                <label class="form-label">Номер заказа <span>*</span></label>
+                <input class="form-control" type="text" placeholder="3456832" required>
+              </div>
+              <div class="popup-form__item">
+                <label class="form-label">Серийный номер товара</label>
+                <input class="form-control" type="text" placeholder="ADO A20F">
+              </div>
+              <div class="popup-form__item">
+                <label class="form-label">Причина возврата <span>*</span></label>
+                <div class="select-wrap"> 
+                  <select class="form-select" data-show-element-by-id="select">
+                    <option value="1" selected>Не подошел / не понравился</option>
+                    <option value="2">Другой цвет</option>
+                    <option value="3" data-show-element-by-id="element-1">Брак</option>
+                    <option value="4" data-show-element-by-id="element-2">Другое</option>
+                  </select>
+                </div>
+              </div>
+              <div class="popup-form__item d-none" data-show-element-by-id="element" data-id="element-1"> 
+                <label class="form-label">Описание неисправности <span>*</span></label>
+                <input class="form-control" type="text" placeholder="Пожалуйста, опишите неисправность товара" required>
+              </div>
+              <div class="popup-form__item d-none" data-show-element-by-id="element" data-id="element-2"> 
+                <label class="form-label">Детали <span>*</span></label>
+                <input class="form-control" type="text" placeholder="Пожалуйста, опишите неисправность товара" required>
+              </div>
+              <div class="popup-form__item">
+                <label class="file-input" data-file-input>
+                  <input class="file-input__input" type="file" accept=".jpg, .png, .pdf, .txt">
+                  <div class="file-input__inner">
+                    <div class="file-input__icon"><i class="icon-upload"></i></div>
+                    <div class="file-input__text">Загрузите фото чека, накладной или акта</div>
+                  </div>
+                </label>
+              </div>
+              <div class="popup-form__item">
+                    <label class="checkbox-radio">
+                      <input type="checkbox" name="politics" data-politics-checkbox>
+                      <div class="checkbox-radio__square"></div>
+                      <div class="checkbox-radio__text">Согласен с <a href="#">условиями использования</a> сервиса ADO и <a href="#">обработки персональных данных</a></div>
+                    </label>
+              </div>
+            </div>
+            <button class="popup-form__submit btn btn--secondary"> <span>Подтвердить форму</span></button>
+            <p class="popup-form__continue" data-popup="close-popup">Отменить</p>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="cookies-message" data-cookies-message>
+      <div class="container"> 
+        <div class="cookies-message__body"> 
+          <div class="cookies-message__text text">
+            <p>Этот сайт использует файлы cookies. Нажимая ПРИНИМАЮ или продолжая просмотр сайта, Вы даете согласие на их использование. <a href="#">Подробнее</a></p>
+          </div>
+          <button class="cookies-message__agree btn btn--secondary" data-action="cookies-message-close"><span>Принимаю        </span></button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

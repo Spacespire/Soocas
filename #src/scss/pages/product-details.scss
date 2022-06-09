@@ -1,0 +1,18 @@
+.product-full-info {
+    padding-top: 5rem;
+
+    @media (max-width: $md2+px) {
+        padding-top: 12px;
+    }
+
+    &__previev {
+        margin-bottom: 10.8rem;
+
+        @media (max-width: $md2+px) {
+            margin-bottom: 60px;
+        }
+        @media (max-width: $md3+px) {
+            margin-bottom: 20px;
+        }
+    }
+}

@@ -1,0 +1,17 @@
+extends _base
+
+block header
+    - var headerModClass = 'header--text-dark';
+    include components/header/_header
+
+block content
+    main._page.news-page.padding-top-header-size
+        - var title = 'Новости компании';
+        - var subtitle = 'Наши последние новости, акции и новинки.';
+        - var imgUrls = ['img/photo/news-img-1.jpg' ,'img/photo/news-img-2.jpg' ,'img/photo/news-img-3.jpg' ,'img/photo/news-img-4.jpg' ,'img/photo/news-img-5.jpg' ,'img/photo/news-img-6.jpg'];
+        - var pagination = true;
+        +news(title, subtitle, imgUrls, pagination)
+
+
+block footer 
+    include components/footer/_footer

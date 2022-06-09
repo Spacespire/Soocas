@@ -1,0 +1,9 @@
+.map {
+    width: 100%;
+    height: 80rem;
+    background-color: $secondColor;
+
+    @media (max-width: $md2+px) {
+        height: 400px;
+    }
+}

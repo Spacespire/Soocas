@@ -1,0 +1,83 @@
+.product-benefits {
+    padding: 15rem 0;
+
+    @media (min-width: 992px) {
+        padding-top: 15rem !important;
+    }
+    @media (max-width: $md2+px) {
+        padding: 72px 0;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: center;
+        padding-left: 0;
+
+        @media (max-width: $md2+px) {
+            flex-wrap: wrap;
+            margin-bottom: -47px;
+        }
+        @media (max-width: $md3+px) {
+            margin-bottom: -35px;
+        }
+
+        & > li {
+            padding: 0 1rem;
+            text-align: center;
+            flex: 0 1 25%;
+
+            @media (max-width: $md2+px) {
+                flex: 0 1 50%;
+                margin-bottom: 47px;
+            }
+
+            @media (max-width: $md3+px) {
+                flex: 0 1 100%;
+                margin-bottom: 35px;
+            }
+        }
+    }
+
+    &__icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 16.7rem;
+        width: 100%;
+        margin-bottom: 4.3rem;
+
+        & img {
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
+        }
+
+        @media (max-width: $md2+px) {
+            height: 114px;
+            margin-bottom: 23px;
+        }
+
+        @media (max-width: $md3+px) {
+            height: 100px;
+            margin-bottom: 10px;
+        }
+    }
+
+    &__text {
+        font-weight: 500;
+
+        @media (max-width: $md2+px) {
+            font-size: 30px !important;
+            line-height: 1.26em;
+
+            & br {
+                display: none;
+            }
+        }
+        @media (max-width: $md3+px) {
+            font-size: 18px !important;
+            line-height: 1.26em;
+        }
+    }
+}

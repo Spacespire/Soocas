@@ -1,0 +1,6 @@
+mixin breadcrumb(links, current)
+    ul.breadcrumb
+        for val in links
+            li.breadcrumb__item 
+                a(href="#").breadcrumb__link= val 
+        li.breadcrumb__item= current         

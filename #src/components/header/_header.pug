@@ -1,0 +1,132 @@
+header(class=`header ${headerModClass}` data-header data-popup="add-right-padding")
+    a(href="#").top-line-message <!-- use class .top-line-message--show -->
+        p Рождественская скидка 20% на все товары!
+    .container 
+        .header__body
+            .header__logo
+                a(href="/") 
+                    img(src="img/logo/logo.svg", alt="")
+
+            nav.header__menu.menu 
+                ul.menu__list
+                    li.menu__list-item.menu__list-item--has-sab-menu
+                        a(href="#").menu__link.menu__link--with-chevron Продукты <!-- use class .menu__link--active -->
+                        .menu__sub-menu-wrap
+                            ul.sub-menu
+                                li
+                                    a(href="#").sub-menu__link Бритвы и триммеры  <!-- use class .sub-menu__link--active -->
+                                li
+                                    a(href="#").sub-menu__link Зубные щетки и ирригаторы
+                                li
+                                    a(href="#").sub-menu__link Фены для волос 
+                                li
+                                    a(href="#").sub-menu__link Аксессуары
+                                li
+                                    a(href="#").sub-menu__link Акции
+                            .menu__img
+                                a(href="#")  
+                                    img(src="img/photo/sub-menu-img.png", alt="")
+
+                    li.menu__list-item
+                        a(href="#").menu__link Доставка и оплата
+
+                    li.menu__list-item.menu__list-item--has-sab-menu
+                        a(href="#").menu__link.menu__link--with-chevron Сервис
+                        .menu__sub-menu-wrap
+                            ul.sub-menu
+                                li
+                                    a(href="#").sub-menu__link Сервисные услуги
+                                li
+                                    a(href="#").sub-menu__link Возврат и обмен
+                                li
+                                    a(href="#").sub-menu__link Инструкции
+
+                    li.menu__list-item.menu__list-item--has-sab-menu
+                        a(href="#").menu__link.menu__link--with-chevron О нас
+                        .menu__sub-menu-wrap
+                            ul.sub-menu
+                                li
+                                    a(href="#").sub-menu__link О бренде
+                                li
+                                    a(href="#").sub-menu__link Новости
+                                li
+                                    a(href="#").sub-menu__link Наши партнеры
+                                li
+                                    a(href="#").sub-menu__link Контакты
+
+            .header__contact-info
+                include ../common/contact-info/_contact-info
+
+            .header__actions
+                .header-actions
+                    .header-actions__item.header-actions__item--search
+                        a(href="#popupSerch" data-popup="open-popup").header-actions__link
+                            i.icon-search
+                    .header-actions__item
+                        a(href="#").header-actions__link
+                            i.icon-user
+                    .header-actions__item
+                        a(href="#").header-actions__link
+                            i.icon-bag
+                            span.header-actions__num-products 2
+
+            .header__burger.burger(data-action="toggle-menu-mobile") 
+                span.burger__cross
+                span.burger__cross
+                span.burger__cross
+                span.burger__cross
+
+
+.menu-mobile(data-menu-mobile) 
+    ul.menu-mobile__list
+        li.menu-mobile__list-item(data-toggle-sab)
+            a(href="#").menu-mobile__link.menu-mobile__link--with-chevron.menu-mobile__link Продукты <!-- use .menu-mobile__link -->
+            ul.sub-menu
+                li
+                    a(href="#").sub-menu__link Бритвы и триммеры  <!-- use class .sub-menu__link--active -->
+                li
+                    a(href="#").sub-menu__link Зубные щетки и ирригаторы
+                li
+                    a(href="#").sub-menu__link Фены для волос 
+                li
+                    a(href="#").sub-menu__link Аксессуары
+                li
+                    a(href="#").sub-menu__link Акции
+
+        li.menu-mobile__list-item
+            a(href="#").menu-mobile__link Доставка и оплата
+
+        li.menu-mobile__list-item(data-toggle-sab)
+            a(href="#").menu-mobile__link.menu-mobile__link--with-chevron Сервис
+            ul.sub-menu
+                li
+                    a(href="#").sub-menu__link Сервисные услуги
+                li
+                    a(href="#").sub-menu__link Возврат и обмен
+                li
+                    a(href="#").sub-menu__link Инструкции
+
+        li.menu-mobile__list-item(data-toggle-sab)
+            a(href="#").menu-mobile__link.menu-mobile__link--with-chevron О нас
+            ul.sub-menu
+                li
+                    a(href="#").sub-menu__link О бренде
+                li
+                    a(href="#").sub-menu__link Новости
+                li
+                    a(href="#").sub-menu__link Наши партнеры
+                li
+                    a(href="#").sub-menu__link Контакты
+
+    .menu-mobile__search
+        form.menu-mobile-search
+            input(type="text" placeholder="Поиск…").menu-mobile-search__field
+            button.menu-mobile-search__submit 
+                i.icon-search
+    .menu-mobile__contact-info
+        include ../common/contact-info/_contact-info
+    .menu-mobile__social
+        ul.social 
+            li.social__item  
+                a(href="#") 
+                    i.icon-vk

@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soocas</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style type="text/css">
+      body.page-is-load ._preload-body {
+          opacity: 0;
+          visibility: hidden;
+      }
+      
+      body.page-is-load ._preload-body:before {
+          display: none;
+      }
+      
+      ._preload-body {
+          background-color: #fff;
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: 999;
+          transition: all .6s ease .2s;
+      }
+      
+      ._preload-body:before {
+          position: absolute;
+          content: '';
+          z-index: 999;
+          top: 50%;
+          left: 50%;
+          height: 50px;
+          width: 50px;
+          border-radius: 50%;
+          border: 4px solid #6e6e6e;
+          border-right: 4px solid #fff;
+          transform: translate(-50%, -50%);
+          animation: preloadBody 2s linear infinite;
+      }
+      
+      @keyframes preloadBody {
+          from {
+              transform: translate(-50%, -50%) rotate(0);
+          }
+      
+          to {
+              transform: translate(-50%, -50%) rotate(360deg);
+          }
+      }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/vendors.js"></script>
+    <script src="js/app.js"></script>
+  </head>
+  <body>
+    <div class="_preload-body"></div>
+    <header class="header header--text-dark" data-header data-popup="add-right-padding"><a class="top-line-message" href="#"><!-- use class .top-line-message--show -->
+        <p>Рождественская скидка 20% на все товары!</p></a>
+      <div class="container"> 
+        <div class="header__body">
+          <div class="header__logo"><a href="/"> <img src="img/logo/logo.svg" alt=""></a></div>
+          <nav class="header__menu menu"> 
+            <ul class="menu__list">
+              <li class="menu__list-item menu__list-item--has-sab-menu"><a class="menu__link menu__link--with-chevron" href="#">Продукты <!-- use class .menu__link--active --></a>
+                <div class="menu__sub-menu-wrap">
+                  <ul class="sub-menu">
+                    <li><a class="sub-menu__link" href="#">Бритвы и триммеры  <!-- use class .sub-menu__link--active --></a></li>
+                    <li><a class="sub-menu__link" href="#">Зубные щетки и ирригаторы</a></li>
+                    <li><a class="sub-menu__link" href="#">Фены для волос </a></li>
+                    <li><a class="sub-menu__link" href="#">Аксессуары</a></li>
+                    <li><a class="sub-menu__link" href="#">Акции</a></li>
+                  </ul>
+                  <div class="menu__img"><a href="#"> <img src="img/photo/sub-menu-img.png" alt=""></a></div>
+                </div>
+              </li>
+              <li class="menu__list-item"><a class="menu__link" href="#">Доставка и оплата</a></li>
+              <li class="menu__list-item menu__list-item--has-sab-menu"><a class="menu__link menu__link--with-chevron" href="#">Сервис</a>
+                <div class="menu__sub-menu-wrap">
+                  <ul class="sub-menu">
+                    <li><a class="sub-menu__link" href="#">Сервисные услуги</a></li>
+                    <li><a class="sub-menu__link" href="#">Возврат и обмен</a></li>
+                    <li><a class="sub-menu__link" href="#">Инструкции</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="menu__list-item menu__list-item--has-sab-menu"><a class="menu__link menu__link--with-chevron" href="#">О нас</a>
+                <div class="menu__sub-menu-wrap">
+                  <ul class="sub-menu">
+                    <li><a class="sub-menu__link" href="#">О бренде</a></li>
+                    <li><a class="sub-menu__link" href="#">Новости</a></li>
+                    <li><a class="sub-menu__link" href="#">Наши партнеры</a></li>
+                    <li><a class="sub-menu__link" href="#">Контакты</a></li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </nav>
+          <div class="header__contact-info">
+            <div class="contact-info"> <a class="contact-info__phone" href="tel:74957777777">+7 (495) 777-77-77</a><a class="contact-info__mail" href="mailto:info@di-house.ru">info@di-house.ru</a></div>
+          </div>
+          <div class="header__actions">
+            <div class="header-actions">
+              <div class="header-actions__item header-actions__item--search"><a class="header-actions__link" href="#popupSerch" data-popup="open-popup"><i class="icon-search"></i></a></div>
+              <div class="header-actions__item"><a class="header-actions__link" href="#"><i class="icon-user"></i></a></div>
+              <div class="header-actions__item"><a class="header-actions__link" href="#"><i class="icon-bag"></i><span class="header-actions__num-products">2</span></a></div>
+            </div>
+          </div>
+          <div class="header__burger burger" data-action="toggle-menu-mobile"> <span class="burger__cross"></span><span class="burger__cross"></span><span class="burger__cross"></span><span class="burger__cross"></span></div>
+        </div>
+      </div>
+    </header>
+    <div class="menu-mobile" data-menu-mobile> 
+      <ul class="menu-mobile__list">
+        <li class="menu-mobile__list-item" data-toggle-sab><a class="menu-mobile__link menu-mobile__link--with-chevron menu-mobile__link" href="#">Продукты <!-- use .menu-mobile__link --></a>
+          <ul class="sub-menu">
+            <li><a class="sub-menu__link" href="#">Бритвы и триммеры  <!-- use class .sub-menu__link--active --></a></li>
+            <li><a class="sub-menu__link" href="#">Зубные щетки и ирригаторы</a></li>
+            <li><a class="sub-menu__link" href="#">Фены для волос </a></li>
+            <li><a class="sub-menu__link" href="#">Аксессуары</a></li>
+            <li><a class="sub-menu__link" href="#">Акции</a></li>
+          </ul>
+        </li>
+        <li class="menu-mobile__list-item"><a class="menu-mobile__link" href="#">Доставка и оплата</a></li>
+        <li class="menu-mobile__list-item" data-toggle-sab><a class="menu-mobile__link menu-mobile__link--with-chevron" href="#">Сервис</a>
+          <ul class="sub-menu">
+            <li><a class="sub-menu__link" href="#">Сервисные услуги</a></li>
+            <li><a class="sub-menu__link" href="#">Возврат и обмен</a></li>
+            <li><a class="sub-menu__link" href="#">Инструкции</a></li>
+          </ul>
+        </li>
+        <li class="menu-mobile__list-item" data-toggle-sab><a class="menu-mobile__link menu-mobile__link--with-chevron" href="#">О нас</a>
+          <ul class="sub-menu">
+            <li><a class="sub-menu__link" href="#">О бренде</a></li>
+            <li><a class="sub-menu__link" href="#">Новости</a></li>
+            <li><a class="sub-menu__link" href="#">Наши партнеры</a></li>
+            <li><a class="sub-menu__link" href="#">Контакты</a></li>
+          </ul>
+        </li>
+      </ul>
+      <div class="menu-mobile__search">
+        <form class="menu-mobile-search">
+          <input class="menu-mobile-search__field" type="text" placeholder="Поиск…">
+          <button class="menu-mobile-search__submit"> <i class="icon-search"></i></button>
+        </form>
+      </div>
+      <div class="menu-mobile__contact-info">
+        <div class="contact-info"> <a class="contact-info__phone" href="tel:74957777777">+7 (495) 777-77-77</a><a class="contact-info__mail" href="mailto:info@di-house.ru">info@di-house.ru</a></div>
+      </div>
+      <div class="menu-mobile__social">
+        <ul class="social"> 
+          <li class="social__item"> <a href="#"> <i class="icon-vk"></i></a></li>
+        </ul>
+      </div>
+    </div>
+    <main class="_page about-page padding-top-header-size">
+      <picture>
+        <source class="w-100" srcset="img/photo/banner-about.jpeg" media="(min-width: 576px)"><img class="w-100" src="img/photo/promo-header-img-2.jpg" alt="img">
+      </picture>
+      <section class="article">
+        <div class="article__row"> 
+          <div class="container-sm"> 
+                <ul class="breadcrumb">
+                  <li class="breadcrumb__item"> <a class="breadcrumb__link" href="#">Главная</a></li>
+                  <li class="breadcrumb__item"> <a class="breadcrumb__link" href="#">Новости</a></li>
+                  <li class="breadcrumb__item">Уличный велосипед возвращается с новым предложением</li>
+                </ul>
+          </div>
+        </div>
+        <div class="article__row">
+          <div class="container-sm"> 
+            <h3 class="article__title">ADO A16: the street bike is back <br> on offer from Europe</h3>
+            <div class="article__info"> <span class="article__label">About ADO</span>|<span class="article__date">22 Jan 2022</span></div>
+          </div>
+        </div>
+        <div class="article__row">
+          <div class="container-sm">
+            <div class="article__text text-content text-content--big row justify-content-lg-between"> 
+              <div class="col-12 col-lg-5">
+                <p class="text-uppercase text-primary"> <strong>Smartmi — разработчик и производитель уникальной бытовой техники из Китая.</strong></p>
+                <p class="text-secondary">Компания постоянно совершенствует свои технологии и дизайнерские решения, чтобы привнести в жизнь своих клиентов больше эстетичных и высокотехнологичных товаров.</p>
+              </div>
+              <div class="col-12 col-lg-5">
+                <h5>Миссия компании SmartMi: </h5>
+                <p>Максимально содействовать созданию мира, в котором у каждого будет доступ к новейшим технологиям. Мы считаем, каждый человек заслуживает право обладать высокотехнологичным современным товарам по разумной цене. Поэтому при всех преимуществах нашей бытовой техники и товаров для дома, мы не завышаем цену на свою продукцию.</p>
+                <h5>Наша продукция:</h5>
+                <p>Это высокие технологии в сочетании с качественной сборкой и программным обеспечением. Все эти факторы работают в гармонии, чтобы повысить качество жизни людей и обеспечить им ежедневный й комфорт.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="article__row">
+          <div class="container-sm">
+            <div class="article__text text-content text-content--big text-secondary"> 
+              <p>Многие люди говорят об инновациях в продуктах, но немногие могут воплотить свои идеи в жизнь.</p>
+              <p>На Ежегодном инвестиционном собрании Xiaomi и Shunwei 2019 Су Цзюнь, основатель и генеральный директор Smartmi, поделился своим «менталитетом бестселлеров». Многие люди говорят об инновациях в продуктах, но немногие могут воплотить свои идеи в жизнь.</p>
+            </div>
+          </div>
+        </div>
+        <div class="article__row article__row--slider"> 
+          <div class="images-carousel swiper" data-slider="images-carousel"> 
+            <div class="swiper-wrapper"> 
+              <div class="swiper-slide images-carousel__item ibg"> <img class="swiper-lazy" data-src="img/photo/images-carousel-1.jpg" alt=""></div>
+              <div class="swiper-slide images-carousel__item ibg"> <img class="swiper-lazy" data-src="img/photo/images-carousel-1.jpg" alt=""></div>
+              <div class="swiper-slide images-carousel__item ibg"> <img class="swiper-lazy" data-src="img/photo/images-carousel-1.jpg" alt=""></div>
+              <div class="swiper-slide images-carousel__item ibg"> <img class="swiper-lazy" data-src="img/photo/images-carousel-1.jpg" alt=""></div>
+            </div>
+            <div class="images-carousel__dots">
+              <div class="slider-dots" data-slider-dots></div>
+            </div>
+            <div class="images-carousel__controls">
+              <div class="slider-controls"> 
+                <div class="slider-controls__btn slider-controls__btn--prev" data-action="slider-prev"> <span class="icon-chevron-left1"></span></div>
+                <div class="slider-controls__btn slider-controls__btn--next" data-action="slider-next"> <span class="icon-chevron-right1"></span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="article__row">
+          <div class="container-sm">
+            <div class="article__text text-content text-content--big text-secondary">
+              <h2>Подзаголовок текста</h2>
+              <p>Многие люди говорят об инновациях в продуктах, но немногие могут воплотить свои идеи в жизнь.</p>
+              <p>На Ежегодном инвестиционном собрании Xiaomi и Shunwei 2019 Су Цзюнь, основатель и генеральный директор Smartmi, поделился своим «менталитетом бестселлеров». Многие люди говорят об инновациях в продуктах, но немногие могут воплотить свои идеи в жизнь.</p>
+              <h3>Подзаголовок текста</h3>
+              <p>Многие люди говорят об инновациях в продуктах, но немногие могут воплотить свои идеи в жизнь.</p>
+              <p>На Ежегодном инвестиционном собрании Xiaomi и Shunwei 2019 Су Цзюнь, основатель и генеральный директор Smartmi, поделился своим «менталитетом бестселлеров». Многие люди говорят об инновациях в продуктах, но немногие могут воплотить свои идеи в жизнь.</p>
+              <picture>
+                <source srcset="img/photo/article-img.jpg" media="(min-width: 576px)"><img src="img/photo/article-img.jpg" alt="img">
+              </picture>
+              <h4>Подзаголовок текста</h4>
+              <p>Многие люди говорят об инновациях в продуктах, но немногие могут воплотить свои идеи в жизнь.</p>
+              <p>На Ежегодном инвестиционном собрании Xiaomi и Shunwei 2019 Су Цзюнь, основатель и генеральный директор Smartmi, поделился своим «менталитетом бестселлеров». Многие люди говорят об инновациях в продуктах, но немногие могут воплотить свои идеи в жизнь.</p>
+              <h5>Подзаголовок текста</h5>
+              <p>Многие люди говорят об инновациях в продуктах, но немногие могут воплотить свои идеи в жизнь.</p>
+              <p>На Ежегодном инвестиционном собрании Xiaomi и Shunwei 2019 Су Цзюнь, основатель и генеральный директор Smartmi, поделился своим «менталитетом бестселлеров». Многие люди говорят об инновациях в продуктах, но немногие могут воплотить свои идеи в жизнь.</p>
+              <ul> 
+                <li>Интеллектуально совмещает фильтрацию и мониторинг;</li>
+                <li>Лазерный сенсор двойного назначения для контроля качество воздуха в помещении;</li>
+                <li>Настоящий HEPA-фильтр удаляет 99,98% частиц до 80нм*;</li>
+                <li>Тщательно очищает воздух вашей комнаты за 6,5 минут*.</li>
+              </ul>
+              <ol> 
+                <li>Интеллектуально совмещает фильтрацию и мониторинг;</li>
+                <li>Лазерный сенсор двойного назначения для контроля качество воздуха в помещении;</li>
+                <li>Настоящий HEPA-фильтр удаляет 99,98% частиц до 80нм*;</li>
+                <li>Тщательно очищает воздух вашей комнаты за 6,5 минут*.</li>
+              </ol>
+              <figure> <img src="img/photo/article-img.jpg" alt=""></figure>
+              <picture>
+                <source srcset="img/photo/article-img.jpg" media="(min-width: 576px)"><img src="img/photo/article-img.jpg" alt="img">
+              </picture>
+              <figure> 
+                <div class="images-carousel swiper" data-slider="images-carousel"> 
+                  <div class="swiper-wrapper"> 
+                    <div class="swiper-slide images-carousel__item ibg"> <img class="swiper-lazy" data-src="img/photo/images-carousel-1.jpg" alt=""></div>
+                    <div class="swiper-slide images-carousel__item ibg"> <img class="swiper-lazy" data-src="img/photo/images-carousel-1.jpg" alt=""></div>
+                    <div class="swiper-slide images-carousel__item ibg"> <img class="swiper-lazy" data-src="img/photo/images-carousel-1.jpg" alt=""></div>
+                    <div class="swiper-slide images-carousel__item ibg"> <img class="swiper-lazy" data-src="img/photo/images-carousel-1.jpg" alt=""></div>
+                  </div>
+                  <div class="images-carousel__dots">
+                    <div class="slider-dots" data-slider-dots></div>
+                  </div>
+                  <div class="images-carousel__controls">
+                    <div class="slider-controls"> 
+                      <div class="slider-controls__btn slider-controls__btn--prev" data-action="slider-prev"> <span class="icon-chevron-left1"></span></div>
+                      <div class="slider-controls__btn slider-controls__btn--next" data-action="slider-next"> <span class="icon-chevron-right1"></span></div>
+                    </div>
+                  </div>
+                </div>
+              </figure>
+              <figure> 
+                <video src="img/videoForTest.mp4" poster="img/photo/article-img.jpg" playsinline controls></video>
+              </figure>
+              <figure>
+                 <iframe src="https://www.youtube.com/embed/hp2UQDrkjN4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></figure>
+              <h5>Подзаголовок текста</h5>
+              <p>Многие люди говорят об инновациях в продуктах, но немногие могут воплотить свои идеи в жизнь.</p>
+              <p>На Ежегодном инвестиционном собрании Xiaomi и Shunwei 2019 Су Цзюнь, основатель и генеральный директор Smartmi, поделился своим «менталитетом бестселлеров». Многие люди говорят об инновациях в продуктах, но немногие могут воплотить свои идеи в жизнь.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="text-block padding-wrap"> 
+        <div class="container">
+          <div class="text-block__text text-content text-content--big row justify-content-lg-between"> 
+            <div class="col-12 col-lg-5">
+              <p class="text-uppercase text-primary"> <strong>Smartmi — разработчик и производитель уникальной бытовой техники из Китая.</strong></p>
+              <p class="text-secondary">Компания постоянно совершенствует свои технологии и дизайнерские решения, чтобы привнести в жизнь своих клиентов больше эстетичных и высокотехнологичных товаров.</p>
+            </div>
+            <div class="col-12 col-lg-5">
+              <h5>Миссия компании SmartMi: </h5>
+              <p>Максимально содействовать созданию мира, в котором у каждого будет доступ к новейшим технологиям. Мы считаем, каждый человек заслуживает право обладать высокотехнологичным современным товарам по разумной цене. Поэтому при всех преимуществах нашей бытовой техники и товаров для дома, мы не завышаем цену на свою продукцию.</p>
+              <h5>Наша продукция:</h5>
+              <p>Это высокие технологии в сочетании с качественной сборкой и программным обеспечением. Все эти факторы работают в гармонии, чтобы повысить качество жизни людей и обеспечить им ежедневный й комфорт.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="gallery">
+        <div class="gallery__item ibg"> <img src="img/photo/gallery-img-1.jpg" alt=""></div>
+        <div class="gallery__item ibg"> <img src="img/photo/gallery-img-2.jpg" alt=""></div>
+        <div class="gallery__item ibg"> <img src="img/photo/gallery-img-3.jpg" alt=""></div>
+        <div class="gallery__item ibg"> <img src="img/photo/gallery-img-4.jpg" alt=""></div>
+      </div>
+          <section class="news padding-wrap">
+            <div class="container">
+              <ul class="news__list">
+                <li class="news__list-item"><a class="post-card" href="#">
+                        <div class="post-card__img ibg"> <img src="img/photo/news-img-1.jpg" alt=""></div>
+                        <div class="post-card__head"> <span class="post-card__label">About ADO</span>|<span class="post-card__date">22 Jan 2022</span></div>
+                        <div class="post-card__title">ADO Vision is unlock possibiliries for life and realize it better</div></a>
+                </li>
+                <li class="news__list-item"><a class="post-card" href="#">
+                        <div class="post-card__img ibg"> <img src="img/photo/news-img-2.jpg" alt=""></div>
+                        <div class="post-card__head"> <span class="post-card__label">About ADO</span>|<span class="post-card__date">22 Jan 2022</span></div>
+                        <div class="post-card__title">ADO Vision is unlock possibiliries for life and realize it better</div></a>
+                </li>
+                <li class="news__list-item"><a class="post-card" href="#">
+                        <div class="post-card__img ibg"> <img src="img/photo/news-img-3.jpg" alt=""></div>
+                        <div class="post-card__head"> <span class="post-card__label">About ADO</span>|<span class="post-card__date">22 Jan 2022</span></div>
+                        <div class="post-card__title">ADO Vision is unlock possibiliries for life and realize it better</div></a>
+                </li>
+              </ul>
+            </div>
+          </section>
+    </main>
+    <footer class="footer">
+      <div class="container"> 
+        <div class="footer__body"> 
+          <div class="footer__col footer__col--1">
+            <div class="footer__logo"> <a href="#"><img src="img/logo/logo-white.svg" alt=""></a></div>
+            <div class="footer__copy" data-da=".footer__col--4,767.98,last">© 2022 diHouse <br> Все права защищены.</div>
+          </div>
+          <div class="footer__col footer__col--2">
+            <ul class="footer__list"> 
+              <li> <a class="footer__link" href="#">Бритвы и триммеры </a></li>
+              <li> <a class="footer__link" href="#">Зубные щетки и ирригаторы</a></li>
+              <li> <a class="footer__link" href="#">Фены для волос </a></li>
+              <li> <a class="footer__link" href="#">Аксессуары</a></li>
+            </ul>
+          </div>
+          <div class="footer__col footer__col--3">
+            <ul class="footer__list"> 
+              <li> <a class="footer__link" href="#">Сервис</a></li>
+              <li> <a class="footer__link" href="#">Наши партнеры</a></li>
+              <li> <a class="footer__link" href="#">Доставка и оплата</a></li>
+              <li> <a class="footer__link" href="#">Пользовательское соглашение</a></li>
+              <li> <a class="footer__link" href="#">Политика конфиденциальности</a></li>
+            </ul>
+          </div>
+          <div class="footer__col footer__col--4">
+            <div class="footer__contact-info">
+              <div class="contact-info"> <a class="contact-info__phone" href="tel:74957777777">+7 (495) 777-77-77</a><a class="contact-info__mail" href="mailto:info@di-house.ru">info@di-house.ru</a></div>
+            </div>
+            <div class="footer__social">
+              <ul class="social"> 
+                <li class="social__item"> <a href="#"> <i class="icon-vk"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="popup" id="popupSerch">
+      <div class="popup__body"> 
+        <div class="popup__close-btn" data-popup="close-popup"><span> </span></div>
+        <div class="popup__content popup__content--search">
+          <form action="/"> 
+            <div class="popup-search">
+              <div class="popup-search__input input">
+                <input class="input__field" type="text" placeholder="Поиск товаров">
+              </div>
+              <button class="popup-search__submit btn">Искать</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="popup" id="popupMessage"><!-- API   popup.open('#popupMessage')  popup.close('#popupMessage') -->
+      <div class="popup__body"> 
+        <div class="popup__content">
+          <div class="popup__close-btn popup__close-btn--dark" data-popup="close-popup"><span> </span></div>
+          <div class="popup-message text-center">
+            <div class="popup-message__icon"> <img src="img/icons/check-circle.svg" alt=""></div>
+            <h3 class="popup-message__title">Спасибо за ваш заказ! </h3>
+            <div class="popup-message__text text-content"> 
+              <p>Наш специалист свяжется с вами в течение дня для подтверждения заказа и уточнения деталей доставки.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="popup" id="popupOrder">
+      <div class="popup__body"> 
+        <div class="popup__content">
+          <div class="popup__close-btn popup__close-btn--dark" data-popup="close-popup"><span> </span></div>
+          <div class="popup-order">
+            <h5 class="popup-order__title">Ваш заказ:</h5>
+            <div class="popup-order__body"> 
+              <div class="popup-order__colo-1">
+                <div class="popup-order-product">
+                  <div class="popup-order-product__img"> <img src="img/photo/product.webp" alt=""></div>
+                  <div class="popup-order-product__inner">
+                    <div class="popup-order-product__title">Мощный электровелосипед <span class="text-nowrap">ADO A20F</span></div>
+                    <ul class="popup-order-product__list"> 
+                      <li>Цвет: Черный</li>
+                      <li>Количество: 1 шт.</li>
+                    </ul>
+                    <div class="popup-order-product__price">19 999 ₽</div>
+                  </div>
+                </div>
+              </div>
+              <div class="popup-order__colo-2">
+                <form class="popup-form">
+                  <div class="popup-form__items">
+                    <div class="popup-form__item form-error"> 
+                      <label class="form-label">Ваше имя <span>*</span></label>
+                      <input class="form-control" type="text" placeholder="Введите ваше имя" required>
+                      <div class="form-error-message">Пожалуйста, проверьте корректность ввода данных</div>
+                    </div>
+                    <div class="popup-form__item form-error"> 
+                      <label class="form-label">Ваш Email <span>*</span></label>
+                      <input class="form-control" type="text" placeholder="name@email.com" required>
+                    </div>
+                    <div class="popup-form__item" data-mask="+7 (999) 999-99-99">
+                      <label class="form-label">Ваш телефон <span>*</span></label>
+                      <input class="form-control" type="text" placeholder="+7 ХХХ ХХХ-ХХ-ХХ" required>
+                    </div>
+                    <div class="popup-form__item">
+                          <label class="checkbox-radio">
+                            <input type="checkbox" name="politics" data-politics-checkbox>
+                            <div class="checkbox-radio__square"></div>
+                            <div class="checkbox-radio__text">Согласен с <a href="#">условиями использования</a> сервиса ADO и <a href="#">обработки персональных данных</a></div>
+                          </label>
+                    </div>
+                  </div>
+                  <button class="popup-form__submit btn btn--secondary"> <span>Подтвердить заказ</span></button>
+                  <p class="popup-form__continue" data-popup="close-popup">Продолжить покупки</p>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="popup" id="popupMessageRefund"><!-- API   popup.open('#popupMessageRefund')  popup.close('#popupMessageRefund') -->
+      <div class="popup__body"> 
+        <div class="popup__content">
+          <div class="popup__close-btn popup__close-btn--dark" data-popup="close-popup"><span> </span></div>
+          <div class="popup-message text-center">
+            <div class="popup-message__icon"> <img src="img/icons/check-circle.svg" alt=""></div>
+            <h3 class="popup-message__title">Ваша заявка на возврат отправлена.</h3>
+            <div class="popup-message__text text-content"> 
+              <p>Наш специалист свяжется с вами в течение дня для уточнения деталей.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="popup" id="popupRefund">
+      <div class="popup__body"> 
+        <div class="popup__content">
+          <div class="popup__close-btn popup__close-btn--dark" data-popup="close-popup"><span> </span></div>
+          <h5 class="popup__title">Заявка на возврат</h5>
+          <form class="popup-form">
+            <div class="popup-form__items">
+              <div class="popup-form__item form-error"> 
+                <label class="form-label">Полное имя <span>*</span></label>
+                <input class="form-control" type="text" placeholder="Введите ваше имя" required>
+                <div class="form-error-message">Пожалуйста, проверьте корректность ввода данных</div>
+              </div>
+              <div class="popup-form__item"> 
+                <label class="form-label">Ваш Email <span>*</span></label>
+                <input class="form-control" type="text" placeholder="name@email.com" required>
+              </div>
+              <div class="popup-form__item" data-mask="+7 (999) 999-99-99">
+                <label class="form-label">Ваш телефон <span>*</span></label>
+                <input class="form-control" type="text" placeholder="+7 ХХХ ХХХ-ХХ-ХХ" required>
+              </div>
+              <div class="popup-form__item"> 
+                <label class="form-label">Наименование товара <span>*</span></label>
+                <input class="form-control" type="text" placeholder="ADO A20F" required>
+              </div>
+              <div class="popup-form__item">
+                <label class="form-label">Магазин, где куплен товар? <span>*</span></label>
+                <div class="select-wrap"> 
+                  <select class="form-select" data-show-element-by-id="select">
+                    <option value="1" selected>на сайте adoebike.ru</option>
+                    <option value="3" data-show-element-by-id="element-3">В другом магазине</option>
+                  </select>
+                </div>
+              </div>
+              <div class="popup-form__item d-none" data-show-element-by-id="element" data-id="element-3"> 
+                <label class="form-label">Название магазина <span>*</span></label>
+                <input class="form-control" type="text" placeholder="Пожалуйста, укажите название магазина" required>
+              </div>
+              <div class="popup-form__item" data-mask="99.99.9999">
+                <label class="form-label">Дата покупки <span>*</span></label>
+                <input class="form-control" type="text" placeholder="06.04.2022" required>
+              </div>
+              <div class="popup-form__item" data-mask="99.99.9999">
+                <label class="form-label">Дата получения заказа <span>*</span></label>
+                <input class="form-control" type="text" placeholder="06.04.2022" required>
+              </div>
+              <div class="popup-form__item" data-mask="9{*}">
+                <label class="form-label">Номер заказа <span>*</span></label>
+                <input class="form-control" type="text" placeholder="3456832" required>
+              </div>
+              <div class="popup-form__item">
+                <label class="form-label">Серийный номер товара</label>
+                <input class="form-control" type="text" placeholder="ADO A20F">
+              </div>
+              <div class="popup-form__item">
+                <label class="form-label">Причина возврата <span>*</span></label>
+                <div class="select-wrap"> 
+                  <select class="form-select" data-show-element-by-id="select">
+                    <option value="1" selected>Не подошел / не понравился</option>
+                    <option value="2">Другой цвет</option>
+                    <option value="3" data-show-element-by-id="element-1">Брак</option>
+                    <option value="4" data-show-element-by-id="element-2">Другое</option>
+                  </select>
+                </div>
+              </div>
+              <div class="popup-form__item d-none" data-show-element-by-id="element" data-id="element-1"> 
+                <label class="form-label">Описание неисправности <span>*</span></label>
+                <input class="form-control" type="text" placeholder="Пожалуйста, опишите неисправность товара" required>
+              </div>
+              <div class="popup-form__item d-none" data-show-element-by-id="element" data-id="element-2"> 
+                <label class="form-label">Детали <span>*</span></label>
+                <input class="form-control" type="text" placeholder="Пожалуйста, опишите неисправность товара" required>
+              </div>
+              <div class="popup-form__item">
+                <label class="file-input" data-file-input>
+                  <input class="file-input__input" type="file" accept=".jpg, .png, .pdf, .txt">
+                  <div class="file-input__inner">
+                    <div class="file-input__icon"><i class="icon-upload"></i></div>
+                    <div class="file-input__text">Загрузите фото чека, накладной или акта</div>
+                  </div>
+                </label>
+              </div>
+              <div class="popup-form__item">
+                    <label class="checkbox-radio">
+                      <input type="checkbox" name="politics" data-politics-checkbox>
+                      <div class="checkbox-radio__square"></div>
+                      <div class="checkbox-radio__text">Согласен с <a href="#">условиями использования</a> сервиса ADO и <a href="#">обработки персональных данных</a></div>
+                    </label>
+              </div>
+            </div>
+            <button class="popup-form__submit btn btn--secondary"> <span>Подтвердить форму</span></button>
+            <p class="popup-form__continue" data-popup="close-popup">Отменить</p>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="cookies-message" data-cookies-message>
+      <div class="container"> 
+        <div class="cookies-message__body"> 
+          <div class="cookies-message__text text">
+            <p>Этот сайт использует файлы cookies. Нажимая ПРИНИМАЮ или продолжая просмотр сайта, Вы даете согласие на их использование. <a href="#">Подробнее</a></p>
+          </div>
+          <button class="cookies-message__agree btn btn--secondary" data-action="cookies-message-close"><span>Принимаю        </span></button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

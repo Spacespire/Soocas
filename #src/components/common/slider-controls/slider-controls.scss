@@ -1,0 +1,61 @@
+.slider-controls {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+
+    &__btn {
+        font-size: 7rem;
+        width: 24rem;
+        height: 24rem;
+        border-radius: 50%;
+        cursor: pointer;
+        background-color: transparent;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        pointer-events: auto;
+        color: rgba(#000, 0.19);
+        transition: all 0.3s ease;
+
+        @media (min-width: 992px) {
+            &:hover {
+                background-color: $mainColor;
+                color: #fff;
+            }
+        }
+
+        @media (max-width: $md2+px) {
+            width: 100px;
+            height: 100px;
+            background-color: $mainColor;
+            color: #fff;
+            font-size: 30px;
+        }
+
+        &--prev {
+            transform: translateX(-50%);
+            & span {
+                display: inline-block;
+                transform: translateX(105%);
+            }
+        }
+        &--next {
+            transform: translateX(50%);
+            & span {
+                display: inline-block;
+                transform: translateX(-105%);
+            }
+        }
+
+        &.swiper-button-lock {
+            display: none;
+        }
+    }
+}

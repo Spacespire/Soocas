@@ -1,0 +1,267 @@
+section.technical-info(data-technical-info)
+    .technical-info__desk
+        .container
+            h3.technical-info__title Выберите свою модель
+            table.technical-info__table
+                tr.technical-info__table-top 
+                    th.technical-info__table-th
+                        .technical-info__logo 
+                            img(src="img/logo/logo.svg", alt="")
+                    th.technical-info__table-th 
+                        .technical-info__head-item 
+                            .technical-info__head-item-img 
+                                img(src="img/photo/classes-img-1.png", alt="")
+                            .technical-info__head-item-title ADO A16
+                    th.technical-info__table-th 
+                        .technical-info__head-item 
+                            .technical-info__head-item-img 
+                                img(src="img/photo/classes-img-2.png", alt="")
+                            .technical-info__head-item-title ADO A20
+                    th.technical-info__table-th 
+                        .technical-info__head-item 
+                            .technical-info__head-item-img 
+                                img(src="img/photo/classes-img-3.png", alt="")
+                            .technical-info__head-item-title ADO A20F
+                    th.technical-info__table-th 
+                        .technical-info__head-item 
+                            .technical-info__head-item-img 
+                                img(src="img/photo/classes-img-4.png", alt="")
+                            .technical-info__head-item-title ADO A26
+
+                tr 
+                    td.technical-info__table-td 
+                        strong Диаметр колес
+                    td.technical-info__table-td 16 дюймов
+                    td.technical-info__table-td 20 дюймов
+                    td.technical-info__table-td 20 дюймов
+                    td.technical-info__table-td 26 дюймов
+                tr 
+                    td.technical-info__table-td 
+                        strong Мощность двигателя
+                    td.technical-info__table-td 350 Вт
+                    td.technical-info__table-td 350 Вт
+                    td.technical-info__table-td 500 Вт
+                    td.technical-info__table-td 500 Вт
+                tr 
+                    td.technical-info__table-td 
+                        strong Максимальная скорость
+                    td.technical-info__table-td 35 км/час
+                    td.technical-info__table-td 35 км/час
+                    td.technical-info__table-td 35 км/час
+                    td.technical-info__table-td 35 км/час
+                tr 
+                    td.technical-info__table-td 
+                        strong Запас хода
+                    td.technical-info__table-td до 35 км
+                    td.technical-info__table-td до 60 км
+                    td.technical-info__table-td до 50 км
+                    td.technical-info__table-td до 50 км
+                tr 
+                    td.technical-info__table-td 
+                        strong Трансмиссия
+                    td.technical-info__table-td 7-ступенчатая <br> SHIMANO
+                    td.technical-info__table-td 7-ступенчатая <br> SHIMANO
+                    td.technical-info__table-td 7-ступенчатая <br> SHIMANO
+                    td.technical-info__table-td 7-ступенчатая <br> SHIMANO
+                tr 
+                    td.technical-info__table-td 
+                        strong Допустимая нагрузка 
+                    td.technical-info__table-td 120 кг
+                    td.technical-info__table-td 120 кг
+                    td.technical-info__table-td 120 кг
+                    td.technical-info__table-td 120 кг
+                tr 
+                    td.technical-info__table-td 
+                        strong Вес устройства
+                    td.technical-info__table-td 20 кг
+                    td.technical-info__table-td 21 кг
+                    td.technical-info__table-td 29 кг
+                    td.technical-info__table-td 22 кг
+                tr 
+                    td.technical-info__table-td 
+                        strong Степень защиты от влаги
+                    td.technical-info__table-td IPX5
+                    td.technical-info__table-td IPX5
+                    td.technical-info__table-td IPX5
+                    td.technical-info__table-td IPX5
+                tr 
+                    td.technical-info__table-td 
+                        strong Складная конструкция
+                    td.technical-info__table-td 
+                        span.icon-circle-check
+                    td.technical-info__table-td 
+                        span.icon-circle-check
+                    td.technical-info__table-td 
+                        span.icon-circle-check
+                    td.technical-info__table-td –
+                tr 
+                    td.technical-info__table-td 
+                    td.technical-info__table-td 
+                        +btn('#', false,'Подробнее')(class="btn--light-secondary")
+                    td.technical-info__table-td 
+                        +btn('#', false,'Подробнее')(class="btn--light-secondary")
+                    td.technical-info__table-td 
+                        +btn('#', false,'Подробнее')(class="btn--light-secondary")
+                    td.technical-info__table-td
+                        +btn('#', false,'Подробнее')(class="btn--light-secondary")
+
+        include ../product-benefits/_product-benefits
+
+
+    .technical-info__mob
+        .technical-info__slider.swiper(data-slider="technical-info-mob-slider") 
+            .swiper-wrapper 
+                .swiper-slide.technical-info__slider-item 
+                    .technical-info__head-item 
+                        .technical-info__head-item-img 
+                            img(src="img/photo/bike-classes-nav-card-img-1.png", alt="")
+                        .technical-info__head-item-title ADO A16
+                    
+                    ul.technical-info__list 
+                        li.technical-info__list-title Диаметр колес
+                        li.technical-info__list-text 16 дюймов
+                        
+                        li.technical-info__list-title Мощность двигателя
+                        li.technical-info__list-text 350 Вт
+
+                        li.technical-info__list-title Максимальная скорость
+                        li.technical-info__list-text 35 км/час
+
+                        li.technical-info__list-title Запас хода
+                        li.technical-info__list-text до 35 км
+
+                        li.technical-info__list-title Трансмиссия
+                        li.technical-info__list-text 7-ступенчатая SHIMANO
+
+                        li.technical-info__list-title Допустимая нагрузка
+                        li.technical-info__list-text 120 кг
+
+                        li.technical-info__list-title Вес устройства
+                        li.technical-info__list-text 20 кг
+
+                        li.technical-info__list-title Степень защиты от влаги
+                        li.technical-info__list-text IPX5
+
+                        li.technical-info__list-title Складная конструкция
+                        li.technical-info__list-text
+                            span.icon-circle-check
+                        
+                        li.technical-info__list-text
+                            +btn('#', false,'Подробнее')(class="btn--light-secondary")
+                            
+                .swiper-slide.technical-info__slider-item 
+                    .technical-info__head-item 
+                        .technical-info__head-item-img 
+                            img(src="img/photo/bike-classes-nav-card-img-1.png", alt="")
+                        .technical-info__head-item-title ADO A16
+                    
+                    ul.technical-info__list 
+                        li.technical-info__list-title Параметр колёс
+                        li.technical-info__list-text 16 дюймов
+                        
+                        li.technical-info__list-title Мощность двигателя
+                        li.technical-info__list-text 350 Вт
+
+                        li.technical-info__list-title Максимальная скорость
+                        li.technical-info__list-text 35 км/час
+
+                        li.technical-info__list-title Запас хода
+                        li.technical-info__list-text до 35 км
+
+                        li.technical-info__list-title Трансмиссия
+                        li.technical-info__list-text 7-ступенчатая SHIMANO
+
+                        li.technical-info__list-title Допустимая нагрузка
+                        li.technical-info__list-text 120 кг
+
+                        li.technical-info__list-title Вес устройства
+                        li.technical-info__list-text 20 кг
+
+                        li.technical-info__list-title Защита от влаги
+                        li.technical-info__list-text IPX5
+
+                        li.technical-info__list-title Складной
+                        li.technical-info__list-text
+                            span.icon-circle-check
+                        
+                        li.technical-info__list-text
+                            +btn('#', false,'Подробнее')(class="btn--light-secondary")
+                            
+                .swiper-slide.technical-info__slider-item 
+                    .technical-info__head-item 
+                        .technical-info__head-item-img 
+                            img(src="img/photo/bike-classes-nav-card-img-1.png", alt="")
+                        .technical-info__head-item-title ADO A16
+                    
+                    ul.technical-info__list 
+                        li.technical-info__list-title Параметр колёс
+                        li.technical-info__list-text 16 дюймов
+                        
+                        li.technical-info__list-title Мощность двигателя
+                        li.technical-info__list-text 350 Вт
+
+                        li.technical-info__list-title Максимальная скорость
+                        li.technical-info__list-text 35 км/час
+
+                        li.technical-info__list-title Запас хода
+                        li.technical-info__list-text до 35 км
+
+                        li.technical-info__list-title Трансмиссия
+                        li.technical-info__list-text 7-ступенчатая SHIMANO
+
+                        li.technical-info__list-title Допустимая нагрузка
+                        li.technical-info__list-text 120 кг
+
+                        li.technical-info__list-title Вес устройства
+                        li.technical-info__list-text 20 кг
+
+                        li.technical-info__list-title Защита от влаги
+                        li.technical-info__list-text IPX5
+
+                        li.technical-info__list-title Складной
+                        li.technical-info__list-text
+                            span.icon-circle-check
+                        
+                        li.technical-info__list-text
+                            +btn('#', false,'Подробнее')(class="btn--light-secondary")
+                            
+                .swiper-slide.technical-info__slider-item 
+                    .technical-info__head-item 
+                        .technical-info__head-item-img 
+                            img(src="img/photo/bike-classes-nav-card-img-1.png", alt="")
+                        .technical-info__head-item-title ADO A16
+                    
+                    ul.technical-info__list 
+                        li.technical-info__list-title Параметр колёс
+                        li.technical-info__list-text 16 дюймов
+                        
+                        li.technical-info__list-title Мощность двигателя
+                        li.technical-info__list-text 350 Вт
+
+                        li.technical-info__list-title Максимальная скорость
+                        li.technical-info__list-text 35 км/час
+
+                        li.technical-info__list-title Запас хода
+                        li.technical-info__list-text до 35 км
+
+                        li.technical-info__list-title Трансмиссия
+                        li.technical-info__list-text 7-ступенчатая SHIMANO
+
+                        li.technical-info__list-title Допустимая нагрузка
+                        li.technical-info__list-text 120 кг
+
+                        li.technical-info__list-title Вес устройства
+                        li.technical-info__list-text 20 кг
+
+                        li.technical-info__list-title Защита от влаги
+                        li.technical-info__list-text IPX5
+
+                        li.technical-info__list-title Складной
+                        li.technical-info__list-text
+                            span.icon-circle-check
+                        
+                        li.technical-info__list-text
+                            +btn('#', false,'Подробнее')(class="btn--light-secondary")
+
+            include ../common/slider-controls/_slider-controls             
+

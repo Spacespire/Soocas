@@ -1,0 +1,61 @@
+
+.popup-form {
+    display: flex;
+    flex-direction: column;
+    &__items {
+        margin-bottom: 6rem;
+
+        @media (max-width: $md2+px) {
+            margin-bottom: 60px;
+        }
+        @media (max-width: $md3+px) {
+            margin-bottom: 40px;
+        }
+    }
+
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: 8rem;
+
+            @media (max-width: $md2+px) {
+                margin-bottom: 60px;
+            }
+
+            @media (max-width: $md3+px) {
+                margin-bottom: 65px;
+            }
+        }
+
+        & .checkbox-radio {
+            font-size: 1.8rem;
+        }
+    }
+
+    &__submit {
+        align-self: center;
+        margin-bottom: 3rem;
+
+        @media (max-width: $md4+px) {
+            width: 100%;
+            margin-bottom: 16px;
+        }
+    }
+
+    &__continue {
+        text-align: center;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        color: $textColorSecondary;
+
+        @media (max-width: $md3+px) {
+            font-size: 18px;
+            line-height: 22px;
+        }
+
+        @media (min-width: 992px) {
+            &:hover {
+                opacity: 0.7;
+            }
+        }
+    }
+}

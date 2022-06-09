@@ -1,0 +1,82 @@
+section.catalog
+    .container 
+        .catalog__row 
+            - var breadcrumbLinks = ['Главная'];
+            +breadcrumb(breadcrumbLinks, 'Каталог товаров')
+
+        .catalog__row
+            h3 Электровелосипеды
+        
+        .catalog__row
+            ul.catalog__list 
+                li.catalog__list-item
+                    - var label = 'хит продаж'; 
+                    - var labelClassMod = 'product-label--warning'; 
+                    - var imgDetail = false; 
+                    - var url = 'img/photo/card-img-1.png'; 
+                    - var title = 'Мощный электровелосипед ADO A20'; 
+                    - var present = false; 
+                    - var promotion = false;
+                    - var pricePrimary = false;
+                    - var btnText = 'купить';
+                    +card(label, labelClassMod, imgDetail, url, title, present, promotion, pricePrimary, btnText)(class="card--big")
+
+                li.catalog__list-item 
+                    - var label = 'Подарок'; 
+                    - var labelClassMod = 'product-label--success'; 
+                    - var imgDetail = 'img/photo/card-img-details.png'; 
+                    - var url = 'img/photo/card-img-1.png'; 
+                    - var title = 'Мощный электровелосипед ADO A20'; 
+                    - var present = true; 
+                    - var promotion = false;
+                    - var pricePrimary = false;
+                    - var btnText = 'купить';
+                    +card(label, labelClassMod, imgDetail, url, title, present, promotion, pricePrimary, btnText)(class="card--big")
+
+                li.catalog__list-item 
+                    - var label = 'АКЦИЯ'; 
+                    - var labelClassMod = 'product-label--danger'; 
+                    - var imgDetail = false; 
+                    - var url = 'img/photo/card-img-1.png'; 
+                    - var title = 'Мощный электровелосипед ADO A20'; 
+                    - var present = false; 
+                    - var promotion = true;
+                    - var pricePrimary = 'text-primary';
+                    - var btnText = 'купить';
+                    +card(label, labelClassMod, imgDetail, url, title, present, promotion, pricePrimary, btnText)(class="card--big")
+
+                li.catalog__list-item 
+                    - var label = 'НОВИНКА'; 
+                    - var labelClassMod = 'product-label--info'; 
+                    - var imgDetail = false; 
+                    - var url = 'img/photo/card-img-1.png'; 
+                    - var title = 'Мощный электровелосипед ADO A20'; 
+                    - var present = false; 
+                    - var promotion = false;
+                    - var pricePrimary = false;
+                    - var btnText = 'купить';
+                    +card(label, labelClassMod, imgDetail, url, title, present, promotion, pricePrimary, btnText)(class="card--big")
+
+                li.catalog__list-item
+                    - var label = false; 
+                    - var labelClassMod = false; 
+                    - var imgDetail = false; 
+                    - var url = 'img/photo/card-img-1.png'; 
+                    - var title = 'Мощный электровелосипед ADO A20'; 
+                    - var present = false; 
+                    - var promotion = false;
+                    - var pricePrimary = false;
+                    - var btnText = 'купить';
+                    +card(label, labelClassMod, imgDetail, url, title, present, promotion, pricePrimary, btnText)(class="card--big")
+
+                li.catalog__list-item 
+                    - var label = 'Подарок'; 
+                    - var labelClassMod = 'product-label--success'; 
+                    - var imgDetail = 'img/photo/card-img-details.png'; 
+                    - var url = 'img/photo/card-img-1.png'; 
+                    - var title = 'Мощный электровелосипед ADO A20'; 
+                    - var present = true; 
+                    - var promotion = false;
+                    - var pricePrimary = false;
+                    - var btnText = 'купить';
+                    +card(label, labelClassMod, imgDetail, url, title, present, promotion, pricePrimary, btnText)(class="card--big")

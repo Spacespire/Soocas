@@ -1,0 +1,85 @@
+section.promo-header(data-promo-header)
+        .promo-header__bg 
+            .promo-header__images-slider.swiper(data-slider="promo-header-images-slider")
+                .swiper-wrapper 
+                    .swiper-slide.promo-header__images-slider-item.ibg
+                        picture
+                            source(class="swiper-lazy" data-srcset="img/photo/promo-header-img-1.jpg" media="(min-width: 576px)")
+                            img(class="swiper-lazy" data-src="img/photo/promo-header-img-1-mob.jpg"  alt="img")
+                    .swiper-slide.promo-header__images-slider-item.ibg
+                        picture
+                            source(class="swiper-lazy" data-srcset="img/photo/promo-header-img-2.jpg" media="(min-width: 576px)")
+                            img(class="swiper-lazy" data-src="img/photo//promo-header-img-2-mob.jpg"  alt="img")
+                    .swiper-slide.promo-header__images-slider-item.ibg
+                        picture
+                            source(class="swiper-lazy" data-srcset="img/photo/promo-header-img-3.jpg" media="(min-width: 576px)")
+                            img(class="swiper-lazy" data-src="img/photo//promo-header-img-3-mob.jpg"  alt="img")
+                    .swiper-slide.promo-header__images-slider-item.ibg
+                        picture
+                            source(class="swiper-lazy" data-srcset="img/photo/promo-header-img-4.jpg" media="(min-width: 576px)")
+                            img(class="swiper-lazy" data-src="img/photo/promo-header-img-4.jpg"  alt="img")
+
+        .promo-header__body.container  
+            .promo-header__text-slider.swiper(data-slider="promo-header-text-slider") 
+                .swiper-wrapper 
+                    .swiper-slide.promo-header__text-sider-item
+                        h2.promo-header__title Мультифункциональная электробритва 4в1
+                        p.promo-header__subtitle Одна бритва решает много задач <br> Одна бритва — решение всех задач 
+
+                        +btn('#', '', 'Подробнее').promo-header__btn
+
+                    .swiper-slide.promo-header__text-sider-item
+                        h2.promo-header__title Уход <br> за Полостью рта 
+                        p.promo-header__subtitle Технологии нового поколения на страже <br> чистоты и здоровья ваших зубов 
+                        +btn('#', '', 'Подробнее').promo-header__btn.btn--light
+
+                    .swiper-slide.promo-header__text-sider-item
+                        h2.promo-header__title Уход <br> за волосами
+                        p.promo-header__subtitle(style="color: #000000;") Гладкие, блестящие <br> и послушные волосы всегда! 
+
+                        +btn('#', '', 'Подробнее').promo-header__btn.btn--light
+                        
+                    .swiper-slide.promo-header__text-sider-item
+                        h2.promo-header__title(style="color: #493C8C;") Уход <br> за Полостью <br> рта 
+                        p.promo-header__subtitle(style="color: #493C8C;") Технологии нового поколения на страже <br> чистоты и здоровья ваших зубов  
+                        +btn('#', '', 'Подробнее').promo-header__btn.btn--light
+
+            .promo-header__bottom
+                .promo-header__links-slider.swiper.d-md-none(data-slider="promo-header-links-slider")
+                    .swiper-wrapper
+                        .swiper-slide.promo-header__links-slider-item 
+                            a.promo-header__link(href="#")
+                                span.promo-header__link-desk-text Смотреть все увлажнители воздуха
+                                span.promo-header__link-mob-text Смотреть все
+                                i.icon-arrow-right 
+                        .swiper-slide.promo-header__links-slider-item 
+                            a.promo-header__link(href="#")
+                                span.promo-header__link-desk-text Смотреть все обогреватели
+                                span.promo-header__link-mob-text Смотреть все
+                                i.icon-arrow-right 
+                        .swiper-slide.promo-header__links-slider-item 
+                            a.promo-header__link(href="#")
+                                span.promo-header__link-desk-text Подробнее
+                                span.promo-header__link-mob-text Смотреть все
+                                i.icon-arrow-right 
+                        .swiper-slide.promo-header__links-slider-item 
+                            a.promo-header__link(href="#")
+                                span.promo-header__link-desk-text Подробнее
+                                span.promo-header__link-mob-text Смотреть все
+                                i.icon-arrow-right 
+                .promo-header__slider-dots
+                    include ../common/slider-dots/_slider-dots
+
+
+
+
+
+
+
+
+
+
+
+
+
+

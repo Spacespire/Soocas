@@ -1,0 +1,32 @@
+.slider-dots {
+    display: flex;
+    align-items: center;
+    width: auto !important;
+    & .swiper-pagination-bullet {
+        height: 2rem;
+        width: 2rem;
+        margin: 0 1rem !important;
+        flex: 0 0 auto;
+        opacity: 1;
+        border: 0.3rem solid #fff;
+        background-color: transparent;
+
+        @media (max-width: $md2+px) {
+            height: 16px;
+            width: 16px;
+            border: 2px solid #fff;
+        }
+
+        @media (max-width: $md3+px) {
+            height: 12px;
+            width: 12px;
+            margin: 0 7px !important;
+            border: 1px solid #fff;
+        }
+
+        &.swiper-pagination-bullet-active {
+            background-color: #fff;
+        }
+
+    }
+}

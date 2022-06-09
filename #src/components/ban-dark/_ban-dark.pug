@@ -1,0 +1,21 @@
+mixin ban-dark(url, title, text, labelList, list)
+    section.ban-dark&attributes(attributes)
+        .container 
+            .ban-dark__body 
+                .ban-dark__text-wrap
+                    h3.ban-dark__title.wow.fadeInUp(data-wow-duration="2s") !{title}
+                    if text 
+                        .ban-dark__text.text.wow.fadeInUp(data-wow-duration="2s") !{text}
+
+                    if list 
+                        if labelList
+                            p.ban-dark__label-list.text.wow.fadeInUp(data-wow-duration="2s") !{labelList}
+                        ul.ban-dark__list.wow.fadeInUp(data-wow-duration="2s")
+                            each val in list 
+                                li 
+                                    p= val
+
+                .ban-dark__img.ibg
+                    picture
+                        source(srcset=url.desk media="(min-width: 576px)")
+                        img(src=url.mob alt="img")

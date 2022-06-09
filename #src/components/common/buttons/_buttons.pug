@@ -1,0 +1,5 @@
+mixin btn(href, icon, text)
+    a(href=href class="btn")&attributes(attributes)
+        if icon 
+            i(class=`${icon}`)
+        | !{text} 

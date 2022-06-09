@@ -1,0 +1,43 @@
+.popup#popupOrder
+    .popup__body 
+        .popup__content
+            .popup__close-btn.popup__close-btn--dark(data-popup="close-popup")
+                span  
+            .popup-order
+                h5.popup-order__title Ваш заказ:
+                .popup-order__body 
+                    .popup-order__colo-1
+                        .popup-order-product
+                            .popup-order-product__img 
+                                img(src="img/photo/product.webp", alt="")
+                            .popup-order-product__inner
+                                .popup-order-product__title Мощный электровелосипед <span class="text-nowrap">ADO A20F</span>
+                                ul.popup-order-product__list 
+                                    li Цвет: Черный
+                                    li Количество: 1 шт.
+
+                                .popup-order-product__price 19 999 ₽
+                            
+                    .popup-order__colo-2
+                        form.popup-form
+                            .popup-form__items
+                                .popup-form__item.form-error 
+                                    label.form-label Ваше имя <span>*</span>
+                                    input(class="form-control" type="text" placeholder="Введите ваше имя" required)
+                                    .form-error-message Пожалуйста, проверьте корректность ввода данных
+
+                                .popup-form__item.form-error 
+                                    label.form-label Ваш Email <span>*</span>
+                                    input(class="form-control" type="text" placeholder="name@email.com" required)
+
+                                .popup-form__item(data-mask="+7 (999) 999-99-99")
+                                    label.form-label Ваш телефон <span>*</span>
+                                    input(class="form-control" type="text" placeholder="+7 ХХХ ХХХ-ХХ-ХХ" required)
+
+                                .popup-form__item
+                                    +checkbox('Согласен с <a href="#">условиями использования</a> сервиса ADO и <a href="#">обработки персональных данных</a>', 'politics')(data-politics-checkbox)
+                            
+                            button.popup-form__submit.btn.btn--secondary 
+                                span Подтвердить заказ
+
+                            p.popup-form__continue(data-popup="close-popup") Продолжить покупки

@@ -1,0 +1,32 @@
+mixin ban-light(url, title, text, list, listMob, labels, btn, imgClass)
+    section.ban-light&attributes(attributes)
+        .container 
+            .ban-light__body 
+                .ban-light__text-wrap 
+                    h3.ban-light__title.wow.fadeInUp(data-wow-duration="2s")= title
+                    if text 
+                        .ban-light__text.text.wow.fadeInUp(data-wow-duration="2s") 
+                            p= text 
+                    
+
+                    ul.ban-light__list.wow.fadeInUp(data-wow-duration="2s" class=`${list ? '' : 'ban-light__list--only-mob'}`)
+                        if list 
+                            each val in list
+                                li 
+                                    p= val
+                        if listMob
+                            each val in listMob 
+                                li.ban-light__list-mob-item 
+                                    p= val
+                    if btn
+                        +btn('#', 'заказать сейчас')(class="btn--third wow fadeInUp" data-wow-duration="2s")
+
+                .ban-light__img.ibg
+                    if labels
+                        .ban-light__labels
+                            each val in labels 
+                                .ban-light__label !{val} 
+
+                    picture
+                        source(srcset=url.desk media="(min-width: 768px)")
+                        img(src=url.mob alt="img" class=`${imgClass}`)

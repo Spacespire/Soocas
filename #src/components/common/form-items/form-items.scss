@@ -1,0 +1,258 @@
+.input {
+	position: relative;
+	&__field {
+		display: flex;
+		align-items: center;
+		width: 100%;
+		background-color: transparent;
+		min-height: 8rem;
+		padding: 1.5rem 3.5rem;
+		outline: none;
+		border-radius: 300px;
+		position: relative;
+		z-index: 2;
+		font-size: 3.2rem;
+		line-height: 1em;
+		letter-spacing: -0.01em;
+		font-weight: 400;
+		background-color: #fff;
+		margin: 0;
+		border: none;
+		
+
+		&::placeholder {
+			color: rgba(#818181, 0.5);
+		}
+
+		@media (max-width: $md2+px) {
+			min-height: 60px;
+			font-weight: 500;
+			font-size: 20px;
+			letter-spacing: 0.181818px;
+			font-weight: 500;
+		}
+	}
+}
+
+.form-control {
+	font-size: 2.4rem;
+	color: $textColor;
+	line-height: 1.16em;
+	min-height: 4.6rem;
+	padding: 0.5rem 0;
+	border: none;
+	border-bottom: 1px solid $secondColor;
+	outline: none;
+	box-shadow: none !important;
+	border-radius: 0 !important;
+
+	@media (max-width: $md2+px) {
+		font-size: 20px;
+	}
+	@media (max-width: $md3+px) {
+		font-size: 16px;
+		line-height: 19px;
+	}
+
+	&::placeholder {
+		font-size: 2.4rem;
+		color: $secondColor;
+		line-height: 1.16em;
+	
+		@media (max-width: $md2+px) {
+			font-size: 20px;
+		}
+		@media (max-width: $md3+px) {
+			font-size: 16px;
+			line-height: 19px;
+		}
+	}
+
+	&:focus {
+		border-color: $textColor;
+	}
+}
+
+.form-select {
+	font-size: 2.4rem;
+	color: $secondColor;
+	line-height: 1.16em;
+	min-height: 4.6rem;
+	padding: 0.5rem 0;
+	border: none;
+	border-bottom: 1px solid $secondColor;
+	outline: none;
+	box-shadow: none !important;
+	border-radius: 0 !important;
+
+	@media (max-width: $md2+px) {
+		font-size: 20px;
+	}
+	@media (max-width: $md3+px) {
+		font-size: 16px;
+		line-height: 19px;
+	}
+
+	&.visited {
+		color: $textColor;
+	}
+
+	&::placeholder {
+		font-size: 2.4rem;
+		color: $secondColor;
+		line-height: 1.16em;
+
+		@media (max-width: $md2+px) {
+			font-size: 20px;
+		}
+		@media (max-width: $md3+px) {
+			font-size: 16px;
+			line-height: 19px;
+		}
+	}
+
+	&:focus {
+		border-color: $textColor;
+	}
+
+	& option {
+		color: $textColor;
+
+		&[value=""] {
+			display: none;
+		}
+	}
+}
+
+.form-label {
+	margin-bottom: 0.5em;
+
+	@media (max-width: $md3+px) {
+		font-size: 20px;
+		line-height: 1em;
+	}
+
+	& span {
+		color: $dangerColor;
+	}
+}
+
+.form-error {
+	position: relative;
+
+	& .form-error-message {
+		display: block;
+	}
+}
+
+.form-error-message {
+	font-size: 1.8rem;
+	line-height: 1.11em;
+	color: $dangerColor;
+	position: absolute;
+	top: calc(100% + 0.3em);
+	left: 0;
+	width: 100%;
+	display: none;
+
+	@media (max-width: $md3+px) {
+		font-size: 14px;
+		line-height: 20px;
+	}
+}
+
+.checkbox-radio {
+	position: relative;
+	display: flex;
+	align-items: center;
+	line-height: 1.2em;
+	cursor: pointer;
+	
+	@media (max-width: $md2+px) {
+		font-size: 18px;
+	}
+
+	@media (max-width: $md3+px) {
+		font-size: 16px;
+	}
+
+	& input {
+		position: absolute;
+		z-index: 1;
+		visibility: hidden;
+
+		&:checked ~ .checkbox-radio__square:before {
+			opacity: 1;
+		}
+	}
+
+	&__square {
+		flex: 0 0 auto;
+		margin-right: 2rem;
+		height: 5rem;
+		width: 5rem;
+		border: 1px solid #000;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		color: #000;
+		font-size: 3rem;
+		border-radius: 50%;
+
+		@media (max-width: $md2+px) {
+			height: 4rem;
+			width: 4rem;
+		}
+		@media (max-width: $md3+px) {
+			height: 35px;
+			width: 35px;
+			margin-right: 15px;
+			font-size: 24px;
+		}
+
+		&:before {
+			font-family: 'icomoon' !important;
+			content: "\e913";
+			transition: all .3s ease;
+			opacity: 0;
+		}
+	}	
+
+	&__text {
+
+		& a {
+			text-decoration: underline;
+		}
+	}
+}
+
+.file-input {
+	position: relative;
+	display: block;
+	cursor: pointer;
+
+	&__input {
+		position: absolute;
+		z-index: -1;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		visibility: hidden;
+		cursor: pointer;
+	
+	}
+
+	&__inner {
+		display: flex;
+	}
+
+	&__icon {
+		flex: 0 0 auto;
+		margin-right: 0.7em;
+	}
+
+	&__text {
+
+	}
+}

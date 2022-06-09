@@ -1,0 +1,54 @@
+.grid-banner.grid-banner--first
+    .container
+        h3.grid-banner__title.text-uppercase.text-center.wow.fadeInUp(data-wow-duration="0.8s") 
+            strong Бритвы Soocas:
+            | стиль, качество, многофункциональность
+        .grid-banner__inner.wow.fadeInUp(data-wow-duration="0.8s") 
+            .grid-banner__card-wrap 
+                .card.card--preview
+                    .card__img-wrap
+                        a(href="#")
+                            .card__img 
+                                img(src="img/photo/card-preview-img-1.jpg", alt="")
+                    .card__text-wrap
+                        .card__title.text 
+                            a(href="#") Электробритва Soocas S5 4 в 1 
+
+                        .card__bottom 
+                            .card__price 1999 ₽
+                            +btn('#', false, 'купить')(class="card__btn") 
+                        a(href="").card__link-all-products(style="color: #004922;") Все электробритвыи триммеры
+
+            .grid-banner__grid.swiper(data-slider="grid-banner" data-mobile="false")
+                .swiper-wrapper 
+                    .swiper-slide.grid-banner__item.grid-banner__item--1
+                        a(href="#").grid-banner__item-inner.not-hover
+                            .grid-banner__img.ibg 
+                                picture
+                                    source(srcset="img/photo/grid-banner-img-1.jpg" media="(min-width: 768px)")
+                                    img(src="img/photo/grid-banner-img-mob-1.jpg" alt="img")
+                            .grid-banner__text 
+                                p Плавное <br> вращение <br> на 360°
+
+                    .swiper-slide.grid-banner__item.grid-banner__item--2
+                        a(href="#").grid-banner__item-inner.not-hover
+                            .grid-banner__img.ibg 
+                                picture
+                                    source(srcset="img/photo/grid-banner-img-2.jpg" media="(min-width: 768px)")
+                                    img(src="img/photo/grid-banner-img-mob-2.jpg" alt="img")
+                            .grid-banner__text 
+                                p Влагозащита IPX7: <br> доступно влажное <br> и сухое бритье
+
+                    .swiper-slide.grid-banner__item.grid-banner__item--3
+                        a(href="#").grid-banner__item-inner.not-hover
+                            .grid-banner__img.ibg 
+                                picture
+                                    source(srcset="img/photo/grid-banner-img-3.jpg" media="(min-width: 768px)")
+                                    img(src="img/photo/grid-banner-img-mob-3.jpg" alt="img")
+                            .grid-banner__text 
+                                h5 4 в 1: 
+                                p электробритва, <br> два триммера <br> и щетка для чистки лица
+
+                .grid-banner__slider-dots
+                    include ../common/slider-dots/_slider-dots
+

@@ -1,0 +1,11 @@
+mixin checkbox(text, name)
+    label.checkbox-radio
+        input(type="checkbox" name=name checked!=attributes.checked)&attributes(attributes)
+        .checkbox-radio__square
+        .checkbox-radio__text !{text}
+
+mixin radio(text, name)
+    label.checkbox-radio
+        input(type="radio" name=name checked!=attributes.checked)&attributes(attributes)
+        .checkbox-radio__square
+        .checkbox-radio__text !{text}

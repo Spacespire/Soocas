@@ -1,0 +1,85 @@
+.popup#popupRefund
+    .popup__body 
+        .popup__content
+            .popup__close-btn.popup__close-btn--dark(data-popup="close-popup")
+                span 
+            h5.popup__title Заявка на возврат
+
+            form.popup-form
+                .popup-form__items
+                    .popup-form__item.form-error 
+                        label.form-label Полное имя <span>*</span>
+                        input(class="form-control" type="text" placeholder="Введите ваше имя" required)
+                        .form-error-message Пожалуйста, проверьте корректность ввода данных
+
+                    .popup-form__item 
+                        label.form-label Ваш Email <span>*</span>
+                        input(class="form-control" type="text" placeholder="name@email.com" required)
+
+                    .popup-form__item(data-mask="+7 (999) 999-99-99")
+                        label.form-label Ваш телефон <span>*</span>
+                        input(class="form-control" type="text" placeholder="+7 ХХХ ХХХ-ХХ-ХХ" required)
+                    
+                    .popup-form__item 
+                        label.form-label Наименование товара <span>*</span>
+                        input(class="form-control" type="text" placeholder="ADO A20F" required)
+
+                    .popup-form__item
+                        label.form-label Магазин, где куплен товар? <span>*</span>
+                        .select-wrap 
+                            select.form-select(data-show-element-by-id="select")
+                                option(value="1" selected) на сайте adoebike.ru
+                                option(value="3" data-show-element-by-id="element-3") В другом магазине
+
+                    .popup-form__item.d-none(data-show-element-by-id="element" data-id="element-3") 
+                        label.form-label Название магазина <span>*</span>
+                        input(class="form-control" type="text" placeholder="Пожалуйста, укажите название магазина" required)
+
+                    .popup-form__item(data-mask="99.99.9999")
+                        label.form-label Дата покупки <span>*</span>
+                        input(class="form-control" type="text" placeholder="06.04.2022" required)
+
+                    .popup-form__item(data-mask="99.99.9999")
+                        label.form-label Дата получения заказа <span>*</span>
+                        input(class="form-control" type="text" placeholder="06.04.2022" required)
+
+                    .popup-form__item(data-mask="9{*}")
+                        label.form-label Номер заказа <span>*</span>
+                        input(class="form-control" type="text" placeholder="3456832" required)
+
+                    .popup-form__item
+                        label.form-label Серийный номер товара
+                        input(class="form-control" type="text" placeholder="ADO A20F")
+
+                    .popup-form__item
+                        label.form-label Причина возврата <span>*</span>
+                        .select-wrap 
+                            select.form-select(data-show-element-by-id="select")
+                                option(value="1" selected) Не подошел / не понравился
+                                option(value="2" ) Другой цвет
+                                option(value="3" data-show-element-by-id="element-1") Брак
+                                option(value="4" data-show-element-by-id="element-2") Другое
+
+                    .popup-form__item.d-none(data-show-element-by-id="element" data-id="element-1") 
+                        label.form-label Описание неисправности <span>*</span>
+                        input(class="form-control" type="text" placeholder="Пожалуйста, опишите неисправность товара" required)
+
+                    .popup-form__item.d-none(data-show-element-by-id="element" data-id="element-2") 
+                        label.form-label Детали <span>*</span>
+                        input(class="form-control" type="text" placeholder="Пожалуйста, опишите неисправность товара" required)
+
+                    .popup-form__item
+                        label.file-input(data-file-input)
+                            input(class="file-input__input" type="file" accept=".jpg, .png, .pdf, .txt")
+                            .file-input__inner
+                                .file-input__icon
+                                    i.icon-upload
+                                .file-input__text Загрузите фото чека, накладной или акта
+
+                    .popup-form__item
+                        +checkbox('Согласен с <a href="#">условиями использования</a> сервиса ADO и <a href="#">обработки персональных данных</a>', 'politics')(data-politics-checkbox)
+                
+                button.popup-form__submit.btn.btn--secondary 
+                    span Подтвердить форму
+
+                p.popup-form__continue(data-popup="close-popup") Отменить

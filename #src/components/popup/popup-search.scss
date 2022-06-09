@@ -1,0 +1,31 @@
+.popup-search {
+    display: flex;
+    background-color: #fff;
+    border-radius: 200px;
+
+    @media (max-width: $md3+px) {
+        display: block;
+        background-color: transparent;
+        border-radius: 0;
+        & > *:not(:last-child) {
+            margin-bottom: 16px;
+        }
+    }
+
+    &__input {
+        flex: 1 1 auto;
+        
+        @media (min-width: 768px) {
+            margin-right: 4rem;
+        }
+    }
+    &__submit {
+        flex: 0 0 auto;
+
+        @media (max-width: $md4+px) {
+            min-width: auto;
+            width: 100%;
+        }
+    }
+}
+

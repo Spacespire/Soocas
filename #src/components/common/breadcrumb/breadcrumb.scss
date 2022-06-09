@@ -1,0 +1,35 @@
+.breadcrumb {
+    padding-left: 0;
+    margin-bottom: 0;
+    display: block;
+    &__item {
+        display: inline;
+        font-size: 2.4rem;
+        line-height: 1.16em;
+
+        @media (max-width: $md2+px) {
+            font-size: 16px;
+            line-height: 19px;
+        }
+
+        &:not(:last-child) {
+            margin-right: 0.4333em;
+        }
+    }
+    &__link {
+        color: $secondColor;
+        transition: all 0.3s ease;
+
+        @media (min-width: 992px) {
+            &:hover {
+                color: $mainColor;
+            }
+        }
+
+        &:after {
+            content: "|";
+            margin-left: 0.8333em;
+            color: $secondColor;
+        }
+    }
+}

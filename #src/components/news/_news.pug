@@ -1,0 +1,17 @@
+mixin news(title, subtitle, imgUrls, pagination) 
+    section.news.padding-wrap&attributes(attributes)
+        .container
+            if title 
+                h3.news__title !{title}
+
+            if subtitle
+                p.news__subtitle.text !{subtitle}
+            ul.news__list
+                each url in imgUrls 
+                    li.news__list-item
+                        +post-card(url)
+
+
+            if pagination
+                .news__bottom
+                    include ../common/pagination/_pagination

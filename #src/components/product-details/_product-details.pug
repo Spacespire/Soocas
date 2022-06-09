@@ -1,0 +1,138 @@
+.product-details(data-tabs)
+    .product-details__head 
+        .container 
+            .product-details__nav.swiper(data-slider="product-details-nav")
+                .swiper-wrapper 
+                    .swiper-slide.product-details__nav-item(data-tab-trigger="0") Описание
+                    .swiper-slide.product-details__nav-item(data-tab-trigger="1") Характеристики
+                    .swiper-slide.product-details__nav-item(data-tab-trigger="2") Комплектация
+                    .swiper-slide.product-details__nav-item(data-tab-trigger="3") Аксессуары и комплектующие
+                    .swiper-slide.product-details__nav-item(data-tab-trigger="4") Обзоры
+                    .swiper-slide.product-details__nav-item(data-tab-trigger="5") Отзывы
+
+    .product-details__body
+        .product-details__content.pt-0(data-tab-content="0")
+
+            .padding-wrap.bg-black.text-white
+                .container
+                    .head.mb-0 
+                        h3.head__title.text-center  Умная техника для дома Smartmi
+                        p.head__subtitle.text.text-center Инновации, заслуживающие внимания.
+
+            .video-full-width
+                video(src="img/Video-Purification.mp4" playsinline loop muted autoplay)
+
+            section.ban-img-full-width
+                .container 
+                    .ban-img-full-width__body 
+                        .ban-img-full-width__text-wrap
+                            h2.ban-img-full-width__title.wow.fadeInUp(data-wow-duration="2s") Умная техника для дома Smartmi
+                            .ban-img-full-width__text.text.wow.fadeInUp(data-wow-duration="2s") Инновации, заслуживающие внимания.
+
+                        .ban-img-full-width__img.ibg 
+                            picture
+                                source(srcset="img/photo/ban-dark-img-3@2x.jpg" media="(min-width: 576px)")
+                                img(src="img/photo/article-img.jpg" alt="img")
+
+            .padding-wrap.bg-black.text-white
+                .container 
+                    .head.mb-0 
+                        h3.head__title.text-center 7-ступенчатая трансмиссия SHIMANO
+                        .head__subtitle.text.text-center 
+                            p Комплектующие от легендарного японского бренда Shimano: надежность, качество, долговечность.
+
+            section.ban-light.ban-light--row-revers
+                .container 
+                    .ban-light__body 
+                        .ban-light__text-wrap 
+                            h3.ban-light__title.wow.fadeInUp(data-wow-duration="2s") 7-ступенчатая трансмиссия SHIMANO
+                            .ban-light__text.text.wow.fadeInUp(data-wow-duration="2s") 
+                                p Комплектующие от легендарного японского бренда Shimano: надежность, качество, долговечность.
+
+                        .ban-light__img.ibg.img-contain
+                            picture
+                                source(srcset="img/photo/app-review-img-right.png" media="(min-width: 768px)")
+                                img(src="img/photo/app-review-img-right.png" alt="img" class=`${imgClass}`)
+
+            - var banUrl = {desk: 'img/photo/ban-dark-img-2.jpg', mob: 'img/photo/ban-dark-img-2-mob.jpg'};
+            - var banTitle = '7-ступенчатая трансмиссия SHIMANO';
+            - var banText = '<p>Комплектующие от легендарного японского бренда Shimano: надежность, качество, долговечность.</p>';
+            +ban-dark(banUrl, banTitle, banText)
+            
+            - var banUrl = {desk: 'img/photo/ban-dark-img-7.jpg', mob: 'img/photo/ban-dark-img-7-mob.jpg'};
+            - var banTitle = 'Универсальная амортизационная система Double Shock';
+            - var banText = '<p>Гибкая конструкция амортизатора адаптируется к любым дорожным условиям и нейтрализует удары и вибрации, обеспечивая комфортную езду.</p>';
+            +ban-dark(banUrl, banTitle, banText)(class="ban-dark--row-revers")
+
+            .padding-wrap.pb-0
+                .container
+                    picture
+                        source(srcset="img/photo/bike-schema-img-1.jpg" media="(min-width: 576px)" class="w-100")
+                        img(src="img/photo/bike-schema-img-mob-1.jpg" alt="img" class="w-100") 
+
+            +product-benefits
+
+            include ../mini-gallery/_mini-gallery
+
+            picture
+                source(srcset="img/photo/promo-header-img-1.jpg" media="(min-width: 576px)" class="w-100")
+                img(src="img/photo/promo-header-img-2.jpg" alt="img" class="w-100")
+
+            +videoBanner()(class="video-banner--text-over-video")
+
+        .product-details__content(data-tab-content="1")
+            .product-details__content-row
+                .container-sm
+                    h3.title-3.text-center Регулируемые Размеры
+                    img(src="img/photo/bike-size.jpg", alt="" class="w-100 h-auto")
+
+            .product-details__content-row
+                .container-sm
+                    h3.title-3.text-center Технические характеристики
+                    
+                    include ../table-default/_table-default
+
+        .product-details__content(data-tab-content="2")
+            .product-details__content-row
+                .container 
+                    .row 
+                        .col-12.col-md-8 
+                            .text-content 
+                                ol
+                                    li Держатель для мобильного телефона - х1
+                                    li Зарядный блок и шнур - х1 
+                                    li Руководство по эксплуатации
+                                    li Краткое руководство по установке - x1
+                                    li Шестигранная отвертка, 5 мм - х1
+                                    li Шестигранная отвертка, 6 мм - х1
+                                    li Многоцелевой ключ - x1
+                                    li Сиденье велосипеда - х1
+                                    li Воздушный насос - х1
+                                    li Педаль - х1
+                                    li Подножка - х1
+
+                        .col-12.col-md-4.text-center 
+                            img(src="img/photo/equipment.jpg", alt="" class="w-auto h-auto mw-100 mh-100")
+
+        .product-details__content(data-tab-content="3")
+            .product-details__content-row
+                - var title = false;
+                +product-carousel(title)(class="py-0")
+
+        .product-details__content(data-tab-content="4")
+            .product-details__content-row
+                .container-sm 
+                    include ../video-gallery/_video-gallery
+
+        .product-details__content(data-tab-content="5")
+            .product-details__content-row
+                .container-sm 
+                    h3.title-3.text-center.mb-5 Отзывы (3)
+                    .subtitle.text-center.text-light.mw-md-70.mx-auto 
+                        p Отзывы к продукту могут оставлять только авторизированные пользователи, у которых есть хотя бы один оплаченый товар
+
+                    include ../testimonials/_testimonials
+
+
+- var title = 'Рекомендуемые товары';
++product-carousel(title)

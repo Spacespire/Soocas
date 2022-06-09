@@ -1,0 +1,16 @@
+mixin ban-img-full-width(url, title, text, btn, darkCover)
+    section.ban-img-full-width&attributes(attributes)
+        .ban-img-full-width__img.ibg(class=darkCover) 
+            picture
+                source(srcset=url.desk media="(min-width: 576px)")
+                img(src=url.mob alt="img")
+
+        .container 
+            .ban-img-full-width__body 
+                h2.ban-img-full-width__title.wow.fadeInUp(data-wow-duration="0.8s")  !{title}
+
+                if text 
+                    .ban-img-full-width__text.wow.fadeInUp(data-wow-duration="0.8s")  !{text}
+
+                if btn
+                    +btn('#', '', btn)(class="btn--light wow fadeInUp" data-wow-duration="0.8s") 

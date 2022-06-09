@@ -1,0 +1,18 @@
+extends _base
+
+block header
+    - var headerModClass = 'header--text-dark';
+    include components/header/_header
+
+block content
+    main._page.product-details-page.padding-top-header-size
+        section.product-full-info
+            .product-full-info__previev 
+                include components/product-preview/_product-preview
+
+            .product-full-info__details 
+                include components/product-details/_product-details
+
+
+block footer 
+    include components/footer/_footer

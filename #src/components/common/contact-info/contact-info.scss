@@ -1,0 +1,23 @@
+.contact-info {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-end;
+    font-size: 1rem;
+
+    & a {
+        color: inherit;
+        white-space: nowrap;
+        transition-duration: 0s;
+    }
+
+    &__phone {
+        font-size: 3em;
+        line-height: 1.06em;
+        font-weight: bold;
+    }
+    &__mail {
+        font-size: 2.4em;
+        letter-spacing: 0.01125em;
+        line-height: 1.33em;
+    }
+}

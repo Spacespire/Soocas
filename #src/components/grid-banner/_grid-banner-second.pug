@@ -1,0 +1,73 @@
+.grid-banner.grid-banner--second
+    .container
+        h3.grid-banner__title.text-uppercase.text-center.wow.fadeInUp(data-wow-duration="0.8s")
+            strong Зубные щетки Soocas:
+            | безупречный уход за зубами и деснами
+            
+        .grid-banner__inner.wow.fadeInUp(data-wow-duration="0.8s") 
+            .grid-banner__card-wrap 
+                .card.card--preview
+                    .card__img-wrap
+                        a(href="#")
+                            .card__img 
+                                img(src="img/photo/card-preview-img-2.jpg", alt="")
+                    .card__text-wrap
+                        .card__title.text 
+                            a(href="#") Soocas X3PRO UVC Sanitizer Sonic Toothbrush Purple
+
+                        .card__bottom 
+                            .card__price 1999 ₽
+                            +btn('#', false, 'купить')(class="card__btn") 
+                        a(href="").card__link-all-products(style="color: rgba(73, 60, 139, 0.77);") Все ЗУБНЫЕ ЩЕТКИ
+
+            .grid-banner__grid.swiper(data-slider="grid-banner" data-mobile="false")
+                .swiper-wrapper 
+                    .swiper-slide.grid-banner__item.grid-banner__item--1
+                        a(href="#").grid-banner__item-inner.not-hover
+                            .grid-banner__img.ibg 
+                                picture
+                                    source(srcset="img/photo/grid-banner-img-4.jpg" media="(min-width: 768px)")
+                                    img(src="img/photo/grid-banner-img-mob-1.jpg" alt="img")
+                            .grid-banner__text 
+                                p Электрическая зубная <br>
+                                    | щетка со стерилизатором <br>
+                                    | Soocas X3PRO UVC <br>
+                                    | Sanitizer Sonic <br>
+                                    | Toothbrush Purple
+
+                    .swiper-slide.grid-banner__item.grid-banner__item--2
+                        a(href="#").grid-banner__item-inner.not-hover
+                            .grid-banner__img.ibg 
+                                picture
+                                    source(srcset="img/photo/grid-banner-img-5.jpg" media="(min-width: 768px)")
+                                    img(src="img/photo/grid-banner-img-mob-2.jpg" alt="img")
+                            .grid-banner__text 
+                                p УФ-стерилизатор <br>
+                                    | в комплекте: уничтожает <br>
+                                    | до <b><strong>99,99</strong> %</b> <br>
+                                    | бактерий
+                    .swiper-slide.grid-banner__item.grid-banner__item--3
+                        a(href="#").grid-banner__item-inner.not-hover
+                            .grid-banner__img.ibg 
+                                picture
+                                    source(srcset="img/photo/grid-banner-img-6.jpg" media="(min-width: 768px)")
+                                    img(src="img/photo/grid-banner-img-mob-3.jpg" alt="img")
+                            .grid-banner__text 
+                                p Стильный <br>
+                                    | водонепроницаемый <br>
+                                    | корпус IPX7 
+
+                    .swiper-slide.grid-banner__item.grid-banner__item--4
+                        a(href="#").grid-banner__item-inner.not-hover
+                            .grid-banner__img.ibg 
+                                picture
+                                    source(srcset="img/photo/grid-banner-img-7.jpg" media="(min-width: 768px)")
+                                    img(src="img/photo/grid-banner-img-mob-3.jpg" alt="img")
+                            .grid-banner__text 
+                                p Работает <br>
+                                    | до 6 месяцев <br>
+                                    | на одном заряде
+
+                .grid-banner__slider-dots
+                    include ../common/slider-dots/_slider-dots
+

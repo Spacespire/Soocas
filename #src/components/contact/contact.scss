@@ -1,0 +1,245 @@
+.contact {
+    padding: 8rem 0;
+
+    @media (max-width: $md2+px) {
+        padding: 60px 0 80px;
+    }
+
+    @media (max-width: $md3+px) {
+        padding: 30px 0 50px;
+
+        &:first-child {
+            padding-top: 0;
+        }
+    }
+
+    &__row {
+        margin-bottom: 14rem;
+
+        @media (max-width: $md2+px) {
+            margin-bottom: 80px;
+        }
+        @media (max-width: $md3+px) {
+            margin-bottom: 60px;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__title {
+        margin-bottom: 11.5rem;
+
+        @media (max-width: $md2+px) {
+            margin-bottom: 60px;
+        }
+        @media (max-width: $md3+px) {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__info {
+    }
+
+    &__form  {
+        margin: 0 auto;
+        max-width: 129.7rem;
+    }
+}
+
+.info-contact {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: -7rem;
+
+    @media (max-width: $md2+px) {
+        margin-bottom: -35px;
+    }
+
+    @media (max-width: $md3+px) {
+        margin-bottom: 0;
+        display: block;
+        text-align: center;
+    }
+
+    &__col {
+        flex: 1 1 auto;
+        max-width: 46.2rem;
+        margin-bottom: 7rem;
+
+        @media (max-width: $md2+px) {
+            margin-bottom: 35px;
+        }
+
+        @media (max-width: $md3+px) {
+            max-width: none;
+        }
+
+        &:not(:last-child) {
+            @media (min-width: 768px) {
+                padding-right: 2rem;
+            }
+        }
+
+        & > *:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__item {
+        margin-bottom: 7rem;
+
+        @media (max-width: $md2+px) {
+            margin-bottom: 40px;
+        }
+
+        & > *:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__label {
+        margin-bottom: 3rem;
+
+        @media (max-width: $md2+px) {
+            margin-bottom: 15px;
+        }
+
+    }
+
+    &__footnote {
+        font-weight: 500;
+        font-size: 2.4rem;
+        line-height: 1.33em;
+        max-width: 15.75em;
+        color: $textColorSecondary;
+        margin-bottom: 3.2rem;
+
+        @media (max-width: $md2+px) {
+            font-size: 18px;
+        }
+
+        @media (max-width: $md3+px) {
+            font-size: 16px;
+            margin: 0 auto 15px;
+        }
+    }
+
+    &__text {
+        margin-bottom: 3.2rem;
+
+        @media (max-width: $md3+px) {
+            margin-bottom: 15px;
+        }
+
+        & > *:last-child {
+            margin-bottom: 0;
+        }
+
+    }
+
+    &__social {
+        padding-top: 1rem;
+        & .social {
+            justify-content: flex-start;
+
+            @media (max-width: $md3+px) {
+                justify-content: center;
+            }
+        }
+
+        & .social__item {
+            &:not(:last-child) {
+                margin-right: 5.6rem;
+
+                @media (max-width: $md2+px) {
+                    margin-right: 4rem;
+                }
+
+                @media (max-width: $md3+px) {
+                    margin-right: 3rem;
+                }
+            }
+        }
+
+        & a {
+            font-size: 6rem;
+
+            & .icon-vk {
+                font-size: 5rem;
+            }
+
+            @media (max-width: $md2+px) {
+                font-size: 4rem;
+
+                & .icon-vk {
+                    font-size: 3.4rem;
+                }
+            }
+            @media (max-width: $md3+px) {
+                font-size: 3rem;
+
+                & .icon-vk {
+                    font-size: 2.4rem;
+                }
+            }
+        }
+    }
+}
+
+.form-contact {
+    &__items {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    &__item {
+        flex: 0 1 100%;
+        margin-bottom: 7.5rem;
+        position: relative;
+
+        @media (max-width: $md2+px) {
+            margin-bottom: 50px;
+        }
+        @media (max-width: $md3+px) {
+            margin-bottom: 30px;
+        }
+
+        &:last-child {
+            margin-bottom: 5rem;
+
+            @media (max-width: $md2+px) {
+                margin-bottom: 30px;
+            }
+        }
+
+        &--half {
+            @media (min-width: 768px) {
+                flex: 0 1 calc(50% - 1.5rem);
+            }
+        }
+
+        &--required {
+            &:before {
+                position: absolute;
+                content: '*';
+                top: 1rem;
+                left: 0;
+                color: $mainColor;
+            }
+
+            & .form-control, & .form-select {
+                padding-left: 1.8rem;
+            }
+        }
+    }
+
+    &__submit {
+        @media (max-width: 575.98px) {
+            width: 100%;
+        }
+    }
+}

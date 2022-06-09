@@ -1,0 +1,1726 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soocas</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style type="text/css">
+      body.page-is-load ._preload-body {
+          opacity: 0;
+          visibility: hidden;
+      }
+      
+      body.page-is-load ._preload-body:before {
+          display: none;
+      }
+      
+      ._preload-body {
+          background-color: #fff;
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: 999;
+          transition: all .6s ease .2s;
+      }
+      
+      ._preload-body:before {
+          position: absolute;
+          content: '';
+          z-index: 999;
+          top: 50%;
+          left: 50%;
+          height: 50px;
+          width: 50px;
+          border-radius: 50%;
+          border: 4px solid #6e6e6e;
+          border-right: 4px solid #fff;
+          transform: translate(-50%, -50%);
+          animation: preloadBody 2s linear infinite;
+      }
+      
+      @keyframes preloadBody {
+          from {
+              transform: translate(-50%, -50%) rotate(0);
+          }
+      
+          to {
+              transform: translate(-50%, -50%) rotate(360deg);
+          }
+      }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/vendors.js"></script>
+    <script src="js/app.js"></script>
+  </head>
+  <body>
+    <div class="_preload-body"></div>
+    <header class="header header--text-dark" data-header data-popup="add-right-padding"><a class="top-line-message" href="#"><!-- use class .top-line-message--show -->
+        <p>Рождественская скидка 20% на все товары!</p></a>
+      <div class="container"> 
+        <div class="header__body">
+          <div class="header__logo"><a href="/"> <img src="img/logo/logo.svg" alt=""></a></div>
+          <nav class="header__menu menu"> 
+            <ul class="menu__list">
+              <li class="menu__list-item menu__list-item--has-sab-menu"><a class="menu__link menu__link--with-chevron" href="#">Продукты <!-- use class .menu__link--active --></a>
+                <div class="menu__sub-menu-wrap">
+                  <ul class="sub-menu">
+                    <li><a class="sub-menu__link" href="#">Бритвы и триммеры  <!-- use class .sub-menu__link--active --></a></li>
+                    <li><a class="sub-menu__link" href="#">Зубные щетки и ирригаторы</a></li>
+                    <li><a class="sub-menu__link" href="#">Фены для волос </a></li>
+                    <li><a class="sub-menu__link" href="#">Аксессуары</a></li>
+                    <li><a class="sub-menu__link" href="#">Акции</a></li>
+                  </ul>
+                  <div class="menu__img"><a href="#"> <img src="img/photo/sub-menu-img.png" alt=""></a></div>
+                </div>
+              </li>
+              <li class="menu__list-item"><a class="menu__link" href="#">Доставка и оплата</a></li>
+              <li class="menu__list-item menu__list-item--has-sab-menu"><a class="menu__link menu__link--with-chevron" href="#">Сервис</a>
+                <div class="menu__sub-menu-wrap">
+                  <ul class="sub-menu">
+                    <li><a class="sub-menu__link" href="#">Сервисные услуги</a></li>
+                    <li><a class="sub-menu__link" href="#">Возврат и обмен</a></li>
+                    <li><a class="sub-menu__link" href="#">Инструкции</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="menu__list-item menu__list-item--has-sab-menu"><a class="menu__link menu__link--with-chevron" href="#">О нас</a>
+                <div class="menu__sub-menu-wrap">
+                  <ul class="sub-menu">
+                    <li><a class="sub-menu__link" href="#">О бренде</a></li>
+                    <li><a class="sub-menu__link" href="#">Новости</a></li>
+                    <li><a class="sub-menu__link" href="#">Наши партнеры</a></li>
+                    <li><a class="sub-menu__link" href="#">Контакты</a></li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </nav>
+          <div class="header__contact-info">
+            <div class="contact-info"> <a class="contact-info__phone" href="tel:74957777777">+7 (495) 777-77-77</a><a class="contact-info__mail" href="mailto:info@di-house.ru">info@di-house.ru</a></div>
+          </div>
+          <div class="header__actions">
+            <div class="header-actions">
+              <div class="header-actions__item header-actions__item--search"><a class="header-actions__link" href="#popupSerch" data-popup="open-popup"><i class="icon-search"></i></a></div>
+              <div class="header-actions__item"><a class="header-actions__link" href="#"><i class="icon-user"></i></a></div>
+              <div class="header-actions__item"><a class="header-actions__link" href="#"><i class="icon-bag"></i><span class="header-actions__num-products">2</span></a></div>
+            </div>
+          </div>
+          <div class="header__burger burger" data-action="toggle-menu-mobile"> <span class="burger__cross"></span><span class="burger__cross"></span><span class="burger__cross"></span><span class="burger__cross"></span></div>
+        </div>
+      </div>
+    </header>
+    <div class="menu-mobile" data-menu-mobile> 
+      <ul class="menu-mobile__list">
+        <li class="menu-mobile__list-item" data-toggle-sab><a class="menu-mobile__link menu-mobile__link--with-chevron menu-mobile__link" href="#">Продукты <!-- use .menu-mobile__link --></a>
+          <ul class="sub-menu">
+            <li><a class="sub-menu__link" href="#">Бритвы и триммеры  <!-- use class .sub-menu__link--active --></a></li>
+            <li><a class="sub-menu__link" href="#">Зубные щетки и ирригаторы</a></li>
+            <li><a class="sub-menu__link" href="#">Фены для волос </a></li>
+            <li><a class="sub-menu__link" href="#">Аксессуары</a></li>
+            <li><a class="sub-menu__link" href="#">Акции</a></li>
+          </ul>
+        </li>
+        <li class="menu-mobile__list-item"><a class="menu-mobile__link" href="#">Доставка и оплата</a></li>
+        <li class="menu-mobile__list-item" data-toggle-sab><a class="menu-mobile__link menu-mobile__link--with-chevron" href="#">Сервис</a>
+          <ul class="sub-menu">
+            <li><a class="sub-menu__link" href="#">Сервисные услуги</a></li>
+            <li><a class="sub-menu__link" href="#">Возврат и обмен</a></li>
+            <li><a class="sub-menu__link" href="#">Инструкции</a></li>
+          </ul>
+        </li>
+        <li class="menu-mobile__list-item" data-toggle-sab><a class="menu-mobile__link menu-mobile__link--with-chevron" href="#">О нас</a>
+          <ul class="sub-menu">
+            <li><a class="sub-menu__link" href="#">О бренде</a></li>
+            <li><a class="sub-menu__link" href="#">Новости</a></li>
+            <li><a class="sub-menu__link" href="#">Наши партнеры</a></li>
+            <li><a class="sub-menu__link" href="#">Контакты</a></li>
+          </ul>
+        </li>
+      </ul>
+      <div class="menu-mobile__search">
+        <form class="menu-mobile-search">
+          <input class="menu-mobile-search__field" type="text" placeholder="Поиск…">
+          <button class="menu-mobile-search__submit"> <i class="icon-search"></i></button>
+        </form>
+      </div>
+      <div class="menu-mobile__contact-info">
+        <div class="contact-info"> <a class="contact-info__phone" href="tel:74957777777">+7 (495) 777-77-77</a><a class="contact-info__mail" href="mailto:info@di-house.ru">info@di-house.ru</a></div>
+      </div>
+      <div class="menu-mobile__social">
+        <ul class="social"> 
+          <li class="social__item"> <a href="#"> <i class="icon-vk"></i></a></li>
+        </ul>
+      </div>
+    </div>
+    <main class="_page product-details-page padding-top-header-size">
+      <section class="product-full-info">
+        <div class="product-full-info__previev"> 
+          <div class="product-preview">
+            <div class="container product-preview__body"> 
+              <div class="product-preview__col-1">
+                <div class="product-preview__breadcrumb">
+                      <ul class="breadcrumb">
+                        <li class="breadcrumb__item"> <a class="breadcrumb__link" href="#">Главная</a></li>
+                        <li class="breadcrumb__item"> <a class="breadcrumb__link" href="#">Каталог товаров</a></li>
+                        <li class="breadcrumb__item">ADO A20F</li>
+                      </ul>
+                </div>
+                <div class="product-preview__slider">
+                  <div class="product-preview__slider-thumbs swiper" data-slider="product-preview-slider-thumbs">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide product-preview__slider-thumbs-item"> <img src="img/photo/product-preview-slider-thumb-img-1.jpg" alt=""></div>
+                      <div class="swiper-slide product-preview__slider-thumbs-item"> <img src="img/photo/product-preview-slider-thumb-img-2.jpg" alt=""></div>
+                      <div class="swiper-slide product-preview__slider-thumbs-item"> <img src="img/photo/product-preview-slider-thumb-img-3.jpg" alt=""></div>
+                      <div class="swiper-slide product-preview__slider-thumbs-item"> <img src="img/photo/product-preview-slider-thumb-img-4.jpg" alt=""></div>
+                      <div class="swiper-slide product-preview__slider-thumbs-item"> <img src="img/photo/product-preview-slider-thumb-img-5.jpg" alt=""></div>
+                      <div class="swiper-slide product-preview__slider-thumbs-item"> <img src="img/photo/product-preview-slider-thumb-img-1.jpg" alt=""></div>
+                      <div class="swiper-slide product-preview__slider-thumbs-item"> <img src="img/photo/product-preview-slider-thumb-img-2.jpg" alt=""></div>
+                    </div>
+                    <div class="product-preview__slider-thumbs-btn" data-action="slider-next"><i class="icon-chevron-down"></i></div>
+                  </div>
+                  <div class="product-preview__slider-images swiper" data-slider="product-preview-slider-images" data-zoom-container>
+                    <div class="product-preview__slider-images-label"> 
+                          <div class="product-label">Подарок</div>
+                    </div>
+                    <div data-zoom-zone></div>
+                    <div class="swiper-wrapper"> 
+                      <div class="swiper-slide product-preview__slider-images-item"><img class="swiper-lazy" data-src="img/photo/product-preview-slider-images-1.jpg" data-zoom-img="img/photo/product-preview-slider-images-1.jpg" alt=""></div>
+                      <div class="swiper-slide product-preview__slider-images-item"> <img class="swiper-lazy" data-src="img/photo/promo-header-img-1.png" data-zoom-img="img/photo/promo-header-img-1.png" alt=""></div>
+                      <div class="swiper-slide product-preview__slider-images-item"> <img class="swiper-lazy" data-src="img/photo/product-preview-slider-images-1.jpg" data-zoom-img="img/photo/product-preview-slider-images-1.jpg" alt=""></div>
+                      <div class="swiper-slide product-preview__slider-images-item"> <img class="swiper-lazy" data-src="img/photo/product-preview-slider-images-1.jpg" data-zoom-img="img/photo/product-preview-slider-images-1.jpg" alt=""></div>
+                      <div class="swiper-slide product-preview__slider-images-item"> <img class="swiper-lazy" data-src="img/photo/product-preview-slider-images-1.jpg" data-zoom-img="img/photo/product-preview-slider-images-1.jpg" alt=""></div>
+                      <div class="swiper-slide product-preview__slider-images-item"> <img class="swiper-lazy" data-src="img/photo/product-preview-slider-images-1.jpg" data-zoom-img="img/photo/product-preview-slider-images-1.jpg" alt=""></div>
+                      <div class="swiper-slide product-preview__slider-images-item"> <img class="swiper-lazy" data-src="img/photo/product-preview-slider-images-1.jpg" data-zoom-img="img/photo/product-preview-slider-images-1.jpg" alt=""></div>
+                    </div>
+                    <div class="product-preview__slider-images-dots">
+                      <div class="slider-dots" data-slider-dots></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <form class="product-preview__col-2">
+                <div class="product-preview__row product-preview__row--1 order-2 order-md-1 d-flex justify-content-between align-items-center">
+                  <div class="product-preview__promotion">
+                    <div class="product-preview__promotion-label"> <span>Акция </span></div>
+                    <div class="product-preview__promotion-time"> <span class="timer" data-timer="02/19/2022 10:00:00 PM">Осталось <span class="timer__hours">23</span>:<span class="timer__minutes">12</span>:<span class="timer__seconds">12</span></span></div>
+                  </div>
+                  <div class="product-preview__product-number">Артикул: 045829</div>
+                </div>
+                <div class="product-preview__row product-preview__row--2 order-1 order-md-2">
+                  <h3 class="product-preview__title">Мощный электровелосипед <br> ADO A20F <span class="product-preview__title--show-mobile">(Акция!)</span></h3>
+                </div>
+                <div class="product-preview__row product-preview__row--3 order-6 order-md-3 text-content">
+                  <p>ADO A20F — высокопроизводительный двигатель и широкие колеса гарантируют комфорт, безопасность и высокую проходимость.</p>
+                  <ul> 
+                    <li>Запас хода на электротяге — до 40 км, в смешанном режиме —  до 80 км.</li>
+                    <li>Диаметр колес 20 дюймов.</li>
+                    <li>7-ступенчатая трансмиссия Shimano: быстрое переключение передач, полный контроль над движениями.</li>
+                    <li>Полная зарядка батареи занимает всего 4-6 часов.</li>
+                    <li>Вес — 29 кг, складная алюминиевая рама, яркая LED-подсветка, удобная приборная панель.</li>
+                  </ul>
+                </div>
+                <div class="product-preview__row product-preview__row--4 order-4">
+                  <div class="product-preview__colors d-flex align-items-center">
+                    <div class="product-preview__label">Цвет: </div>
+                    <div class="product-preview__colors-list"> 
+                      <ul class="list-colors"> 
+                        <li class="list-colors__item"> <a class="list-colors__item-color" href="#" style="background-color: #000;"></a></li>
+                        <li class="list-colors__item"> <a class="list-colors__item-color list-colors__item-color--disabled" href="#" style="background-color: #fff;"></a></li>
+                        <li class="list-colors__item"> <a class="list-colors__item-color list-colors__item-color--disabled" href="#" style="background-color: #9142F4;"></a></li>
+                        <li class="list-colors__item"> <a class="list-colors__item-color" href="#" style="background-color: #EE26C8;"></a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="product-preview__row product-preview__row--4 order-4">
+                  <div class="product-preview__present">
+                    <div class="product-preview__present-head"> 
+                      <div class="product-preview__present-time">До конца акции <span class="timer" data-timer="02/19/2022 10:00:00 PM">Осталось <span class="timer__hours">23</span>:<span class="timer__minutes">12</span>:<span class="timer__seconds">12</span></span></div>
+                      <div class="product-preview__present-label">Подарок</div>
+                    </div>
+                    <div class="product-preview__present-body"> 
+                      <div class="product-preview__present-img"><img src="img/photo/card-img-details.png" alt=""></div>
+                      <div class="product-preview__present-title">Акумулятор ADO A20 Electric Bike Battery 36V 10.4Ah</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="product-preview__row product-preview__row--5 order-5">
+                  <div class="product-preview__quantity d-flex align-items-center">
+                    <div class="product-preview__label">Количество:</div>
+                    <div class="product-preview__quantity-action">
+                      <div class="quantity" data-quantity>
+                        <div class="quantity__btn quantity__btn--minus"> </div>
+                        <input class="quantity__input" type="text" value="1">
+                        <div class="quantity__btn quantity__btn--plus"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="product-preview__row product-preview__row--6 order-3 order-md-6">
+                  <div class="product-preview__bottom"> 
+                    <div class="product-preview__price">19 999 ₽<span class="product-preview__price-old">21 599 ₽</span></div>
+                    <button class="product-preview__btn btn btn--secondary"><span>купить</span></button><a class="product-preview__add-to-compare" href="http://localhost:3000/compare.html"> <span>Добавить</span><span>к сравнению</span></a>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="product-full-info__details"> 
+          <div class="product-details" data-tabs>
+            <div class="product-details__head"> 
+              <div class="container"> 
+                <div class="product-details__nav swiper" data-slider="product-details-nav">
+                  <div class="swiper-wrapper"> 
+                    <div class="swiper-slide product-details__nav-item" data-tab-trigger="0">Описание</div>
+                    <div class="swiper-slide product-details__nav-item" data-tab-trigger="1">Характеристики</div>
+                    <div class="swiper-slide product-details__nav-item" data-tab-trigger="2">Комплектация</div>
+                    <div class="swiper-slide product-details__nav-item" data-tab-trigger="3">Аксессуары и комплектующие</div>
+                    <div class="swiper-slide product-details__nav-item" data-tab-trigger="4">Обзоры</div>
+                    <div class="swiper-slide product-details__nav-item" data-tab-trigger="5">Отзывы</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product-details__body">
+              <div class="product-details__content pt-0" data-tab-content="0">
+                <div class="padding-wrap bg-black text-white">
+                  <div class="container">
+                    <div class="head mb-0"> 
+                      <h3 class="head__title text-center"> Умная техника для дома Smartmi</h3>
+                      <p class="head__subtitle text text-center">Инновации, заслуживающие внимания.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="video-full-width">
+                  <video src="img/Video-Purification.mp4" playsinline loop muted autoplay></video>
+                </div>
+                <section class="ban-img-full-width">
+                  <div class="container"> 
+                    <div class="ban-img-full-width__body"> 
+                      <div class="ban-img-full-width__text-wrap">
+                        <h2 class="ban-img-full-width__title wow fadeInUp" data-wow-duration="2s">Умная техника для дома Smartmi</h2>
+                        <div class="ban-img-full-width__text text wow fadeInUp" data-wow-duration="2s">Инновации, заслуживающие внимания.</div>
+                      </div>
+                      <div class="ban-img-full-width__img ibg"> 
+                        <picture>
+                          <source srcset="img/photo/ban-dark-img-3@2x.jpg" media="(min-width: 576px)"><img src="img/photo/article-img.jpg" alt="img">
+                        </picture>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+                <div class="padding-wrap bg-black text-white">
+                  <div class="container"> 
+                    <div class="head mb-0"> 
+                      <h3 class="head__title text-center">7-ступенчатая трансмиссия SHIMANO</h3>
+                      <div class="head__subtitle text text-center"> 
+                        <p>Комплектующие от легендарного японского бренда Shimano: надежность, качество, долговечность.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <section class="ban-light ban-light--row-revers">
+                  <div class="container"> 
+                    <div class="ban-light__body"> 
+                      <div class="ban-light__text-wrap"> 
+                        <h3 class="ban-light__title wow fadeInUp" data-wow-duration="2s">7-ступенчатая трансмиссия SHIMANO</h3>
+                        <div class="ban-light__text text wow fadeInUp" data-wow-duration="2s"> 
+                          <p>Комплектующие от легендарного японского бренда Shimano: надежность, качество, долговечность.</p>
+                        </div>
+                      </div>
+                      <div class="ban-light__img ibg img-contain">
+                        <picture>
+                          <source srcset="img/photo/app-review-img-right.png" media="(min-width: 768px)"><img class="undefined" src="img/photo/app-review-img-right.png" alt="img">
+                        </picture>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+                    <section class="ban-dark">
+                      <div class="container"> 
+                        <div class="ban-dark__body"> 
+                          <div class="ban-dark__text-wrap">
+                            <h3 class="ban-dark__title wow fadeInUp" data-wow-duration="2s">7-ступенчатая трансмиссия SHIMANO</h3>
+                            <div class="ban-dark__text text wow fadeInUp" data-wow-duration="2s"><p>Комплектующие от легендарного японского бренда Shimano: надежность, качество, долговечность.</p></div>
+                          </div>
+                          <div class="ban-dark__img ibg">
+                            <picture>
+                              <source srcset="img/photo/ban-dark-img-2.jpg" media="(min-width: 576px)"><img src="img/photo/ban-dark-img-2-mob.jpg" alt="img">
+                            </picture>
+                          </div>
+                        </div>
+                      </div>
+                    </section>
+                    <section class="ban-dark ban-dark--row-revers">
+                      <div class="container"> 
+                        <div class="ban-dark__body"> 
+                          <div class="ban-dark__text-wrap">
+                            <h3 class="ban-dark__title wow fadeInUp" data-wow-duration="2s">Универсальная амортизационная система Double Shock</h3>
+                            <div class="ban-dark__text text wow fadeInUp" data-wow-duration="2s"><p>Гибкая конструкция амортизатора адаптируется к любым дорожным условиям и нейтрализует удары и вибрации, обеспечивая комфортную езду.</p></div>
+                          </div>
+                          <div class="ban-dark__img ibg">
+                            <picture>
+                              <source srcset="img/photo/ban-dark-img-7.jpg" media="(min-width: 576px)"><img src="img/photo/ban-dark-img-7-mob.jpg" alt="img">
+                            </picture>
+                          </div>
+                        </div>
+                      </div>
+                    </section>
+                <div class="padding-wrap pb-0">
+                  <div class="container">
+                    <picture>
+                      <source class="w-100" srcset="img/photo/bike-schema-img-1.jpg" media="(min-width: 576px)"><img class="w-100" src="img/photo/bike-schema-img-mob-1.jpg" alt="img">
+                    </picture>
+                  </div>
+                </div>
+                    <div class="product-benefits">
+                      <div class="container">
+                        <ul class="product-benefits__list">
+                          <li> 
+                            <div class="product-benefits__icon"><img src="img/photo/product-benefits-icon-1.png" alt=""></div>
+                            <div class="product-benefits__text text">Экологичный стиль жизни </div>
+                          </li>
+                          <li> 
+                            <div class="product-benefits__icon"><img src="img/photo/product-benefits-icon-2.png" alt=""></div>
+                            <div class="product-benefits__text text">Удобство <br> эксплуатации</div>
+                          </li>
+                          <li> 
+                            <div class="product-benefits__icon"><img src="img/photo/product-benefits-icon-3.png" alt=""></div>
+                            <div class="product-benefits__text text">Износостойкие комплектующие</div>
+                          </li>
+                          <li> 
+                            <div class="product-benefits__icon"><img src="img/photo/product-benefits-icon-4.png" alt=""></div>
+                            <div class="product-benefits__text text">Официальное представительство в РФ</div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                <div class="mini-gallery"> 
+                  <div class="container"> 
+                    <ul class="mini-gallery__list">
+                      <li class="mini-gallery__list-item"> 
+                        <div class="mini-gallery-card">
+                          <div class="mini-gallery-card__img ibg"> <img src="img/photo/mini-gallery-card-img-1.jpg" alt=""></div>
+                          <div class="mini-gallery-card__text text">IPX5 водонепроницаемый корпус</div>
+                        </div>
+                      </li>
+                      <li class="mini-gallery__list-item"> 
+                        <div class="mini-gallery-card">
+                          <div class="mini-gallery-card__img ibg"> <img src="img/photo/mini-gallery-card-img-2.jpg" alt=""></div>
+                          <div class="mini-gallery-card__text text">Широкоугольная LED-фара</div>
+                        </div>
+                      </li>
+                      <li class="mini-gallery__list-item"> 
+                        <div class="mini-gallery-card">
+                          <div class="mini-gallery-card__img ibg"> <img src="img/photo/mini-gallery-card-img-3.jpg" alt=""></div>
+                          <div class="mini-gallery-card__text text">Удобная зарядка и подставка для смартфона</div>
+                        </div>
+                      </li>
+                      <li class="mini-gallery__list-item"> 
+                        <div class="mini-gallery-card">
+                          <div class="mini-gallery-card__img ibg"> <img src="img/photo/mini-gallery-card-img-4.jpg" alt=""></div>
+                          <div class="mini-gallery-card__text text">HD LCD-дисплей с хорошей видимостью даже в солнечную погоду </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <picture>
+                  <source class="w-100" srcset="img/photo/promo-header-img-1.jpg" media="(min-width: 576px)"><img class="w-100" src="img/photo/promo-header-img-2.jpg" alt="img">
+                </picture>
+                    <section class="video-banner video-banner--text-over-video">
+                      <div class="video-banner__head">
+                        <div class="container"> 
+                          <h3 class="video-banner__title">Умная техника для дома Smartmi</h3>
+                          <p class="video-banner__subtitle subtitle">Инновации, заслуживающие внимания.</p>
+                        </div>
+                      </div>
+                      <div class="video-banner__inner">
+                        <video src="img/Video-Purification.mp4" playsinline loop muted autoplay></video>
+                      </div>
+                    </section>
+              </div>
+              <div class="product-details__content" data-tab-content="1">
+                <div class="product-details__content-row">
+                  <div class="container-sm">
+                    <h3 class="title-3 text-center">Регулируемые Размеры</h3><img class="w-100 h-auto" src="img/photo/bike-size.jpg" alt="">
+                  </div>
+                </div>
+                <div class="product-details__content-row">
+                  <div class="container-sm">
+                    <h3 class="title-3 text-center">Технические характеристики</h3>
+                    <table class="table-default">
+                      <tr> 
+                        <th class="bg-dark text-white" colspan="2">Main Parameters</th>
+                      </tr>
+                      <tr> 
+                        <th class="bg-primary text-white" colspan="2">General</th>
+                      </tr>
+                      <tr> 
+                        <td>Brand</td>
+                        <td>ADO</td>
+                      </tr>
+                      <tr> 
+                        <td class="bg-light">Type</td>
+                        <td class="bg-light">20*4.0 Inches</td>
+                      </tr>
+                      <tr> 
+                        <td>Model</td>
+                        <td>A20F</td>
+                      </tr>
+                      <tr> 
+                        <td class="bg-light">Color</td>
+                        <td class="bg-light">Black/White</td>
+                      </tr>
+                    </table>
+                    <table class="table-default">
+                      <tr> 
+                        <th class="bg-primary text-white" colspan="2">Vehicle Performance</th>
+                      </tr>
+                      <tr> 
+                        <td rowspan="2">Dimensions L×W×H</td>
+                        <td>Overall unit：1740*530*1200 mm</td>
+                      </tr>
+                      <tr> 
+                        <td>After folding：980*450*770 mm</td>
+                      </tr>
+                      <tr> 
+                        <td class="bg-light">Package Size</td>
+                        <td class="bg-light">1010*490*710mm</td>
+                      </tr>
+                      <tr> 
+                        <td>Operating Temperature</td>
+                        <td>-10~40°C</td>
+                      </tr>
+                      <tr> 
+                        <td class="bg-light">Storage Temperature</td>
+                        <td class="bg-light">-20~50°C</td>
+                      </tr>
+                      <tr> 
+                        <td>Net Weight</td>
+                        <td>29kg</td>
+                      </tr>
+                      <tr> 
+                        <td class="bg-light">Gross weight</td>
+                        <td class="bg-light">IPX5</td>
+                      </tr>
+                      <tr> 
+                        <td>IP Rating</td>
+                        <td>-10~40°C</td>
+                      </tr>
+                      <tr> 
+                        <td class="bg-light">Max. Speed</td>
+                        <td class="bg-light">25km/35km (Unlock mode)</td>
+                      </tr>
+                      <tr> 
+                        <td>Transmission</td>
+                        <td>Shimano 7 Speed</td>
+                      </tr>
+                      <tr> 
+                        <td class="bg-light">Gear ratio</td>
+                        <td class="bg-light">(28-14):48</td>
+                      </tr>
+                      <tr> 
+                        <td>Electric range</td>
+                        <td><50km</td>
+                      </tr>
+                      <tr> 
+                        <td class="bg-light">Assisting range</td>
+                        <td class="bg-light"><70km</td>
+                      </tr>
+                      <tr> 
+                        <td>Shock-absorption</td>
+                        <td>Front Fork and Rubber pneumatic tire</td>
+                      </tr>
+                      <tr> 
+                        <td class="bg-light" rowspan="2">Brake</td>
+                        <td class="bg-light">Front: Mechanical disc brake</td>
+                      </tr>
+                      <tr> 
+                        <td class="bg-light">Rear: Mechanical disc brake</td>
+                      </tr>
+                    </table>
+                    <table class="table-default">
+                      <tr> 
+                        <th class="bg-dark text-white" colspan="2">Mechanic</th>
+                      </tr>
+                      <tr> 
+                        <th class="bg-primary text-white" colspan="2">Head of Bicycle</th>
+                      </tr>
+                      <tr> 
+                        <td>Material</td>
+                        <td>Aluminum alloy</td>
+                      </tr>
+                      <tr> 
+                        <td class="bg-light">Handgrip Material</td>
+                        <td class="bg-light">TPR</td>
+                      </tr>
+                      <tr> 
+                        <td>Foldable</td>
+                        <td>Foldable, Adjustable</td>
+                      </tr>
+                      <tr> 
+                        <td class="bg-light">Adjustable of height</td>
+                        <td class="bg-light">Yes,with protective jacket</td>
+                      </tr>
+                      <tr> 
+                        <td>Throttle lever</td>
+                        <td>Yes</td>
+                      </tr>
+                      <tr> 
+                        <td class="bg-light">Small bell</td>
+                        <td class="bg-light">Electronic speaker</td>
+                      </tr>
+                      <tr> 
+                        <td>Brake handle</td>
+                        <td>left/Right</td>
+                      </tr>
+                      <tr> 
+                        <td class="bg-light">Mobile Phone Charging Station</td>
+                        <td class="bg-light">5V/1A USB type A+ Charging Base</td>
+                      </tr>
+                    </table>
+                    <table class="table-default">
+                      <tr> 
+                        <th class="bg-primary text-white" colspan="2">Front Wheel</th>
+                      </tr>
+                      <tr> 
+                        <td>Drivenmethod</td>
+                        <td>/</td>
+                      </tr>
+                      <tr> 
+                        <td class="bg-light">Material</td>
+                        <td class="bg-light">Aluminum alloy</td>
+                      </tr>
+                      <tr> 
+                        <td>Hub type</td>
+                        <td>Integrated molding hub</td>
+                      </tr>
+                      <tr> 
+                        <td class="bg-light">Size</td>
+                        <td class="bg-light">20 *4.0inch</td>
+                      </tr>
+                      <tr> 
+                        <td>Tire</td>
+                        <td>Mechanical disc brake </td>
+                      </tr>
+                      <tr> 
+                        <td class="bg-light">Brake </td>
+                        <td class="bg-light">Motor drive wheel </td>
+                      </tr>
+                    </table>
+                    <table class="table-default">
+                      <tr> 
+                        <th class="bg-primary text-white" colspan="2">Rear Wheel</th>
+                      </tr>
+                      <tr> 
+                        <td>Drivenmethod</td>
+                        <td>/</td>
+                      </tr>
+                      <tr> 
+                        <td class="bg-light">Material</td>
+                        <td class="bg-light">Aluminum alloy</td>
+                      </tr>
+                      <tr> 
+                        <td>Hub type</td>
+                        <td>Integrated molding hub</td>
+                      </tr>
+                      <tr> 
+                        <td class="bg-light">Size</td>
+                        <td class="bg-light">20 *4.0inch</td>
+                      </tr>
+                      <tr> 
+                        <td>Tire</td>
+                        <td>Rubber pneumatic tire (American gas nozzle)</td>
+                      </tr>
+                      <tr> 
+                        <td class="bg-light">Brake</td>
+                        <td class="bg-light">Mechanical disc brake</td>
+                      </tr>
+                    </table>
+                    <table class="table-default">
+                      <tr> 
+                        <th class="bg-primary text-white" colspan="2">Main Frame</th>
+                      </tr>
+                      <tr> 
+                        <td>Material </td>
+                        <td>Aluminum alloy</td>
+                      </tr>
+                      <tr> 
+                        <td class="bg-light">Type</td>
+                        <td class="bg-light">Main Girder Folding</td>
+                      </tr>
+                      <tr> 
+                        <td>Parking</td>
+                        <td>Parking stand </td>
+                      </tr>
+                      <tr> 
+                        <td class="bg-light">Battery location</td>
+                        <td class="bg-light">Built-in main girder</td>
+                      </tr>
+                      <tr> 
+                        <td>Reflect Sticker</td>
+                        <td>/</td>
+                      </tr>
+                      <tr> 
+                        <td class="bg-light">Max Steering Angle </td>
+                        <td class="bg-light">60°(each side)</td>
+                      </tr>
+                      <tr> 
+                        <td>Rear  Light </td>
+                        <td>Electric taillight</td>
+                      </tr>
+                      <tr> 
+                        <td class="bg-light">Air pump </td>
+                        <td class="bg-light">yes (Accessory)</td>
+                      </tr>
+                      <tr> 
+                        <td>Foot Pad Material </td>
+                        <td>Nylon</td>
+                      </tr>
+                      <tr> 
+                        <td class="bg-light">Foot Pad Type </td>
+                        <td class="bg-light">Folding</td>
+                      </tr>
+                      <tr> 
+                        <td>Carrying handle</td>
+                        <td>Yes</td>
+                      </tr>
+                    </table>
+                    <table class="table-default">
+                      <tr> 
+                        <th class="bg-primary text-white" colspan="2">Light auxiliary settings</th>
+                      </tr>
+                      <tr> 
+                        <td>Front white light + white reflector </td>
+                        <td>YES</td>
+                      </tr>
+                      <tr> 
+                        <td class="bg-light">Rear red light + red reflector </td>
+                        <td class="bg-light">YES</td>
+                      </tr>
+                      <tr> 
+                        <td>Two yellow reflectors before and after the pedal</td>
+                        <td>YES</td>
+                      </tr>
+                      <tr> 
+                        <td class="bg-light">Two yellow reflectors on the spoke</td>
+                        <td class="bg-light">YES</td>
+                      </tr>
+                    </table>
+                    <table class="table-default">
+                      <tr> 
+                        <th class="bg-dark text-white" colspan="2">Electronics Control</th>
+                      </tr>
+                      <tr> 
+                        <th class="bg-primary text-white" colspan="2">Battery</th>
+                      </tr>
+                      <tr> 
+                        <td>Material </td>
+                        <td>Lithium battery</td>
+                      </tr>
+                      <tr> 
+                        <td class="bg-light">Type of batteries</td>
+                        <td class="bg-light">Removable portable charging</td>
+                      </tr>
+                      <tr> 
+                        <td>Battery number </td>
+                        <td>40PCS</td>
+                      </tr>
+                      <tr> 
+                        <td class="bg-light">Rated Voltage </td>
+                        <td class="bg-light">36V</td>
+                      </tr>
+                      <tr> 
+                        <td>Charge cut-off voltage</td>
+                        <td>42V</td>
+                      </tr>
+                      <tr> 
+                        <td class="bg-light">Rated Capacity </td>
+                        <td class="bg-light">36V12.5AH</td>
+                      </tr>
+                      <tr> 
+                        <td>Charging Temperature </td>
+                        <td>0~40°C</td>
+                      </tr>
+                      <tr> 
+                        <td class="bg-light">Battery ManagementSystem</td>
+                        <td class="bg-light">Over-heating, Short circuit, Over- current, Over-charge protection</td>
+                      </tr>
+                    </table>
+                    <table class="table-default">
+                      <tr> 
+                        <th class="bg-primary text-white" colspan="2">Charger</th>
+                      </tr>
+                      <tr> 
+                        <td>Input Voltage </td>
+                        <td>100~240V, 50/60Hz</td>
+                      </tr>
+                      <tr> 
+                        <td class="bg-light">Output Voltage   </td>
+                        <td class="bg-light">42V DC</td>
+                      </tr>
+                      <tr> 
+                        <td>Output Current  </td>
+                        <td>2A</td>
+                      </tr>
+                      <tr> 
+                        <td class="bg-light">Output Power  </td>
+                        <td class="bg-light">84W</td>
+                      </tr>
+                    </table>
+                    <table class="table-default">
+                      <tr> 
+                        <th class="bg-primary text-white" colspan="2">Motor</th>
+                      </tr>
+                      <tr> 
+                        <td>Brand </td>
+                        <td>\</td>
+                      </tr>
+                      <tr> 
+                        <td class="bg-light">Motor Type  </td>
+                        <td class="bg-light">Hall Brushless Gear DC Motor </td>
+                      </tr>
+                      <tr> 
+                        <td>Rated Voltage  </td>
+                        <td>36V</td>
+                      </tr>
+                      <tr> 
+                        <td class="bg-light">Rated Power   </td>
+                        <td class="bg-light">CE Version：250W（Unlock Mode：500W）；Internation Version:500W</td>
+                      </tr>
+                      <tr> 
+                        <td>Max. Power  </td>
+                        <td>\</td>
+                      </tr>
+                      <tr> 
+                        <td class="bg-light">Torque  </td>
+                        <td class="bg-light">45 N.m</td>
+                      </tr>
+                      <tr> 
+                        <td>Rated speed </td>
+                        <td>380 r/min</td>
+                      </tr>
+                    </table>
+                    <table class="table-default">
+                      <tr> 
+                        <th class="bg-primary text-white" colspan="2">System Control</th>
+                      </tr>
+                      <tr> 
+                        <td>Turn On/Off</td>
+                        <td rowspan="3">Visible button on the speed control handle </td>
+                      </tr>
+                      <tr>
+                        <td>Motor Riding Modes Switch</td>
+                      </tr>
+                      <tr>
+                        <td>Front Light Switch</td>
+                      </tr>
+                      <tr> 
+                        <td class="bg-light">Display Type </td>
+                        <td class="bg-light">886 Type HD LCD Display, Clearly under the sunshine</td>
+                      </tr>
+                      <tr> 
+                        <td>Display Contents </td>
+                        <td>Speed, mileage, Gear, glitch</td>
+                      </tr>
+                      <tr> 
+                        <td class="bg-light">Electronic booster starting point  </td>
+                        <td class="bg-light">6 KM start (CE )(Can change to 0KM start by enduser)</td>
+                      </tr>
+                      <tr> 
+                        <td>Under voltage protection</td>
+                        <td>31±2V</td>
+                      </tr>
+                      <tr> 
+                        <td class="bg-light">Over current protection </td>
+                        <td class="bg-light">15±2A</td>
+                      </tr>
+                    </table>
+                    <table class="table-default">
+                      <tr> 
+                        <th class="bg-dark text-white" colspan="2">ADO Dual System Controller (Dual System switch at will)</th>
+                      </tr>
+                      <tr> 
+                        <th class="bg-primary text-white" colspan="2">Pedal Assist System: (2 modes) Bicycle mode Pedal assist mode</th>
+                      </tr>
+                      <tr> 
+                        <td>0: Riding mode</td>
+                        <td rowspan="4">yes</td>
+                      </tr>
+                      <tr> 
+                        <td>1: Assist speed limit 15km/h</td>
+                      </tr>
+                      <tr>
+                        <td>2: Assist speed limit 20km/h</td>
+                      </tr>
+                      <tr> 
+                        <td>3: Assist speed limit 25km/h</td>
+                      </tr>
+                    </table>
+                    <table class="table-default">
+                      <tr> 
+                        <th class="bg-primary text-white" colspan="2">Hybrid Drive System: (3 modes) Bicycle mode Pedal assist mode Pure electric mode</th>
+                      </tr>
+                      <tr> 
+                        <td> 0: Riding mode</td>
+                        <td rowspan="4">yes </td>
+                      </tr>
+                      <tr> 
+                        <td>1: Assist speed limit 15km/h</td>
+                      </tr>
+                      <tr> 
+                        <td>3: Assist speed limit 25km/h</td>
+                      </tr>
+                      <tr> 
+                        <td>5: Pure electric: after 6 km/h, the speed limit is 25km(=P08)</td>
+                      </tr>
+                    </table>
+                    <table class="table-default">
+                      <tr> 
+                        <th class="bg-dark text-white" colspan="2">Main Selling Points</th>
+                      </tr>
+                      <tr> 
+                        <td>1</td>
+                        <td>20*4.0 Inches tires with Integrated molding hub</td>
+                      </tr>
+                      <tr> 
+                        <td class="bg-light">2</td>
+                        <td class="bg-light">500W Power rate Gear Motor with 380 r/Min speed</td>
+                      </tr>
+                      <tr> 
+                        <td>3</td>
+                        <td>Front fork and addle tube double Shock-absorption</td>
+                      </tr>
+                      <tr> 
+                        <td class="bg-light">4</td>
+                        <td class="bg-light">886 Type HD LCD Display,clearly under the sunshine</td>
+                      </tr>
+                      <tr> 
+                        <td>5</td>
+                        <td>Humanization design,like USB Charger/Carrying handle....</td>
+                      </tr>
+                      <tr> 
+                        <td class="bg-light">6</td>
+                        <td class="bg-light">Dual mode free switching</td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="product-details__content" data-tab-content="2">
+                <div class="product-details__content-row">
+                  <div class="container"> 
+                    <div class="row"> 
+                      <div class="col-12 col-md-8"> 
+                        <div class="text-content"> 
+                          <ol>
+                            <li>Держатель для мобильного телефона - х1</li>
+                            <li>Зарядный блок и шнур - х1 </li>
+                            <li>Руководство по эксплуатации</li>
+                            <li>Краткое руководство по установке - x1</li>
+                            <li>Шестигранная отвертка, 5 мм - х1</li>
+                            <li>Шестигранная отвертка, 6 мм - х1</li>
+                            <li>Многоцелевой ключ - x1</li>
+                            <li>Сиденье велосипеда - х1</li>
+                            <li>Воздушный насос - х1</li>
+                            <li>Педаль - х1</li>
+                            <li>Подножка - х1</li>
+                          </ol>
+                        </div>
+                      </div>
+                      <div class="col-12 col-md-4 text-center"> <img class="w-auto h-auto mw-100 mh-100" src="img/photo/equipment.jpg" alt=""></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="product-details__content" data-tab-content="3">
+                <div class="product-details__content-row">
+                      <div class="product-carousel padding-wrap py-0">
+                        <div class="container">
+                          <div class="product-carousel__slider-wrap" data-slider="product-carousel-slider"> 
+                            <div class="product-carousel__slider swiper">
+                              <div class="swiper-wrapper">
+                                <div class="swiper-slide product-carousel__slider-item">
+                                      <div class="card">
+                                        <div class="card__label">
+                                              <div class="product-label">хит продаж</div>
+                                        </div>
+                                        <div class="card__img-wrap"><a href="#">
+                                            <div class="card__img"> <img src="img/photo/card-img-1.png" alt=""></div>
+                                            <div class="card__hover-img"><img src="img/photo/bike-classes-nav-card-img-2.png" alt=""></div></a></div>
+                                        <div class="card__text-wrap">
+                                          <div class="card__title text"> <a href="#">Мощный электровелосипед ADO A20</a></div>
+                                          <div class="card__product-number">Артикул: 045829</div>
+                                          <ul class="card__list">
+                                            <li> 
+                                              <p>Складной корпус</p>
+                                            </li>
+                                            <li> 
+                                              <p>500 Вт электрический двигатель</p>
+                                            </li>
+                                            <li> 
+                                              <p>7-скоростная трансмиссия SHIMANO</p>
+                                            </li>
+                                          </ul>
+                                          <div class="card__text"> 
+                                          </div>
+                                          <div class="card__bottom"> 
+                                            <div class="card__price false">19 999.99 ₽
+                                            </div><a class="card__btn" href="#"><!-- use .card__btn--added-to-cart --></a>
+                                          </div>
+                                        </div>
+                                      </div>
+                                </div>
+                                <div class="swiper-slide product-carousel__slider-item"> 
+                                      <div class="card">
+                                        <div class="card__label">
+                                              <div class="product-label">Подарок</div>
+                                        </div>
+                                        <div class="card__label-detail"> <img src="img/photo/card-img-details.png" alt=""></div>
+                                        <div class="card__img-wrap"><a href="#">
+                                            <div class="card__img"> <img src="img/photo/card-img-1.png" alt=""></div>
+                                            <div class="card__hover-img"><img src="img/photo/bike-classes-nav-card-img-2.png" alt=""></div></a></div>
+                                        <div class="card__text-wrap">
+                                          <div class="card__title text"> <a href="#">Мощный электровелосипед ADO A20</a></div>
+                                          <div class="card__product-number">Артикул: 045829</div>
+                                          <ul class="card__list">
+                                            <li> 
+                                              <p>Складной корпус</p>
+                                            </li>
+                                            <li> 
+                                              <p>500 Вт электрический двигатель</p>
+                                            </li>
+                                            <li> 
+                                              <p>7-скоростная трансмиссия SHIMANO</p>
+                                            </li>
+                                          </ul>
+                                          <div class="card__text"> 
+                                            <p class="text-uppercase"> <strong><span class="text-success">Подарок: </span>ADO A20/A20+ Electric Bike Battery</strong></p>
+                                          </div>
+                                          <div class="card__bottom"> 
+                                            <div class="card__price false">19 999.99 ₽
+                                            </div><a class="card__btn" href="#"><!-- use .card__btn--added-to-cart --></a>
+                                          </div>
+                                        </div>
+                                      </div>
+                                </div>
+                                <div class="swiper-slide product-carousel__slider-item"> 
+                                      <div class="card">
+                                        <div class="card__label">
+                                              <div class="product-label">АКЦИЯ</div>
+                                        </div>
+                                        <div class="card__label-detail">
+                                          <p>Скидка до:</p>
+                                          <p class="text-primary"> <strong>25.03.22 </strong></p>
+                                        </div>
+                                        <div class="card__img-wrap"><a href="#">
+                                            <div class="card__img"> <img src="img/photo/card-img-1.png" alt=""></div>
+                                            <div class="card__hover-img"><img src="img/photo/bike-classes-nav-card-img-2.png" alt=""></div></a></div>
+                                        <div class="card__text-wrap">
+                                          <div class="card__title text"> <a href="#">Мощный электровелосипед ADO A20</a></div>
+                                          <div class="card__product-number">Артикул: 045829</div>
+                                          <ul class="card__list">
+                                            <li> 
+                                              <p>Складной корпус</p>
+                                            </li>
+                                            <li> 
+                                              <p>500 Вт электрический двигатель</p>
+                                            </li>
+                                            <li> 
+                                              <p>7-скоростная трансмиссия SHIMANO</p>
+                                            </li>
+                                          </ul>
+                                          <div class="card__text"> 
+                                          </div>
+                                          <div class="card__bottom"> 
+                                            <div class="card__price text-primary">19 999.99 ₽
+                                              <div class="card__price-old"> <span class="text-decoration-line-through me-2">29 999 ₽ </span></div>
+                                            </div><a class="card__btn" href="#"><!-- use .card__btn--added-to-cart --></a>
+                                          </div>
+                                        </div>
+                                      </div>
+                                </div>
+                                <div class="swiper-slide product-carousel__slider-item"> 
+                                      <div class="card">
+                                        <div class="card__label">
+                                              <div class="product-label">НОВИНКА</div>
+                                        </div>
+                                        <div class="card__img-wrap"><a href="#">
+                                            <div class="card__img"> <img src="img/photo/card-img-1.png" alt=""></div>
+                                            <div class="card__hover-img"><img src="img/photo/bike-classes-nav-card-img-2.png" alt=""></div></a></div>
+                                        <div class="card__text-wrap">
+                                          <div class="card__title text"> <a href="#">Мощный электровелосипед ADO A20</a></div>
+                                          <div class="card__product-number">Артикул: 045829</div>
+                                          <ul class="card__list">
+                                            <li> 
+                                              <p>Складной корпус</p>
+                                            </li>
+                                            <li> 
+                                              <p>500 Вт электрический двигатель</p>
+                                            </li>
+                                            <li> 
+                                              <p>7-скоростная трансмиссия SHIMANO</p>
+                                            </li>
+                                          </ul>
+                                          <div class="card__text"> 
+                                          </div>
+                                          <div class="card__bottom"> 
+                                            <div class="card__price false">19 999.99 ₽
+                                            </div><a class="card__btn" href="#"><!-- use .card__btn--added-to-cart --></a>
+                                          </div>
+                                        </div>
+                                      </div>
+                                </div>
+                                <div class="swiper-slide product-carousel__slider-item">
+                                      <div class="card">
+                                        <div class="card__img-wrap"><a href="#">
+                                            <div class="card__img"> <img src="img/photo/card-img-1.png" alt=""></div>
+                                            <div class="card__hover-img"><img src="img/photo/bike-classes-nav-card-img-2.png" alt=""></div></a></div>
+                                        <div class="card__text-wrap">
+                                          <div class="card__title text"> <a href="#">Мощный электровелосипед ADO A20</a></div>
+                                          <div class="card__product-number">Артикул: 045829</div>
+                                          <ul class="card__list">
+                                            <li> 
+                                              <p>Складной корпус</p>
+                                            </li>
+                                            <li> 
+                                              <p>500 Вт электрический двигатель</p>
+                                            </li>
+                                            <li> 
+                                              <p>7-скоростная трансмиссия SHIMANO</p>
+                                            </li>
+                                          </ul>
+                                          <div class="card__text"> 
+                                          </div>
+                                          <div class="card__bottom"> 
+                                            <div class="card__price false">19 999.99 ₽
+                                            </div><a class="card__btn" href="#"><!-- use .card__btn--added-to-cart --></a>
+                                          </div>
+                                        </div>
+                                      </div>
+                                </div>
+                                <div class="swiper-slide product-carousel__slider-item"> 
+                                      <div class="card">
+                                        <div class="card__label">
+                                              <div class="product-label">Подарок</div>
+                                        </div>
+                                        <div class="card__label-detail"> <img src="img/photo/card-img-details.png" alt=""></div>
+                                        <div class="card__img-wrap"><a href="#">
+                                            <div class="card__img"> <img src="img/photo/card-img-1.png" alt=""></div>
+                                            <div class="card__hover-img"><img src="img/photo/bike-classes-nav-card-img-2.png" alt=""></div></a></div>
+                                        <div class="card__text-wrap">
+                                          <div class="card__title text"> <a href="#">Мощный электровелосипед ADO A20</a></div>
+                                          <div class="card__product-number">Артикул: 045829</div>
+                                          <ul class="card__list">
+                                            <li> 
+                                              <p>Складной корпус</p>
+                                            </li>
+                                            <li> 
+                                              <p>500 Вт электрический двигатель</p>
+                                            </li>
+                                            <li> 
+                                              <p>7-скоростная трансмиссия SHIMANO</p>
+                                            </li>
+                                          </ul>
+                                          <div class="card__text"> 
+                                            <p class="text-uppercase"> <strong><span class="text-success">Подарок: </span>ADO A20/A20+ Electric Bike Battery</strong></p>
+                                          </div>
+                                          <div class="card__bottom"> 
+                                            <div class="card__price false">19 999.99 ₽
+                                            </div><a class="card__btn" href="#"><!-- use .card__btn--added-to-cart --></a>
+                                          </div>
+                                        </div>
+                                      </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="product-carousel__slider-controls">
+                              <div class="slider-controls"> 
+                                <div class="slider-controls__btn slider-controls__btn--prev" data-action="slider-prev"> <span class="icon-chevron-left1"></span></div>
+                                <div class="slider-controls__btn slider-controls__btn--next" data-action="slider-next"> <span class="icon-chevron-right1"></span></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+              </div>
+              <div class="product-details__content" data-tab-content="4">
+                <div class="product-details__content-row">
+                  <div class="container-sm"> 
+                    <div class="video-gallery"><a class="video-gallery__item" href="https://youtu.be/hp2UQDrkjN4" data-fancybox="gallery">
+                        <figure class="video-gallery__poster ibg"> 
+                          <div class="video-gallery__play"> <i class="icon-play"> </i></div><img src="img/photo/video-gallery-poster-1.jpg" alt="">
+                        </figure>
+                        <figcaption class="video-gallery__text">ADO A20F: Все, что вам нужно знать о новом электрическом фэтбайке…</figcaption></a><a class="video-gallery__item" href="https://youtu.be/hp2UQDrkjN4" data-fancybox="gallery">
+                        <figure class="video-gallery__poster ibg"> 
+                          <div class="video-gallery__play"> <i class="icon-play"> </i></div><img src="img/photo/video-gallery-poster-1.jpg" alt="">
+                        </figure>
+                        <figcaption class="video-gallery__text">ADO A20F: Внедорожный Электрический Складной Велосипед с двигателем 500W</figcaption></a><a class="video-gallery__item" href="https://youtu.be/hp2UQDrkjN4" data-fancybox="gallery">
+                        <figure class="video-gallery__poster ibg"> 
+                          <div class="video-gallery__play"> <i class="icon-play"> </i></div><img src="img/photo/video-gallery-poster-2.jpg" alt="">
+                        </figure>
+                        <figcaption class="video-gallery__text">ADO A20F: Внедорожный Электрический Складной Велосипед с двигателем 500W</figcaption></a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="product-details__content" data-tab-content="5">
+                <div class="product-details__content-row">
+                  <div class="container-sm"> 
+                    <h3 class="title-3 text-center mb-5">Отзывы (3)</h3>
+                    <div class="subtitle text-center text-light mw-md-70 mx-auto"> 
+                      <p>Отзывы к продукту могут оставлять только авторизированные пользователи, у которых есть хотя бы один оплаченый товар</p>
+                    </div>
+                    <div class="testimonials">
+                      <div class="testimonials__body">
+                        <div class="testimonials__item">
+                          <div class="testimonials__item-inner"> 
+                            <div class="testimonials__name">Виталий</div>
+                            <div class="testimonials__date">22 ноября 2021, 14:13 </div>
+                            <div class="testimonials__stars"> 
+                                  <div class="rating" data-rating="5"> 
+                                    <div class="rating__star"><span class="icon-star-full"></span></div>
+                                    <div class="rating__star"> <span class="icon-star-full"></span></div>
+                                    <div class="rating__star"> <span class="icon-star-full"></span></div>
+                                    <div class="rating__star"> <span class="icon-star-full"></span></div>
+                                    <div class="rating__star"> <span class="icon-star-full"></span></div>
+                                  </div>
+                            </div>
+                            <div class="testimonials__text">Один из лучших фетбайков на сегодняшний день в продаже. И в ADO дешевле чем, в других магазинах. В комплекте насос, ключи, держатель смарта на руль. Скорость по прямой 35 км.ч. На подъемах 500 ваттный двигатель с ручкой газа, т.е без помощи педалей, работает уверенно. Широкие покрышки значительно смягчают езду. Фара освещает дорогу прилично. Особая благодарность ребятам из ADO на Грушевского 5. Толковые, вежливые и оставляют приятное впечатление профессионалов. На фоне других складных электрофэтбайков, ADO 20F - пока лидер. Весной вероятно цены будут другими, с возрастанием и значительно.</div>
+                          </div>
+                        </div>
+                        <div class="testimonials__item">
+                          <div class="testimonials__item-inner"> 
+                            <div class="testimonials__name">Светлана</div>
+                            <div class="testimonials__date">22 ноября 2021, 14:13 </div>
+                            <div class="testimonials__stars"> 
+                                  <div class="rating" data-rating="3"> 
+                                    <div class="rating__star"><span class="icon-star-full"></span></div>
+                                    <div class="rating__star"> <span class="icon-star-full"></span></div>
+                                    <div class="rating__star"> <span class="icon-star-full"></span></div>
+                                    <div class="rating__star"> <span class="icon-star-full"></span></div>
+                                    <div class="rating__star"> <span class="icon-star-full"></span></div>
+                                  </div>
+                            </div>
+                            <div class="testimonials__text">Катаю третью неделю, 35 км на электрике и горки также были. Вилка полный отстой. А так хорош. Еще проблема - все в городе глазеют на него. Задолбали :) Хорошая покупка.</div>
+                          </div>
+                        </div>
+                        <div class="testimonials__item">
+                          <div class="testimonials__item-inner"> 
+                            <div class="testimonials__name">Егор</div>
+                            <div class="testimonials__date">22 ноября 2021, 14:13 </div>
+                            <div class="testimonials__stars"> 
+                                  <div class="rating" data-rating="1"> 
+                                    <div class="rating__star"><span class="icon-star-full"></span></div>
+                                    <div class="rating__star"> <span class="icon-star-full"></span></div>
+                                    <div class="rating__star"> <span class="icon-star-full"></span></div>
+                                    <div class="rating__star"> <span class="icon-star-full"></span></div>
+                                    <div class="rating__star"> <span class="icon-star-full"></span></div>
+                                  </div>
+                            </div>
+                            <div class="testimonials__text">Велосипед пришел побитый, с помятым рулем и царапиной на раме. Ощущение, что мне прислали БУшный комплект.</div>
+                          </div>
+                          <div class="testimonials__item testimonials__item--sub testimonials__item--support">
+                            <div class="testimonials__item-inner">
+                              <div class="testimonials__name">ADO Support</div>
+                              <div class="testimonials__text">Спасибо за отзыв, мы обязательно разберемся с вашей проблемой. Пришлите, пожалуйста, номер заказа.</div>
+                            </div>
+                            <div class="testimonials__item testimonials__item--sub">
+                              <div class="testimonials__item-inner"> 
+                                <div class="testimonials__name">Егор</div>
+                                <div class="testimonials__text">Номер 2456789</div>
+                              </div>
+                              <div class="testimonials__item testimonials__item--sub testimonials__item--support"> 
+                                <div class="testimonials__item-inner">
+                                  <div class="testimonials__name">ADO Support</div>
+                                  <div class="testimonials__text">Наш менеджер свяжется с вами в ближайшее время.</div>
+                                </div>
+                                <div class="testimonials__item testimonials__item--sub">
+                                  <div class="testimonials__item-inner"> 
+                                    <div class="testimonials__name">Егор</div>
+                                    <div class="testimonials__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis, obcaecati.</div>
+                                  </div>
+                                  <div class="testimonials__item testimonials__item--sub testimonials__item--support"> 
+                                    <div class="testimonials__item-inner">
+                                      <div class="testimonials__name">ADO Support</div>
+                                      <div class="testimonials__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia eveniet blanditiis consequuntur ab tempore qui!</div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="testimonials__bottom">
+                        <form action="/">
+                          <div class="mb-5">
+                            <input class="form-control" type="text" placeholder="Авторизуйтесь и оставьте, пожалуйста, отзыв о вашей покупке">
+                          </div>
+                          <button class="btn btn--secondary w-100 w-sm-auto"><span>Оставить отзыв</span></button>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+              <div class="product-carousel padding-wrap">
+                <div class="container">
+                  <h3 class="product-carousel__title">Рекомендуемые товары</h3>
+                  <div class="product-carousel__slider-wrap" data-slider="product-carousel-slider"> 
+                    <div class="product-carousel__slider swiper">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide product-carousel__slider-item">
+                              <div class="card">
+                                <div class="card__label">
+                                      <div class="product-label">хит продаж</div>
+                                </div>
+                                <div class="card__img-wrap"><a href="#">
+                                    <div class="card__img"> <img src="img/photo/card-img-1.png" alt=""></div>
+                                    <div class="card__hover-img"><img src="img/photo/bike-classes-nav-card-img-2.png" alt=""></div></a></div>
+                                <div class="card__text-wrap">
+                                  <div class="card__title text"> <a href="#">Мощный электровелосипед ADO A20</a></div>
+                                  <div class="card__product-number">Артикул: 045829</div>
+                                  <ul class="card__list">
+                                    <li> 
+                                      <p>Складной корпус</p>
+                                    </li>
+                                    <li> 
+                                      <p>500 Вт электрический двигатель</p>
+                                    </li>
+                                    <li> 
+                                      <p>7-скоростная трансмиссия SHIMANO</p>
+                                    </li>
+                                  </ul>
+                                  <div class="card__text"> 
+                                  </div>
+                                  <div class="card__bottom"> 
+                                    <div class="card__price false">19 999.99 ₽
+                                    </div><a class="card__btn" href="#"><!-- use .card__btn--added-to-cart --></a>
+                                  </div>
+                                </div>
+                              </div>
+                        </div>
+                        <div class="swiper-slide product-carousel__slider-item"> 
+                              <div class="card">
+                                <div class="card__label">
+                                      <div class="product-label">Подарок</div>
+                                </div>
+                                <div class="card__label-detail"> <img src="img/photo/card-img-details.png" alt=""></div>
+                                <div class="card__img-wrap"><a href="#">
+                                    <div class="card__img"> <img src="img/photo/card-img-1.png" alt=""></div>
+                                    <div class="card__hover-img"><img src="img/photo/bike-classes-nav-card-img-2.png" alt=""></div></a></div>
+                                <div class="card__text-wrap">
+                                  <div class="card__title text"> <a href="#">Мощный электровелосипед ADO A20</a></div>
+                                  <div class="card__product-number">Артикул: 045829</div>
+                                  <ul class="card__list">
+                                    <li> 
+                                      <p>Складной корпус</p>
+                                    </li>
+                                    <li> 
+                                      <p>500 Вт электрический двигатель</p>
+                                    </li>
+                                    <li> 
+                                      <p>7-скоростная трансмиссия SHIMANO</p>
+                                    </li>
+                                  </ul>
+                                  <div class="card__text"> 
+                                    <p class="text-uppercase"> <strong><span class="text-success">Подарок: </span>ADO A20/A20+ Electric Bike Battery</strong></p>
+                                  </div>
+                                  <div class="card__bottom"> 
+                                    <div class="card__price false">19 999.99 ₽
+                                    </div><a class="card__btn" href="#"><!-- use .card__btn--added-to-cart --></a>
+                                  </div>
+                                </div>
+                              </div>
+                        </div>
+                        <div class="swiper-slide product-carousel__slider-item"> 
+                              <div class="card">
+                                <div class="card__label">
+                                      <div class="product-label">АКЦИЯ</div>
+                                </div>
+                                <div class="card__label-detail">
+                                  <p>Скидка до:</p>
+                                  <p class="text-primary"> <strong>25.03.22 </strong></p>
+                                </div>
+                                <div class="card__img-wrap"><a href="#">
+                                    <div class="card__img"> <img src="img/photo/card-img-1.png" alt=""></div>
+                                    <div class="card__hover-img"><img src="img/photo/bike-classes-nav-card-img-2.png" alt=""></div></a></div>
+                                <div class="card__text-wrap">
+                                  <div class="card__title text"> <a href="#">Мощный электровелосипед ADO A20</a></div>
+                                  <div class="card__product-number">Артикул: 045829</div>
+                                  <ul class="card__list">
+                                    <li> 
+                                      <p>Складной корпус</p>
+                                    </li>
+                                    <li> 
+                                      <p>500 Вт электрический двигатель</p>
+                                    </li>
+                                    <li> 
+                                      <p>7-скоростная трансмиссия SHIMANO</p>
+                                    </li>
+                                  </ul>
+                                  <div class="card__text"> 
+                                  </div>
+                                  <div class="card__bottom"> 
+                                    <div class="card__price text-primary">19 999.99 ₽
+                                      <div class="card__price-old"> <span class="text-decoration-line-through me-2">29 999 ₽ </span></div>
+                                    </div><a class="card__btn" href="#"><!-- use .card__btn--added-to-cart --></a>
+                                  </div>
+                                </div>
+                              </div>
+                        </div>
+                        <div class="swiper-slide product-carousel__slider-item"> 
+                              <div class="card">
+                                <div class="card__label">
+                                      <div class="product-label">НОВИНКА</div>
+                                </div>
+                                <div class="card__img-wrap"><a href="#">
+                                    <div class="card__img"> <img src="img/photo/card-img-1.png" alt=""></div>
+                                    <div class="card__hover-img"><img src="img/photo/bike-classes-nav-card-img-2.png" alt=""></div></a></div>
+                                <div class="card__text-wrap">
+                                  <div class="card__title text"> <a href="#">Мощный электровелосипед ADO A20</a></div>
+                                  <div class="card__product-number">Артикул: 045829</div>
+                                  <ul class="card__list">
+                                    <li> 
+                                      <p>Складной корпус</p>
+                                    </li>
+                                    <li> 
+                                      <p>500 Вт электрический двигатель</p>
+                                    </li>
+                                    <li> 
+                                      <p>7-скоростная трансмиссия SHIMANO</p>
+                                    </li>
+                                  </ul>
+                                  <div class="card__text"> 
+                                  </div>
+                                  <div class="card__bottom"> 
+                                    <div class="card__price false">19 999.99 ₽
+                                    </div><a class="card__btn" href="#"><!-- use .card__btn--added-to-cart --></a>
+                                  </div>
+                                </div>
+                              </div>
+                        </div>
+                        <div class="swiper-slide product-carousel__slider-item">
+                              <div class="card">
+                                <div class="card__img-wrap"><a href="#">
+                                    <div class="card__img"> <img src="img/photo/card-img-1.png" alt=""></div>
+                                    <div class="card__hover-img"><img src="img/photo/bike-classes-nav-card-img-2.png" alt=""></div></a></div>
+                                <div class="card__text-wrap">
+                                  <div class="card__title text"> <a href="#">Мощный электровелосипед ADO A20</a></div>
+                                  <div class="card__product-number">Артикул: 045829</div>
+                                  <ul class="card__list">
+                                    <li> 
+                                      <p>Складной корпус</p>
+                                    </li>
+                                    <li> 
+                                      <p>500 Вт электрический двигатель</p>
+                                    </li>
+                                    <li> 
+                                      <p>7-скоростная трансмиссия SHIMANO</p>
+                                    </li>
+                                  </ul>
+                                  <div class="card__text"> 
+                                  </div>
+                                  <div class="card__bottom"> 
+                                    <div class="card__price false">19 999.99 ₽
+                                    </div><a class="card__btn" href="#"><!-- use .card__btn--added-to-cart --></a>
+                                  </div>
+                                </div>
+                              </div>
+                        </div>
+                        <div class="swiper-slide product-carousel__slider-item"> 
+                              <div class="card">
+                                <div class="card__label">
+                                      <div class="product-label">Подарок</div>
+                                </div>
+                                <div class="card__label-detail"> <img src="img/photo/card-img-details.png" alt=""></div>
+                                <div class="card__img-wrap"><a href="#">
+                                    <div class="card__img"> <img src="img/photo/card-img-1.png" alt=""></div>
+                                    <div class="card__hover-img"><img src="img/photo/bike-classes-nav-card-img-2.png" alt=""></div></a></div>
+                                <div class="card__text-wrap">
+                                  <div class="card__title text"> <a href="#">Мощный электровелосипед ADO A20</a></div>
+                                  <div class="card__product-number">Артикул: 045829</div>
+                                  <ul class="card__list">
+                                    <li> 
+                                      <p>Складной корпус</p>
+                                    </li>
+                                    <li> 
+                                      <p>500 Вт электрический двигатель</p>
+                                    </li>
+                                    <li> 
+                                      <p>7-скоростная трансмиссия SHIMANO</p>
+                                    </li>
+                                  </ul>
+                                  <div class="card__text"> 
+                                    <p class="text-uppercase"> <strong><span class="text-success">Подарок: </span>ADO A20/A20+ Electric Bike Battery</strong></p>
+                                  </div>
+                                  <div class="card__bottom"> 
+                                    <div class="card__price false">19 999.99 ₽
+                                    </div><a class="card__btn" href="#"><!-- use .card__btn--added-to-cart --></a>
+                                  </div>
+                                </div>
+                              </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="product-carousel__slider-controls">
+                      <div class="slider-controls"> 
+                        <div class="slider-controls__btn slider-controls__btn--prev" data-action="slider-prev"> <span class="icon-chevron-left1"></span></div>
+                        <div class="slider-controls__btn slider-controls__btn--next" data-action="slider-next"> <span class="icon-chevron-right1"></span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container"> 
+        <div class="footer__body"> 
+          <div class="footer__col footer__col--1">
+            <div class="footer__logo"> <a href="#"><img src="img/logo/logo-white.svg" alt=""></a></div>
+            <div class="footer__copy" data-da=".footer__col--4,767.98,last">© 2022 diHouse <br> Все права защищены.</div>
+          </div>
+          <div class="footer__col footer__col--2">
+            <ul class="footer__list"> 
+              <li> <a class="footer__link" href="#">Бритвы и триммеры </a></li>
+              <li> <a class="footer__link" href="#">Зубные щетки и ирригаторы</a></li>
+              <li> <a class="footer__link" href="#">Фены для волос </a></li>
+              <li> <a class="footer__link" href="#">Аксессуары</a></li>
+            </ul>
+          </div>
+          <div class="footer__col footer__col--3">
+            <ul class="footer__list"> 
+              <li> <a class="footer__link" href="#">Сервис</a></li>
+              <li> <a class="footer__link" href="#">Наши партнеры</a></li>
+              <li> <a class="footer__link" href="#">Доставка и оплата</a></li>
+              <li> <a class="footer__link" href="#">Пользовательское соглашение</a></li>
+              <li> <a class="footer__link" href="#">Политика конфиденциальности</a></li>
+            </ul>
+          </div>
+          <div class="footer__col footer__col--4">
+            <div class="footer__contact-info">
+              <div class="contact-info"> <a class="contact-info__phone" href="tel:74957777777">+7 (495) 777-77-77</a><a class="contact-info__mail" href="mailto:info@di-house.ru">info@di-house.ru</a></div>
+            </div>
+            <div class="footer__social">
+              <ul class="social"> 
+                <li class="social__item"> <a href="#"> <i class="icon-vk"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="popup" id="popupSerch">
+      <div class="popup__body"> 
+        <div class="popup__close-btn" data-popup="close-popup"><span> </span></div>
+        <div class="popup__content popup__content--search">
+          <form action="/"> 
+            <div class="popup-search">
+              <div class="popup-search__input input">
+                <input class="input__field" type="text" placeholder="Поиск товаров">
+              </div>
+              <button class="popup-search__submit btn">Искать</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="popup" id="popupMessage"><!-- API   popup.open('#popupMessage')  popup.close('#popupMessage') -->
+      <div class="popup__body"> 
+        <div class="popup__content">
+          <div class="popup__close-btn popup__close-btn--dark" data-popup="close-popup"><span> </span></div>
+          <div class="popup-message text-center">
+            <div class="popup-message__icon"> <img src="img/icons/check-circle.svg" alt=""></div>
+            <h3 class="popup-message__title">Спасибо за ваш заказ! </h3>
+            <div class="popup-message__text text-content"> 
+              <p>Наш специалист свяжется с вами в течение дня для подтверждения заказа и уточнения деталей доставки.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="popup" id="popupOrder">
+      <div class="popup__body"> 
+        <div class="popup__content">
+          <div class="popup__close-btn popup__close-btn--dark" data-popup="close-popup"><span> </span></div>
+          <div class="popup-order">
+            <h5 class="popup-order__title">Ваш заказ:</h5>
+            <div class="popup-order__body"> 
+              <div class="popup-order__colo-1">
+                <div class="popup-order-product">
+                  <div class="popup-order-product__img"> <img src="img/photo/product.webp" alt=""></div>
+                  <div class="popup-order-product__inner">
+                    <div class="popup-order-product__title">Мощный электровелосипед <span class="text-nowrap">ADO A20F</span></div>
+                    <ul class="popup-order-product__list"> 
+                      <li>Цвет: Черный</li>
+                      <li>Количество: 1 шт.</li>
+                    </ul>
+                    <div class="popup-order-product__price">19 999 ₽</div>
+                  </div>
+                </div>
+              </div>
+              <div class="popup-order__colo-2">
+                <form class="popup-form">
+                  <div class="popup-form__items">
+                    <div class="popup-form__item form-error"> 
+                      <label class="form-label">Ваше имя <span>*</span></label>
+                      <input class="form-control" type="text" placeholder="Введите ваше имя" required>
+                      <div class="form-error-message">Пожалуйста, проверьте корректность ввода данных</div>
+                    </div>
+                    <div class="popup-form__item form-error"> 
+                      <label class="form-label">Ваш Email <span>*</span></label>
+                      <input class="form-control" type="text" placeholder="name@email.com" required>
+                    </div>
+                    <div class="popup-form__item" data-mask="+7 (999) 999-99-99">
+                      <label class="form-label">Ваш телефон <span>*</span></label>
+                      <input class="form-control" type="text" placeholder="+7 ХХХ ХХХ-ХХ-ХХ" required>
+                    </div>
+                    <div class="popup-form__item">
+                          <label class="checkbox-radio">
+                            <input type="checkbox" name="politics" data-politics-checkbox>
+                            <div class="checkbox-radio__square"></div>
+                            <div class="checkbox-radio__text">Согласен с <a href="#">условиями использования</a> сервиса ADO и <a href="#">обработки персональных данных</a></div>
+                          </label>
+                    </div>
+                  </div>
+                  <button class="popup-form__submit btn btn--secondary"> <span>Подтвердить заказ</span></button>
+                  <p class="popup-form__continue" data-popup="close-popup">Продолжить покупки</p>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="popup" id="popupMessageRefund"><!-- API   popup.open('#popupMessageRefund')  popup.close('#popupMessageRefund') -->
+      <div class="popup__body"> 
+        <div class="popup__content">
+          <div class="popup__close-btn popup__close-btn--dark" data-popup="close-popup"><span> </span></div>
+          <div class="popup-message text-center">
+            <div class="popup-message__icon"> <img src="img/icons/check-circle.svg" alt=""></div>
+            <h3 class="popup-message__title">Ваша заявка на возврат отправлена.</h3>
+            <div class="popup-message__text text-content"> 
+              <p>Наш специалист свяжется с вами в течение дня для уточнения деталей.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="popup" id="popupRefund">
+      <div class="popup__body"> 
+        <div class="popup__content">
+          <div class="popup__close-btn popup__close-btn--dark" data-popup="close-popup"><span> </span></div>
+          <h5 class="popup__title">Заявка на возврат</h5>
+          <form class="popup-form">
+            <div class="popup-form__items">
+              <div class="popup-form__item form-error"> 
+                <label class="form-label">Полное имя <span>*</span></label>
+                <input class="form-control" type="text" placeholder="Введите ваше имя" required>
+                <div class="form-error-message">Пожалуйста, проверьте корректность ввода данных</div>
+              </div>
+              <div class="popup-form__item"> 
+                <label class="form-label">Ваш Email <span>*</span></label>
+                <input class="form-control" type="text" placeholder="name@email.com" required>
+              </div>
+              <div class="popup-form__item" data-mask="+7 (999) 999-99-99">
+                <label class="form-label">Ваш телефон <span>*</span></label>
+                <input class="form-control" type="text" placeholder="+7 ХХХ ХХХ-ХХ-ХХ" required>
+              </div>
+              <div class="popup-form__item"> 
+                <label class="form-label">Наименование товара <span>*</span></label>
+                <input class="form-control" type="text" placeholder="ADO A20F" required>
+              </div>
+              <div class="popup-form__item">
+                <label class="form-label">Магазин, где куплен товар? <span>*</span></label>
+                <div class="select-wrap"> 
+                  <select class="form-select" data-show-element-by-id="select">
+                    <option value="1" selected>на сайте adoebike.ru</option>
+                    <option value="3" data-show-element-by-id="element-3">В другом магазине</option>
+                  </select>
+                </div>
+              </div>
+              <div class="popup-form__item d-none" data-show-element-by-id="element" data-id="element-3"> 
+                <label class="form-label">Название магазина <span>*</span></label>
+                <input class="form-control" type="text" placeholder="Пожалуйста, укажите название магазина" required>
+              </div>
+              <div class="popup-form__item" data-mask="99.99.9999">
+                <label class="form-label">Дата покупки <span>*</span></label>
+                <input class="form-control" type="text" placeholder="06.04.2022" required>
+              </div>
+              <div class="popup-form__item" data-mask="99.99.9999">
+                <label class="form-label">Дата получения заказа <span>*</span></label>
+                <input class="form-control" type="text" placeholder="06.04.2022" required>
+              </div>
+              <div class="popup-form__item" data-mask="9{*}">
+                <label class="form-label">Номер заказа <span>*</span></label>
+                <input class="form-control" type="text" placeholder="3456832" required>
+              </div>
+              <div class="popup-form__item">
+                <label class="form-label">Серийный номер товара</label>
+                <input class="form-control" type="text" placeholder="ADO A20F">
+              </div>
+              <div class="popup-form__item">
+                <label class="form-label">Причина возврата <span>*</span></label>
+                <div class="select-wrap"> 
+                  <select class="form-select" data-show-element-by-id="select">
+                    <option value="1" selected>Не подошел / не понравился</option>
+                    <option value="2">Другой цвет</option>
+                    <option value="3" data-show-element-by-id="element-1">Брак</option>
+                    <option value="4" data-show-element-by-id="element-2">Другое</option>
+                  </select>
+                </div>
+              </div>
+              <div class="popup-form__item d-none" data-show-element-by-id="element" data-id="element-1"> 
+                <label class="form-label">Описание неисправности <span>*</span></label>
+                <input class="form-control" type="text" placeholder="Пожалуйста, опишите неисправность товара" required>
+              </div>
+              <div class="popup-form__item d-none" data-show-element-by-id="element" data-id="element-2"> 
+                <label class="form-label">Детали <span>*</span></label>
+                <input class="form-control" type="text" placeholder="Пожалуйста, опишите неисправность товара" required>
+              </div>
+              <div class="popup-form__item">
+                <label class="file-input" data-file-input>
+                  <input class="file-input__input" type="file" accept=".jpg, .png, .pdf, .txt">
+                  <div class="file-input__inner">
+                    <div class="file-input__icon"><i class="icon-upload"></i></div>
+                    <div class="file-input__text">Загрузите фото чека, накладной или акта</div>
+                  </div>
+                </label>
+              </div>
+              <div class="popup-form__item">
+                    <label class="checkbox-radio">
+                      <input type="checkbox" name="politics" data-politics-checkbox>
+                      <div class="checkbox-radio__square"></div>
+                      <div class="checkbox-radio__text">Согласен с <a href="#">условиями использования</a> сервиса ADO и <a href="#">обработки персональных данных</a></div>
+                    </label>
+              </div>
+            </div>
+            <button class="popup-form__submit btn btn--secondary"> <span>Подтвердить форму</span></button>
+            <p class="popup-form__continue" data-popup="close-popup">Отменить</p>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="cookies-message" data-cookies-message>
+      <div class="container"> 
+        <div class="cookies-message__body"> 
+          <div class="cookies-message__text text">
+            <p>Этот сайт использует файлы cookies. Нажимая ПРИНИМАЮ или продолжая просмотр сайта, Вы даете согласие на их использование. <a href="#">Подробнее</a></p>
+          </div>
+          <button class="cookies-message__agree btn btn--secondary" data-action="cookies-message-close"><span>Принимаю        </span></button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

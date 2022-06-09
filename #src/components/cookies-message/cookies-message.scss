@@ -1,0 +1,81 @@
+.cookies-message {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #fff;
+    transition: all 0.4s ease;
+    z-index: 50;
+    transform: translateY(102%);
+
+    &--show {
+        transform: translateY(0%);
+    }
+
+    &__body {
+        display: flex;
+        align-items: center;
+        min-height: 10rem;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+
+        @media (max-width: $md3+px) {
+            min-height: 70px;
+        }
+
+        @media (max-width: $md4+px) {
+            display: block;
+        }
+    }
+
+    &__text {
+        flex: 1 1 auto;
+        margin-right: 3rem;
+
+        @media (min-width: 992px) {
+            &.text {
+                font-size: 3rem;
+            }
+        }
+
+        @media (max-width: $md4+px) {
+            margin-bottom: 15px;
+            text-align: center;
+            margin-right: 0;
+        }
+
+        &.text {
+            @media (min-width: 992px) {
+                font-size: 3rem;
+            }
+
+            @media (max-width: $md2+px) {
+                font-size: 16px;
+            }
+        }
+
+        & a {
+            text-decoration: underline;
+        }
+
+        & > *:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__agree {
+        flex: 0 0 auto;
+        align-self: center;
+
+        &.btn {
+            @media (max-width: $md3+px) {
+                font-size: 16px;
+                min-width: 160px;
+            }
+
+            @media (max-width: $md4+px) {
+                width: 100%;
+            }
+        }
+    }
+}

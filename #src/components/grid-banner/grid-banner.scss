@@ -1,0 +1,369 @@
+.grid-banner {
+    padding: 11.5rem 0 27.5rem;
+
+    @media (max-width: $md2+px) {
+        padding: 80px 0 140px;
+    }
+
+    @media (max-width: $md3+px) {
+        padding: 40px 0 110px;
+    }
+
+    &__title {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 6rem;
+
+        @media (max-width: $md2+px) {
+            margin-bottom: 40px;
+        }
+        @media (max-width: $md3+px) {
+            margin-bottom: 24px;
+        }
+    }
+
+    &__inner {
+        display: flex;
+        gap: 3.5rem;
+        min-width: 0;
+
+        @media (max-width: $md2+px) {
+            flex-direction: column-reverse;
+            gap: 16px;
+        }
+    }
+
+    &__card-wrap {
+        @media (min-width: 992px) {
+            flex: 0 0 24.28%;
+        }
+    }
+
+    &__grid {
+        min-width: 0;
+        width: 100%;
+        overflow: visible;
+
+        @media (min-width: 768px) {
+            margin: 0;
+            font-size: 7px;
+            flex: 1 1 auto;
+            width: auto;
+        }
+
+        @media (min-width: 992px) {
+            font-size: 1rem;
+        }
+    }
+
+    & .swiper-wrapper {
+        @media (min-width: 768px) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 1.5em;
+        }
+    }
+
+    &__item {
+        &--1 {
+            & .grid-banner__item-inner {
+                @media (min-width: 768px) {
+                    padding-bottom: 0;
+                    height: 100%;
+                }
+            }
+
+            & .grid-banner__text {
+                right: 2px;
+                bottom: 60px;
+
+                @media (min-width: 768px) {
+                    top: 52%;
+                    transform: translateY(-50%);
+                    right: 16%;
+                    bottom: auto;
+                }
+
+                @media (max-width: $md4+px) {
+                    bottom: 40px;
+                    max-width: 250px;
+                }
+            }
+        }
+        &--2 {
+            & .grid-banner__text {
+                left: 0;
+                bottom: 7px;
+
+                @media (min-width: 768px) {
+                    bottom: 11%;
+                    left: 7%;
+                }
+            }
+
+            & .grid-banner__item-inner {
+                @media (min-width: 768px) {
+                    padding-bottom: 0;
+                    height: 100%;
+                }
+            }
+        }
+        &--3 {
+            @media (min-width: 768px) {
+                grid-column: span 2;
+            }
+
+            & .grid-banner__item-inner {
+                @media (min-width: 768px) {
+                    padding-bottom: 0;
+                    height: 100%;
+                }
+            }
+
+            & .grid-banner__text {
+                @media (min-width: 768px) {
+                    left: 5%;
+                    top: 44%;
+                    transform: translateY(-50%);
+                }
+            }
+        }
+        &--4 {
+
+
+            & .grid-banner__item-inner {
+                @media (min-width: 768px) {
+                    padding-bottom: 0;
+                    height: 100%;
+                }
+            }
+
+            & .grid-banner__text {
+                @media (min-width: 768px) {
+                    top: auto;
+                    left: 5%;
+                    bottom: 15%;
+                }
+            }
+        }
+    }
+
+    &__item-inner {
+        position: relative;
+        height: 0;
+        padding-bottom: 100%;
+        color: $lightColor;
+        display: block;
+        overflow: hidden;
+        border-radius: 3.3rem;
+
+        @media (min-width: 768px) {
+            border-radius: 3.3em;
+            padding-bottom: 0;
+            height: 100%;
+            min-height: 38rem;
+        }
+
+        @media (min-width: 992px) {
+            &:hover {
+                color: $lightColor;
+                & .grid-banner__img img {
+                    transform: scale(1.03);
+                }
+            }
+        }
+
+        &:hover {
+            color: $lightColor;
+        }
+    }
+
+    &__img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+
+        & img {
+            transition: all 1s ease;
+        }
+    }
+
+    &__text {
+        position: absolute;
+        z-index: 2;
+        padding: 31px 32px;
+
+        @media (min-width: 768px) {
+            padding: 0;
+        }
+
+        @media (max-width: $md4+px) {
+            padding: 20px;
+        }
+
+        & > *:last-child {
+            margin-bottom: 0;
+        }
+
+        & h5 {
+            font-weight: 600;
+            font-size: 26px !important;
+            line-height: 32px;
+            margin-bottom: 1.18em !important;
+
+            @media (min-width: 768px) {
+                font-size: 6.6em !important;
+                line-height: 1.21em;
+                margin-bottom: 0 !important;
+            }
+        }
+
+        & p {
+            font-size: 3em;
+            line-height: 1.23em;
+            font-weight: 600;
+
+            @media (max-width: $md3+px) {
+                font-size: 18px;
+            }
+
+            & b {
+                font-size: 1.83em;
+                font-weight: 400;
+            }
+        }
+    }
+
+    &__slider-dots {
+        position: absolute;
+        z-index: 2;
+        width: 100%;
+        left: 0;
+        bottom: 25px;
+        display: flex;
+        justify-content: flex-end;
+        padding: 0 16px;
+        opacity: 0.5;
+
+        @media (min-width: 768px) {
+            display: none;
+        }
+    }
+
+    &--first {
+        background-color: #C1D2CB;
+    }
+
+    &--second {
+        background-color: #FFEDFF;
+        & .grid-banner__title {
+            color: rgba(#493c8c, 0.77);
+        }
+
+        & .grid-banner__inner {
+            @media (min-width: 992px) {
+                flex-direction: row-reverse;
+            }
+        }
+
+        & .swiper-wrapper {
+            @media (min-width: 768px) {
+
+                grid-template-columns: 38.5% 1fr;
+                grid-template-rows: 1fr 1fr 1fr;
+            }
+        }
+
+        & .grid-banner__item--1 {
+            @media (min-width: 768px) {
+                grid-row: span 3;
+
+                & .grid-banner__text {
+                    transform: translate(0);
+                    top: 5.5%;
+                    left: 7.5%;
+                    right: 7.5%;
+                }
+            }
+
+        }
+        & .grid-banner__item--2 {
+            @media (min-width: 768px) {
+                & .grid-banner__text {
+                    transform: translateY(-50%);
+                    top: 50%;
+                    left: 5%;
+                    right: 5%;
+                    bottom: auto;
+                }
+            }
+
+        }
+        & .grid-banner__item--3 {
+            @media (min-width: 768px) {
+                grid-column: auto;
+
+                & .grid-banner__text {
+                    transform: translateY(-50%);
+                    top: 50%;
+                    left: auto;
+                    right: 17%;
+                }
+            }
+        }
+        & .grid-banner__item--4 {
+            @media (min-width: 768px) {
+
+            }
+        }
+
+        & .grid-banner__item-inner  {
+            @media (min-width: 768px) {
+                color: $mainColor !important;
+                min-height: 24rem;
+            }
+        }
+
+        & .card {
+            background-color: #fff;
+        }
+    }
+
+    &--third {
+        background-color: #EECCD3;
+
+        & .grid-banner__title {
+            color: #9C2235;
+        }
+
+        @media (min-width: 768px) {
+            & .grid-banner__item--1 {
+                & .grid-banner__text {
+                    color: $textColor !important;
+                    top: 48%;
+                    right: 11%;
+                }
+            }
+            & .grid-banner__item--2 {
+                & .grid-banner__text {
+                    top: 29%;
+                    bottom: auto;
+                }
+            }
+            & .grid-banner__item--3 {
+                & .grid-banner__text {
+                    top: 50%;
+                }
+            }
+            & .grid-banner__item--4 {
+                & .grid-banner__text {
+                    
+                }
+            }
+        }
+    }
+}

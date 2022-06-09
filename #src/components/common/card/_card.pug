@@ -1,0 +1,51 @@
+mixin card(label, labelClassMod, labelDetail, url, title, present, promotion, pricePrimary, btnText)
+    .card&attributes(attributes)
+        if label
+            .card__label
+                +product-label(label)
+        if labelDetail
+            if present
+                .card__label-detail 
+                    img(src="img/photo/card-img-details.png", alt="")
+            if promotion
+                .card__label-detail
+                    p Скидка до:
+                    p.text-primary 
+                        strong 25.03.22 
+            
+        .card__img-wrap
+            a(href="#")
+                .card__img 
+                    img(src=url, alt="")
+                .card__hover-img
+                    img(src="img/photo/bike-classes-nav-card-img-2.png", alt="")
+        .card__text-wrap
+            .card__title.text 
+                a(href="#") !{title}
+            .card__product-number Артикул: 045829
+
+            ul.card__list
+                li 
+                    p Складной корпус
+                li 
+                    p 500 Вт электрический двигатель
+                li 
+                    p 7-скоростная трансмиссия SHIMANO
+
+            .card__text 
+                if present
+                    p.text-uppercase 
+                        strong
+                            span.text-success Подарок: 
+                            | ADO A20/A20+ Electric Bike Battery
+
+            .card__bottom 
+                .card__price(class=`${pricePrimary}`) 19 999.99 ₽
+                    if promotion
+                        .card__price-old 
+                            span.text-decoration-line-through.me-2 29 999 ₽ 
+                            
+                if btnText
+                    +btn('#', false, btnText)(class="card__btn") 
+                else
+                    a(href="#").card__btn <!-- use .card__btn--added-to-cart -->

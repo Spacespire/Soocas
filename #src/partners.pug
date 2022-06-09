@@ -1,0 +1,14 @@
+extends _base
+
+block header
+    - var headerModClass = 'header--text-dark';
+    include components/header/_header
+
+block content
+    main._page.partners-page.padding-top-header-size
+        include components/partners/_partners
+
+
+
+block footer 
+    include components/footer/_footer

@@ -1,0 +1,137 @@
+extends _base
+
+block header
+    - var headerModClass = 'header--text-dark';
+    include components/header/_header
+
+block content
+    main._page.about-page.padding-top-header-size
+        picture
+            source(srcset="img/photo/banner-about.jpeg" media="(min-width: 576px)" class="w-100")
+            img(src="img/photo/promo-header-img-2.jpg" alt="img" class="w-100")
+
+        section.article
+            .article__row 
+                .container-sm 
+                    - var breadcrumbLinks = ['Главная', 'Новости'];
+                    +breadcrumb(breadcrumbLinks, 'Уличный велосипед возвращается с новым предложением')
+            
+            .article__row
+                .container-sm 
+                    h3.article__title ADO A16: the street bike is back <br> on offer from Europe
+                    .article__info 
+                        span.article__label About ADO
+                        | |
+                        span.article__date 22 Jan 2022
+
+            .article__row
+                .container-sm
+                    .article__text.text-content.text-content--big.row.justify-content-lg-between 
+                        .col-12.col-lg-5
+                            p.text-uppercase.text-primary 
+                                strong Smartmi — разработчик и производитель уникальной бытовой техники из Китая.
+                            
+                            p.text-secondary Компания постоянно совершенствует свои технологии и дизайнерские решения, чтобы привнести в жизнь своих клиентов больше эстетичных и высокотехнологичных товаров.
+
+                        .col-12.col-lg-5
+                            h5 Миссия компании SmartMi: 
+                            p Максимально содействовать созданию мира, в котором у каждого будет доступ к новейшим технологиям. Мы считаем, каждый человек заслуживает право обладать высокотехнологичным современным товарам по разумной цене. Поэтому при всех преимуществах нашей бытовой техники и товаров для дома, мы не завышаем цену на свою продукцию.
+
+                            h5 Наша продукция:
+
+                            p Это высокие технологии в сочетании с качественной сборкой и программным обеспечением. Все эти факторы работают в гармонии, чтобы повысить качество жизни людей и обеспечить им ежедневный й комфорт.
+
+
+            .article__row
+                .container-sm
+                    .article__text.text-content.text-content--big.text-secondary 
+                        p Многие люди говорят об инновациях в продуктах, но немногие могут воплотить свои идеи в жизнь.
+                        p На Ежегодном инвестиционном собрании Xiaomi и Shunwei 2019 Су Цзюнь, основатель и генеральный директор Smartmi, поделился своим «менталитетом бестселлеров». Многие люди говорят об инновациях в продуктах, но немногие могут воплотить свои идеи в жизнь.
+
+            .article__row.article__row--slider 
+                include components/images-carousel/_images-carousel
+
+            .article__row
+                .container-sm
+                    .article__text.text-content.text-content--big.text-secondary
+                        h2 Подзаголовок текста
+                        p Многие люди говорят об инновациях в продуктах, но немногие могут воплотить свои идеи в жизнь.
+                        p На Ежегодном инвестиционном собрании Xiaomi и Shunwei 2019 Су Цзюнь, основатель и генеральный директор Smartmi, поделился своим «менталитетом бестселлеров». Многие люди говорят об инновациях в продуктах, но немногие могут воплотить свои идеи в жизнь.
+                        h3 Подзаголовок текста
+                        p Многие люди говорят об инновациях в продуктах, но немногие могут воплотить свои идеи в жизнь.
+                        p На Ежегодном инвестиционном собрании Xiaomi и Shunwei 2019 Су Цзюнь, основатель и генеральный директор Smartmi, поделился своим «менталитетом бестселлеров». Многие люди говорят об инновациях в продуктах, но немногие могут воплотить свои идеи в жизнь.
+                        
+                        picture
+                            source(srcset="img/photo/article-img.jpg" media="(min-width: 576px)")
+                            img(src="img/photo/article-img.jpg" alt="img")
+                        
+                        h4 Подзаголовок текста
+                        p Многие люди говорят об инновациях в продуктах, но немногие могут воплотить свои идеи в жизнь.
+                        p На Ежегодном инвестиционном собрании Xiaomi и Shunwei 2019 Су Цзюнь, основатель и генеральный директор Smartmi, поделился своим «менталитетом бестселлеров». Многие люди говорят об инновациях в продуктах, но немногие могут воплотить свои идеи в жизнь.
+                        h5 Подзаголовок текста
+                        p Многие люди говорят об инновациях в продуктах, но немногие могут воплотить свои идеи в жизнь.
+                        p На Ежегодном инвестиционном собрании Xiaomi и Shunwei 2019 Су Цзюнь, основатель и генеральный директор Smartmi, поделился своим «менталитетом бестселлеров». Многие люди говорят об инновациях в продуктах, но немногие могут воплотить свои идеи в жизнь.
+
+                        ul 
+                            li Интеллектуально совмещает фильтрацию и мониторинг;
+                            li Лазерный сенсор двойного назначения для контроля качество воздуха в помещении;
+                            li Настоящий HEPA-фильтр удаляет 99,98% частиц до 80нм*;
+                            li Тщательно очищает воздух вашей комнаты за 6,5 минут*.
+
+                        ol 
+                            li Интеллектуально совмещает фильтрацию и мониторинг;
+                            li Лазерный сенсор двойного назначения для контроля качество воздуха в помещении;
+                            li Настоящий HEPA-фильтр удаляет 99,98% частиц до 80нм*;
+                            li Тщательно очищает воздух вашей комнаты за 6,5 минут*.
+
+                        figure 
+                            img(src="img/photo/article-img.jpg", alt="")
+
+                        picture
+                            source(srcset="img/photo/article-img.jpg" media="(min-width: 576px)")
+                            img(src="img/photo/article-img.jpg" alt="img")
+
+                        figure 
+                            include components/images-carousel/_images-carousel
+
+                        figure 
+                            video(src="img/videoForTest.mp4" poster="img/photo/article-img.jpg" 
+                            playsinline controls)
+
+                        figure 
+                            <iframe src="https://www.youtube.com/embed/hp2UQDrkjN4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                        h5 Подзаголовок текста
+                        p Многие люди говорят об инновациях в продуктах, но немногие могут воплотить свои идеи в жизнь.
+                        p На Ежегодном инвестиционном собрании Xiaomi и Shunwei 2019 Су Цзюнь, основатель и генеральный директор Smartmi, поделился своим «менталитетом бестселлеров». Многие люди говорят об инновациях в продуктах, но немногие могут воплотить свои идеи в жизнь.
+
+
+        section.text-block.padding-wrap 
+            .container
+                .text-block__text.text-content.text-content--big.row.justify-content-lg-between 
+                    .col-12.col-lg-5
+                        p.text-uppercase.text-primary 
+                            strong Smartmi — разработчик и производитель уникальной бытовой техники из Китая.
+                        
+                        p.text-secondary Компания постоянно совершенствует свои технологии и дизайнерские решения, чтобы привнести в жизнь своих клиентов больше эстетичных и высокотехнологичных товаров.
+
+                    .col-12.col-lg-5
+                        h5 Миссия компании SmartMi: 
+                        p Максимально содействовать созданию мира, в котором у каждого будет доступ к новейшим технологиям. Мы считаем, каждый человек заслуживает право обладать высокотехнологичным современным товарам по разумной цене. Поэтому при всех преимуществах нашей бытовой техники и товаров для дома, мы не завышаем цену на свою продукцию.
+
+                        h5 Наша продукция:
+
+                        p Это высокие технологии в сочетании с качественной сборкой и программным обеспечением. Все эти факторы работают в гармонии, чтобы повысить качество жизни людей и обеспечить им ежедневный й комфорт.
+
+
+        include components/gallery/_gallery
+
+        - var title = false;
+        - var subtitle = false;
+        - var imgUrls = ['img/photo/news-img-1.jpg' ,'img/photo/news-img-2.jpg' ,'img/photo/news-img-3.jpg'];
+        - var pagination = false;
+        +news(title, subtitle, imgUrls, pagination)
+
+
+block footer 
+    include components/footer/_footer

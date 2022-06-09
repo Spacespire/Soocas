@@ -1,0 +1,69 @@
+section.contact
+    .contact__row 
+        .container-sm 
+            h3.contact__title.text-center Наши контакты
+            .contact__info 
+                .info-contact
+                    .info-contact__col
+                        .info-contact__item.text 
+                            .info-contact__label 
+                                strong Email
+                            .info-contact__text 
+                                a(href="mailto:info@di-house.ru") info@di-house.ru 
+                        
+                        .info-contact__item.text 
+                            .info-contact__label 
+                                strong Телефон
+                            .info-contact__text 
+                                a(href="tel:+74957777777") +7 (495) 777-77-77
+
+                    .info-contact__col
+                        .info-contact__item.text 
+                            .info-contact__label 
+                                strong Наш офис
+                            
+                            .info-contact__footnote (только онлайн продажи, продажи на месте нет)
+
+                            .info-contact__text 111250, Россия, <br> г. Москва, пр-д Завода Серп и Молот, д. 6, к. 1, БЦ «РОСТЭК
+                            
+
+                    .info-contact__col
+                        .info-contact__item.text 
+                            .info-contact__label 
+                                strong Социальные сети
+                            .info-contact__social 
+                                include ../common/social/_social
+
+    .contact__row 
+        include ../map/_map 
+    .contact__row 
+        .container-sm 
+            h3.contact__title.text-center Напишите нам
+            .contact__form 
+                form.form-contact
+                    .form-contact__items
+                        .form-contact__item.form-contact__item--required
+                            .select-wrap 
+                                select.form-select(required)
+                                    option(value="" selected) Тема вопроса
+                                    option(value="1") Вопрос о заказе
+                                    option(value="2") Вопрос о товаре
+                                    option(value="3" data-redirect="https://spacespire.github.io/ADO/dist/delivery.html") Вопрос о возврате
+
+                        .form-contact__item.form-contact__item--half.form-contact__item--required 
+                            input(class="form-control" type="text" placeholder="Ваше имя" required)
+                            
+                        .form-contact__item.form-contact__item--half.form-contact__item--required 
+                            input(class="form-control" type="email" placeholder="Ваш email" required)
+
+                        .form-contact__item(data-mask="+7 (999) 999-99-99")
+                            input(class="form-control" type="text" placeholder="Ваш телефон")
+
+                        .form-contact__item.form-contact__item--required 
+                            input(class="form-control" type="text" placeholder="Ваше сообщение" required)
+
+                        .form-contact__item
+                            +checkbox('Согласен с <a href="#">условиями использования</a> сервиса SmartMi и <a href="#">обработки персональных данных</a>', 'politics')(data-politics-checkbox)
+
+                    button.form-contact__submit.btn.btn--secondary 
+                        span Отправить сообщение

@@ -1,0 +1,103 @@
+.cta {
+    background-color: $mainColor;
+    padding-top: 11rem;
+    padding-bottom: 12rem;
+    color: $lightColor;
+    position: relative;
+
+
+    @media (max-width: $md3+px) {
+        padding-top: 95px;
+        padding-bottom: 95px;
+
+    }
+
+    &__decor {
+        position: absolute;
+        left: 79%;
+        bottom: 0;
+        width: 33.7rem;
+        height: calc(100% - 12.9rem);
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        
+
+        @media (max-width: $md2+px) {
+            width: 150px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: none;
+        }
+
+        & img {
+            width: auto;
+            height: auto;
+            max-height: 100%;
+            max-width: 100%;
+        }
+    }
+
+    &__head {
+
+    }
+
+    & .head__title {
+        font-weight: 600;
+    }
+
+    &__form {
+        
+        @media (min-width: 768px) {
+            display: flex;
+            width: 100%;
+            max-width: 78rem;
+            background-color: #fff;
+            border-radius: 300px;
+            margin: 0 auto;
+            width: 100%;    
+        }
+        @media (max-width: $md3+px) { 
+            text-align: center;
+        }
+    }
+
+    &__form-input {
+
+        @media (min-width: 768px) {
+            flex: 0 0 40rem;
+            margin-right: 4rem;
+            flex: 1 1 auto;
+            text-align: left;
+        }
+
+        @media (max-width: $md3+px) { 
+            margin-bottom: 16px;
+        }
+
+        & input {
+            @media (max-width: $md3+px) { 
+                text-align: center;
+            }
+        }
+    }
+
+    &__form-submit {
+        flex: 0 0 auto;
+
+        @media (min-width: 768px) {
+            transform: translateX(1px);
+        }
+
+        @media (max-width: $md3+px) {
+            min-width: 250px;
+
+            &.btn {
+                background-color: #fff;
+            }
+        }
+
+    }
+
+
+}

@@ -1,0 +1,83 @@
+.table-default {
+    font-size: 1rem;
+    width: 100%;
+    text-align: center;
+
+    @media (max-width: $md2+px) {
+        font-size: 8px;
+    }
+    @media (max-width: $md2+px) {
+        font-size: 6px;
+    }
+
+
+
+    th {
+        height: 3.33em;
+        font-size: 2.4em;
+        line-height: 1.16em;
+        font-weight: bold;
+        padding: 0.5em;
+    }
+    td {
+        border: 1px solid #dcdcdc;
+        height: 3.33em;
+        font-size: 2.4em;
+        line-height: 1.16em;
+        padding: 0.5em;
+    }
+
+    @for $i from 2 to 13 {
+        &--col-#{$i} {
+            td {
+                width: calc(100% / $i);
+            }
+        }
+    }
+
+    &--col-3 {
+        td {
+            &:first-child {
+                width: 25%;
+            }
+        }
+    }
+
+    &--collapse {
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+
+        & tr:first-child {
+            & td {
+                border-top: none;
+            }
+        }
+    }
+}
+
+.hidden-table-wrap {
+    margin-bottom: 4.5rem !important;
+    display: none;
+
+    @media (max-width: $md2+px) {
+        margin-bottom: 40px !important;
+    }
+    @media (max-width: $md3+px) {
+        margin-bottom: 25px !important;
+    }
+}
+
+.hidden-table-btn-wrap {
+    margin-bottom: 9rem;
+    margin-top: 4.5rem;
+    text-align: center;
+
+    @media (max-width: $md2+px) {
+        margin-top: 40px;
+        margin-bottom: 80px;
+    }
+    @media (max-width: $md3+px) {
+        margin-top: 25px;
+        margin-bottom: 50px;
+    }
+}

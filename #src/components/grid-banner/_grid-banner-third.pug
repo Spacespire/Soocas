@@ -1,0 +1,55 @@
+.grid-banner.grid-banner--third
+    .container
+        h3.grid-banner__title.text-uppercase.text-center.wow.fadeInUp(data-wow-duration="0.8s")
+            strong Мощные фены Soocas:
+            | всегда красивые и ухоженные волосы
+        .grid-banner__inner.wow.fadeInUp(data-wow-duration="0.8s") 
+            .grid-banner__card-wrap 
+                .card.card--preview
+                    .card__img-wrap
+                        a(href="#")
+                            .card__img 
+                                img(src="img/photo/card-preview-img-3.jpg", alt="")
+                    .card__text-wrap
+                        .card__title.text 
+                            a(href="#") Фен для волос Soocas H5 Ionic Hair Dryer Red
+                        .card__bottom 
+                            .card__price 1999 ₽
+                            +btn('#', false, 'купить')(class="card__btn") 
+                        a(href="").card__link-all-products(style="color: #9C2235;") Все фены
+
+            .grid-banner__grid.swiper(data-slider="grid-banner" data-mobile="false")
+                .swiper-wrapper 
+                    .swiper-slide.grid-banner__item.grid-banner__item--1
+                        a(href="#").grid-banner__item-inner.not-hover
+                            .grid-banner__img.ibg 
+                                picture
+                                    source(srcset="img/photo/grid-banner-img-8.jpg" media="(min-width: 768px)")
+                                    img(src="img/photo/grid-banner-img-mob-1.jpg" alt="img")
+                            .grid-banner__text 
+                                p Мощный мотор <br> 1800 Вт
+
+                    .swiper-slide.grid-banner__item.grid-banner__item--2
+                        a(href="#").grid-banner__item-inner.not-hover
+                            .grid-banner__img.ibg 
+                                picture
+                                    source(srcset="img/photo/grid-banner-img-9.jpg" media="(min-width: 768px)")
+                                    img(src="img/photo/grid-banner-img-mob-2.jpg" alt="img")
+                            .grid-banner__text 
+                                p Интеллектуальная <br>
+                                    | система <br>
+                                    | контроля <br>
+                                    | температуры
+
+                    .swiper-slide.grid-banner__item.grid-banner__item--3
+                        a(href="#").grid-banner__item-inner.not-hover
+                            .grid-banner__img.ibg 
+                                picture
+                                    source(srcset="img/photo/grid-banner-img-10.jpg" media="(min-width: 768px)")
+                                    img(src="img/photo/grid-banner-img-mob-3.jpg" alt="img")
+                            .grid-banner__text 
+                                p Функция ионизации нейтрализует <br> статическое электричество
+
+                .grid-banner__slider-dots
+                    include ../common/slider-dots/_slider-dots
+

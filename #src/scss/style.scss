@@ -1,0 +1,103 @@
+//<MIXINE>===============================================================================================
+@import "mixins.scss";
+//</MIXINE>===============================================================================================
+
+// ==== FONTS ===========================================================================================
+@import "fonts";
+// ==== // FONTS ===========================================================================================
+
+// ==== Normalize ===========================================================================================
+@import "normalize";
+// ==== // НОРМАЛАЙЗ ===========================================================================================
+
+//<ICOMOON>===============================================================================================
+@import "../icomoon/style";
+//</ICOMOON>===============================================================================================
+
+// ==== PLUGINS ===========================================================================================
+@import "plugins/swiper-bundle";
+@import "plugins/animate";
+@import "plugins/fancybox.scss";
+@import "plugins/zoom.scss";
+// ==== // PLUGINS ===========================================================================================
+
+// ==== B00TSTRAP ===========================================================================================
+@import "../../node_modules/bootstrap/dist/css/bootstrap.min";
+// ==== // BOOTSTARP ===========================================================================================
+
+// ==== VARS ===========================================================================================
+@import "vars";
+// ==== // VARS ===========================================================================================
+
+
+// ==== BASE STYLES ===========================================================================================
+@import "base";
+// ==== // BASE STYLES ===========================================================================================
+
+
+// ==== COMMON BLOCKS =====================================================
+@import "../components/common/contact-info/contact-info";
+@import "../components/common/social/social";
+@import "../components/common/buttons/buttons";
+@import "../components/common/slider-controls/slider-controls";
+@import "../components/common/breadcrumb/breadcrumb";
+@import "../components/common/quantity/quantity";
+@import "../components/common/product-label/product-label";
+@import "../components/common/slider-dots/slider-dots";
+@import "../components/common/form-items/form-items";
+@import "../components/common/card/card";
+@import "../components/common/rating/rating";
+@import "../components/common/post-card/post-card";
+@import "../components/common/pagination/pagination";
+// ==== // COMMON BLOCKS =====================================================
+
+// ==== BLOCKS =====================================================
+@import "../components/header/header";
+@import "../components/footer/footer";
+@import "../components/popup/popup";
+@import "../components/popup/popup-search";
+@import "../components/popup/popup-message";
+@import "../components/popup/popup-order";
+@import "../components/popup/popup-form";
+@import "../components/promo-header/promo-header";
+@import "../components/product-classes/product-classes";
+@import "../components/product-benefits/product-benefits";
+@import "../components/ban-dark/ban-dark";
+@import "../components/ban-light/ban-light";
+@import "../components/ban-img-full-width/ban-img-full-width";
+@import "../components/technical-info/technical-info";
+@import "../components/cta/cta";
+@import "../components/product-preview/product-preview";
+@import "../components/product-details/product-details";
+@import "../components/mini-gallery/mini-gallery";
+@import "../components/product-carousel/product-carousel";
+@import "../components/table-default/table-default";
+@import "../components/video-gallery/video-gallery";
+@import "../components/testimonials/testimonials";
+@import "../components/catalog/catalog";
+@import "../components/news/news";
+@import "../components/article/article";
+@import "../components/images-carousel/images-carousel";
+@import "../components/partners/partners";
+@import "../components/contact/contact";
+@import "../components/text-block/text-block";
+@import "../components/gallery/gallery";
+@import "../components/grid-banner/grid-banner";
+@import "../components/video-banner/video-banner";
+@import "../components/map/map";
+@import "../components/cookies-message/cookies-message";
+@import "../components/logos-list/logos-list";
+// ==== // BLOCKS =====================================================
+
+// ==== PAGES =====================================================
+@import "pages/home";
+@import "pages/product-details";
+@import "pages/catalog";
+@import "pages/news";
+@import "pages/article";
+@import "pages/partners";
+@import "pages/contact";
+@import "pages/about";
+@import "pages/delivery";
+@import "pages/confidential";
+// ==== AND PAGES =====================================================

@@ -1,0 +1,103 @@
+.testimonials {
+    font-size: 1rem;
+    max-width: 130em;
+    margin: 0 auto;
+
+    @media (max-width: $md2+px) {
+        font-size: 8px;
+    }
+    @media (max-width: $md3+px) {
+        font-size: 7px;
+    }
+
+    &__body {
+        margin-bottom: 10em;
+    }
+
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: 5em;
+        }
+
+        & > *:last-child {
+            margin-bottom: 0;
+        }
+
+        &--support {
+            & > .testimonials__item-inner {
+                & .testimonials__name {
+                    color: $mainColor;
+                }
+
+                &:before {
+                    background-color: $mainColor !important;
+                }
+            }
+        }
+
+        &--sub {
+            margin-bottom: 3em;
+            padding-left: 11em;
+
+            @media (max-width: $md2+px) {
+                padding-left: 3em;
+            }
+
+            & > .testimonials__item-inner {
+                padding-left: 2.8em;
+
+                &:before {
+                    position: absolute;
+                    content: '';
+                    top: 0; 
+                    left: 0;
+                    height: 100%;
+                    width: 0.4em;
+                    background-color: #000;
+                }
+            }
+        }
+
+        @media (min-width: 992px) {
+            & > .testimonials__item--sub > .testimonials__item--sub > .testimonials__item--sub .testimonials__item--sub {
+                padding-left: 0;
+            }
+        }
+
+        @media (max-width: $md2+px) {
+            & > .testimonials__item--sub .testimonials__item--sub {
+                padding-left: 0;
+            }
+        }
+    }
+
+    &__item-inner {
+        margin-bottom: 3em;
+        position: relative;
+    }
+
+    &__name {
+        font-weight: bold;
+        font-size: 2.4em;
+        margin-bottom: 0.41em;
+    }
+
+    &__date {
+        font-size: 1.8em;
+        line-height: 1.16em;
+        color: $secondColor;
+        margin-bottom: 1.38em;
+    }
+
+    &__stars {
+        margin-bottom: 2.5em;
+    }
+
+    &__text {
+        font-size: 2.4em;
+        line-height: 1.41em;
+    }
+
+    &__bottom {
+    }
+}

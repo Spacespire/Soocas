@@ -1,0 +1,19 @@
+extends _base
+
+block header
+    - var headerModClass = 'header--text-dark';
+    include components/header/_header
+
+block content
+    main._page.article-page.padding-top-header-size
+        include components/article/_article
+
+        - var title = false;
+        - var subtitle = false;
+        - var imgUrls = ['img/photo/news-img-1.jpg' ,'img/photo/news-img-2.jpg' ,'img/photo/news-img-3.jpg'];
+        - var pagination = false;
+        +news(title, subtitle, imgUrls, pagination)
+
+
+block footer 
+    include components/footer/_footer

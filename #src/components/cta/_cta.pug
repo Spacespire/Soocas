@@ -1,0 +1,13 @@
+section.cta
+    .cta__decor
+        img(src="img/photo/cta-decor.png", alt="")
+    .container 
+        .cta__head.head
+            h3.head__title.text-center.wow.fadeInUp(data-wow-duration="0.8s") Хотите узнать больше?
+            p.head__subtitle.text.text-center.wow.fadeInUp(data-wow-duration="0.8s") Оставьте ваш номер, и мы перезвоним вам в ближайшее время. 
+
+        form.cta__form.wow.fadeInUp( action="/" data-wow-duration="0.8s") 
+            .cta__form-input.input(data-mask="+7 (999) 999-99-99")
+                input(type="text" placeholder="+7 (___) ___-__-__").input__field
+            button.cta__form-submit.btn.btn--light-secondary 
+                span Перезвоните
