@@ -2,11 +2,11 @@
     padding: 11.5rem 0 27.5rem;
 
     @media (max-width: $md2+px) {
-        padding: 80px 0 140px;
+        padding: 90px 0 205px;
     }
 
     @media (max-width: $md3+px) {
-        padding: 40px 0 110px;
+        padding: 90px 0 160px;
     }
 
     &__title {
@@ -18,7 +18,25 @@
             margin-bottom: 40px;
         }
         @media (max-width: $md3+px) {
-            margin-bottom: 24px;
+            margin-bottom: 20px;
+            font-size: 22px !important;
+            font-weight: 300;
+            padding: 0 20px;
+            
+            & strong {
+                font-size: 38px !important;
+                font-weight: 600;
+                line-height: 1em;
+            }
+        }
+
+        @media (max-width: 374.98px) {
+            font-size: 19px !important;
+            padding: 0;
+            
+            & strong {
+                font-size: 30px !important;
+            }
         }
     }
 
@@ -30,6 +48,15 @@
         @media (max-width: $md2+px) {
             flex-direction: column-reverse;
             gap: 16px;
+        }
+
+        @media (max-width: $md3+px) {
+            padding: 0 23px;
+            gap: 55px;
+        }
+
+        @media (max-width: 374.98px) {
+            padding: 0;
         }
     }
 
@@ -75,14 +102,18 @@
             }
 
             & .grid-banner__text {
-                right: 2px;
-                bottom: 60px;
-
                 @media (min-width: 768px) {
                     top: 52%;
                     transform: translateY(-50%);
                     right: 16%;
                     bottom: auto;
+                }
+
+                @media (max-width: $md3+px) {
+                    right: 20px;
+                    top: 30px;
+                    left: 30px;
+                    transform: translate(0);
                 }
 
                 @media (max-width: $md4+px) {
@@ -93,12 +124,15 @@
         }
         &--2 {
             & .grid-banner__text {
-                left: 0;
-                bottom: 7px;
-
                 @media (min-width: 768px) {
                     bottom: 11%;
                     left: 7%;
+                }
+
+                @media (max-width: $md3+px) {
+                    left: 21px;
+                    bottom: 40px;
+                    right: 20px;
                 }
             }
 
@@ -126,6 +160,15 @@
                     left: 5%;
                     top: 44%;
                     transform: translateY(-50%);
+                }
+
+                @media (max-width: $md3+px) {
+                    left: auto;
+                    right: 16px;
+                    top: auto;
+                    transform: translate(0);
+                    bottom: 56px;
+                    width: 160px;
                 }
             }
         }
@@ -195,15 +238,12 @@
     &__text {
         position: absolute;
         z-index: 2;
-        padding: 31px 32px;
 
         @media (min-width: 768px) {
             padding: 0;
         }
 
-        @media (max-width: $md4+px) {
-            padding: 20px;
-        }
+
 
         & > *:last-child {
             margin-bottom: 0;
@@ -213,13 +253,14 @@
             font-weight: 600;
             font-size: 26px !important;
             line-height: 32px;
-            margin-bottom: 1.18em !important;
-
+            margin-bottom: 0;
             @media (min-width: 768px) {
                 font-size: 6.6em !important;
                 line-height: 1.21em;
                 margin-bottom: 0 !important;
             }
+
+
         }
 
         & p {
@@ -228,7 +269,8 @@
             font-weight: 600;
 
             @media (max-width: $md3+px) {
-                font-size: 18px;
+                font-size: 20px;
+                line-height: 24px;
             }
 
             & b {
@@ -256,6 +298,10 @@
 
     &--first {
         background-color: #C1D2CB;
+
+        & .grid-banner__title {
+            color: #004922;
+        }
     }
 
     &--second {
@@ -290,6 +336,16 @@
                 }
             }
 
+            @media (max-width: $md3+px) {
+                & .grid-banner__text {
+                    top: 24px;
+                    left: auto;
+                    right: 19px;
+                    text-align: right;
+                }
+
+            }
+
         }
         & .grid-banner__item--2 {
             @media (min-width: 768px) {
@@ -314,10 +370,24 @@
                     right: 17%;
                 }
             }
+
+            @media (max-width: $md3+px) {
+                & .grid-banner__text {
+                    top: 30px;
+                    right: 20px;
+                    left: 24%;
+                }
+            }
         }
         & .grid-banner__item--4 {
-            @media (min-width: 768px) {
 
+            @media (max-width: $md3+px) {
+                & .grid-banner__text {
+                    top: 30px;
+                    right: 20px;
+                    left: 20px;
+                    text-align: center;
+                }
             }
         }
 
@@ -326,6 +396,10 @@
                 color: $mainColor !important;
                 min-height: 24rem;
             }
+        }
+
+        & .grid-banner__text {
+            color: $mainColor;
         }
 
         & .card {
@@ -357,6 +431,36 @@
             & .grid-banner__item--3 {
                 & .grid-banner__text {
                     top: 50%;
+                }
+            }
+            & .grid-banner__item--4 {
+                & .grid-banner__text {
+                    
+                }
+            }
+        }
+
+        @media (max-width: $md3+px) {
+            & .grid-banner__item--1 {
+                & .grid-banner__text {
+                    color: $textColor !important;
+                    top: 24px;
+                    right: 11%;
+                    left: 30px;
+                }
+            }
+            & .grid-banner__item--2 {
+                & .grid-banner__text {
+                    top: 24px;
+                    left: 30px;
+                    bottom: auto;
+                }
+            }
+            & .grid-banner__item--3 {
+                & .grid-banner__text {
+                    top: 24px;
+                    left: 30px;
+                    width: 216px;
                 }
             }
             & .grid-banner__item--4 {

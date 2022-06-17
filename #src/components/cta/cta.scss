@@ -8,7 +8,7 @@
 
     @media (max-width: $md3+px) {
         padding-top: 95px;
-        padding-bottom: 95px;
+        padding-bottom: 156px;
 
     }
 
@@ -24,10 +24,10 @@
         
 
         @media (max-width: $md2+px) {
-            width: 150px;
+            width: auto;
+            height: 140px;
             left: 50%;
             transform: translateX(-50%);
-            display: none;
         }
 
         & img {

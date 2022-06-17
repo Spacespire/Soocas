@@ -1,0 +1,16 @@
+.brands {
+    & .head__title {
+        @media (min-width: 768px) {
+            & br {
+                display: none;
+            }
+        }
+
+        @media (max-width: $md3+px) {
+            font-weight: 600;
+            font-size: 38px !important;
+            line-height: 46px;
+            color: rgba(73, 60, 140, 0.77);
+        }
+    }
+}

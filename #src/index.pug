@@ -8,21 +8,21 @@ block content
     main._page.home-page
         include components/promo-header/_promo-header
 
-        .padding-wrap.pt-0-mob
+        .padding-wrap.pt-0-mob.pb-0-mob
             include components/product-classes/_product-classes
 
-        .padding-wrap 
-            .container
+        .padding-wrap.pt-0-mob 
+            .container.d-none.d-md-block
                 .head 
                     h2.head__title.text-center.wow.fadeInUp(data-wow-duration="0.8s") Выбери свой SOOCAS
             include components/grid-banner/_grid-banner-first
             include components/grid-banner/_grid-banner-second
             include components/grid-banner/_grid-banner-third
 
-        .padding-wrap 
+        .padding-wrap.brands 
             .container 
                 .head 
-                    h3.head__title.text-center.text-uppercase.text-primary.wow.fadeInUp(data-wow-duration="0.8s") AWARD & RECOGNITION
+                    h3.head__title.text-center.text-uppercase.text-primary.wow.fadeInUp(data-wow-duration="0.8s") AWARD <br> & RECOGNITION
                 include components/logos-list/_logos-list
                 .padding-wrap.pb-0.text-center
                     +btn('#', false, 'О БРЕНДЕ')

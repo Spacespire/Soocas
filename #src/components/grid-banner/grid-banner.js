@@ -9,7 +9,7 @@
                     swiperGridBannerSlider = new Swiper(gridBannerSlider, {
                         slidesPerView: 1,
                         speed: 600,
-                        spaceBetween: 16,
+                        spaceBetween: 40,
                         pagination: {
                             el: gridBannerSlider.querySelector('[data-slider-dots]'),
                             clickable: true,

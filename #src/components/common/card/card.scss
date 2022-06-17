@@ -467,6 +467,11 @@
 
         & .card__price {
             color: $mainColor;
+            font-family: sans-serif;
+
+            @media (max-width: $md3+px) {
+                font-weight: 600;
+            }
         }
 
         & .card__btn {
@@ -474,6 +479,7 @@
 
             @media (max-width: $md3+px) {
                 display: flex;
+                max-width: 164px;
             }
         }
 

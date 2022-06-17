@@ -4,7 +4,6 @@ if (promoHeader) {
     let textSlider = new Swiper(promoHeader.querySelector('[data-slider="promo-header-text-slider"]'), {
         effect: 'fade',
         speed: 400,
-        loop: true,
         breakpoints: {
             320: {
                 slidesPerView: 1,
@@ -27,7 +26,6 @@ if (promoHeader) {
         slidesPerView: 1,
         spaceBetween: 0,
         speed: 800,
-        loop: true,
         on: {
             activeIndexChange: (data) => {
                 textSlider.slideTo(data.activeIndex);
@@ -46,7 +44,6 @@ if (promoHeader) {
         slidesPerView: 1,
         spaceBetween: 0,
         speed: 800,
-        loop: true,
         lazy: {
             loadPrevNext: true,
         },

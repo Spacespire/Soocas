@@ -15020,6 +15020,7 @@ p {
 
 .card--preview .card__price {
   color: #493C8C;
+  font-family: sans-serif;
 }
 
 .card--preview .card__btn {
@@ -15502,7 +15503,7 @@ p {
   width: 100%;
   height: 2px;
   display: block;
-  background: #000;
+  background: #493C8C;
   position: absolute;
   -webkit-transition: all 0.2s;
   -o-transition: all 0.2s;
@@ -18214,16 +18215,6 @@ p {
   overflow: visible;
 }
 
-.grid-banner__item--1 .grid-banner__text {
-  right: 2px;
-  bottom: 60px;
-}
-
-.grid-banner__item--2 .grid-banner__text {
-  left: 0;
-  bottom: 7px;
-}
-
 .grid-banner__item-inner {
   position: relative;
   height: 0;
@@ -18256,7 +18247,6 @@ p {
 .grid-banner__text {
   position: absolute;
   z-index: 2;
-  padding: 31px 32px;
 }
 
 .grid-banner__text > *:last-child {
@@ -18267,7 +18257,7 @@ p {
   font-weight: 600;
   font-size: 26px !important;
   line-height: 32px;
-  margin-bottom: 1.18em !important;
+  margin-bottom: 0;
 }
 
 .grid-banner__text p {
@@ -18301,12 +18291,20 @@ p {
   background-color: #C1D2CB;
 }
 
+.grid-banner--first .grid-banner__title {
+  color: #004922;
+}
+
 .grid-banner--second {
   background-color: #FFEDFF;
 }
 
 .grid-banner--second .grid-banner__title {
   color: rgba(73, 60, 140, 0.77);
+}
+
+.grid-banner--second .grid-banner__text {
+  color: #493C8C;
 }
 
 .grid-banner--second .card {
@@ -21109,6 +21107,10 @@ p {
 
   .grid-banner--third .grid-banner__item--3 .grid-banner__text {
     top: 50%;
+  }
+
+  .brands .head__title br {
+    display: none;
   }
 }
 
@@ -25937,12 +25939,12 @@ p {
   }
 
   .cta__decor {
-    width: 150px;
+    width: auto;
+    height: 140px;
     left: 50%;
     -webkit-transform: translateX(-50%);
         -ms-transform: translateX(-50%);
             transform: translateX(-50%);
-    display: none;
   }
 
   .product-preview__col-1 {
@@ -26241,7 +26243,7 @@ p {
   }
 
   .grid-banner {
-    padding: 80px 0 140px;
+    padding: 90px 0 205px;
   }
 
   .grid-banner__title {
@@ -26590,10 +26592,15 @@ p {
     font-size: 24px;
   }
 
+  .card--preview .card__price {
+    font-weight: 600;
+  }
+
   .card--preview .card__btn {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    max-width: 164px;
   }
 
   .card--preview .card__text-wrap {
@@ -26768,6 +26775,36 @@ p {
     min-height: calc(100vh - 98px);
   }
 
+  .promo-header__text-sider-item:nth-child(1) .promo-header__title {
+    color: #fff !important;
+    font-size: 26px !important;
+  }
+
+  .promo-header__text-sider-item:nth-child(1) .promo-header__subtitle {
+    color: #fff;
+  }
+
+  .promo-header__text-sider-item:nth-child(1) .promo-header__btn.btn {
+    color: #000 !important;
+    background-color: #97FFC3;
+  }
+
+  .promo-header__text-sider-item:nth-child(2) .promo-header__title {
+    color: #fff !important;
+  }
+
+  .promo-header__text-sider-item:nth-child(2) .promo-header__subtitle {
+    color: #fff;
+  }
+
+  .promo-header__text-sider-item:nth-child(3) .promo-header__subtitle {
+    color: #fff !important;
+  }
+
+  .promo-header__text-sider-item:nth-child(4) .promo-header__subtitle {
+    color: #474747 !important;
+  }
+
   .promo-header__subtitle {
     font-size: 20px;
     margin: 0 auto 26px;
@@ -26775,7 +26812,7 @@ p {
 
   .promo-header__title {
     margin: 0 auto 20px;
-    font-size: 24px !important;
+    font-size: 35px !important;
     text-align: center;
   }
 
@@ -26836,7 +26873,7 @@ p {
 
   .cta {
     padding-top: 95px;
-    padding-bottom: 95px;
+    padding-bottom: 156px;
   }
 
   .cta__form {
@@ -27164,15 +27201,95 @@ p {
   }
 
   .grid-banner {
-    padding: 40px 0 110px;
+    padding: 90px 0 160px;
   }
 
   .grid-banner__title {
-    margin-bottom: 24px;
+    margin-bottom: 20px;
+    font-size: 22px !important;
+    font-weight: 300;
+    padding: 0 20px;
+  }
+
+  .grid-banner__title strong {
+    font-size: 38px !important;
+    font-weight: 600;
+    line-height: 1em;
+  }
+
+  .grid-banner__inner {
+    padding: 0 23px;
+    gap: 55px;
+  }
+
+  .grid-banner__item--1 .grid-banner__text {
+    right: 20px;
+    top: 30px;
+    left: 30px;
+    -webkit-transform: translate(0);
+        -ms-transform: translate(0);
+            transform: translate(0);
+  }
+
+  .grid-banner__item--2 .grid-banner__text {
+    left: 21px;
+    bottom: 40px;
+    right: 20px;
+  }
+
+  .grid-banner__item--3 .grid-banner__text {
+    left: auto;
+    right: 16px;
+    top: auto;
+    -webkit-transform: translate(0);
+        -ms-transform: translate(0);
+            transform: translate(0);
+    bottom: 56px;
+    width: 160px;
   }
 
   .grid-banner__text p {
-    font-size: 18px;
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .grid-banner--second .grid-banner__item--1 .grid-banner__text {
+    top: 24px;
+    left: auto;
+    right: 19px;
+    text-align: right;
+  }
+
+  .grid-banner--second .grid-banner__item--3 .grid-banner__text {
+    top: 30px;
+    right: 20px;
+    left: 24%;
+  }
+
+  .grid-banner--second .grid-banner__item--4 .grid-banner__text {
+    top: 30px;
+    right: 20px;
+    left: 20px;
+    text-align: center;
+  }
+
+  .grid-banner--third .grid-banner__item--1 .grid-banner__text {
+    color: #000 !important;
+    top: 24px;
+    right: 11%;
+    left: 30px;
+  }
+
+  .grid-banner--third .grid-banner__item--2 .grid-banner__text {
+    top: 24px;
+    left: 30px;
+    bottom: auto;
+  }
+
+  .grid-banner--third .grid-banner__item--3 .grid-banner__text {
+    top: 24px;
+    left: 30px;
+    width: 216px;
   }
 
   .video-banner__title {
@@ -27214,6 +27331,13 @@ p {
   .logos-list__text {
     font-size: 14px;
     line-height: 1em;
+  }
+
+  .brands .head__title {
+    font-weight: 600;
+    font-size: 38px !important;
+    line-height: 46px;
+    color: rgba(73, 60, 140, 0.77);
   }
 
   .product-full-info__previev {
@@ -27368,10 +27492,6 @@ p {
     max-width: 250px;
   }
 
-  .grid-banner__text {
-    padding: 20px;
-  }
-
   .cookies-message__body {
     display: block;
   }
@@ -27387,23 +27507,11 @@ p {
   }
 }
 
-@media (max-width: 400px) {
-  .promo-header__title {
-    font-size: 22px;
-  }
-}
-
 @media (max-width: 399.98px) {
   .catalog__list-item {
     -webkit-box-flex: 0;
         -ms-flex: 0 1 100%;
             flex: 0 1 100%;
-  }
-}
-
-@media (max-width: 384.98px) {
-  h3 {
-    font-size: 18px !important;
   }
 }
 
@@ -27414,10 +27522,27 @@ p {
 }
 
 @media (max-width: 374.98px) {
+  .promo-header__title {
+    font-size: 26px !important;
+  }
+
   .partners__list-item {
     -webkit-box-flex: 0;
         -ms-flex: 0 1 50%;
             flex: 0 1 50%;
+  }
+
+  .grid-banner__title {
+    font-size: 19px !important;
+    padding: 0;
+  }
+
+  .grid-banner__title strong {
+    font-size: 30px !important;
+  }
+
+  .grid-banner__inner {
+    padding: 0;
   }
 }
 
