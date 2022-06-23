@@ -1,23 +1,24 @@
-.mini-gallery 
-    .container 
-        ul.mini-gallery__list
-            li.mini-gallery__list-item 
-                .mini-gallery-card
-                    .mini-gallery-card__img.ibg 
-                        img(src="img/photo/mini-gallery-card-img-1.jpg", alt="")
-                    .mini-gallery-card__text.text IPX5 водонепроницаемый корпус
-            li.mini-gallery__list-item 
-                .mini-gallery-card
-                    .mini-gallery-card__img.ibg 
-                        img(src="img/photo/mini-gallery-card-img-2.jpg", alt="")
-                    .mini-gallery-card__text.text Широкоугольная LED-фара
-            li.mini-gallery__list-item 
-                .mini-gallery-card
-                    .mini-gallery-card__img.ibg 
-                        img(src="img/photo/mini-gallery-card-img-3.jpg", alt="")
-                    .mini-gallery-card__text.text Удобная зарядка и подставка для смартфона
-            li.mini-gallery__list-item 
-                .mini-gallery-card
-                    .mini-gallery-card__img.ibg 
-                        img(src="img/photo/mini-gallery-card-img-4.jpg", alt="")
-                    .mini-gallery-card__text.text HD LCD-дисплей с хорошей видимостью даже в солнечную погоду 
+mixin mini-gallery() 
+    .mini-gallery&attributes(attributes) 
+        .container 
+            ul.mini-gallery__list
+                li.mini-gallery__list-item 
+                    .mini-gallery-card
+                        .mini-gallery-card__img.ibg 
+                            img(src="img/photo/mini-gallery-card-img-1.jpg", alt="")
+                        .mini-gallery-card__text.text IPX5 водонепроницаемый корпус
+                li.mini-gallery__list-item 
+                    .mini-gallery-card
+                        .mini-gallery-card__img.ibg 
+                            img(src="img/photo/mini-gallery-card-img-2.jpg", alt="")
+                        .mini-gallery-card__text.text Широкоугольная LED-фара
+                li.mini-gallery__list-item 
+                    .mini-gallery-card
+                        .mini-gallery-card__img.ibg 
+                            img(src="img/photo/mini-gallery-card-img-3.jpg", alt="")
+                        .mini-gallery-card__text.text Удобная зарядка и подставка для смартфона
+                li.mini-gallery__list-item 
+                    .mini-gallery-card
+                        .mini-gallery-card__img.ibg 
+                            img(src="img/photo/mini-gallery-card-img-4.jpg", alt="")
+                        .mini-gallery-card__text.text HD LCD-дисплей с хорошей видимостью даже в солнечную погоду 

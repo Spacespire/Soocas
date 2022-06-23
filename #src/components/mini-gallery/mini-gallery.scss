@@ -31,6 +31,32 @@
             flex: 0 1 100%;
         }
     }
+
+
+
+
+    &--text-outside {
+ 
+        & .mini-gallery-card {
+            padding-bottom: 0;
+            height: auto;
+        }
+        & .mini-gallery-card__img {
+            height: 0;
+            padding-bottom: 55.95%;
+            position: relative;
+            &:before {
+                display: none;
+            }
+        }
+
+        & .mini-gallery-card__text {
+            position: static;
+            color: #000;
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+        }
+    }
 }
 
 .mini-gallery-card {
