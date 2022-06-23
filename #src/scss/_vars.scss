@@ -2,6 +2,7 @@
 
 //<ШРИФТЫ>===========================================================================================================
 $mainFontFamily:  'MuseoSansCyrl', sans-serif;
+$secondFontFamily: 'Montserrat', sans-serif;
 //</ШРИФТЫ>===========================================================================================================
 
 //<РАЗМЕРЫ КОНТЕЙНЕРА>===========================================================================================================
@@ -21,7 +22,7 @@ $secondColor: #C8C8C8;
 $dangerColor:  #CC413C; 
 $successColor:#188045;
 $infoColor: #BC62EF;
-$lightColor: #fff;
+$lightColor: #f4f4f4;
 $darkColor: #222222;
 $warningColor: #FFC31C;
 
@@ -33,7 +34,7 @@ $warningColor: #FFC31C;
     --bs-info: #BC62EF;
     --bs-warning: #FFC31C;
     --bs-danger: #CC413C;
-    --bs-light: #fff;
+    --bs-light: #f4f4f4;
     --bs-dark: #222222;
 
     --bs-primary-rgb: 73, 60, 140; 

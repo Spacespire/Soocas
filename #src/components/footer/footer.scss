@@ -2,12 +2,10 @@
     background-color: #362D67;
     color: $lightColor;
     padding: 10rem 0 4rem;
+    font-family: $secondFontFamily;
 
-    @media (max-width: $md2+px) {
-        padding: 70px 0 20px;
-    }
     @media (max-width: $md3+px) {
-        padding: 40px 0 20px;
+        padding: 90px 0 20px;
     }
 
     &__body {
@@ -117,7 +115,7 @@
     &__copy {
         font-size: 2.4rem;
         line-height: 1.25em;
-        color: rgba(#75777a, 0.5);
+        color: rgba(#fff, 0.5);
 
         @media (max-width: $md2+px) {
             font-size: 16px;
@@ -149,6 +147,13 @@
             font-size: 20px;
             line-height: 22px;
             letter-spacing: 0.181818px;
+            color: inherit !important;
+        }
+
+        @media (min-width: 992px) {
+            &:hover {
+                color: #FACECB !important;
+            }
         }
     }
 }

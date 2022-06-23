@@ -113,13 +113,19 @@
                 }
             }
             &:nth-child(3) {
+                & .promo-header__title {
+                    color: #3158A1 !important;
+                }
                 & .promo-header__subtitle {
-                    color: #fff !important;
+                    color: #474747 !important;
                 }
             }
             &:nth-child(4) {
+                & .promo-header__title {
+                    color: #3158A1 !important;
+                }
                 & .promo-header__subtitle {
-                    color: #474747 !important;
+                    color: #fff !important;
                 }
             }
         }

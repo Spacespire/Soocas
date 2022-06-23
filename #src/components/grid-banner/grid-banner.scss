@@ -22,7 +22,7 @@
             font-size: 22px !important;
             font-weight: 300;
             padding: 0 20px;
-            
+
             & strong {
                 font-size: 38px !important;
                 font-weight: 600;
@@ -33,7 +33,7 @@
         @media (max-width: 374.98px) {
             font-size: 19px !important;
             padding: 0;
-            
+
             & strong {
                 font-size: 30px !important;
             }
@@ -173,8 +173,6 @@
             }
         }
         &--4 {
-
-
             & .grid-banner__item-inner {
                 @media (min-width: 768px) {
                     padding-bottom: 0;
@@ -243,13 +241,12 @@
             padding: 0;
         }
 
-
-
         & > *:last-child {
             margin-bottom: 0;
         }
 
         & h5 {
+            font-family: $secondFontFamily;
             font-weight: 600;
             font-size: 26px !important;
             line-height: 32px;
@@ -259,14 +256,13 @@
                 line-height: 1.21em;
                 margin-bottom: 0 !important;
             }
-
-
         }
 
         & p {
             font-size: 3em;
             line-height: 1.23em;
             font-weight: 600;
+            font-family: $secondFontFamily;
 
             @media (max-width: $md3+px) {
                 font-size: 20px;
@@ -275,7 +271,12 @@
 
             & b {
                 font-size: 1.83em;
-                font-weight: 400;
+
+                @media (max-width: $md3+px) {
+                    font-size: 33px;
+                    line-height: 40px;
+                    font-weight: 600 !important;
+                }
             }
         }
     }
@@ -297,7 +298,7 @@
     }
 
     &--first {
-        background-color: #C1D2CB;
+        background-color: #c1d2cb;
 
         & .grid-banner__title {
             color: #004922;
@@ -305,7 +306,7 @@
     }
 
     &--second {
-        background-color: #FFEDFF;
+        background-color: #ffedff;
         & .grid-banner__title {
             color: rgba(#493c8c, 0.77);
         }
@@ -318,7 +319,6 @@
 
         & .swiper-wrapper {
             @media (min-width: 768px) {
-
                 grid-template-columns: 38.5% 1fr;
                 grid-template-rows: 1fr 1fr 1fr;
             }
@@ -343,9 +343,7 @@
                     right: 19px;
                     text-align: right;
                 }
-
             }
-
         }
         & .grid-banner__item--2 {
             @media (min-width: 768px) {
@@ -357,7 +355,6 @@
                     bottom: auto;
                 }
             }
-
         }
         & .grid-banner__item--3 {
             @media (min-width: 768px) {
@@ -380,7 +377,6 @@
             }
         }
         & .grid-banner__item--4 {
-
             @media (max-width: $md3+px) {
                 & .grid-banner__text {
                     top: 30px;
@@ -391,7 +387,7 @@
             }
         }
 
-        & .grid-banner__item-inner  {
+        & .grid-banner__item-inner {
             @media (min-width: 768px) {
                 color: $mainColor !important;
                 min-height: 24rem;
@@ -408,10 +404,10 @@
     }
 
     &--third {
-        background-color: #EECCD3;
+        background-color: #eeccd3;
 
         & .grid-banner__title {
-            color: #9C2235;
+            color: #9c2235;
         }
 
         @media (min-width: 768px) {
@@ -435,7 +431,6 @@
             }
             & .grid-banner__item--4 {
                 & .grid-banner__text {
-                    
                 }
             }
         }
@@ -460,12 +455,11 @@
                 & .grid-banner__text {
                     top: 24px;
                     left: 30px;
-                    width: 216px;
+                    width: 224px;
                 }
             }
             & .grid-banner__item--4 {
                 & .grid-banner__text {
-                    
                 }
             }
         }

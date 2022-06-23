@@ -21,6 +21,7 @@
     border-radius: 300px;
     border: 1px solid var(--bs-primary);
     text-transform: uppercase;
+    font-family: $secondFontFamily;
 
     @media (min-width: 992px) {
         &:hover {
@@ -50,7 +51,7 @@
 
     &--light {
         background-color: #fff;
-        color: $textColor;
+        color: $mainColor;
         border-color: #fff;
 
         @media (min-width: 992px) {
@@ -62,7 +63,7 @@
 
     &--light-secondary {
         background-color: transparent;
-        color: $mainColor;
+        color: #3158A1;
         border-color: $mainColor;
 
         @media (min-width: 992px) {

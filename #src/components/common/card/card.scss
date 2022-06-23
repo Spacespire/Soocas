@@ -385,11 +385,11 @@
         text-align: center;
         text-decoration-line: underline;
         text-transform: uppercase;
-        transition: all .3s ease;
+        transition: all 0.3s ease;
 
         @media (max-width: $md3+px) {
-            top: calc(100% + 2.2rem);
-            font-size: 20px;
+            font-size: 25px;
+            line-height: 30px;
         }
 
         @media (min-width: 992px) {
@@ -411,7 +411,7 @@
         background-color: rgba(#fff, 0.33);
         border: none;
         border-radius: 3.3rem;
-        
+
         @media (min-width: 992px) {
             min-height: 77.2rem;
         }
@@ -456,18 +456,20 @@
         }
 
         & .card__title {
+            font-family: $secondFontFamily;
             font-weight: 600;
             font-size: 3rem;
             line-height: 1.23em;
 
             @media (max-width: $md3+px) {
                 font-size: 24px;
+                margin-bottom: 20px;
             }
         }
 
         & .card__price {
             color: $mainColor;
-            font-family: sans-serif;
+            font-family: $secondFontFamily;
 
             @media (max-width: $md3+px) {
                 font-weight: 600;
@@ -476,7 +478,7 @@
 
         & .card__btn {
             max-width: 23.3rem;
-
+            font-family: $secondFontFamily;
             @media (max-width: $md3+px) {
                 display: flex;
                 max-width: 164px;

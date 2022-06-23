@@ -5,11 +5,9 @@
     color: $lightColor;
     position: relative;
 
-
     @media (max-width: $md3+px) {
         padding-top: 95px;
         padding-bottom: 156px;
-
     }
 
     &__decor {
@@ -21,7 +19,6 @@
         display: flex;
         justify-content: center;
         align-items: flex-end;
-        
 
         @media (max-width: $md2+px) {
             width: auto;
@@ -39,15 +36,29 @@
     }
 
     &__head {
-
     }
 
     & .head__title {
         font-weight: 600;
+
+        @media (max-width: $md3+px) {
+            font-weight: 400;
+            font-size: 40px !important;
+            line-height: 42px;
+            letter-spacing: -0.825397px;
+            margin-bottom: 15px;
+        }
+    }
+
+    & .head__subtitle {
+        @media (max-width: $md3+px) {
+            font-size: 20px;
+            line-height: 26px;
+            letter-spacing: 0.0833333px;
+        }
     }
 
     &__form {
-        
         @media (min-width: 768px) {
             display: flex;
             width: 100%;
@@ -55,15 +66,14 @@
             background-color: #fff;
             border-radius: 300px;
             margin: 0 auto;
-            width: 100%;    
+            width: 100%;
         }
-        @media (max-width: $md3+px) { 
+        @media (max-width: $md3+px) {
             text-align: center;
         }
     }
 
     &__form-input {
-
         @media (min-width: 768px) {
             flex: 0 0 40rem;
             margin-right: 4rem;
@@ -71,12 +81,12 @@
             text-align: left;
         }
 
-        @media (max-width: $md3+px) { 
+        @media (max-width: $md3+px) {
             margin-bottom: 16px;
         }
 
         & input {
-            @media (max-width: $md3+px) { 
+            @media (max-width: $md3+px) {
                 text-align: center;
             }
         }
@@ -96,8 +106,5 @@
                 background-color: #fff;
             }
         }
-
     }
-
-
 }
