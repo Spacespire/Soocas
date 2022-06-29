@@ -17365,6 +17365,7 @@ p {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 auto;
           flex: 0 0 auto;
+  font-family: "Montserrat", sans-serif;
 }
 
 .product-preview__price-old {

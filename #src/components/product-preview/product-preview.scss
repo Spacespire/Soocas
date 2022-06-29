@@ -433,6 +433,7 @@
         letter-spacing: -0.027em;
         color: $textColor;
         flex: 0 0 auto;
+        font-family: $secondFontFamily;
 
         @media (max-width: $md2+px) {
             font-size: 52px;
