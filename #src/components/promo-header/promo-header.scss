@@ -36,7 +36,7 @@
         flex-direction: column;
         position: relative;
         z-index: 2;
-        padding-top: 18rem;
+        padding-top: 22rem;
         padding-bottom: 5.5rem;
 
         @media (max-width: $md2+px) {
@@ -87,10 +87,17 @@
             flex-direction: column;
         }
 
+
+
         @media (max-width: $md3+px) {
             &:nth-child(1) {
                 & .promo-header__title {
+                    color: #fff;
                     font-size: 26px !important;
+                }
+
+                & .promo-header__subtitle {
+                    color: #fff;
                 }
 
                 & .promo-header__btn.btn {
@@ -99,22 +106,6 @@
                 }
             }
 
-            // &:nth-child(3) {
-            //     & .promo-header__title {
-            //         color: #3158A1 !important;
-            //     }
-            //     & .promo-header__subtitle {
-            //         color: #474747 !important;
-            //     }
-            // }
-            // &:nth-child(4) {
-            //     & .promo-header__title {
-            //         color: #3158A1 !important;
-            //     }
-            //     & .promo-header__subtitle {
-            //         color: #fff !important;
-            //     }
-            // }
         }
 
         &.swiper-slide-active {
