@@ -14420,6 +14420,10 @@ p {
   color: rgba(129, 129, 129, 0.5);
 }
 
+.input[data-mask] .input__field {
+  letter-spacing: -0.05em;
+}
+
 .form-control {
   font-size: 2.4rem;
   color: #000;
@@ -16229,7 +16233,7 @@ p {
           flex-direction: column;
   position: relative;
   z-index: 2;
-  padding-top: 22rem;
+  padding-top: 18rem;
   padding-bottom: 5.5rem;
 }
 
@@ -16293,7 +16297,7 @@ p {
   -webkit-transition-delay: 0.8s, 0.8s;
        -o-transition-delay: 0.8s, 0.8s;
           transition-delay: 0.8s, 0.8s;
-  margin-bottom: 10.5rem;
+  margin-bottom: 6rem;
   color: #696969;
 }
 
@@ -16319,7 +16323,7 @@ p {
           transition-delay: 0.6s, 0.6s;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  font-size: 11.1rem !important;
+  font-size: 9rem !important;
   line-height: 1.19em;
   letter-spacing: 0.05em;
   font-weight: 100;
@@ -22422,6 +22426,10 @@ p {
     display: none;
   }
 
+  .footer a:hover {
+    color: #FACECB !important;
+  }
+
   .footer__link:hover {
     color: #FACECB !important;
   }
@@ -26805,41 +26813,12 @@ p {
   }
 
   .promo-header__text-sider-item:nth-child(1) .promo-header__title {
-    color: #fff !important;
     font-size: 26px !important;
-  }
-
-  .promo-header__text-sider-item:nth-child(1) .promo-header__subtitle {
-    color: #fff;
   }
 
   .promo-header__text-sider-item:nth-child(1) .promo-header__btn.btn {
     color: #000 !important;
     background-color: #97FFC3;
-  }
-
-  .promo-header__text-sider-item:nth-child(2) .promo-header__title {
-    color: #fff !important;
-  }
-
-  .promo-header__text-sider-item:nth-child(2) .promo-header__subtitle {
-    color: #fff;
-  }
-
-  .promo-header__text-sider-item:nth-child(3) .promo-header__title {
-    color: #3158A1 !important;
-  }
-
-  .promo-header__text-sider-item:nth-child(3) .promo-header__subtitle {
-    color: #474747 !important;
-  }
-
-  .promo-header__text-sider-item:nth-child(4) .promo-header__title {
-    color: #3158A1 !important;
-  }
-
-  .promo-header__text-sider-item:nth-child(4) .promo-header__subtitle {
-    color: #fff !important;
   }
 
   .promo-header__subtitle {

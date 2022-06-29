@@ -36,7 +36,7 @@
         flex-direction: column;
         position: relative;
         z-index: 2;
-        padding-top: 22rem;
+        padding-top: 18rem;
         padding-bottom: 5.5rem;
 
         @media (max-width: $md2+px) {
@@ -90,12 +90,7 @@
         @media (max-width: $md3+px) {
             &:nth-child(1) {
                 & .promo-header__title {
-                    color: #fff !important;
                     font-size: 26px !important;
-                }
-
-                & .promo-header__subtitle {
-                    color: #fff;
                 }
 
                 & .promo-header__btn.btn {
@@ -103,31 +98,23 @@
                     background-color: #97FFC3;
                 }
             }
-            &:nth-child(2) {
-                & .promo-header__title {
-                    color: #fff !important;
-                }
 
-                & .promo-header__subtitle {
-                    color: #fff;
-                }
-            }
-            &:nth-child(3) {
-                & .promo-header__title {
-                    color: #3158A1 !important;
-                }
-                & .promo-header__subtitle {
-                    color: #474747 !important;
-                }
-            }
-            &:nth-child(4) {
-                & .promo-header__title {
-                    color: #3158A1 !important;
-                }
-                & .promo-header__subtitle {
-                    color: #fff !important;
-                }
-            }
+            // &:nth-child(3) {
+            //     & .promo-header__title {
+            //         color: #3158A1 !important;
+            //     }
+            //     & .promo-header__subtitle {
+            //         color: #474747 !important;
+            //     }
+            // }
+            // &:nth-child(4) {
+            //     & .promo-header__title {
+            //         color: #3158A1 !important;
+            //     }
+            //     & .promo-header__subtitle {
+            //         color: #fff !important;
+            //     }
+            // }
         }
 
         &.swiper-slide-active {
@@ -145,7 +132,7 @@
         transition-duration: 0.8s, 0.8s;
         transition-timing-function: ease-out, ease-out;
         transition-delay: 0.8s, 0.8s;
-        margin-bottom: 10.5rem;
+        margin-bottom: 6rem;
         color: $textColorSecondary;
 
         @media (max-width: $md2+px) {
@@ -173,7 +160,7 @@
         transition-delay: 0.6s, 0.6s;
         letter-spacing: 0.22em;
         text-transform: uppercase;
-        font-size: 11.1rem !important;
+        font-size: 9rem !important;
         line-height: 1.19em;
         letter-spacing: 0.05em;
         font-weight: 100;

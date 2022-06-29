@@ -8,6 +8,14 @@
         padding: 90px 0 20px;
     }
 
+    & a {
+        @media (min-width: 992px) {
+            &:hover {
+                color: #FACECB !important;
+            }
+        }
+    }
+
     &__body {
         display: flex;
 

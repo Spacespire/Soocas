@@ -32,6 +32,12 @@
 			font-weight: 500;
 		}
 	}
+
+	&[data-mask] {
+		& .input__field {
+			letter-spacing: -0.05em;
+		}
+	}
 }
 
 .form-control {
