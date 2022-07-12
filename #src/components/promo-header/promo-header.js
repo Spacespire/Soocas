@@ -66,6 +66,10 @@ if (promoHeader) {
                 } else {
                     header.classList.remove('header--text-white');
                 }
+            },
+
+            afterInit: () => {
+                header.classList.add('header--text-white');
             }
         }
     });
