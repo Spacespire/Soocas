@@ -54,6 +54,29 @@
         }
     }
 
+    &--text-white:not(.header--is-scroll):not(.header--menu-is-open) {
+        color: #fff;
+
+        & .burger__cross {
+            background-color: #fff;
+        }
+
+        & .header-actions__num-products {
+            background-color: #fff;
+            color: $mainColor;
+        }
+
+        & .menu__link, & .contact-info a, & .header-actions a, & .header__logo a {
+            color: #fff !important;
+
+            @media (min-width: 992px) {
+                &:hover {
+                    opacity: 0.7 !important;
+                }
+            }
+        }
+    }
+
     &--is-scroll,
     &--menu-is-open {
         background-color: #fff;
@@ -101,11 +124,17 @@
         width: 100%;
         max-width: 19.1rem;
         margin-right: 6rem;
+        transition: all 0s !important;
+
+        &  * {
+            transition: all 0s !important;
+        }
         & img,
         & svg {
             width: 100%;
             height: auto;
             display: block;
+            transition: all 0s ease;
         }
 
 

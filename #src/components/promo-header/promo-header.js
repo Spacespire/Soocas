@@ -1,6 +1,6 @@
 let promoHeader = document.querySelector('[data-promo-header]');
 if (promoHeader) {
-
+    let header = document.querySelector('[data-header]')
     let textSlider = new Swiper(promoHeader.querySelector('[data-slider="promo-header-text-slider"]'), {
         effect: 'fade',
         speed: 400,
@@ -60,6 +60,12 @@ if (promoHeader) {
             activeIndexChange: (data) => {
                 textSlider.slideTo(data.activeIndex);
                 linksSlider.slideTo(data.activeIndex);
+
+                if(data.activeIndex === 0) {
+                    header.classList.add('header--text-white');
+                } else {
+                    header.classList.remove('header--text-white');
+                }
             }
         }
     });

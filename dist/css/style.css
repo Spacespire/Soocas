@@ -15201,6 +15201,26 @@ p {
   background-color: #000;
 }
 
+.header--text-white:not(.header--is-scroll):not(.header--menu-is-open) {
+  color: #fff;
+}
+
+.header--text-white:not(.header--is-scroll):not(.header--menu-is-open) .burger__cross {
+  background-color: #fff;
+}
+
+.header--text-white:not(.header--is-scroll):not(.header--menu-is-open) .header-actions__num-products {
+  background-color: #fff;
+  color: #493C8C;
+}
+
+.header--text-white:not(.header--is-scroll):not(.header--menu-is-open) .menu__link,
+.header--text-white:not(.header--is-scroll):not(.header--menu-is-open) .contact-info a,
+.header--text-white:not(.header--is-scroll):not(.header--menu-is-open) .header-actions a,
+.header--text-white:not(.header--is-scroll):not(.header--menu-is-open) .header__logo a {
+  color: #fff !important;
+}
+
 .header--is-scroll,
 .header--menu-is-open {
   background-color: #fff;
@@ -15243,6 +15263,15 @@ p {
   width: 100%;
   max-width: 19.1rem;
   margin-right: 6rem;
+  -webkit-transition: all 0s !important;
+  -o-transition: all 0s !important;
+  transition: all 0s !important;
+}
+
+.header__logo * {
+  -webkit-transition: all 0s !important;
+  -o-transition: all 0s !important;
+  transition: all 0s !important;
 }
 
 .header__logo img,
@@ -15250,6 +15279,9 @@ p {
   width: 100%;
   height: auto;
   display: block;
+  -webkit-transition: all 0s ease;
+  -o-transition: all 0s ease;
+  transition: all 0s ease;
 }
 
 .header__menu {
@@ -16268,6 +16300,22 @@ p {
 
 .promo-header__text-sider-item {
   opacity: 0 !important;
+}
+
+.promo-header__text-sider-item:nth-child(1) .promo-header__title {
+  color: #fff;
+}
+
+.promo-header__text-sider-item:nth-child(1) .promo-header__subtitle {
+  color: #fff;
+}
+
+.promo-header__text-sider-item:nth-child(1) .promo-header__btn.btn {
+  color: #000 !important;
+  background-color: #97ffc3;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .promo-header__text-sider-item.swiper-slide-active {
@@ -22371,6 +22419,13 @@ p {
     color: #fff !important;
   }
 
+  .header--text-white:not(.header--is-scroll):not(.header--menu-is-open) .menu__link:hover,
+  .header--text-white:not(.header--is-scroll):not(.header--menu-is-open) .contact-info a:hover,
+  .header--text-white:not(.header--is-scroll):not(.header--menu-is-open) .header-actions a:hover,
+  .header--text-white:not(.header--is-scroll):not(.header--menu-is-open) .header__logo a:hover {
+    opacity: 0.7 !important;
+  }
+
   .header__burger {
     display: none;
   }
@@ -22458,6 +22513,10 @@ p {
 
   .popup-form__continue:hover {
     opacity: 0.7;
+  }
+
+  .promo-header__text-sider-item:nth-child(1) .promo-header__btn.btn:hover {
+    background-color: #fff;
   }
 
   .promo-header__slider-dots:hover {
@@ -26814,17 +26873,7 @@ p {
   }
 
   .promo-header__text-sider-item:nth-child(1) .promo-header__title {
-    color: #fff;
-    font-size: 26px !important;
-  }
-
-  .promo-header__text-sider-item:nth-child(1) .promo-header__subtitle {
-    color: #fff;
-  }
-
-  .promo-header__text-sider-item:nth-child(1) .promo-header__btn.btn {
-    color: #000 !important;
-    background-color: #97FFC3;
+    font-size: 22px !important;
   }
 
   .promo-header__subtitle {

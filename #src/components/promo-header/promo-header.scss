@@ -87,25 +87,29 @@
             flex-direction: column;
         }
 
-
-
-        @media (max-width: $md3+px) {
-            &:nth-child(1) {
-                & .promo-header__title {
-                    color: #fff;
-                    font-size: 26px !important;
-                }
-
-                & .promo-header__subtitle {
-                    color: #fff;
-                }
-
-                & .promo-header__btn.btn {
-                    color: $textColor !important;
-                    background-color: #97FFC3;
+        &:nth-child(1) {
+            & .promo-header__title {
+                color: #fff;
+                @media (max-width: $md3+px) {
+                    font-size: 22px !important;
                 }
             }
 
+            & .promo-header__subtitle {
+                color: #fff;
+            }
+
+            & .promo-header__btn.btn {
+                color: $textColor !important;
+                background-color: #97ffc3;
+                transition: all .3s ease;
+
+                @media (min-width: 992px) {
+                    &:hover {
+                        background-color: #fff;
+                    }
+                }
+            }
         }
 
         &.swiper-slide-active {

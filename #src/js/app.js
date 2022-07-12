@@ -15,7 +15,8 @@ class App {
 		if (this.utils.iOS()) {
 			document.body.classList.add('mobile-ios');
 		}
-	
+		
+		this.utils.replaceToInlineSvg('[data-replace-to-inline-svg]');
 		this.dynamicAdapt.init();
 		this.headerHandler();
 		this.popupHandler();
