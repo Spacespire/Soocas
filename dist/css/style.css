@@ -22613,6 +22613,13 @@ p {
     margin-bottom: 0;
   }
 
+  .ban-light--row-revers .ban-light__body {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+
   .ban-light--row-revers .ban-light__text-wrap {
     margin-left: 0;
     padding-left: 0;
@@ -22620,12 +22627,11 @@ p {
   }
 
   .ban-light--row-revers .ban-light__img {
-    left: 50%;
-  }
-
-  .ban-light--row-revers .ban-light__img img {
-    -o-object-position: left center;
-       object-position: left center;
+    margin-left: 0;
+    margin-right: calc((100vw - (100vw - 100px)) / 2 * -1);
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 calc(50% + (100vw - (100vw - 100px)) / 2);
+            flex: 0 0 calc(50% + (100vw - (100vw - 100px)) / 2);
   }
 
   .ban-light--row-revers .ban-light__labels {
@@ -22641,7 +22647,20 @@ p {
     padding: 2.2rem 16rem 2.2rem 4rem;
   }
 
+  .ban-light__body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+
   .ban-light__text-wrap {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -22653,7 +22672,6 @@ p {
         -ms-flex-pack: center;
             justify-content: center;
     width: 50%;
-    min-height: 120rem;
   }
 
   .ban-light__list--only-mob,
@@ -22691,16 +22709,21 @@ p {
   }
 
   .ban-light__img {
-    position: absolute;
-    top: 0;
-    right: 50%;
-    height: 100%;
-    width: 50vw;
+    margin-left: calc((100vw - (100% - 100px)) / 2 * -1);
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 calc(50% + (100vw - (100% - 100px)) / 2);
+            flex: 0 0 calc(50% + (100vw - (100% - 100px)) / 2);
+    -webkit-transform: translate(0);
+        -ms-transform: translate(0);
+            transform: translate(0);
+    left: 0;
   }
 
   .ban-light__img img {
-    -o-object-position: right center;
-       object-position: right center;
+    position: static;
+    width: 100%;
+    height: auto;
+    display: block;
   }
 
   .ban-img-full-width__text-wrap {
@@ -24023,6 +24046,38 @@ p {
 
   .fs-4 {
     font-size: 1.5rem !important;
+  }
+}
+
+@media (min-width: 1268px) {
+  .ban-light--row-revers .ban-light__img {
+    margin-right: calc((100vw - (100vw - 200px)) / 2 * -1);
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 calc(50% + (100vw - (100vw - 200px)) / 2);
+            flex: 0 0 calc(50% + (100vw - (100vw - 200px)) / 2);
+  }
+
+  .ban-light__img {
+    margin-left: calc((100vw - (100% - 200px)) / 2 * -1);
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 calc(50% + (100vw - (100% - 200px)) / 2);
+            flex: 0 0 calc(50% + (100vw - (100% - 200px)) / 2);
+  }
+}
+
+@media (min-width: 1346px) {
+  .ban-light--row-revers .ban-light__img {
+    margin-right: calc((100vw - 196rem) / 2 * -1);
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 calc(50% + (100vw - 196rem) / 2);
+            flex: 0 0 calc(50% + (100vw - 196rem) / 2);
+  }
+
+  .ban-light__img {
+    margin-left: calc((100vw - 196rem) / 2 * -1);
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 calc(50% + (100vw - 196rem) / 2);
+            flex: 0 0 calc(50% + (100vw - 196rem) / 2);
   }
 }
 
@@ -25960,11 +26015,13 @@ p {
   }
 
   .ban-light__img {
-    margin-top: -32px;
     margin-left: -16px;
     margin-right: -16px;
-    height: 0;
-    padding-bottom: 78.36%;
+  }
+
+  .ban-light__img img {
+    position: static;
+    height: auto;
   }
 
   .ban-light__labels {
@@ -27400,6 +27457,25 @@ p {
   .video-full-width {
     padding-bottom: 0;
     min-height: calc(100vh - 55px);
+  }
+
+  .video-full-width--second {
+    height: auto;
+    min-height: auto;
+  }
+
+  .video-full-width--second video {
+    position: static;
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .video-full-width--second iframe {
+    position: static;
+    width: 100%;
+    height: auto;
+    display: block;
   }
 
   .cookies-message__body {

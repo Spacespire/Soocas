@@ -101,4 +101,25 @@
         height: 100%;
         z-index: 1;
     }
+
+    &--second {
+        @media (max-width: $md3+px) {
+            height: auto;
+            min-height: auto;
+
+            & video {
+                position: static;
+                width: 100%;
+                height: auto;
+                display: block;
+            }
+        
+            & iframe {
+                position: static;
+                width: 100%;
+                height: auto;
+                display: block;
+            }
+        }
+    }
 }

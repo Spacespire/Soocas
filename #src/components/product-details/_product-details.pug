@@ -22,6 +22,9 @@
             .video-full-width
                 video(src="img/Video-Purification.mp4" playsinline loop muted autoplay)
 
+            .video-full-width.video-full-width--second
+                video(src="img/Video-Purification.mp4" playsinline loop muted autoplay)
+
             section.ban-img-full-width
                 .container 
                     .ban-img-full-width__body 
@@ -29,10 +32,10 @@
                             h2.ban-img-full-width__title.wow.fadeInUp(data-wow-duration="2s") Умная техника для дома Smartmi
                             .ban-img-full-width__text.text.wow.fadeInUp(data-wow-duration="2s") Инновации, заслуживающие внимания.
 
-                        .ban-img-full-width__img.ibg 
-                            picture
-                                source(srcset="img/photo/ban-dark-img-3@2x.jpg" media="(min-width: 576px)")
-                                img(src="img/photo/article-img.jpg" alt="img")
+                .ban-img-full-width__img.ibg 
+                    picture
+                        source(srcset="img/photo/ban-dark-img-3@2x.jpg" media="(min-width: 576px)")
+                        img(src="img/photo/article-img.jpg" alt="img")
 
             .padding-wrap.bg-black.text-white
                 .container 
@@ -49,10 +52,38 @@
                             .ban-light__text.text.wow.fadeInUp(data-wow-duration="2s") 
                                 p Комплектующие от легендарного японского бренда Shimano: надежность, качество, долговечность.
 
-                        .ban-light__img.ibg.img-contain
+                        .ban-light__img.ibg
                             picture
                                 source(srcset="img/photo/app-review-img-right.png" media="(min-width: 768px)")
-                                img(src="img/photo/app-review-img-right.png" alt="img" class=`${imgClass}`)
+                                img(src="img/photo/app-review-img-right.png" alt="img")
+
+
+            section.ban-light.ban-light--row-revers
+                .container 
+                    .ban-light__body 
+                        .ban-light__text-wrap 
+                            h3.ban-light__title.wow.fadeInUp(data-wow-duration="2s") 7-ступенчатая трансмиссия SHIMANO
+                            .ban-light__text.text.wow.fadeInUp(data-wow-duration="2s") 
+                                p Комплектующие от легендарного японского бренда Shimano: надежность, качество, долговечность.
+
+                        .ban-light__img.ibg
+                            picture
+                                source(srcset="img/photo/ban-dark-img-7-mob.jpg" media="(min-width: 768px)")
+                                img(src="img/photo/ban-dark-img-7-mob.jpg" alt="img")
+
+
+            section.ban-light(style="background-color: #f7f7f7;")
+                .container 
+                    .ban-light__body 
+                        .ban-light__text-wrap 
+                            h3.ban-light__title.wow.fadeInUp(data-wow-duration="2s") 7-ступенчатая трансмиссия SHIMANO
+                            .ban-light__text.text.wow.fadeInUp(data-wow-duration="2s") 
+                                p Комплектующие от легендарного японского бренда Shimano: надежность, качество, долговечность.
+
+                        .ban-light__img.ibg.object-position-center
+                            picture
+                                source(srcset="img/photo/ban-dark-img-7-mob.jpg" media="(min-width: 768px)")
+                                img(src="img/photo/ban-dark-img-7-mob.jpg" alt="img")
 
             - var banUrl = {desk: 'img/photo/ban-dark-img-2.jpg', mob: 'img/photo/ban-dark-img-2-mob.jpg'};
             - var banTitle = '7-ступенчатая трансмиссия SHIMANO';
@@ -68,7 +99,7 @@
                 .container
                     picture
                         source(srcset="img/photo/bike-schema-img-1.jpg" media="(min-width: 576px)" class="w-100")
-                        img(src="img/photo/bike-schema-img-mob-1.jpg" alt="img" class="w-100") 
+                        img(src="img/photo/bike-classes-info-img-mob.jpg" alt="img" class="w-100") 
 
             +product-benefits
 
