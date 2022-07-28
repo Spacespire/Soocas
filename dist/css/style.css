@@ -16643,13 +16643,6 @@ p {
 
 .ban-dark__body {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
 }
 
 .ban-dark__text-wrap {
@@ -16670,10 +16663,15 @@ p {
 
 .ban-dark__text {
   max-width: 25.75em;
+  margin-bottom: 7.8rem;
 }
 
 .ban-dark__text > *:last-child {
   margin-bottom: 0;
+}
+
+.ban-dark__img {
+  z-index: 1;
 }
 
 .ban-dark__list,
@@ -16695,6 +16693,13 @@ p {
 
 .ban-light__body {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .ban-light__text-wrap {
@@ -16705,6 +16710,10 @@ p {
   position: relative;
   z-index: 2;
   margin-left: auto;
+}
+
+.ban-light__text-wrap > *:last-child {
+  margin-bottom: 0;
 }
 
 .ban-light__title {
@@ -16718,11 +16727,6 @@ p {
 
 .ban-light__text > *:last-child {
   margin-bottom: 0;
-}
-
-.ban-light__img {
-  z-index: 1;
-  background-color: #fff;
 }
 
 .ban-light__labels {
@@ -22543,6 +22547,13 @@ p {
     padding-top: 15rem !important;
   }
 
+  .ban-dark--row-revers .ban-dark__body {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+
   .ban-dark--row-revers .ban-dark__text-wrap {
     margin-left: 0;
     padding-left: 0;
@@ -22550,13 +22561,21 @@ p {
   }
 
   .ban-dark--row-revers .ban-dark__img {
-    right: auto;
-    left: 50%;
+    margin-left: 0;
+    margin-right: calc((100vw - (100vw - 100px)) / 2 * -1);
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 calc(50% + (100vw - (100vw - 100px)) / 2);
+            flex: 0 0 calc(50% + (100vw - (100vw - 100px)) / 2);
   }
 
-  .ban-dark--row-revers .ban-dark__img img {
-    -o-object-position: left center;
-       object-position: left center;
+  .ban-dark__body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
   }
 
   .ban-dark__text-wrap {
@@ -22572,20 +22591,24 @@ p {
             justify-content: center;
     width: 50%;
     margin-left: auto;
-    min-height: 120rem;
   }
 
   .ban-dark__img {
-    position: absolute;
-    top: 0;
-    right: 50%;
-    height: 100%;
-    width: 50vw;
+    margin-left: calc((100vw - (100% - 100px)) / 2 * -1);
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 calc(50% + (100vw - (100% - 100px)) / 2);
+            flex: 0 0 calc(50% + (100vw - (100% - 100px)) / 2);
+    -webkit-transform: translate(0);
+        -ms-transform: translate(0);
+            transform: translate(0);
+    left: 0;
   }
 
   .ban-dark__img img {
-    -o-object-position: right center;
-       object-position: right center;
+    position: static;
+    width: 100%;
+    height: auto;
+    display: block;
   }
 
   .ban-dark__list,
@@ -22627,11 +22650,13 @@ p {
   }
 
   .ban-light--row-revers .ban-light__img {
-    margin-left: 0;
-    margin-right: calc((100vw - (100vw - 100px)) / 2 * -1);
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 calc(50% + (100vw - (100vw - 100px)) / 2);
-            flex: 0 0 calc(50% + (100vw - (100vw - 100px)) / 2);
+    right: auto;
+    left: 50%;
+  }
+
+  .ban-light--row-revers .ban-light__img img {
+    -o-object-position: left center;
+       object-position: left center;
   }
 
   .ban-light--row-revers .ban-light__labels {
@@ -22645,16 +22670,6 @@ p {
   .ban-light--row-revers .ban-light__label {
     text-align: right;
     padding: 2.2rem 16rem 2.2rem 4rem;
-  }
-
-  .ban-light__body {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: row-reverse;
-            flex-direction: row-reverse;
   }
 
   .ban-light__text-wrap {
@@ -22672,6 +22687,7 @@ p {
         -ms-flex-pack: center;
             justify-content: center;
     width: 50%;
+    min-height: 120rem;
   }
 
   .ban-light__list--only-mob,
@@ -22709,21 +22725,16 @@ p {
   }
 
   .ban-light__img {
-    margin-left: calc((100vw - (100% - 100px)) / 2 * -1);
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 calc(50% + (100vw - (100% - 100px)) / 2);
-            flex: 0 0 calc(50% + (100vw - (100% - 100px)) / 2);
-    -webkit-transform: translate(0);
-        -ms-transform: translate(0);
-            transform: translate(0);
-    left: 0;
+    position: absolute;
+    top: 0;
+    right: 50%;
+    height: 100%;
+    width: 50vw;
   }
 
   .ban-light__img img {
-    position: static;
-    width: 100%;
-    height: auto;
-    display: block;
+    -o-object-position: right center;
+       object-position: right center;
   }
 
   .ban-img-full-width__text-wrap {
@@ -24050,14 +24061,14 @@ p {
 }
 
 @media (min-width: 1268px) {
-  .ban-light--row-revers .ban-light__img {
+  .ban-dark--row-revers .ban-dark__img {
     margin-right: calc((100vw - (100vw - 200px)) / 2 * -1);
     -webkit-box-flex: 0;
         -ms-flex: 0 0 calc(50% + (100vw - (100vw - 200px)) / 2);
             flex: 0 0 calc(50% + (100vw - (100vw - 200px)) / 2);
   }
 
-  .ban-light__img {
+  .ban-dark__img {
     margin-left: calc((100vw - (100% - 200px)) / 2 * -1);
     -webkit-box-flex: 0;
         -ms-flex: 0 0 calc(50% + (100vw - (100% - 200px)) / 2);
@@ -24066,14 +24077,14 @@ p {
 }
 
 @media (min-width: 1346px) {
-  .ban-light--row-revers .ban-light__img {
+  .ban-dark--row-revers .ban-dark__img {
     margin-right: calc((100vw - 196rem) / 2 * -1);
     -webkit-box-flex: 0;
         -ms-flex: 0 0 calc(50% + (100vw - 196rem) / 2);
             flex: 0 0 calc(50% + (100vw - 196rem) / 2);
   }
 
-  .ban-light__img {
+  .ban-dark__img {
     margin-left: calc((100vw - 196rem) / 2 * -1);
     -webkit-box-flex: 0;
         -ms-flex: 0 0 calc(50% + (100vw - 196rem) / 2);
@@ -25949,8 +25960,11 @@ p {
   .ban-dark__img {
     margin-left: -16px;
     margin-right: -16px;
-    height: 0;
-    padding-bottom: 101.71%;
+  }
+
+  .ban-dark__img img {
+    position: static;
+    height: auto;
   }
 
   .ban-dark__list,
@@ -26988,8 +27002,8 @@ p {
     line-height: 1.26em;
   }
 
-  .ban-light__text-wrap {
-    padding-bottom: 0;
+  .ban-dark__text {
+    margin-bottom: 36px;
   }
 
   .ban-img-full-width__title {
