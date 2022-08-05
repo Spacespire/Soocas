@@ -54,7 +54,7 @@
     &__text-wrap {
         flex: 0 0 auto;
         color: #fff;
-        padding: 15rem 0 15rem 10rem;
+        padding: 10rem 0 10rem 10rem;
 
         & > *:last-child {
             margin-bottom: 0;
@@ -101,13 +101,14 @@
             margin-left: calc(calc((100vw - 196rem) / 2) * -1);
             flex: 0 0 calc(50% + (calc(calc((100vw - 196rem) / 2))));
         }
+
         @media (min-width: 1268px) {
-            margin-left: calc(calc((100vw - (100% - 200px)) / 2) * -1);
-            flex: 0 0 calc(50% + calc(calc((100vw - (100% - 200px)) / 2)));
+            margin-left: calc(calc((100vw - (100% - 0px)) / 2) * -1);
+            flex: 0 0 calc(50% + calc(calc((100vw - (100% - 0px)) / 2)));
         }
         @media (min-width: 992px) {
-            margin-left: calc(calc((100vw - (100% - 100px)) / 2) * -1);
-            flex: 0 0 calc(50% + calc(calc((100vw - (100% - 100px)) / 2)));
+            margin-left: calc(calc((100vw - (100% - 0px)) / 2) * -1);
+            flex: 0 0 calc(50% + calc(calc((100vw - (100% - 0px)) / 2)));
             transform: translate(0);
             left: 0;
 

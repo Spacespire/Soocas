@@ -1303,6 +1303,44 @@ if (technicalInfo) {
             }
         })
     }
+
+    let tableDefaultAll = document.querySelectorAll('.table-default');
+    if(tableDefaultAll.length) {
+        tableDefaultAll.forEach(tableDefault => {
+            if(tableDefault.hasAttribute('data-table-show-first-lines')) {
+                let scrollWrap = document.createElement('div');
+                scrollWrap.className = "table-default-scroll-wrap";
+                tableDefault.after(scrollWrap);
+                scrollWrap.append(tableDefault);
+                
+
+                if(scrollWrap.nextElementSibling.classList.contains('hidden-table-wrap')) {
+                    scrollWrap.append(scrollWrap.nextElementSibling);
+                }
+            } else {
+                if(tableDefault.classList.contains('in-scroll-wrap')) return;
+                if(tableDefault.closest('.hidden-table-wrap')) return;
+                
+                let scrollWrap = document.createElement('div');
+                scrollWrap.className = "table-default-scroll-wrap";
+                tableDefault.after(scrollWrap);
+                scrollWrap.append(tableDefault);
+
+                const appendTable = () => {
+                    if(scrollWrap.nextElementSibling.classList.contains('table-default')) {
+                        if(scrollWrap.nextElementSibling.hasAttribute('data-table-show-first-lines')) return;
+                        scrollWrap.nextElementSibling.classList.add('in-scroll-wrap')
+                        scrollWrap.append(scrollWrap.nextElementSibling);
+                        appendTable();
+                    } else {
+                        return;
+                    }
+                }
+
+                appendTable();
+            }
+        })
+    }
 };
 	}
 

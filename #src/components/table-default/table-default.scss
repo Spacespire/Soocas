@@ -1,7 +1,38 @@
+.table-default-scroll-wrap {
+    @media (max-width: $md2+px) {
+        margin-left: -16px;
+        margin-right: -16px;
+        padding-left: 16px;
+        padding-right: 16px;
+        overflow-x: auto;
+    }
+
+    &::-webkit-scrollbar {
+        width: 2px;
+        height: 2px;
+    }
+    &::-webkit-scrollbar-thumb {
+        background: rgba(214, 214, 214, 0.3);
+        border-radius: 10px;
+    }
+    &::-webkit-scrollbar-thumb:hover {
+        background: #fff;
+    }
+    &::-webkit-scrollbar-track {
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: inset 0px 0px 0px 0px #fff;
+    }
+
+    & .hidden-table-wrap {
+        margin-bottom: 0 !important;
+    }
+}
 .table-default {
     font-size: 1rem;
     width: 100%;
     text-align: center;
+    word-break: break-word;
 
     @media (max-width: $md2+px) {
         font-size: 8px;
@@ -29,10 +60,15 @@
 
     @for $i from 2 to 13 {
         &--col-#{$i} {
+            min-width: 500 + ($i * 30px);
             td {
                 width: calc(100% / $i);
             }
         }
+    }
+
+    &--col-2 {
+        min-width: auto;
     }
 
     &--col-3 {
