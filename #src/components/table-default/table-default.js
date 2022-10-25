@@ -65,13 +65,17 @@
                 scrollWrap.append(tableDefault);
 
                 const appendTable = () => {
-                    if(scrollWrap.nextElementSibling.classList.contains('table-default')) {
-                        if(scrollWrap.nextElementSibling.hasAttribute('data-table-show-first-lines')) return;
-                        scrollWrap.nextElementSibling.classList.add('in-scroll-wrap')
-                        scrollWrap.append(scrollWrap.nextElementSibling);
-                        appendTable();
+                    if(scrollWrap.nextElementSibling) {
+                        if(scrollWrap.nextElementSibling.classList.contains('table-default')) {
+                            if(scrollWrap.nextElementSibling.hasAttribute('data-table-show-first-lines')) return;
+                            scrollWrap.nextElementSibling.classList.add('in-scroll-wrap')
+                            scrollWrap.append(scrollWrap.nextElementSibling);
+                            appendTable();
+                        } else {
+                            return;
+                        }
                     } else {
-                        return;
+                        return; 
                     }
                 }
 

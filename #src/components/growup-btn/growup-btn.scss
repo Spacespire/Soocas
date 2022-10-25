@@ -1,0 +1,46 @@
+.btn-growup {
+    background-color: transparent;
+    outline: none;
+    border-radius: 0;
+    border: none;
+    width: 8rem;
+    cursor: pointer;
+    position: fixed;
+    right: 5rem;
+    bottom: 5rem;
+    z-index: 50;
+    padding: 0;
+    transition: opacity .6s ease, color .3s ease;
+    color: $textColor;
+    opacity: 0;
+    visibility: hidden;
+
+    @media (min-width: 992px) {
+        &:hover {
+            color: $mainColor;
+        }
+    }
+    
+    @media (max-width: $md3+px) {
+        right: 20px;
+        bottom: 20px;
+        width: 40px;
+    }
+
+    & svg {
+        width: 100%;
+        height: auto;
+        border: 2px solid #fff;
+        border-radius: 50%;
+        background-color: #fff;
+
+        & path {
+            fill: currentColor;
+        }
+    }
+
+    &--show {
+        opacity: 1;
+        visibility: visible;
+    }
+}

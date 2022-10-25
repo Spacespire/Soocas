@@ -287,7 +287,9 @@ class App {
 		@@include('../components/common/quantity/quantity.js');
 		@@include('../components/common/rating/rating.js');
 		@@include('../components/popup/popup-form-scripts.js');
+		@@include('../components/popup/popup-search.js');
 		@@include('../components/table-default/table-default.js');
+		@@include('../components/growup-btn/growup-btn.js');
 	}
 
 }

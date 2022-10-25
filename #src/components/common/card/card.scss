@@ -264,6 +264,15 @@
         justify-content: space-between;
         flex-wrap: wrap;
         margin-top: auto;
+        min-height: 8rem; 
+
+        @media (max-width: $md2+px) {
+            min-height: 50px;
+        }
+
+        @media (max-width: $md3+px) {
+            min-height: auto;
+        }
     }
 
     &__price {
