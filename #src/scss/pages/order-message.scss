@@ -1,0 +1,97 @@
+.order-message {
+    &__title {
+        font-weight: 700;
+        font-size: 4.4rem !important;
+        line-height: 1.18em;
+        text-transform: uppercase;
+        margin-bottom: 3.6rem;
+        color: $mainColor;
+
+        @media (max-width: $md3+px) {
+            font-weight: 700;
+            font-size: 20px !important;
+            line-height: 23px;
+            margin-bottom: 21px;
+        }
+    }
+
+    &__text {
+        max-width: 157rem;
+
+        &.text-content {
+            font-size: 2.8rem;
+            line-height: 1.178em;
+
+            @media (max-width: $md3+px) {
+                font-size: 18px;
+                line-height: 21px;
+            }
+        }
+
+        & > *:last-child {
+            margin-bottom: 0;
+        }
+
+        & a {
+            text-decoration: underline;
+        }
+
+        & .text-secondary {
+            color: #979797 !important;
+        }
+    }
+
+    &__info-box {
+        margin-bottom: 1.2em;
+        display: inline-block;
+        padding: 1.8rem 3.8rem;
+        background-color: #f6f6f6;
+
+        @media (max-width: $md4+px) {
+            padding: 18px 18px;
+            font-size: 16px;
+            line-height: 1.16em;
+        }
+
+        & > *:last-child {
+            margin-bottom: 0;
+        }
+    }
+    &__info-box-label {
+        margin-bottom: 0.32em;
+    }
+    &__info-box-list {
+        padding-left: 0 !important;
+    }
+    &__info-box-list-item {
+        list-style: none !important;
+        display: flex;
+        align-items: center;
+        gap: 0.7rem;
+
+        &:not(:last-child) {
+            margin-bottom: 0.32em !important;
+        }
+
+        & > *:last-child {
+            margin-bottom: 0;
+        }
+    }
+    &__info-box-list-item-icon {
+        width: 2.2rem;
+        height: 2.6rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 0 0 auto;
+
+        & img {
+            width: auto;
+            height: auto;
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
+    &__info-box-list-item-text {
+    }
+}

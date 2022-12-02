@@ -1,0 +1,216 @@
+extends _base
+
+block header
+    - var headerModClass = 'header--text-dark';
+    include components/header/_header
+
+block content
+    main._page.checkout-page.padding-top-header-size
+        .container
+            .head-second
+                .head-second__breadcrumb
+                    +breadcrumb(['Главная', 'Корзина'], 'Оформление заказа')
+                h2.head-second__title.title-2.mb-1 Оформление заказа
+
+        form(action="/") 
+            .padding-wrap.pt-0 
+                .container 
+                    .basket
+                        .basket__row 
+                            .basket__city-selection
+                                include components/city-selection/_city-selection
+                                include components/alert/_alert
+                        .basket__row
+                            .basket__grid
+                                .basket__grid-col-1
+                                    .basket__row
+                                        .checkout 
+                                            .checkout__tabs(data-tabs="not-init")
+                                                .checkout__tabs-nav
+                                                    include components/buttons-delivery-type/_buttons-delivery-type-tabs
+                                                .checkout__tabs-content(data-tab-content="0")
+                                                    .checkout__row
+                                                        .form 
+                                                            .form__fields.row 
+                                                                .form__fields-col.col-12.col-md-4
+                                                                    .form__field 
+                                                                        label.form__label Получатель:
+                                                                        input.form-control(type="text" placeholder="ФИО")
+                                                                .form__fields-col.col-12.col-md-4
+                                                                    .form__field(data-mask="+7 (999) 999-99-99") 
+                                                                        label.form__label Телефон:
+                                                                        input.form-control(type="text" placeholder="+7")
+                                                                .form__fields-col.col-12.col-md-4
+                                                                    .form__field 
+                                                                        label.form__label Почта:
+                                                                        input.form-control(type="email" placeholder="e-mail")
+                                                                .form__fields-col.col-12
+                                                                    .form__field 
+                                                                        input.form-control(type="email" placeholder="Комментарий к заказу")
+                                                    .checkout__row
+                                                        h2.basket__title Выбранный пункт выдачи
+                                                        .checkout__text.text-content 
+                                                            .checkout__two-columns
+                                                                .checkout__selected-address
+                                                                    .checkout__selected-address-label Выбранный пункт выдачи
+                                                                    .checkout__selected-address-text 
+                                                                        img(src="img/icons/marker.png", alt="")
+                                                                        p.text-dark Москва, Настасьинский пер., 8, стр. 2, офис 10, этаж 1
+                                                                a(href="#popupMap" data-popup="open-popup").checkout__map-btn.basket-btn Изменить пункт выдачи
+                                                            p   
+                                                                span.text-dark
+                                                                    strong Стоимость доставки: 
+                                                                    | Бесплатно
+                                                                br
+                                                                | *срок действия доставки на карте указан без учета времени подтверждения заказа клиентом и срока отгрузки товара со склада.
+
+                                                            p 
+                                                                strong.text-dark Важно:
+                                                                br
+                                                                | Доставка заказа в пункт самовывоза курьерской службы. После того, как мы передадим заказ на доставку, вам поступит уведомление с трек-номером для отслеживания. После оформления заказа пункт выдачи изменить нельзя. Обязательно укажите ФИО получателя. 
+                                                                strong.text-dark Выдача товара в ПВЗ строго по паспорту!
+
+                                                .checkout__tabs-content(data-tab-content="1")
+                                                    .checkout__row
+                                                        .form 
+                                                            .form__fields.row 
+                                                                .form__fields-col.col-12.col-md-4
+                                                                    .form__field 
+                                                                        label.form__label Получатель:
+                                                                        input.form-control(type="text" placeholder="ФИО")
+                                                                .form__fields-col.col-12.col-md-4
+                                                                    .form__field(data-mask="+7 (999) 999-99-99") 
+                                                                        label.form__label Телефон:
+                                                                        input.form-control(type="text" placeholder="+7")
+                                                                .form__fields-col.col-12.col-md-4
+                                                                    .form__field 
+                                                                        label.form__label Почта:
+                                                                        input.form-control(type="email" placeholder="e-mail")
+                                                                .form__fields-col.col-12.col-md-8
+                                                                    .form__field 
+                                                                        label.form__label Адрес доставки:
+                                                                        input.form-control(type="email" placeholder="Адрес доставки (улица, дом)")
+                                                                .form__fields-col.col-12.col-md-4
+                                                                    .form__field 
+                                                                        label.form__label Квартира/офис:
+                                                                        input.form-control(type="email" placeholder="123")
+                                                                .form__fields-col.col-12
+                                                                    .form__field 
+                                                                        label.form__label
+                                                                        input.form-control(type="email" placeholder="Комментарий к заказу")
+                                                .checkout__tabs-content(data-tab-content="2")
+                                                    .checkout__row
+                                                        .form 
+                                                            .form__fields.row 
+                                                                .form__fields-col.col-12.col-md-4
+                                                                    .form__field 
+                                                                        label.form__label Получатель:
+                                                                        input.form-control(type="text" placeholder="ФИО")
+                                                                .form__fields-col.col-12.col-md-4
+                                                                    .form__field(data-mask="+7 (999) 999-99-99") 
+                                                                        label.form__label Телефон:
+                                                                        input.form-control(type="text" placeholder="+7")
+                                                                .form__fields-col.col-12.col-md-4
+                                                                    .form__field 
+                                                                        label.form__label Почта:
+                                                                        input.form-control(type="email" placeholder="e-mail")
+                                                                .form__fields-col.col-12.col-md-8
+                                                                    .form__field 
+                                                                        label.form__label Адрес доставки:
+                                                                        input.form-control(type="email" placeholder="Адрес доставки (улица, дом)")
+                                                                .form__fields-col.col-12.col-md-4
+                                                                    .form__field 
+                                                                        label.form__label Квартира/офис:
+                                                                        input.form-control(type="email" placeholder="123")
+                                                                .form__fields-col.col-12
+                                                                    .form__field 
+                                                                        label.form__label
+                                                                        input.form-control(type="email" placeholder="Комментарий к заказу")
+                                                .checkout__tabs-content(data-tab-content="3")
+                                                    .checkout__row
+                                                        .form 
+                                                            .form__fields.row 
+                                                                .form__fields-col.col-12.col-md-4
+                                                                    .form__field 
+                                                                        label.form__label Получатель:
+                                                                        input.form-control(type="text" placeholder="ФИО")
+                                                                .form__fields-col.col-12.col-md-4
+                                                                    .form__field(data-mask="+7 (999) 999-99-99") 
+                                                                        label.form__label Телефон:
+                                                                        input.form-control(type="text" placeholder="+7")
+                                                                .form__fields-col.col-12.col-md-4
+                                                                    .form__field 
+                                                                        label.form__label Почта:
+                                                                        input.form-control(type="email" placeholder="e-mail")
+                                                                .form__fields-col.col-12
+                                                                    .form__field 
+                                                                        input.form-control(type="email" placeholder="Комментарий к заказу")
+
+                                                    .checkout__row
+                                                        h2.basket__title Адрес самовывоза из офиса 
+                                                        h3.basket__title-2.text-primary название магазина
+                                                        .checkout__text.text-content
+                                                            .checkout__text.text-content 
+                                                                .checkout__two-columns
+                                                                    .checkout__selected-address
+                                                                        p <strong class="text-dark">Адрес</strong> Москва, ул. Адрес, дом 13, БЦ “РОСТЭК” <br> Ближайшее мметро: Владимирская
+                                                                    a(href="#popupMap" data-popup="open-popup").checkout__map-btn.basket-btn Показать адрес на карте 
+
+                                                                p <strong class="text-dark">Телефон</strong> <a href="#"> +7 999 999 99 99</a> <br> <strong class="text-dark">Время работы:</strong> пн-пт, 10:00 - 19:00
+                                                                p <strong class="text-dark">Важно: </strong>
+                                                                    | Заказ должен быть предварительно оплаачен <br>
+                                                                    | Необходимо предварительно согласовать день и время забора товара с оператором контакт-центра магазина по тел: <a href="#"> +7 999 999 99 99</a> Для прохода на территорию БЦ “РОСТЭК” при себе необходимо имметь паспорт РФ.
+                                        
+                                    .basket__row
+                                        h2.basket__title скидки и программы
+                                        .checkout-discounts-programs
+                                            .checkout-discounts-programs__item
+                                                .checkout-discounts-programs__item-head
+                                                    .checkout-discounts-programs__item-label Баллы
+                                                    .checkout-discounts-programs__item-text у вас 
+                                                        span.text-primary 100 баллов
+                                                .checkout-discounts-programs__item-body
+                                                    .checkout-discounts-programs__item-field 
+                                                        input(type="text" placeholder="Оплатить баллами").checkout-discounts-programs__item-input
+                                                        button(type="button").checkout-discounts-programs__item-btn-confirm ОК
+                                                        button(type="button").checkout-discounts-programs__item-btn-cancel.d-none отменить
+                                            .checkout-discounts-programs__item
+                                                .checkout-discounts-programs__item-head
+                                                    .checkout-discounts-programs__item-label Промокод
+                                                .checkout-discounts-programs__item-body
+                                                    .checkout-discounts-programs__item-field 
+                                                        input(type="text" placeholder="Введите промокод").checkout-discounts-programs__item-input
+                                                        button(type="button").checkout-discounts-programs__item-btn-confirm ОК
+                                                        button(type="button").checkout-discounts-programs__item-btn-cancel.d-none отменить
+                                            .checkout-discounts-programs__item
+                                                .checkout-discounts-programs__item-head
+                                                    .checkout-discounts-programs__item-label Trade-in
+                                                .checkout-discounts-programs__item-body
+                                                    .checkout-discounts-programs__item-field 
+                                                        input(type="text" placeholder="Trade-in" value="ABC-123-455").checkout-discounts-programs__item-input
+                                                        button(type="button").checkout-discounts-programs__item-btn-confirm.d-none ОК
+                                                        button(type="button").checkout-discounts-programs__item-btn-cancel отменить
+                                            .checkout-discounts-programs__item
+                                                .checkout-discounts-programs__item-head
+                                                    .checkout-discounts-programs__item-label Сертификат
+                                                .checkout-discounts-programs__item-body
+                                                    .checkout-discounts-programs__item-field 
+                                                        input(type="text" placeholder="Код сертификата").checkout-discounts-programs__item-input
+                                                        button(type="button").checkout-discounts-programs__item-btn-confirm ОК
+                                                        button(type="button").checkout-discounts-programs__item-btn-cancel.d-none отменить
+                                    
+                                    .basket__row
+                                        h2.basket__title Способ оплаты
+                                        .basket__subtitle  Выберите способ получения и вы сможете выбрать способ оплаты.
+                                        include components/payment-method/_payment-method
+
+                                .basket__grid-col-2
+                                    include components/checkout-card/_checkout-card-second
+
+        .container 
+            hr
+        include components/product-carousel/_product-carousel-second
+        .p-160
+
+block footer 
+    include components/footer/_footer

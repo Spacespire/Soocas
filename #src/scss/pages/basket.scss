@@ -1,0 +1,462 @@
+.basket {
+    &__row {
+        &:not(:last-child) {
+            margin-bottom: 7rem;
+
+            @media (max-width: $md3+px) {
+                margin-bottom: 3rem;
+            }
+        }
+    }
+    &__empry-text {
+        font-size: 2.8rem;
+        line-height: 1.17em;
+
+        @media (max-width: $md3+px) {
+            font-size: 18px;
+            line-height: 21px;
+        }
+
+        & a {
+            text-decoration: underline;
+        }
+    }
+    &__city-selection {
+        margin-bottom: 2.4rem;
+        position: relative;
+        &--desktop {
+            @media (max-width: $md3+px) {
+                display: none;
+            }
+        }
+    }
+
+    &__buttons-delivery-type {
+        @media (max-width: $md3+px) {
+            display: none;
+        }
+    }
+
+    &__grid {
+        display: flex;
+        gap: 4rem;
+
+        @media (max-width: $md2+px) {
+            display: block;
+        }
+    }
+    &__grid-col-1 {
+        flex: 1 1 auto;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+
+        @media (max-width: $md2+px) {
+            margin-bottom: 6rem;
+        }
+        @media (max-width: $md3+px) {
+            margin-bottom: 50px;
+        }
+    }
+    &__grid-col-2 {
+        flex: 0 0 56.6rem;
+        position: relative;
+
+        & > * {
+            @media (min-width: 992px) {
+                position: sticky;
+                top: 14rem;
+            }
+        }
+    }
+
+    &__product-list {
+        padding-left: 0;
+        margin-bottom: 4rem;
+    }
+    &__product-list-item {
+        padding-bottom: 3rem;
+        padding-top: 3rem;
+        border-bottom: 1px solid #e1e1e1;
+
+        @media (max-width: $md3+px) {
+            padding-bottom: 2.4rem;
+            padding-top: 2.4rem;
+
+            &:first-child {
+                padding-top: 0;
+            }
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__btn-clear-basket {
+        display: inline-block;
+        margin-left: auto;
+        font-weight: 700;
+        font-size: 2.4rem;
+        line-height: 1em;
+        letter-spacing: 0.00875em;
+        text-decoration-line: underline;
+        text-transform: uppercase;
+        transition: all 0.3s ease;
+        color: inherit;
+
+        @media (min-width: 992px) {
+            &:hover {
+                color: $mainColor;
+            }
+        }
+
+        @media (max-width: $md3+px) {
+            font-size: 18px;
+            color: $mainColor;
+        }
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 3.3rem !important;
+        line-height: 1.17em;
+        text-transform: uppercase;
+        font-family: $mainFontFamily;
+        margin-bottom: 3rem;
+
+        @media (max-width: $md3+px) {
+            font-size: 22px !important;
+            line-height: 26px;
+            margin-bottom: 2rem;
+        }
+
+        & + .basket__subtitle {
+            margin-top: -1.5rem;
+
+            @media (max-width: $md3+px) {
+                margin-top: -1rem;
+            }
+        }
+    }
+
+    &__title-2 {
+        font-size: 2.8rem !important;
+        line-height: 1.17em;
+        text-transform: uppercase;
+        font-family: $mainFontFamily;
+        margin-bottom: 3rem;
+
+        @media (max-width: $md3+px) {
+            font-size: 18px !important;
+            line-height: 21px;
+            margin-bottom: 2rem;
+        }
+    }
+
+    &__subtitle {
+        font-size: 2.2rem;
+        line-height: 1.18em;
+        color: #979797;
+        margin-bottom: 2rem;
+
+        @media (max-width: $md3+px) {
+            font-size: 15px;
+            line-height: 18px;
+        }
+    }
+}
+
+.basket-product-card {
+    display: flex;
+    gap: 10.4rem;
+    position: relative;
+
+    @media (max-width: $md2+px) {
+        gap: 30px;
+    }
+
+    @media (max-width: $md3+px) {
+        gap: 14px;
+        min-height: 115px;
+    }
+
+    &__img-wrap {
+        flex: 0 0 auto;
+    }
+    &__img {
+        width: 19.5rem;
+        height: 19.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+        @media (max-width: $md2+px) {
+            width: 100px;
+            height: 100px;
+        }
+
+        @media (max-width: $md3+px) {
+            height: 60px;
+            width: 60px;
+        }
+
+        & img {
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
+
+            &[src$=".jpg"],
+            &[src$=".jpeg"] {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+    &__inner {
+        flex: 1 1 auto;
+        display: flex;
+        padding-right: 8rem;
+        gap: 3rem;
+
+        @media (max-width: $md2+px) {
+            gap: 20px;
+            padding-right: 60px;
+        }
+
+        @media (max-width: $md3+px) {
+            padding-right: 0;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+    }
+    &__col-1 {
+        flex: 1 1 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        @media (max-width: $md3+px) {
+            flex: 0 1 100%;
+        }
+
+        & > * {
+            margin-bottom: 1.5rem;
+
+            @media (max-width: $md3+px) {
+                margin-bottom: 10px;
+            }
+        }
+
+        & > *:last-child {
+            margin-bottom: 0;
+        }
+    }
+    &__col-2 {
+        flex: 0 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        @media (max-width: $md3+px) {
+            margin-right: auto;
+            display: block;
+        }
+    }
+    &__col-3 {
+        flex: 0 0 22.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        @media (max-width: $md2+px) {
+            flex: 0 0 13.5rem;
+        }
+
+        @media (max-width: $md3+px) {
+            flex: 0 0 auto;
+        }
+    }
+    &__title {
+        font-weight: 700;
+        font-size: 2.8rem;
+        line-height: 1.17em;
+
+        @media (max-width: $md2+px) {
+            font-size: 22px;
+        }
+
+        @media (max-width: $md3+px) {
+            font-size: 18px;
+            line-height: 21px;
+        }
+
+        & a {
+            color: inherit;
+        }
+    }
+    &__info-list {
+        font-size: 2.8rem;
+        line-height: 1.1em;
+        color: #979797;
+        padding-left: 0;
+
+        @media (max-width: $md2+px) {
+            font-size: 22px;
+        }
+        @media (max-width: $md3+px) {
+            font-size: 18px;
+        }
+    }
+    &__present {
+        font-size: 2.8rem;
+        line-height: 1.1em;
+        color: #979797;
+        display: flex;
+        align-items: center;
+        gap: 0.9rem;
+
+        @media (max-width: $md2+px) {
+            font-size: 22px;
+        }
+        @media (max-width: $md3+px) {
+            font-size: 18px;
+        }
+
+        & img,
+        & svg {
+            height: 1.21em;
+            width: auto;
+            flex: 0 0 auto;
+            margin-top: -0.1em;
+        }
+    }
+    &__srvices {
+    }
+    &__quantity {}
+    &__price {
+        font-weight: 400;
+        font-size: 2.8rem;
+        line-height: 1.17em;
+        text-align: right;
+        color: #000000;
+
+        @media (max-width: $md2+px) {
+            font-size: 22px;
+        }
+
+        @media (max-width: $md3+px) {
+            font-size: 24px;
+        }
+    }
+    &__old-price {
+        font-weight: 700;
+        font-size: 2rem;
+        line-height: 2.3rem;
+        text-align: right;
+        color: #979797;
+        margin-bottom: 3rem;
+        text-decoration: line-through;
+
+        @media (max-width: $md2+px) {
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        @media (max-width: $md3+px) {
+            font-size: 16px;
+            margin-bottom: 0;
+        }
+    }
+    &__discount {
+        font-size: 2rem;
+        line-height: 2.3rem;
+        text-align: right;
+        color: #8f8f8f;
+        @media (max-width: $md2+px) {
+            font-size: 14px;
+        }
+
+        @media (max-width: $md3+px) {
+            display: none;
+        }
+    }
+    &__vendor-code {
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 18px;
+        color: #c8c8c8;
+        flex: 0 1 calc(100% - 35px - 15px);
+        display: flex;
+        align-items: center;
+        @media (min-width: 768px) {
+            display: none;
+        }
+    }
+    &__close {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 3.5rem;
+        height: 3.5rem;
+        background: transparent;
+        transition: all 0.3s ease;
+        transform: translateY(-50%);
+        z-index: 2;
+        padding: 0.5rem;
+
+        @media (max-width: $md3+px) {
+            transform: translateY(0);
+            right: auto;
+            top: 80px;
+            left: 12.5px;
+        }
+
+        @media (min-width: 992px) {
+            &:hover {
+                opacity: 0.7;
+            }
+        }
+
+        & img {
+            width: auto;
+            height: auto;
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        & > span {
+            position: relative;
+            width: 1.5rem;
+            height: 1.5rem;
+            transform: rotate(45deg);
+            display: block;
+            &:before {
+                position: absolute;
+                content: "";
+                top: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 2px;
+                height: 100%;
+                background-color: #313131;
+            }
+            &:after {
+                position: absolute;
+                content: "";
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+                width: 100%;
+                height: 2px;
+                background-color: #313131;
+            }
+        }
+    }
+}

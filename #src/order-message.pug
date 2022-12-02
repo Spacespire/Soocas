@@ -1,0 +1,59 @@
+extends _base
+
+block header
+    - var headerModClass = 'header--text-dark';
+    include components/header/_header
+
+block content
+    main._page.order-message-page.padding-top-header-size
+        .container
+            .head-second
+                .head-second__breadcrumb
+                    +breadcrumb(['Главная', 'Корзина'], 'Оформление заказа')
+                h2.head-second__title.title-2 Заказ оформлен
+
+                .order-message
+                    h3.order-message__title 
+                        | спасибо! <br>
+                        | ваш заказ #1127710 оформлен
+                    .order-message__text.text-content 
+                        p 
+                            strong Что дальше? <br>
+                            | Менеджер проверит заказ и при необходимости свяжется с вами. <br>
+                            | Далее мы соберем, упакуем и отправим ваш заказ.
+                        
+                        p Сразу после отправки заказа мы пришлем вам ссылку для отслеживания.
+
+                        .order-message__info-box 
+                            .order-message__info-box-label 
+                                a(href="#") Оставить отзыв 
+                                | о нас или 
+                                a(href="#") ваши предложения 
+                                | можно: 
+                            ul.order-message__info-box-list
+                                li.order-message__info-box-list-item
+                                    .order-message__info-box-list-item-icon 
+                                        img(src="img/icons/letter-2.svg", alt="")
+                                    p.order-message__info-box-list-item-text
+                                        | На почту: 
+                                        a(href="#") nazvaniepochti@ya.ru 
+                                li.order-message__info-box-list-item
+                                    .order-message__info-box-list-item-icon 
+                                        img(src="img/icons/phone.svg", alt="")
+                                    p.order-message__info-box-list-item-text
+                                        | По телефону: 
+                                        a(href="#") +7 (495) 000 34 74 
+                                li.order-message__info-box-list-item
+                                    .order-message__info-box-list-item-icon 
+                                        img(src="img/icons/message.svg", alt="")
+                                    p.order-message__info-box-list-item-text
+                                        | Или в 
+                                        a(href="#") чате 
+                                        | на сайте. 
+
+                        p.text-secondary Следите за нами в соцсетях, чтобы не пропускать поступления нового товара, скидки, ссылки на полезные материалы или если вам интересно наблюдать за жизнью нашей компании.
+
+        .p-160
+
+block footer 
+    include components/footer/_footer

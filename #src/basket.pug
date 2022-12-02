@@ -1,0 +1,130 @@
+extends _base
+
+block header
+    - var headerModClass = 'header--text-dark';
+    include components/header/_header
+
+block content
+    main._page.basket-page.padding-top-header-size
+        .container
+            .head-second
+                .head-second__breadcrumb
+                    +breadcrumb(['Главная'], 'Корзина')
+                h2.head-second__title.title-2.mb-1 корзина
+
+        form(action="/") 
+            .padding-wrap.pt-0 
+                .container 
+                    .basket
+                        .basket__row 
+                            .basket__city-selection.basket__city-selection--desktop
+                                include components/city-selection/_city-selection
+                                include components/alert/_alert
+                            .basket__buttons-delivery-type
+                                include components/buttons-delivery-type/_buttons-delivery-type
+
+                        .basket__row
+                            .basket__grid
+                                .basket__grid-col-1
+                                    ul.basket__product-list
+                                        li.basket__product-list-item
+                                            .basket-product-card
+                                                .basket-product-card__img-wrap 
+                                                    a(href="#")
+                                                        .basket-product-card__img 
+                                                            img(src="img/photo/product-preview-slider-images-1.jpg", alt="")
+                                                .basket-product-card__inner 
+                                                    .basket-product-card__col-1
+                                                        .basket-product-card__title 
+                                                            a(href="#") Название товара в одну или две строки
+                                                        .basket-product-card__vendor-code Артикул: 045829
+                                                        ul.basket-product-card__info-list 
+                                                            li.basket-product-card__info-list-item Краткое описание
+                                                    .basket-product-card__col-2
+                                                        .basket-product-card__quantity 
+                                                            include components/common/quantity/_quantity-second
+                                                    .basket-product-card__col-3
+                                                        .basket-product-card__price 99 999 ₽
+                                                        .basket-product-card__old-price 120 999 ₽
+                                                        .basket-product-card__discount скидка 21 000 ₽ 
+
+                                                    button(type="button").basket-product-card__close
+                                                        img(src="img/icons/trash-can-regular.svg", alt="")
+                                        li.basket__product-list-item
+                                            .basket-product-card
+                                                .basket-product-card__img-wrap 
+                                                    a(href="#")
+                                                        .basket-product-card__img 
+                                                            img(src="img/photo/product-preview-slider-images-1.jpg", alt="")
+                                                .basket-product-card__inner 
+                                                    .basket-product-card__col-1
+                                                        .basket-product-card__title 
+                                                            a(href="#") Название товара в одну или две строки
+                                                        .basket-product-card__vendor-code Артикул: 045829
+                                                        ul.basket-product-card__info-list 
+                                                            li.basket-product-card__info-list-item Добавить услугу “Продление гарантии товара Название Марки”
+
+                                                        .basket-product-card__srvices
+                                                            include components/product-services/_product-services
+                                                    .basket-product-card__col-2
+                                                        .basket-product-card__quantity 
+                                                            include components/common/quantity/_quantity-second
+                                                    .basket-product-card__col-3
+                                                        .basket-product-card__price 99 999 ₽
+                                                        .basket-product-card__old-price 120 999 ₽
+                                                        .basket-product-card__discount скидка 21 000 ₽ 
+ 
+                                                    button(type="button").basket-product-card__close
+                                                        img(src="img/icons/trash-can-regular.svg", alt="")
+                                        li.basket__product-list-item
+                                            .basket-product-card
+                                                .basket-product-card__img-wrap 
+                                                    a(href="#")
+                                                        .basket-product-card__img 
+                                                            img(src="img/photo/product-preview-slider-images-1.jpg", alt="")
+                                                .basket-product-card__inner 
+                                                    .basket-product-card__col-1
+                                                        .basket-product-card__title 
+                                                            a(href="#") Название товара в одну или две строки
+                                                        .basket-product-card__vendor-code Артикул: 045829
+                                                        .basket-product-card__present 
+                                                            img(src="img/icons/present.svg", alt="")
+                                                            | Подарок за покупку
+                                                            
+                                                    .basket-product-card__col-2
+                                                        .basket-product-card__quantity 
+                                                            include components/common/quantity/_quantity-second-inactive
+                                                    .basket-product-card__col-3
+                                                        .basket-product-card__price 99 999 ₽
+
+                                                    button(type="button").basket-product-card__close
+                                                        img(src="img/icons/trash-can-regular.svg", alt="")
+                                        li.basket__product-list-item
+                                            .basket-product-card
+                                                .basket-product-card__img-wrap 
+                                                    a(href="#")
+                                                        .basket-product-card__img 
+                                                            img(src="img/photo/service.png", alt="")
+                                                .basket-product-card__inner 
+                                                    .basket-product-card__col-1
+                                                        .basket-product-card__title Услуга “Продление гарантии товара Название Марки” для товара на 12 месяцев
+                                                            
+                                                    .basket-product-card__col-2
+                                                        .basket-product-card__quantity 
+                                                            include components/common/quantity/_quantity-second-inactive
+                                                    .basket-product-card__col-3
+                                                        .basket-product-card__price 99 999 ₽
+                                                    button(type="button").basket-product-card__close
+                                                        img(src="img/icons/trash-can-regular.svg", alt="")
+                                    button(type="button").basket__btn-clear-basket очистить корзину
+
+                                .basket__grid-col-2
+                                    include components/checkout-card/_checkout-card
+
+        .container 
+            hr
+        include components/product-carousel/_product-carousel-second
+        .p-160
+
+block footer 
+    include components/footer/_footer

@@ -1,0 +1,80 @@
+
+.product-carousel.padding-wrap
+    .container
+        h2.title-2.text-center.title-space-default Рекомендуемые товары
+        .product-carousel__slider-wrap(data-slider="product-carousel-slider") 
+            .product-carousel__slider.swiper
+                .swiper-wrapper
+                    .swiper-slide.product-carousel__slider-item
+                        - var label = 'хит продаж'; 
+                        - var labelClassMod = 'product-label--warning'; 
+                        - var labelDetail = false; 
+                        - var url = 'img/photo/card-img-1.png'; 
+                        - var title = 'Мощный электровелосипед ADO A20'; 
+                        - var present = false; 
+                        - var promotion = false;
+                        - var pricePrimary = false;
+                        +card(label, labelClassMod, labelDetail, url, title, present, promotion, pricePrimary)(class="card--third")
+
+                    .swiper-slide.product-carousel__slider-item 
+                        - var label = 'Подарок'; 
+                        - var labelClassMod = 'product-label--success'; 
+                        - var labelDetail = true; 
+                        - var url = 'img/photo/card-img-1.png'; 
+                        - var title = 'Мощный электровелосипед ADO A20'; 
+                        - var present = true; 
+                        - var promotion = false;
+                        - var pricePrimary = false;
+                        +card(label, labelClassMod, labelDetail, url, title, present, promotion, pricePrimary)(class="card--third")
+
+                    .swiper-slide.product-carousel__slider-item 
+                        - var label = 'АКЦИЯ'; 
+                        - var labelClassMod = 'product-label--danger'; 
+                        - var labelDetail = true; 
+                        - var url = 'img/photo/card-img-1.png'; 
+                        - var title = 'Мощный электровелосипед ADO A20'; 
+                        - var present = false; 
+                        - var promotion = true;
+                        - var pricePrimary = 'text-primary';
+                        +card(label, labelClassMod, labelDetail, url, title, present, promotion, pricePrimary)(class="card--third")
+
+                    .swiper-slide.product-carousel__slider-item 
+                        - var label = 'НОВИНКА'; 
+                        - var labelClassMod = 'product-label--info'; 
+                        - var labelDetail = false; 
+                        - var url = 'img/photo/card-img-1.png'; 
+                        - var title = 'Мощный электровелосипед ADO A20'; 
+                        - var present = false; 
+                        - var promotion = false;
+                        - var pricePrimary = false;
+                        +card(label, labelClassMod, labelDetail, url, title, present, promotion, pricePrimary)(class="card--third")
+
+                    .swiper-slide.product-carousel__slider-item
+                        - var label = false; 
+                        - var labelClassMod = false; 
+                        - var labelDetail = false; 
+                        - var url = 'img/photo/card-img-1.png'; 
+                        - var title = 'Мощный электровелосипед ADO A20'; 
+                        - var present = false; 
+                        - var promotion = false;
+                        - var pricePrimary = false;
+                        +card(label, labelClassMod, labelDetail, url, title, present, promotion, pricePrimary)(class="card--third")
+
+                    .swiper-slide.product-carousel__slider-item 
+                        - var label = 'Подарок'; 
+                        - var labelClassMod = 'product-label--success'; 
+                        - var labelDetail = true; 
+                        - var url = 'img/photo/card-img-1.png'; 
+                        - var title = 'Мощный электровелосипед ADO A20'; 
+                        - var present = true; 
+                        - var promotion = false;
+                        - var pricePrimary = false;
+                        +card(label, labelClassMod, labelDetail, url, title, present, promotion, pricePrimary)(class="card--third")
+
+            .product-carousel__slider-controls
+                .slider-controls 
+                    .slider-controls__btn.slider-controls__btn--prev(data-action="slider-prev") 
+                        span.icon-chevron-left1
+                    .swiper-pagination 
+                    .slider-controls__btn.slider-controls__btn--next(data-action="slider-next")  
+                        span.icon-chevron-right1

@@ -49,6 +49,8 @@
 @import "../components/common/rating/rating";
 @import "../components/common/post-card/post-card";
 @import "../components/common/pagination/pagination";
+@import "../components/common/tooltip/tooltip";
+@import "../components/common/copy-link/copy-link";
 // ==== // COMMON BLOCKS =====================================================
 
 // ==== BLOCKS =====================================================
@@ -89,6 +91,14 @@
 @import "../components/logos-list/logos-list";
 @import "../components/brands/brands";
 @import "../components/growup-btn/growup-btn";
+@import "../components/city-selection/city-selection";
+@import "../components/checkout-card/checkout-card";
+@import "../components/alert/alert";
+@import "../components/product-services/product-services";
+@import "../components/buttons-delivery-type/buttons-delivery-type";
+@import "../components/payment-method/payment-method";
+@import "../components/account-nav/account-nav";
+@import "../components/history-orders/history-orders";
 // ==== // BLOCKS =====================================================
 
 // ==== PAGES =====================================================
@@ -102,4 +112,9 @@
 @import "pages/about";
 @import "pages/delivery";
 @import "pages/confidential";
+@import "pages/basket";
+@import "pages/authorization";
+@import "pages/checkout";
+@import "pages/account";
+@import "pages/order-message";
 // ==== AND PAGES =====================================================

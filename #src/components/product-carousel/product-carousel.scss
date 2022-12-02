@@ -19,6 +19,13 @@
     &__slider {
         margin: -2px;
         padding: 2px;
+
+        @media (max-width: $md2+px) {
+            margin-bottom: 5rem;
+        }
+        @media (max-width: $md3+px) {
+            margin-bottom: 24px;
+        }
     }
 
     &__slider-item {
@@ -26,9 +33,6 @@
     }
 
     &__slider-controls {
-        @media (max-width: $md2+px) {
-            display: none;
-        }
 
         & .slider-controls {
             overflow: visible;
@@ -38,6 +42,15 @@
 
             @media (max-width: $md1+px) {
                 width: 105%;
+            }
+
+            @media (max-width: $md2+px) {
+                width: 100% !important;
+                transform: translate(0);
+                position: static;
+                align-items: center;
+                justify-content: center;
+                pointer-events: auto;
             }
         }
 
@@ -54,6 +67,46 @@
             &.swiper-button-disabled {
                 pointer-events: none;
                 opacity: 0.4;
+            }
+
+            @media (max-width: $md2+px) {
+                width: auto;
+                height: auto;
+                padding: 5px;
+                background-color: transparent;
+                color: #C8C8C8;
+                font-size: 32px;
+                font-weight: 700;
+            }
+
+            @media (max-width: $md3+px) {
+                font-size: 22px;
+            }
+        }
+
+        & .swiper-pagination {
+            @media (min-width: 992px) {
+                display: none;
+            }
+            @media (max-width: $md2+px) {
+                position: static;
+                width: auto;
+                display: flex;
+                align-items: center;
+            }
+
+            & .swiper-pagination-bullet {
+                @media (max-width: $md2+px) {
+                    height: 15px;
+                    width: 15px;
+                    opacity: 1;
+                    background-color: #C8C8C8;
+                    margin: 0 9px;
+
+                    &.swiper-pagination-bullet-active {
+                        background-color: $mainColor;
+                    }
+                }
             }
         }
     }

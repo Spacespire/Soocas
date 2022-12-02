@@ -1,0 +1,83 @@
+extends _base
+
+block header
+    - var headerModClass = 'header--text-dark';
+    include components/header/_header
+
+block content
+    main._page.authorization-page.padding-top-header-size
+        .container
+            .head-second
+                .head-second__breadcrumb
+                    +breadcrumb(['Главная'], 'Корзина')
+                h2.head-second__title.title-2 авторизация
+
+        form(action="/")  
+            .container 
+                .authorization(data-tabs)
+                    .authorization__head
+                        .authorization__head-item.authorization__head-item--left(data-tab-trigger="0")
+                            .authorization__head-item-title-mob Зарегистрироваться
+                            .authorization__head-item-title Регистрация покупателя
+                            .authorization__head-item-text Зарегистрируйтесь и участвуйте в программе лояльности. <br> Подробнее про <a href="#">программу лояльности.</a>
+                        .authorization__head-item.authorization__head-item--right(data-tab-trigger="1")
+                            .authorization__head-item-title-mob Авторизоваться
+                            .authorization__head-item-title Авторизация
+                            .authorization__head-item-text Авторизуйтесь, если уже зарегистрированы <br> на сайте или покупали у нас раньше.
+                    
+                    .authorization__content(data-tab-content="0")
+                        .authorization__form.form
+                            .form__row 
+                                .form__fields
+                                    .form__fields-col.form__fields-col--third 
+                                        .form__field
+                                            input.form-control.form-control--text-dark(type="text" placeholder="Имя")
+                                    .form__fields-col.form__fields-col--third 
+                                        .form__field
+                                            input.form-control.form-control--text-dark(type="email" placeholder="Email")
+                                    .form__fields-col.form__fields-col--third
+                                        .form__field(data-mask="+7 (999) 999-99-99") 
+                                            input.form-control.form-control--text-dark(type="text" placeholder="Телефон")
+                                    .form__fields-col.form__fields-col--third
+                                        .form__field(data-field-password) 
+                                            input.form-control.form-control--text-dark(type="password" placeholder="Пароль")
+                                    .form__fields-col.form__fields-col--third 
+                                        .form__field.form-error.tooltip-show(data-field-password data-tooltip="tooltip text example")
+                                            input.form-control.form-control--text-dark(type="password" placeholder="Повторите пароль")
+                                            .form-error-message Неверный пароль <br> <a href="#resetPassword" data-popup="open-popup">Непомню пароль</a>
+
+                            .form__row
+                                ul.form__checkbox-radio-list 
+                                    li.form__checkbox-radio-list-item 
+                                        +checkbox('Я даю согласие на получение новостной рассылки магазина', '')(checked)
+                                        
+                                    li.form__checkbox-radio-list-item 
+                                        +checkbox('Регистрируясь на сайте, вы соглашаетесь с условиями <a href="#">Пользовательского соглашения и Предложением о порядке оформления заказа и продажи, Правил программы лояльности и Услугой “Продления гарантии здесь нужен верный текст”</a>', '')(data-politics-checkbox)
+                                        
+                            .form__row
+                                .form__submin-wrap 
+                                    button.basket-btn.form__submit зарегистрироваться и продолжить
+                    .authorization__content(data-tab-content="1")
+                        .authorization__form.form
+                            .form__row 
+                                .form__fields
+                                    .form__fields-col.form__fields-col--half 
+                                        .form__field
+                                            input.form-control.form-control--text-dark(type="email" placeholder="Email")
+                                    .form__fields-col.form__fields-col--half
+                                        .form__field.form-error.tooltip-show(data-field-password data-tooltip="tooltip text example")
+                                            input.form-control.form-control--text-dark(type="password" placeholder="Пароль")
+                                            .form-error-message Неверный пароль <br> <a href="#resetPassword" data-popup="open-popup">Непомню пароль</a>
+
+                            .form__row
+                                .form__text.text-center 
+                                    p.mb-0 Забыли пароль?
+                                    p.text-secondary Если вы забыли свой пароль воспользуйтесь <a href="#resetPassword" data-popup="open-popup">формой сброса пароля.</a>
+                            .form__row
+                                .form__submin-wrap 
+                                    button.basket-btn.form__submit авторизоваться и продолжить
+
+        .p-160
+
+block footer 
+    include components/footer/_footer

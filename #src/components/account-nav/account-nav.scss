@@ -1,0 +1,69 @@
+.account-nav {
+    border-top: 1px solid #e1e1e1;
+
+    @media (min-width: 992px) {
+        overflow: visible;
+    }
+
+    @media (max-width: $md2+px) {
+        margin-right: -16px;
+        margin-left: -16px;
+        padding-left: 16px; 
+        padding-right: 16px;
+    }
+
+    &::before {
+        @media (max-width: $md2+px) {
+            position: absolute;
+            content: '';
+            top: 0;
+            right: -16px;
+            height: 100%;
+            width: 86px;
+            z-index: 3;
+            background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #ffffff 100%);
+            pointer-events: none;
+        }
+    }
+
+    &__item {
+        display: block;
+        padding: 2.6rem 0;
+        font-weight: 700;
+        font-size: 2.8rem;
+        line-height: 1.17em;
+        text-transform: uppercase;
+        position: relative;
+        width: auto;
+
+        @media (max-width: $md2+px) {
+            white-space: nowrap;
+        }
+
+        @media (max-width: $md3+px) {
+            font-size: 18px;
+            line-height: 21px;
+            padding: 16px 0;
+        }
+
+        &:before {
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 1rem;
+            background-color: $mainColor;
+            transform: translateY(-50%);
+            transition: all 0.3s ease;
+            opacity: 0;
+        }
+
+        &--active {
+            color: $mainColor;
+            &::before {
+                opacity: 1;
+            }
+        }
+    }
+}

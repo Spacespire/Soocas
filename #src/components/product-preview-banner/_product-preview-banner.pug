@@ -1,0 +1,77 @@
+.product-preview-banner
+    .product-preview-banner__bg.ibg 
+        picture
+            source(srcset="img/photo/product-preview-banner-card-bg.jpg" media="(min-width: 576px)")
+            img(src="img/photo/product-preview-banner-card-bg-mob.jpg" alt="img")
+    .product-preview-banner__body.container 
+        .product-preview-banner__head.head
+            h2.head__title.text-center.wow.fadeInUp(data-wow-duration="0.8s") Роботы-пылесосы 360
+            .head__subtitle.text.text-center.wow.fadeInUp(data-wow-duration="0.8s") 
+                p По-настоящему умные <br class="d-sm-none"/> роботы-пылесосы, оснащенные технологиями искусственного интеллекта и автопилота.
+        
+        .product-preview-banner__slider.wow.fadeInUp(data-wow-duration="0.8s") 
+            .swiper(data-product-preview-banner-slider)
+                .product-preview-banner__slider-btn.product-preview-banner__slider-btn--left
+                    .icon-chevron-left1
+                .product-preview-banner__slider-btn.product-preview-banner__slider-btn--right
+                    .icon-chevron-right1
+                .swiper-wrapper
+                    .swiper-slide
+                        a(href="#").product-preview-banner-card.not-hover
+                            .product-preview-banner-card__img
+                                img(src="img/photo/product-preview-banner-card-img-1.png", alt="")
+                            .product-preview-banner-card__title S10 MAX
+                            .product-preview-banner-card__text 
+                                strong Флагман
+                                | со скрытым LiDAR и 3D-сканированием
+                    .swiper-slide
+                        a(href="#").product-preview-banner-card.not-hover
+                            .product-preview-banner-card__img
+                                img(src="img/photo/product-preview-banner-card-img-2.png", alt="")
+                            .product-preview-banner-card__title S9
+                            .product-preview-banner-card__text
+                                strong Улучшенный интеллект, 
+                                | мощная батарея, высокая производительность
+                    .swiper-slide
+                        a(href="#").product-preview-banner-card.not-hover
+                            .product-preview-banner-card__img
+                                img(src="img/photo/product-preview-banner-card-img-3.png", alt="")
+
+                                .product-preview-banner-card__img-label 
+                                    img(src="img/photo/product-preview-banner-card-label.png", alt="")
+
+                            .product-preview-banner-card__title S8 
+                            .product-preview-banner-card__text 
+                                strong Умный выбор
+                                | для различных поверхностей
+                    .swiper-slide
+                        a(href="#").product-preview-banner-card.not-hover
+                            .product-preview-banner-card__img
+                                img(src="img/photo/product-preview-banner-card-img-4.png", alt="")
+                            .product-preview-banner-card__title С50
+                            .product-preview-banner-card__text
+                                strong Компактный бестселлер
+                                | с простым управлением
+
+        .product-preview-banner__button.wow.fadeInUp(data-wow-duration="0.8s")
+            +btn("#","","Сравнение моделей").btn--light
+
+        .product-preview-banner__benefits
+            .product-benefits
+                ul.product-benefits__list
+                    li.wow.fadeInUp(data-wow-duration="0.8s") 
+                        .product-benefits__icon
+                            img(src="img/photo/product-preview-banner-card-icon-1.png", alt="")
+                        .product-benefits__title Инновационность
+                        .product-benefits__text.text Передовые технологии помогают оптимизировать маршрут уборки и повысить ее качество
+                        
+                    li.wow.fadeInUp(data-wow-duration="0.8s") 
+                        .product-benefits__icon
+                            img(src="img/photo/product-preview-banner-card-icon-2.png", alt="")
+                        .product-benefits__title простота
+                        .product-benefits__text.text Управлять уборкой легко через функциональное мобильное приложение
+                    li.wow.fadeInUp(data-wow-duration="0.8s") 
+                        .product-benefits__icon
+                            img(src="img/photo/product-preview-banner-card-icon-3.png", alt="")
+                        .product-benefits__title Автономность
+                        .product-benefits__text.text Адаптируется к условиям уборки и находит оптимальные решения 

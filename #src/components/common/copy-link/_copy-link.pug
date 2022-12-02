@@ -1,0 +1,5 @@
+mixin copy-link(text)
+    .copy-link(data-copy-link)&attributes(attributes)
+        .copy-link__text(title=text)= text 
+        button(type="button" data-text="Скопировано").copy-link__btn
+            img(src="img/icons/copy.png", alt="")

@@ -83,6 +83,12 @@ textarea {
 
 button {
 	cursor: pointer;
+	border: none;
+	border-radius: 0;
+	padding: 0;
+	outline: none;
+	box-shadow: none;
+	background-color: transparent;
 }
 button::-moz-focus-inner {
 	padding: 0;
@@ -117,6 +123,16 @@ textarea {
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	appearance: none;
+}
+
+strong {
+	font-weight: 700;
+}
+
+hr {
+	margin: 0;
+	opacity: 1;
+	background-color: #E1E1E1;
 }
 
 h2 {
@@ -208,7 +224,34 @@ h6 {
 	font-weight: 600;
 }
 
+.title-2 {
+	font-weight: 700;
+	font-size: 7.2rem !important;
+	line-height: 1.27em;
+	text-transform: uppercase;
+
+	@media (max-width: $md2+px) {
+		font-size: 4.2rem !important;
+	}
+
+	@media (max-width: $md3+px) {
+		font-size: 30px !important;
+		line-height: 35px;
+	}
+}
+
 .title-3 {
+	margin-bottom: 7rem;
+
+	@media (max-width: $md2+px) {
+		margin-bottom: 50px;
+	}
+	@media (max-width: $md3+px) {
+		margin-bottom: 35px;
+	}
+}
+
+.title-space-default {
 	margin-bottom: 7rem;
 
 	@media (max-width: $md2+px) {
@@ -264,6 +307,41 @@ h6 {
 .last-child-mb-0 {
 	& > *:last-child {
 		margin-bottom: 0;
+	}
+}
+
+.head-second {
+	padding-top: 5.5rem;
+
+	@media (max-width: $md2+px) {
+		padding-top: 30px;
+	}
+
+	@media (max-width: $md3+px) {
+		padding-top: 20px;
+	}
+	&__breadcrumb {
+		margin-bottom: 8.5rem;
+
+		@media (max-width: $md2+px) {
+			margin-bottom: 50px;
+		}
+
+		@media (max-width: $md3+px) {
+			margin-bottom: 20px;
+			display: none;
+		}
+	}
+	&__title {
+		margin-bottom: 6rem;
+
+		@media (max-width: $md2+px) {
+			margin-bottom: 40px;
+		}
+
+		@media (max-width: $md3+px) {
+			margin-bottom: 20px;
+		}
 	}
 }
 
@@ -346,6 +424,18 @@ p {
 	}
 }
 
+
+.p-160 {
+	padding-top: 16rem;
+
+	@media (max-width: $md2+px) {
+		padding-top: 120px;
+	}
+	@media (max-width: $md3+px) {
+		padding-top: 70px;
+	}
+}
+
 .ibg {
 	position: relative;
 	img {
@@ -397,6 +487,25 @@ p {
 		font-size: 18px;
 		line-height: 24px;
 		letter-spacing: 0.08px;
+	}
+}
+
+.link-with-arrow {
+	display: inline-flex;
+	align-items: center;
+	font-size: 4rem;
+	line-height: 1.2em;
+	font-weight: 600;
+
+	@media (max-width: $md2+px) {
+		font-size: 20px;
+	}
+
+	&:after {
+		font-size: 0.7em;
+		content: "\e900";
+		font-family: "icomoon" !important;
+		margin-left: 1.14em;
 	}
 }
 
@@ -587,6 +696,29 @@ p {
 
 			& > *:last-child {
 				margin-bottom: 0;
+			}
+		}
+
+		&.list-style-check {
+			padding-left: 1.75em;
+
+			& > li {
+				list-style: none;
+				position: relative;
+
+				&:not(:last-child) {
+					margin-bottom: 0.9em;
+				}
+
+				&:before {
+					font-family: 'icomoon' !important;
+					position: absolute;
+					content: '\e913';
+					top: 0;
+					left: -1.75em;
+					color: $mainColor;
+					font-size: 0.9em;
+				}
 			}
 		}
 	}

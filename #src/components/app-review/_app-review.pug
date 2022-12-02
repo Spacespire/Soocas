@@ -1,0 +1,50 @@
+section.app-review
+    .app-review__body.container-xs 
+        .app-review__img-left.wow.fadeInUp(data-wow-duration="0.8s")
+            picture
+                source(srcset="img/photo/app-review-img-left.png" media="(min-width: 992px)")
+                img(src="img/photo/app-review-img-left-mob.png" alt="img") 
+
+        .app-review__content
+            h3.app-review__title.text-center.wow.fadeInUp(data-wow-duration="0.8s") Ваш личный помощник по гигиене полости рта — <strong>приложение Oclean</strong>
+            .app-review__benefits.swiper.wow.fadeInUp(data-wow-duration="0.8s" data-slider="app-review-benefits" data-mobile="false")
+                .swiper-wrapper 
+                    .swiper-slide.app-review__benefits-item 
+                        .app-benefits-card
+                            .app-benefits-card__img 
+                                img(src="img/icons/app-benefits-card-icon-1.svg", alt="")
+                            .app-benefits-card__text Обнаружение слепых зон в полости рта
+
+                    .swiper-slide.app-review__benefits-item 
+                        .app-benefits-card
+                            .app-benefits-card__img 
+                                img(src="img/icons/app-benefits-card-icon-2.svg", alt="")
+                            .app-benefits-card__text Индивидуальный профиль для всех членов семьи
+
+                    .swiper-slide.app-review__benefits-item 
+                        .app-benefits-card
+                            .app-benefits-card__img 
+                                img(src="img/icons/app-benefits-card-icon-3.svg", alt="")
+                            .app-benefits-card__text Настраиваемый алгоритм чистки зубов
+
+                    .swiper-slide.app-review__benefits-item 
+                        .app-benefits-card
+                            .app-benefits-card__img 
+                                img(src="img/icons/app-benefits-card-icon-4.svg", alt="")
+                            .app-benefits-card__text Контроль состояния насадки
+
+
+                    .swiper-slide.app-review__benefits-item 
+                        .app-benefits-card
+                            .app-benefits-card__img 
+                                img(src="img/icons/app-benefits-card-icon-5.svg", alt="")
+                            .app-benefits-card__text Персонализированный отчет о чистке
+
+            .app-review__links.wow.fadeInUp(data-wow-duration="0.8s") 
+                a(href="#").app-review__link
+                    img(src="img/photo/AppStore.svg", alt="")
+                a(href="#").app-review__link
+                    img(src="img/photo/GooglePlay.svg", alt="")
+
+        .app-review__img-right
+            img(src="img/photo/app-review-img-right.png", alt="").wow.fadeInUp(data-wow-duration="0.8s") 

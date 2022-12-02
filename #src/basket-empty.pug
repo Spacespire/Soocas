@@ -1,0 +1,27 @@
+extends _base
+
+block header
+    - var headerModClass = 'header--text-dark';
+    include components/header/_header
+
+block content
+    main._page.basket-page.padding-top-header-size
+        .container
+            .head-second
+                .head-second__breadcrumb
+                    +breadcrumb(['Главная'], 'Корзина')
+                h2.head-second__title.title-2 корзина
+
+        .padding-wrap.pt-0 
+            .container 
+                .basket
+                    .basket__row 
+                        .basket__empry-text.text-content Ваша корзина пуста! <br> Перейдите в раздел <a href="">название раздела</a>, чтобы выбрать товары.
+
+        .container 
+            hr
+        include components/product-carousel/_product-carousel-second
+        .p-160
+
+block footer 
+    include components/footer/_footer

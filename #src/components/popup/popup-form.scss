@@ -2,6 +2,19 @@
 .popup-form {
     display: flex;
     flex-direction: column;
+    &__title {
+        font-size: 5.5rem;
+        line-height: 1.2em;
+        text-transform: uppercase;
+        margin-bottom: 5.5rem;
+        font-weight: 700;
+
+        @media (max-width: $md3+px) {
+            font-size: 22px;
+            line-height: 26px;
+            margin-bottom: 18px;
+        }
+    }
     &__items {
         margin-bottom: 6rem;
 
@@ -28,6 +41,14 @@
 
         & .checkbox-radio {
             font-size: 1.8rem;
+        }
+
+        & > *:not(:last-child) {
+            margin-bottom: 2rem;
+
+            @media (max-width: $md3+px) {
+                margin-bottom: 10px;
+            }
         }
     }
 
@@ -57,5 +78,26 @@
                 opacity: 0.7;
             }
         }
+    }
+
+    &__text {
+        font-size: 2.8rem;
+        line-height: 1.17em;
+
+        @media (max-width: $md3+px) {
+            font-size: 15px;
+            line-height: 18px;
+        }
+    }
+}
+
+.popu-reset-password-box {
+    max-width: 109.4rem;
+
+    &__content {
+        margin: 0 auto;
+        width: 100%;
+        max-width: 77.5rem;
+        padding-top: 4rem;
     }
 }

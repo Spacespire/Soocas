@@ -1,0 +1,101 @@
+.alert {
+    position: absolute;
+    top: calc(100% + 2rem);
+    left: 0;
+    width: 31.4rem;
+    z-index: 5;
+    transition: all 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+    padding: 0;
+    border: none;
+    outline: none;
+
+    @media (max-width: $md3+px) {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(60, 60, 60, 0.33);
+        z-index: 47;
+        pointer-events: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+
+    &__body {
+        background: #ffffff;
+        box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.14) !important;
+        padding: 2rem;
+
+        @media (max-width: $md3+px) {
+            box-shadow: 0px -4px 4px rgba(0, 0, 0, 0.25) !important;
+            pointer-events: auto;
+        }
+    }
+    &__title {
+        font-size: 2rem;
+        line-height: 1.15em;
+        margin-bottom: 1.5rem;
+
+        @media (max-width: $md3+px) {
+            font-weight: 700;
+        }
+    }
+    &__buttons {
+        display: flex;
+        gap: 1.2rem;
+
+        & > * {
+            flex: 0 1 calc(50% - 0.6rem);
+        }
+    }
+
+    &__btn {
+        display: flex;
+        align-items: center;
+        min-height: 3.6rem;
+        padding: 0.4rem 1.6rem;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        color: #fff !important;
+        font-weight: 700;
+        font-size: 2rem;
+        line-height: 1.1em;
+        text-align: center;
+        transition: all .3s ease;
+        text-transform: uppercase;
+
+        @media (max-width: $md3+px) {
+            min-height: 60px;
+        }
+        
+        &--yes {
+            background-color: $mainColor;
+
+            @media (min-width: 992px) {
+                &:hover {
+                    background-color: $hover;
+                }
+            }
+        }
+
+        &--no {
+            background-color: #979797;
+
+            @media (min-width: 992px) {
+                &:hover {
+                    background-color: #626262;
+                }
+            }
+        }
+    }
+
+    &--show {
+        opacity: 1;
+        visibility: visible;
+    }
+}

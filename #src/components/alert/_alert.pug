@@ -1,0 +1,6 @@
+.alert.alert--show(data-alert)
+    .alert__body 
+        .alert__title Ваш регион — г. Москва и область?
+        .alert__buttons 
+            button(type="button" data-action="close-alert").alert__btn.alert__btn--yes да
+            button(type="button" data-action="close-alert,open-city-selection").alert__btn.alert__btn--no нет

@@ -1,0 +1,55 @@
+extends _base
+
+block header
+    - var headerModClass = 'header--text-dark';
+    include components/header/_header
+
+block content
+    main._page.account-page.padding-top-header-size
+        .container
+            .head-second
+                .head-second__breadcrumb
+                    +breadcrumb(['Главная', 'Личный кабинет'], 'Программа лояльности')
+                h2.head-second__title.title-2 Программа лояльности
+
+            .account 
+                .account__nav
+                    +account-nav('','','account-nav__item--active','','')
+                .account__body 
+                    .account__grid.account__grid--mob-revers 
+                        .account__grid-col-1
+                            .account__row 
+                                .account__text.text-content
+                                    p 
+                                        strong Поздравляем! <br>
+                                        | Вы стали участником программы лояльности (подробнее про <a href="#">программу лояльности</a>).
+                                    p 
+                                        strong Теперь вам доступны следующие возможности:
+
+                                    ul.list-style-check 
+                                        li 
+                                            p После регистрации на сайте вы получили <strong class="text-primary">100 баллов</strong>. Они зачисленны на ваш внутренний счет. Текущий внутренний счет отображается справа на экране.
+                                        li 
+                                            p За каждый размещенный и активный <strong class="text-primary">отзыв на сайте</strong> вам будет зачислено по <strong class="text-primary">100 баллов</strong>.
+                                        li 
+                                            p За <strong class="text-primary">каждую покупку</strong> на сайте вы также <strong class="text-primary">получаете баллы</strong>. <br> Величина баллов указана в карточке товара.
+                                        li 
+                                            p <strong class="text-primary">Баллы в день рождения</strong> <br> (при указании необходимой информации в личном профиле).
+                                        li 
+                                            p Если вы приведете друга, который сделает заказ на сайте, вы получите <strong class="text-primary">300 баллов</strong> на свой счет. Вашу персональную скидку вы можете скопировать ниже:
+                                            +copy-link('https://www.figma.com/file/ccылка верная')
+                        .account__grid-col-2
+                            .account-points-card
+                                img(src="img/icons/num-1.png", alt="").account-points-card__icon
+                                .account-points-card__title доступные баллы:
+                                .account-points-card__value 
+                                    span 100
+                                    | баллов
+                                .account-points-card__text.text-content 
+                                    p Бонусными баллами вы можете оплатить до 100% стоимости заказа. При отмене заказа баллы вернутся на счет.
+                                    p С подробными условиями программы лояльности вы можете ознакомиться на странице “<a href="#">Правила и условия программы лояльности</a>”
+
+        .p-160
+
+block footer 
+    include components/footer/_footer

@@ -1,0 +1,182 @@
+.payment-method
+    .payment-method__mob
+        ul.payment-method__list(data-spoller-radio) 
+            li.payment-method__list-item 
+                label.payment-method__tab.active(data-spoller-radio-trigger)
+                    input(type="radio" name="payment" checked)
+                    .payment-method__tab-cirlce 
+                    .payment-method__tab-text Онлайн-оплата
+                .payment-method__list-content
+                        ul.payment-method__checkbox-radio-list 
+                            li.payment-method__checkbox-radio-list-item 
+                                label.checkbox-radio
+                                    input(type="radio" name="online" checked)
+                                    .checkbox-radio__dot
+                                    .checkbox-radio__text.checkbox-radio__text--lg.align-self-start 
+                                        | ЮKassa
+                                        ul.checkbox-radio__icons
+                                            li.checkbox-radio__icons-item 
+                                                img(src="img/photo/payment-icon-1.png", alt="") 
+                                            li.checkbox-radio__icons-item 
+                                                img(src="img/photo/payment-icon-2.png", alt="") 
+                                            li.checkbox-radio__icons-item 
+                                                img(src="img/photo/payment-icon-3.png", alt="") 
+                                            li.checkbox-radio__icons-item 
+                                                img(src="img/photo/payment-icon-4.png", alt="") 
+                                            li.checkbox-radio__icons-item 
+                                                img(src="img/photo/payment-icon-5.png", alt="")  
+                                        .checkbox-radio__sub-text Оплата производится через сервис ЮКassa. Принимаются банковские карты и другие способы оплаты.
+                            li.payment-method__checkbox-radio-list-item 
+                                label.checkbox-radio
+                                    input(type="radio" name="online" checked)
+                                    .checkbox-radio__dot
+                                    .checkbox-radio__text.checkbox-radio__text--lg.align-self-start Альфа-Банк 
+                                        .checkbox-radio__sub-text Оплата производится через сервис Альфа - Банк.- безопасный и удобный сервис от Альфа - банк.
+                    
+            li.payment-method__list-item 
+                label.payment-method__tab(data-spoller-radio-trigger)
+                    input(type="radio" name="payment")
+                    .payment-method__tab-cirlce 
+                    .payment-method__tab-text Оплата по счету
+                .payment-method__list-content
+                    .payment-method__text Менеджер компании вышлет Вам счет на оплату. <br>
+                        | Пожалуйста, укажите реквизиты в комментарии к заказу. <br>
+                        | После поступления средств менеджер свяжется с Вами для уточнения вопросов по доставке.
+
+            li.payment-method__list-item 
+                label.payment-method__tab(data-spoller-radio-trigger)
+                    input(type="radio" name="payment")
+                    .payment-method__tab-cirlce 
+                    .payment-method__tab-text В рассрочку
+                .payment-method__list-content
+                    ul.payment-method__checkbox-radio-list(data-spoller-radio="sub") 
+                        li.payment-method__checkbox-radio-list-item 
+                            label.checkbox-radio(data-spoller-radio-trigger)
+                                input(type="radio" name="installments" checked)
+                                .checkbox-radio__dot
+                                .checkbox-radio__text.checkbox-radio__text--lg.align-self-start Рассрочка от Тинькофф 
+                                    .checkbox-radio__sub-text От 3 000 до 500 000 Р. Короткая заявка и решение банка за 1-2 минуты.
+                            .payment-method__checkbox-radio-list-collapse 
+                                .payment-method__installments
+                                    .payment-method__installments-label Выберите вариант рассрочки:
+                                    select.payment-method__installments-select
+                                        option(value="1" selected) Рассрочка на 3 месяца
+                                        option(value="2") Рассрочка на 6 месяцев
+                                        option(value="3") Рассрочка на 12 месяцев
+                                    .payment-method__installments-bottom 
+                                        .payment-method__installments-total от 
+                                            span.text-dark 1 844, 33 Р
+                                        a(href="#").payment-method__installments-link Подробнее об условиях рассрочки
+                        li.payment-method__checkbox-radio-list-item 
+                            label.checkbox-radio(data-spoller-radio-trigger)
+                                input(type="radio" name="installments")
+                                .checkbox-radio__dot
+                                .checkbox-radio__text.checkbox-radio__text--lg.align-self-start Рассрочка от Сбера 
+                                    .checkbox-radio__sub-text От 3 000 до 1 500 000 Р. Короткая заявка и решение банка за 1-2 минуты.
+                            .payment-method__checkbox-radio-list-collapse 
+                                .payment-method__installments
+                                    .payment-method__installments-label Выберите вариант рассрочки:
+                                    select.payment-method__installments-select
+                                        option(value="1" selected) Рассрочка на 3 месяца
+                                        option(value="2") Рассрочка на 6 месяцев
+                                        option(value="3") Рассрочка на 12 месяцев
+                                    .payment-method__installments-bottom 
+                                        .payment-method__installments-total от 
+                                            span.text-dark 1 844, 33 Р
+                                        a(href="#").payment-method__installments-link Подробнее об условиях рассрочки
+
+            li.payment-method__list-item 
+                label.payment-method__tab(data-spoller-radio-trigger)
+                    input(type="radio" name="payment")
+                    .payment-method__tab-cirlce 
+                    .payment-method__tab-text наличными курьеру
+                .payment-method__list-content
+                    .payment-method__text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, quas?
+
+    .payment-method__desk(data-tabs)
+        .payment-method__head
+            .payment-method__head-item
+                label.payment-method__head-tab.tab-active(data-tab-trigger="0")
+                    input(type="radio" name="payment2" checked)
+                    .payment-method__head-tab-text Онлайн-оплата
+            .payment-method__head-item
+                label.payment-method__head-tab(data-tab-trigger="1")
+                    input(type="radio" name="payment2")
+                    .payment-method__head-tab-text Оплата по счету
+            .payment-method__head-item
+                label.payment-method__head-tab(data-tab-trigger="2")
+                    input(type="radio" name="payment2")
+                    .payment-method__head-tab-text В рассрочку
+            .payment-method__head-item
+                label.payment-method__head-tab(data-tab-trigger="3")
+                    input(type="radio" name="payment2")
+                    .payment-method__head-tab-text наличными курьеру
+
+        .payment-method__body(data-tab-content="0") 
+            ul.payment-method__checkbox-radio-list 
+                li.payment-method__checkbox-radio-list-item 
+                    label.checkbox-radio
+                        input(type="radio" name="online2" checked)
+                        .checkbox-radio__dot
+                        .checkbox-radio__text.checkbox-radio__text--lg.align-self-start 
+                            | ЮKassa
+                            ul.checkbox-radio__icons
+                                li.checkbox-radio__icons-item 
+                                    img(src="img/photo/payment-icon-1.png", alt="") 
+                                li.checkbox-radio__icons-item 
+                                    img(src="img/photo/payment-icon-2.png", alt="") 
+                                li.checkbox-radio__icons-item 
+                                    img(src="img/photo/payment-icon-3.png", alt="") 
+                                li.checkbox-radio__icons-item 
+                                    img(src="img/photo/payment-icon-4.png", alt="") 
+                                li.checkbox-radio__icons-item 
+                                    img(src="img/photo/payment-icon-5.png", alt="") 
+                            .checkbox-radio__sub-text Оплата производится через сервис ЮКassa. Принимаются банковские карты и другие способы оплаты.
+                li.payment-method__checkbox-radio-list-item 
+                    label.checkbox-radio
+                        input(type="radio" name="online2")
+                        .checkbox-radio__dot
+                        .checkbox-radio__text.checkbox-radio__text--lg.align-self-start Альфа-Банк 
+                            .checkbox-radio__sub-text Оплата производится через сервис Альфа - Банк.- безопасный и удобный сервис от Альфа - банк.
+        .payment-method__body(data-tab-content="1")
+            .payment-method__text Менеджер компании вышлет Вам счет на оплату. <br>
+                | Пожалуйста, укажите реквизиты в комментарии к заказу. <br>
+                | После поступления средств менеджер свяжется с Вами для уточнения вопросов по доставке.
+        .payment-method__body(data-tab-content="2")
+            ul.payment-method__checkbox-radio-list(data-spoller-radio) 
+                li.payment-method__checkbox-radio-list-item 
+                    label.checkbox-radio(data-spoller-radio-trigger)
+                        input(type="radio" name="installments2" checked)
+                        .checkbox-radio__dot
+                        .checkbox-radio__text.checkbox-radio__text--lg.align-self-start Рассрочка от Тинькофф 
+                            .checkbox-radio__sub-text От 3 000 до 500 000 Р. Короткая заявка и решение банка за 1-2 минуты.
+                    .payment-method__checkbox-radio-list-collapse 
+                        .payment-method__installments
+                            .payment-method__installments-label Выберите вариант рассрочки:
+                            select.payment-method__installments-select
+                                option(value="1" selected) Рассрочка на 3 месяца
+                                option(value="2") Рассрочка на 6 месяцев
+                                option(value="3") Рассрочка на 12 месяцев
+                            .payment-method__installments-bottom 
+                                .payment-method__installments-total от 
+                                    span.text-dark 1 844, 33 Р
+                                a(href="#").payment-method__installments-link Подробнее об условиях рассрочки
+                li.payment-method__checkbox-radio-list-item 
+                    label.checkbox-radio(data-spoller-radio-trigger)
+                        input(type="radio" name="installments2")
+                        .checkbox-radio__dot
+                        .checkbox-radio__text.checkbox-radio__text--lg.align-self-start Рассрочка от Сбера 
+                            .checkbox-radio__sub-text От 3 000 до 1 500 000 Р. Короткая заявка и решение банка за 1-2 минуты.
+                    .payment-method__checkbox-radio-list-collapse 
+                        .payment-method__installments
+                            .payment-method__installments-label Выберите вариант рассрочки:
+                            select.payment-method__installments-select
+                                option(value="1" selected) Рассрочка на 3 месяца
+                                option(value="2") Рассрочка на 6 месяцев
+                                option(value="3") Рассрочка на 12 месяцев
+                            .payment-method__installments-bottom 
+                                .payment-method__installments-total от 
+                                    span.text-dark 1 844, 33 Р
+                                a(href="#").payment-method__installments-link Подробнее об условиях рассрочки
+        .payment-method__body(data-tab-content="3")
+            .payment-method__text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, quas?

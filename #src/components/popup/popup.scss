@@ -48,11 +48,16 @@
 
 	&__close-btn {
 		position: absolute;
-		top: 20px;
-		right: 20px;
+		top: 15px;
+		right: 3rem;
 		padding: 5px;
 		transition: all .3s ease;
 		cursor: pointer;
+
+		@media (max-width: $md3+px) {
+			right: 1rem;
+			top: 10px;
+		}
 
 		@media (min-width: 992px) {
 			&:hover {
@@ -138,6 +143,18 @@
 			outline: 0;
 			text-align: center;
 			padding: 40px 20px;
+		}
+	}
+
+	&__map-wrap {
+		background-color: #dddddd;
+		position: relative;
+		height: calc(100vh - 110px);
+		width: 100%;
+
+		& iframe {
+			height: 100%;
+			width: 100%;
 		}
 	}
 

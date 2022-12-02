@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soocas</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style type="text/css">
+      body.page-is-load ._preload-body {
+          opacity: 0;
+          visibility: hidden;
+      }
+      
+      body.page-is-load ._preload-body:before {
+          display: none;
+      }
+      
+      ._preload-body {
+          background-color: #fff;
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: 999;
+          transition: all .6s ease .2s;
+      }
+      
+      ._preload-body:before {
+          position: absolute;
+          content: '';
+          z-index: 999;
+          top: 50%;
+          left: 50%;
+          height: 50px;
+          width: 50px;
+          border-radius: 50%;
+          border: 4px solid #6e6e6e;
+          border-right: 4px solid #fff;
+          transform: translate(-50%, -50%);
+          animation: preloadBody 2s linear infinite;
+      }
+      
+      @keyframes preloadBody {
+          from {
+              transform: translate(-50%, -50%) rotate(0);
+          }
+      
+          to {
+              transform: translate(-50%, -50%) rotate(360deg);
+          }
+      }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/vendors.js"></script>
+    <script src="js/app.js"></script>
+  </head>
+  <body>
+    <div class="_preload-body"></div>
+    <header class="header header--text-dark" data-header data-popup="add-right-padding"><a class="top-line-message" href="#"><!-- use class .top-line-message--show -->
+        <p>Рождественская скидка 20% на все товары!</p></a>
+      <div class="container"> 
+        <div class="header__body">
+          <div class="header__logo"><a href="/"> <img src="img/logo/logo.svg" alt="" data-replace-to-inline-svg></a></div>
+          <nav class="header__menu menu"> 
+            <ul class="menu__list">
+              <li class="menu__list-item menu__list-item--has-sab-menu"><a class="menu__link menu__link--with-chevron" href="#">Продукты <!-- use class .menu__link--active --></a>
+                <div class="menu__sub-menu-wrap">
+                  <ul class="sub-menu">
+                    <li><a class="sub-menu__link" href="#">Бритвы и триммеры  <!-- use class .sub-menu__link--active --></a></li>
+                    <li><a class="sub-menu__link" href="#">Зубные щетки и ирригаторы</a></li>
+                    <li><a class="sub-menu__link" href="#">Фены для волос </a></li>
+                    <li><a class="sub-menu__link" href="#">Аксессуары</a></li>
+                    <li><a class="sub-menu__link" href="#">Акции</a></li>
+                  </ul>
+                  <div class="menu__img"><a href="#"> <img src="img/photo/sub-menu-img.png" alt=""></a></div>
+                </div>
+              </li>
+              <li class="menu__list-item"><a class="menu__link" href="#">Доставка и оплата</a></li>
+              <li class="menu__list-item menu__list-item--has-sab-menu"><a class="menu__link menu__link--with-chevron" href="#">Сервис</a>
+                <div class="menu__sub-menu-wrap">
+                  <ul class="sub-menu">
+                    <li><a class="sub-menu__link" href="#">Сервисные услуги</a></li>
+                    <li><a class="sub-menu__link" href="#">Возврат и обмен</a></li>
+                    <li><a class="sub-menu__link" href="#">Инструкции</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="menu__list-item menu__list-item--has-sab-menu"><a class="menu__link menu__link--with-chevron" href="#">О нас</a>
+                <div class="menu__sub-menu-wrap">
+                  <ul class="sub-menu">
+                    <li><a class="sub-menu__link" href="#">О бренде</a></li>
+                    <li><a class="sub-menu__link" href="#">Новости</a></li>
+                    <li><a class="sub-menu__link" href="#">Наши партнеры</a></li>
+                    <li><a class="sub-menu__link" href="#">Контакты</a></li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </nav>
+          <div class="header__contact-info">
+            <div class="contact-info"> <a class="contact-info__phone" href="tel:74957777777">+7 (495) 777-77-77</a><a class="contact-info__mail" href="mailto:info@di-house.ru">info@di-house.ru</a></div>
+          </div>
+          <div class="header__actions">
+            <div class="header-actions">
+              <div class="header-actions__item header-actions__item--search"><a class="header-actions__link" href="#popupSerch" data-popup="open-popup"><i class="icon-search"></i></a></div>
+              <div class="header-actions__item"><a class="header-actions__link" href="#"><i class="icon-user"></i></a></div>
+              <div class="header-actions__item"><a class="header-actions__link" href="#"><i class="icon-bag"></i><span class="header-actions__num-products">2</span></a></div>
+            </div>
+          </div>
+          <div class="header__burger burger" data-action="toggle-menu-mobile"> <span class="burger__cross"></span><span class="burger__cross"></span><span class="burger__cross"></span><span class="burger__cross"></span></div>
+        </div>
+      </div>
+    </header>
+    <div class="menu-mobile" data-menu-mobile> 
+      <ul class="menu-mobile__list">
+        <li class="menu-mobile__list-item" data-toggle-sab><a class="menu-mobile__link menu-mobile__link--with-chevron menu-mobile__link" href="#">Продукты <!-- use .menu-mobile__link --></a>
+          <ul class="sub-menu">
+            <li><a class="sub-menu__link" href="#">Бритвы и триммеры  <!-- use class .sub-menu__link--active --></a></li>
+            <li><a class="sub-menu__link" href="#">Зубные щетки и ирригаторы</a></li>
+            <li><a class="sub-menu__link" href="#">Фены для волос </a></li>
+            <li><a class="sub-menu__link" href="#">Аксессуары</a></li>
+            <li><a class="sub-menu__link" href="#">Акции</a></li>
+          </ul>
+        </li>
+        <li class="menu-mobile__list-item"><a class="menu-mobile__link" href="#">Доставка и оплата</a></li>
+        <li class="menu-mobile__list-item" data-toggle-sab><a class="menu-mobile__link menu-mobile__link--with-chevron" href="#">Сервис</a>
+          <ul class="sub-menu">
+            <li><a class="sub-menu__link" href="#">Сервисные услуги</a></li>
+            <li><a class="sub-menu__link" href="#">Возврат и обмен</a></li>
+            <li><a class="sub-menu__link" href="#">Инструкции</a></li>
+          </ul>
+        </li>
+        <li class="menu-mobile__list-item" data-toggle-sab><a class="menu-mobile__link menu-mobile__link--with-chevron" href="#">О нас</a>
+          <ul class="sub-menu">
+            <li><a class="sub-menu__link" href="#">О бренде</a></li>
+            <li><a class="sub-menu__link" href="#">Новости</a></li>
+            <li><a class="sub-menu__link" href="#">Наши партнеры</a></li>
+            <li><a class="sub-menu__link" href="#">Контакты</a></li>
+          </ul>
+        </li>
+      </ul>
+      <div class="menu-mobile__search">
+        <form class="menu-mobile-search">
+          <input class="menu-mobile-search__field" type="text" placeholder="Поиск…">
+          <button class="menu-mobile-search__submit"> <i class="icon-search"></i></button>
+        </form>
+      </div>
+      <div class="menu-mobile__contact-info">
+        <div class="contact-info"> <a class="contact-info__phone" href="tel:74957777777">+7 (495) 777-77-77</a><a class="contact-info__mail" href="mailto:info@di-house.ru">info@di-house.ru</a></div>
+      </div>
+      <div class="menu-mobile__social">
+        <ul class="social"> 
+          <li class="social__item"> <a href="#"> <i class="icon-vk"></i></a></li>
+        </ul>
+      </div>
+    </div>
+    <main class="_page authorization-page padding-top-header-size">
+      <div class="container">
+        <div class="head-second">
+          <div class="head-second__breadcrumb">
+                <ul class="breadcrumb">
+                  <li class="breadcrumb__item"> <a class="breadcrumb__link" href="#">Главная</a></li>
+                  <li class="breadcrumb__item">Корзина</li>
+                </ul>
+          </div>
+          <h2 class="head-second__title title-2">авторизация</h2>
+        </div>
+      </div>
+      <form action="/"> 
+        <div class="container"> 
+          <div class="authorization" data-tabs>
+            <div class="authorization__head">
+              <div class="authorization__head-item authorization__head-item--left" data-tab-trigger="0">
+                <div class="authorization__head-item-title-mob">Зарегистрироваться</div>
+                <div class="authorization__head-item-title">Регистрация покупателя</div>
+                <div class="authorization__head-item-text">Зарегистрируйтесь и участвуйте в программе лояльности. <br> Подробнее про <a href="#">программу лояльности.</a></div>
+              </div>
+              <div class="authorization__head-item authorization__head-item--right" data-tab-trigger="1">
+                <div class="authorization__head-item-title-mob">Авторизоваться</div>
+                <div class="authorization__head-item-title">Авторизация</div>
+                <div class="authorization__head-item-text">Авторизуйтесь, если уже зарегистрированы <br> на сайте или покупали у нас раньше.</div>
+              </div>
+            </div>
+            <div class="authorization__content" data-tab-content="0">
+              <div class="authorization__form form">
+                <div class="form__row"> 
+                  <div class="form__fields">
+                    <div class="form__fields-col form__fields-col--third"> 
+                      <div class="form__field">
+                        <input class="form-control form-control--text-dark" type="text" placeholder="Имя">
+                      </div>
+                    </div>
+                    <div class="form__fields-col form__fields-col--third"> 
+                      <div class="form__field">
+                        <input class="form-control form-control--text-dark" type="email" placeholder="Email">
+                      </div>
+                    </div>
+                    <div class="form__fields-col form__fields-col--third">
+                      <div class="form__field" data-mask="+7 (999) 999-99-99"> 
+                        <input class="form-control form-control--text-dark" type="text" placeholder="Телефон">
+                      </div>
+                    </div>
+                    <div class="form__fields-col form__fields-col--third">
+                      <div class="form__field" data-field-password> 
+                        <input class="form-control form-control--text-dark" type="password" placeholder="Пароль">
+                      </div>
+                    </div>
+                    <div class="form__fields-col form__fields-col--third"> 
+                      <div class="form__field" data-field-password>
+                        <input class="form-control form-control--text-dark" type="password" placeholder="Повторите пароль">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form__row">
+                  <ul class="form__checkbox-radio-list"> 
+                    <li class="form__checkbox-radio-list-item"> 
+                          <label class="checkbox-radio">
+                            <input type="checkbox" name="" checked>
+                            <div class="checkbox-radio__square"></div>
+                            <div class="checkbox-radio__text">Я даю согласие на получение новостной рассылки магазина</div>
+                          </label>
+                    </li>
+                    <li class="form__checkbox-radio-list-item"> 
+                          <label class="checkbox-radio">
+                            <input type="checkbox" name="" data-politics-checkbox>
+                            <div class="checkbox-radio__square"></div>
+                            <div class="checkbox-radio__text">Регистрируясь на сайте, вы соглашаетесь с условиями <a href="#">Пользовательского соглашения и Предложением о порядке оформления заказа и продажи, Правил программы лояльности и Услугой “Продления гарантии здесь нужен верный текст”</a></div>
+                          </label>
+                    </li>
+                  </ul>
+                </div>
+                <div class="form__row">
+                  <div class="form__submin-wrap"> 
+                    <button class="basket-btn form__submit">зарегистрироваться и продолжить</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="authorization__content" data-tab-content="1">
+              <div class="authorization__form form">
+                <div class="form__row"> 
+                  <div class="form__fields">
+                    <div class="form__fields-col form__fields-col--half"> 
+                      <div class="form__field">
+                        <input class="form-control form-control--text-dark" type="email" placeholder="Email">
+                      </div>
+                    </div>
+                    <div class="form__fields-col form__fields-col--half">
+                      <div class="form__field" data-field-password> 
+                        <input class="form-control form-control--text-dark" type="password" placeholder="Пароль">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form__row">
+                  <div class="form__text text-center"> 
+                    <p class="mb-0">Забыли пароль?</p>
+                    <p class="text-secondary">Если вы забыли свой пароль воспользуйтесь <a href="#resetPassword" data-popup="open-popup">формой сброса пароля.</a></p>
+                  </div>
+                </div>
+                <div class="form__row">
+                  <div class="form__submin-wrap"> 
+                    <button class="basket-btn form__submit">авторизоваться и продолжить</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+      <div class="p-160"></div>
+    </main>
+    <footer class="footer">
+      <div class="container"> 
+        <div class="footer__body"> 
+          <div class="footer__col footer__col--1">
+            <div class="footer__logo"> <a href="#"><img src="img/logo/logo-white.svg" alt=""></a></div>
+            <div class="footer__copy" data-da=".footer__col--4,767.98,last">© 2022 diHouse <br> Все права защищены.</div>
+          </div>
+          <div class="footer__col footer__col--2">
+            <ul class="footer__list"> 
+              <li> <a class="footer__link" href="#">Бритвы и триммеры </a></li>
+              <li> <a class="footer__link" href="#">Зубные щетки и ирригаторы</a></li>
+              <li> <a class="footer__link" href="#">Фены для волос </a></li>
+              <li> <a class="footer__link" href="#">Аксессуары</a></li>
+            </ul>
+          </div>
+          <div class="footer__col footer__col--3">
+            <ul class="footer__list"> 
+              <li> <a class="footer__link" href="#">Сервис</a></li>
+              <li> <a class="footer__link" href="#">Наши партнеры</a></li>
+              <li> <a class="footer__link" href="#">Доставка и оплата</a></li>
+              <li> <a class="footer__link" href="#">Пользовательское соглашение</a></li>
+              <li> <a class="footer__link" href="#">Политика конфиденциальности</a></li>
+            </ul>
+          </div>
+          <div class="footer__col footer__col--4">
+            <div class="footer__contact-info">
+              <div class="contact-info"> <a class="contact-info__phone" href="tel:74957777777">+7 (495) 777-77-77</a><a class="contact-info__mail" href="mailto:info@di-house.ru">info@di-house.ru</a></div>
+            </div>
+            <div class="footer__social">
+              <ul class="social"> 
+                <li class="social__item"> <a href="#"> <i class="icon-vk"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="popup" id="popupSerch">
+      <div class="popup__body"> 
+        <div class="popup__close-btn" data-popup="close-popup"><span> </span></div>
+        <div class="popup__content popup__content--search">
+          <form action="/"> 
+            <div class="popup-search">
+              <div class="popup-search__input input">
+                <input class="input__field" type="text" placeholder="Поиск товаров" required>
+              </div>
+              <button class="popup-search__submit btn">Искать</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="popup" id="popupMessage"><!-- API   popup.open('#popupMessage')  popup.close('#popupMessage') -->
+      <div class="popup__body"> 
+        <div class="popup__content">
+          <div class="popup__close-btn popup__close-btn--dark" data-popup="close-popup"><span> </span></div>
+          <div class="popup-message text-center">
+            <div class="popup-message__icon"> <img src="img/icons/check-circle.svg" alt=""></div>
+            <h3 class="popup-message__title">Спасибо за ваш заказ! </h3>
+            <div class="popup-message__text text-content"> 
+              <p>Наш специалист свяжется с вами в течение дня для подтверждения заказа и уточнения деталей доставки.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="popup" id="popupOrder">
+      <div class="popup__body"> 
+        <div class="popup__content">
+          <div class="popup__close-btn popup__close-btn--dark" data-popup="close-popup"><span> </span></div>
+          <div class="popup-order">
+            <h5 class="popup-order__title">Ваш заказ:</h5>
+            <div class="popup-order__body"> 
+              <div class="popup-order__colo-1">
+                <div class="popup-order-product">
+                  <div class="popup-order-product__img"> <img src="img/photo/product.webp" alt=""></div>
+                  <div class="popup-order-product__inner">
+                    <div class="popup-order-product__title">Мощный электровелосипед <span class="text-nowrap">ADO A20F</span></div>
+                    <ul class="popup-order-product__list"> 
+                      <li>Цвет: Черный</li>
+                      <li>Количество: 1 шт.</li>
+                    </ul>
+                    <div class="popup-order-product__price">19 999 ₽</div>
+                  </div>
+                </div>
+              </div>
+              <div class="popup-order__colo-2">
+                <form class="popup-form">
+                  <div class="popup-form__items">
+                    <div class="popup-form__item form-error"> 
+                      <label class="form-label">Ваше имя <span>*</span></label>
+                      <input class="form-control" type="text" placeholder="Введите ваше имя" required>
+                      <div class="form-error-message">Пожалуйста, проверьте корректность ввода данных</div>
+                    </div>
+                    <div class="popup-form__item form-error"> 
+                      <label class="form-label">Ваш Email <span>*</span></label>
+                      <input class="form-control" type="text" placeholder="name@email.com" required>
+                    </div>
+                    <div class="popup-form__item" data-mask="+7 (999) 999-99-99">
+                      <label class="form-label">Ваш телефон <span>*</span></label>
+                      <input class="form-control" type="text" placeholder="+7 ХХХ ХХХ-ХХ-ХХ" required>
+                    </div>
+                    <div class="popup-form__item">
+                          <label class="checkbox-radio">
+                            <input type="checkbox" name="politics" data-politics-checkbox>
+                            <div class="checkbox-radio__square"></div>
+                            <div class="checkbox-radio__text">Согласен с <a href="#">условиями использования</a> сервиса ADO и <a href="#">обработки персональных данных</a></div>
+                          </label>
+                    </div>
+                  </div>
+                  <button class="popup-form__submit btn btn--secondary"> <span>Подтвердить заказ</span></button>
+                  <p class="popup-form__continue" data-popup="close-popup">Продолжить покупки</p>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="popup" id="popupMessageRefund"><!-- API   popup.open('#popupMessageRefund')  popup.close('#popupMessageRefund') -->
+      <div class="popup__body"> 
+        <div class="popup__content">
+          <div class="popup__close-btn popup__close-btn--dark" data-popup="close-popup"><span> </span></div>
+          <div class="popup-message text-center">
+            <div class="popup-message__icon"> <img src="img/icons/check-circle.svg" alt=""></div>
+            <h3 class="popup-message__title">Ваша заявка на возврат отправлена.</h3>
+            <div class="popup-message__text text-content"> 
+              <p>Наш специалист свяжется с вами в течение дня для уточнения деталей.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="popup" id="popupRefund">
+      <div class="popup__body"> 
+        <div class="popup__content">
+          <div class="popup__close-btn popup__close-btn--dark" data-popup="close-popup"><span> </span></div>
+          <h5 class="popup__title">Заявка на возврат</h5>
+          <form class="popup-form">
+            <div class="popup-form__items">
+              <div class="popup-form__item form-error"> 
+                <label class="form-label">Полное имя <span>*</span></label>
+                <input class="form-control" type="text" placeholder="Введите ваше имя" required>
+                <div class="form-error-message">Пожалуйста, проверьте корректность ввода данных</div>
+              </div>
+              <div class="popup-form__item"> 
+                <label class="form-label">Ваш Email <span>*</span></label>
+                <input class="form-control" type="text" placeholder="name@email.com" required>
+              </div>
+              <div class="popup-form__item" data-mask="+7 (999) 999-99-99">
+                <label class="form-label">Ваш телефон <span>*</span></label>
+                <input class="form-control" type="text" placeholder="+7 ХХХ ХХХ-ХХ-ХХ" required>
+              </div>
+              <div class="popup-form__item"> 
+                <label class="form-label">Наименование товара <span>*</span></label>
+                <input class="form-control" type="text" placeholder="ADO A20F" required>
+              </div>
+              <div class="popup-form__item">
+                <label class="form-label">Магазин, где куплен товар? <span>*</span></label>
+                <div class="select-wrap"> 
+                  <select class="form-select" data-show-element-by-id="select">
+                    <option value="1" selected>на сайте adoebike.ru</option>
+                    <option value="3" data-show-element-by-id="element-3">В другом магазине</option>
+                  </select>
+                </div>
+              </div>
+              <div class="popup-form__item d-none" data-show-element-by-id="element" data-id="element-3"> 
+                <label class="form-label">Название магазина <span>*</span></label>
+                <input class="form-control" type="text" placeholder="Пожалуйста, укажите название магазина" required>
+              </div>
+              <div class="popup-form__item" data-mask="99.99.9999">
+                <label class="form-label">Дата покупки <span>*</span></label>
+                <input class="form-control" type="text" placeholder="06.04.2022" required>
+              </div>
+              <div class="popup-form__item" data-mask="99.99.9999">
+                <label class="form-label">Дата получения заказа <span>*</span></label>
+                <input class="form-control" type="text" placeholder="06.04.2022" required>
+              </div>
+              <div class="popup-form__item" data-mask="9{*}">
+                <label class="form-label">Номер заказа <span>*</span></label>
+                <input class="form-control" type="text" placeholder="3456832" required>
+              </div>
+              <div class="popup-form__item">
+                <label class="form-label">Серийный номер товара</label>
+                <input class="form-control" type="text" placeholder="ADO A20F">
+              </div>
+              <div class="popup-form__item">
+                <label class="form-label">Причина возврата <span>*</span></label>
+                <div class="select-wrap"> 
+                  <select class="form-select" data-show-element-by-id="select">
+                    <option value="1" selected>Не подошел / не понравился</option>
+                    <option value="2">Другой цвет</option>
+                    <option value="3" data-show-element-by-id="element-1">Брак</option>
+                    <option value="4" data-show-element-by-id="element-2">Другое</option>
+                  </select>
+                </div>
+              </div>
+              <div class="popup-form__item d-none" data-show-element-by-id="element" data-id="element-1"> 
+                <label class="form-label">Описание неисправности <span>*</span></label>
+                <input class="form-control" type="text" placeholder="Пожалуйста, опишите неисправность товара" required>
+              </div>
+              <div class="popup-form__item d-none" data-show-element-by-id="element" data-id="element-2"> 
+                <label class="form-label">Детали <span>*</span></label>
+                <input class="form-control" type="text" placeholder="Пожалуйста, опишите неисправность товара" required>
+              </div>
+              <div class="popup-form__item">
+                <label class="file-input" data-file-input>
+                  <input class="file-input__input" type="file" accept=".jpg, .png, .pdf, .txt">
+                  <div class="file-input__inner">
+                    <div class="file-input__icon"><i class="icon-upload"></i></div>
+                    <div class="file-input__text">Загрузите фото чека, накладной или акта</div>
+                  </div>
+                </label>
+              </div>
+              <div class="popup-form__item">
+                    <label class="checkbox-radio">
+                      <input type="checkbox" name="politics" data-politics-checkbox>
+                      <div class="checkbox-radio__square"></div>
+                      <div class="checkbox-radio__text">Согласен с <a href="#">условиями использования</a> сервиса ADO и <a href="#">обработки персональных данных</a></div>
+                    </label>
+              </div>
+            </div>
+            <button class="popup-form__submit btn btn--secondary"> <span>Подтвердить форму</span></button>
+            <p class="popup-form__continue" data-popup="close-popup">Отменить</p>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="popup" id="resetPassword"><!-- API   popup.open('#resetPassword')  popup.close('#resetPassword') -->
+      <div class="popup__body"> 
+        <div class="popup__content popu-reset-password-box">
+          <div class="popup__close-btn popup__close-btn--dark" data-popup="close-popup"><span> </span></div>
+          <form action="/">
+            <div class="popup-form popu-reset-password-box__content"> 
+              <div class="popup-form__title text-center">Форма сброса пароля</div>
+              <div class="popup-form__items"> 
+                <div class="popup-form__item">
+                  <input class="form-control" type="email" placeholder="Email">
+                  <div class="popup-form__text">Введите e-mail указанный при регистрации</div>
+                </div>
+              </div>
+              <button class="popup-form__submit btn-link">Сбросить пароль</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="popup" id="popupMap"><!-- API   popup.open('#popupMap')  popup.close('#popupMap') -->
+      <div class="popup__body"> 
+        <div class="popup__close-btn" data-popup="close-popup"><span> </span></div>
+        <div class="popup__map-wrap">
+          <!--iframe(src="https://yandex.ru/map-widget/v1/-/CCUFNDuJXA" width="560" height="400" frameborder="1" allowfullscreen="true" style="position:relative;")-->
+        </div>
+      </div>
+    </div>
+    <div class="cookies-message" data-cookies-message>
+      <div class="container"> 
+        <div class="cookies-message__body"> 
+          <div class="cookies-message__text text">
+            <p>Этот сайт использует файлы cookies. Нажимая ПРИНИМАЮ или продолжая просмотр сайта, Вы даете согласие на их использование. <a href="#">Подробнее</a></p>
+          </div>
+          <button class="cookies-message__agree btn btn--secondary" data-action="cookies-message-close"><span>Принимаю        </span></button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

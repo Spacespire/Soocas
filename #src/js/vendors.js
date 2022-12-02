@@ -4,3 +4,4 @@
 @@include('plugins/inputmask.min.js');
 @@include('plugins/wow.min.js');
 @@include('plugins/zoom.js');
+@@include('plugins/tippy.js')

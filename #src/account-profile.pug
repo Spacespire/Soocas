@@ -1,0 +1,56 @@
+extends _base
+
+block header
+    - var headerModClass = 'header--text-dark';
+    include components/header/_header
+
+block content
+    main._page.account-page.padding-top-header-size
+        .container
+            .head-second
+                .head-second__breadcrumb
+                    +breadcrumb(['Главная', 'Личный кабинет'], 'Профиль')
+                h2.head-second__title.title-2 ПРОФИЛЬ
+
+            .account 
+                .account__nav
+                    +account-nav('account-nav__item--active','','','','')
+                .account__body 
+                    .account__row 
+                        form(action="/")
+                            .account__form.form 
+                                .account__form-columns.form__row 
+                                    .account__form-col-1
+                                        .form__fields 
+                                            .form__fields-col.form__fields-col--half
+                                                .form__field 
+                                                    input.form-control.form-control--text-dark(type="text" placeholder="Имя") 
+                                            .form__fields-col.form__fields-col--half
+                                                .form__field 
+                                                    input.form-control.form-control--text-dark(type="email" placeholder="Email") 
+                                            .form__fields-col.form__fields-col--half
+                                                .form__field(data-mask="+7 (999) 999-99-99") 
+                                                    input.form-control.form-control--text-dark(type="text" placeholder="Телефон") 
+                                            .form__fields-col.form__fields-col--half
+                                                .form__field 
+                                                    input.form-control.form-control--text-dark(type="date" placeholder="дд.мм.год") 
+                                            .form__fields-col.form__fields-col--half
+                                                .form__field(data-field-password) 
+                                                    input.form-control.form-control--text-dark(type="password" placeholder="Пароль") 
+                                            .form__fields-col.form__fields-col--half
+                                                .form__field(data-field-password) 
+                                                    input.form-control.form-control--text-dark(type="password" placeholder="Повторите пароль") 
+                                    .account__form-col-2
+                                        .form__text 
+                                            p 
+                                                strong Укажите свою дату рождениия и получите баллы в подарок. 
+                                                | Баллы будут зачислены в ваш день рождения. После установки даты, данное поле отредактировать можно только через администратора магазина.
+                                        .form__box 
+                                            +checkbox('Я даю согласие на получение новостной рассылки магазина', '')(checked)
+                                .account__form-bottom
+                                    .form__submin-wrap 
+                                        button.basket-btn.form__submit СОХРАНИТЬ ПРОФИЛЬ
+        .p-160
+
+block footer 
+    include components/footer/_footer

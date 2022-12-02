@@ -1,0 +1,26 @@
+extends _base
+
+block header
+    - var headerModClass = 'header--text-dark';
+    include components/header/_header
+
+block content
+    main._page.account-page.padding-top-header-size
+        .container
+            .head-second
+                .head-second__breadcrumb
+                    +breadcrumb(['Главная', 'Личный кабинет'], 'История заказов')
+                h2.head-second__title.title-2 Мои заказы
+
+            .account 
+                .account__nav
+                    +account-nav('','account-nav__item--active','','','')
+                .account__body 
+                    .account__row 
+                        .account__orders
+                            include components/history-orders/_history-orders
+
+        .p-160
+
+block footer 
+    include components/footer/_footer

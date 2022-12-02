@@ -1,0 +1,243 @@
+.app-review {
+    position: relative;
+
+    @media (max-width: $md2+px) {
+        padding-top: 104px;
+    }
+
+    &:before {
+        position: absolute;
+        content: "";
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: calc(100% - 14.5rem);
+        background-color: $mainColor;
+        z-index: 1;
+
+        @media (max-width: $md2+px) {
+            height: 100%;
+        }
+    }
+
+    &__body {
+        position: relative;
+        z-index: 2;
+        display: flex;
+
+        @media (max-width: $md2+px) {
+            flex-direction: column-reverse;
+        }
+    }
+
+    &__img-left {
+        flex: 0 0 20.03%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        padding-bottom: 5.5rem;
+
+        @media (max-width: $md2+px) {
+            flex: 0 1 auto;
+            display: block;
+            margin: 0 auto;
+            width: 100%;
+            max-width: 428px;
+            padding-bottom: 0;
+        }
+
+        @media (max-width: $md3+px) {
+            max-width: 289px;
+        }
+
+        & img {
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
+        }
+    }
+
+    &__content {
+        flex: 0 0 61.92%;
+        padding: 27.1rem 4rem 11.7rem 4rem;
+        color: $lightColor;
+
+        @media (max-width: $md2+px) {
+            flex: 0 1 auto;
+            padding: 0;
+            margin-bottom: 55px;
+        }
+    }
+
+    &__img-right {
+        flex: 0 0 21.05%;
+        transform: translateX(-22%);
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+
+        & img {
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
+        }
+
+        @media (max-width: $md2+px) {
+            display: none;
+        }
+    }
+
+    &__title {
+        font-weight: 500;
+        margin: 0 auto 8.5rem;
+        max-width: 22.5em;
+
+        @media (max-width: $md2+px) {
+            margin-bottom: 42px;
+        }
+
+        @media (max-width: $md4+px) {
+            font-size: 30px !important;
+        }
+
+        @media (max-width: 375.98px) {
+            font-size: 24px !important;
+        }
+
+        & strong {
+            font-weight: 700;
+        }
+    }
+
+    &__benefits {
+        margin-bottom: 10rem;
+
+        @media (max-width: $md2+px) {
+            margin-bottom: 50px;
+        }
+        &.swiper {
+            @media (min-width: 768px) {
+                overflow: visible;
+                width: auto;
+            }
+        }
+        & .swiper-wrapper {
+            @media (min-width: 768px) {
+                flex-wrap: wrap;
+                margin: 0 -2rem -6.4rem;
+                width: auto;
+            }
+        }
+
+        & .swiper-slide {
+            @media (min-width: 768px) {
+                width: auto;
+                height: auto;
+            }
+
+            @media (max-width: $md3+px) {
+                &:last-child {
+                    & .app-benefits-card:before {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    &__benefits-item {
+        @media (min-width: 992px) {
+            flex: 0 1 33.333333%;
+        }
+
+        @media (min-width: 768px) {
+            padding: 0 2rem;
+            margin-bottom: 6.4rem;
+            flex: 0 1 50%;
+        }
+    }
+
+    &__links {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__link {
+        margin: 0 1.6rem;
+        transition: all 0.3s ease;
+        width: 22.2rem;
+
+        @media (max-width: $md3+px) {
+            max-width: 151px;
+            margin: 0 11.5px;
+        }
+
+        @media (min-width: 992px) {
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
+
+        & img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+
+.app-benefits-card {
+    display: flex;
+    align-items: center;
+
+    @media (max-width: $md3+px) {
+        padding-left: 30px;
+        position: relative;
+        padding-right: 30px;
+
+
+        &:before {
+            position: absolute;
+            font-family: 'icomoon';
+            content: "\e900";
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            z-index: 3;
+            font-size: 12px;
+        }
+    }
+
+    &__img {
+        flex: 0 0 auto;
+        width: 9.2rem;
+        margin-right: 1.6rem;
+
+        & img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &__text {
+        flex: 1 1 auto;
+        font-weight: 500;
+        font-size: 2.5rem;
+        line-height: 1.24em;
+
+        @media (max-width: 1400px) {
+            font-size: 2.2rem;
+        }
+
+        @media (max-width: $md1+px) {
+            font-size: 2rem;
+        }
+
+        @media (max-width: $md2+px) {
+            font-size: 18px;
+            line-height: 22px;
+        }
+    }
+}

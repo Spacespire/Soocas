@@ -6,6 +6,19 @@
     border: none;
     border-radius: 0;
     border: 1px solid $secondColor;
+    padding: 0rem 0 4rem;
+
+    @media (max-width: $md2+px) {
+        padding: 0rem 0 2rem;
+    }
+
+    @media (max-width: $md3+px) {
+        padding: 0px 20px 20px;
+    }
+
+    & > *:last-child {
+        margin-bottom: 0;
+    }
 
     &__label {
         position: absolute;
@@ -16,10 +29,6 @@
         display: inline-flex;
         flex-direction: column;
         justify-content: flex-end;
-
-        @media (max-width: $md3+px) {
-            display: none;
-        }
 
         & .product-label {
             margin-bottom: 1rem;
@@ -60,7 +69,11 @@
         }
 
         @media (max-width: $md3+px) {
-            display: none;
+            top: 1rem;
+            left: 1rem;
+            width: 70px;
+            height: 70px;
+            font-size: 8px;
         }
 
         & p {
@@ -102,7 +115,7 @@
         }
 
         @media (max-width: $md3+px) {
-            height: 190px;
+            height: 170px;
         }
 
         & img {
@@ -182,7 +195,8 @@
         }
 
         @media (max-width: $md3+px) {
-            display: none;
+            font-size: 15px;
+            line-height: 18px;
         }
     }
 
@@ -225,7 +239,7 @@
             padding: 0 16px;
         }
         @media (max-width: $md3+px) {
-            padding: 0 8px;
+            padding: 0;
         }
 
         & > *:last-child {
@@ -265,6 +279,7 @@
         flex-wrap: wrap;
         margin-top: auto;
         min-height: 8rem; 
+        gap: 1.5rem 0;
 
         @media (max-width: $md2+px) {
             min-height: 50px;
@@ -330,10 +345,6 @@
                 font-size: 24px;
             }
 
-            @media (max-width: $md3+px) {
-                display: none;
-            }
-
             &:before {
                 position: absolute;
                 content: "";
@@ -373,10 +384,6 @@
                 min-height: 50px;
                 font-size: 24px;
                 font-size: 18px;
-            }
-
-            @media (max-width: $md3+px) {
-                display: none;
             }
         }
     }

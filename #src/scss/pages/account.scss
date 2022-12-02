@@ -1,0 +1,168 @@
+.account {
+    &__nav {
+        margin-bottom: 4rem;
+
+        @media (max-width: $md2+px) {
+            margin-bottom: 2rem;
+        }
+    }
+
+    &__body {
+    }
+
+    &__row {
+        &:not(:last-child) {
+            margin-bottom: 8rem;
+
+            @media (max-width: $md3+px) {
+                margin-bottom: 40px;
+            }
+        }
+    }
+
+    &__grid {
+        display: flex;
+        @media (min-width: 992px) {
+            gap: 7.5rem;
+        }
+
+        @media (max-width: $md2+px) {
+            flex-direction: column;
+            gap: 8rem;
+        }
+
+        @media (max-width: $md3+px) {
+            gap: 4rem;
+        }
+
+        &--mob-revers {
+            @media (max-width: $md2+px) {
+                flex-direction: column-reverse;
+            }
+        }
+    }
+    &__grid-col-1 {
+        @media (min-width: 992px) {
+            flex: 1 1 auto;
+        }
+    }
+    &__grid-col-2 {
+        @media (min-width: 992px) {
+            flex: 0 0 52rem;
+        }
+    }
+
+    &__text {
+        &.text-content {
+            font-size: 2.8rem;
+            line-height: 1.178em;
+
+            @media (max-width: $md3+px) {
+                font-size: 18px;
+                line-height: 21px;
+            }
+
+            & a {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 5.5rem;
+        line-height: 1.2em;
+        text-transform: uppercase;
+        margin-bottom: 4rem;
+
+        @media (max-width: $md3+px) {
+            font-size: 30px;
+            line-height: 35px;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__form {
+    }
+    &__form-columns {
+        display: flex;
+        gap: 10rem;
+
+        @media (max-width: $md2+px) {
+            display: block;
+        }
+    }
+    &__form-col-1 {
+        flex: 1 1 auto;
+    }
+    &__form-col-2 {
+        flex: 0 0 58rem;
+    }
+    &__form-bottom {
+    }
+}
+
+.account-points-card {
+    position: relative;
+    background-color: $mainColor;
+    padding: 3.4rem;
+    color: #fff;
+    font-size: 2.8rem;
+    line-height: 1.178em;
+
+    @media (max-width: $md3+px) {
+        font-size: 16px;
+        line-height: 1.16em;
+        padding: 20px;
+    }
+
+    &__icon {
+        position: absolute;
+        top: 3.4rem;
+        right: 5rem;
+        width: 7.4rem;
+        @media (max-width: $md3+px) {
+            display: none;
+        }
+
+        & img {
+            width: 100%;
+            height: auto;
+        }
+    }
+    &__title {
+        text-transform: uppercase;
+        font-weight: 700;
+
+        @media (max-width: $md3+px) {
+            font-size: 20px;
+            line-height: 23px;
+            margin-bottom: 5px;
+        }
+    }
+    &__value {
+        margin-bottom: 1rem;
+
+        & span {
+            font-size: 3.57em;
+            font-weight: 700;
+            line-height: 1.17em;
+        }
+    }
+    &__text {
+        &.text-content {
+            & > *:last-child {
+                margin-bottom: 0;
+            }
+            & a {
+                color: inherit;
+                text-decoration: underline;
+            }
+
+            @media (max-width: $md3+px) {
+                font-size: 12px;
+                line-height: 1.16em;
+            }
+        }
+    }
+}

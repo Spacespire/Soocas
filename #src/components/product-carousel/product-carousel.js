@@ -8,10 +8,18 @@
                     nextEl: productCarouselSlider.querySelector('[data-action="slider-next"]'),
                     prevEl: productCarouselSlider.querySelector('[data-action="slider-prev"]'),
                 },
+                pagination: {
+                    el: productCarouselSlider.querySelector('.swiper-pagination'),
+                    clickable: true,
+                },
                 breakpoints: {
-                    320: {
+                    0: {
+                        slidesPerView: 1,
+                        spaceBetween: 20,
+                    },
+                    575: {
                         slidesPerView: 2,
-                        spaceBetween: 16,
+                        spaceBetween: 20,
                     },
                     768: {
                         slidesPerView: 3,

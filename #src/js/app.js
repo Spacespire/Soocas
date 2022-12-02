@@ -28,6 +28,7 @@ class App {
 		this.checkboxPoliticsValidate();
 		this.cookiesMessage();
 		this.selectScripts();
+		this.initTooltipe();
 		
 		window.addEventListener('load', () => {
 			document.body.classList.add('page-is-load');
@@ -57,6 +58,7 @@ class App {
 		@@include('../components/product-carousel/product-carousel.js');
 		@@include('../components/images-carousel/images-carousel.js');
 		@@include('../components/grid-banner/grid-banner.js');
+		@@include('../components/account-nav/account-nav.js');
 	}
 
 	setHtmlFontSize() {
@@ -115,11 +117,15 @@ class App {
 				}
 
 				if (triggerItems.length && contentItems.length) {
-					triggerItems[0].classList.add('tab-active');
-					getContentItem(triggerItems[0].dataset.tabTrigger).classList.add('tab-active');
+					if (!(tabsContainer.dataset.tabs === 'not-init')) {
+						triggerItems[0].classList.add('tab-active');
+						getContentItem(triggerItems[0].dataset.tabTrigger).classList.add('tab-active');
+					}
 
 					triggerItems.forEach(item => {
 						item.addEventListener('click', () => {
+
+							tabsContainer.classList.add('tab-checked');
 							item.classList.add('tab-active');
 							getContentItem(item.dataset.tabTrigger).classList.add('tab-active');
 
@@ -129,6 +135,22 @@ class App {
 								i.classList.remove('tab-active');
 								getContentItem(i.dataset.tabTrigger).classList.remove('tab-active');
 							})
+
+							if (item.hasAttribute('data-tab-scroll-to-content')) {
+								if (document.documentElement.clientWidth < 992) {
+									let el = getContentItem(item.dataset.tabTrigger);
+									let header = document.querySelector('[data-header]');
+									if (el) {
+										let top = Math.abs(document.body.getBoundingClientRect().top) + el.getBoundingClientRect().top;
+
+
+										window.scrollTo({
+											top: top - 20,
+											behavior: 'smooth',
+										})
+									}
+								}
+							}
 						})
 					})
 				}
@@ -290,8 +312,18 @@ class App {
 		@@include('../components/popup/popup-search.js');
 		@@include('../components/table-default/table-default.js');
 		@@include('../components/growup-btn/growup-btn.js');
+		@@include('../components/city-selection/city-selection.js');
+		@@include('../components/checkout-card/checkout-card.js');
+		@@include('../components/alert/alert.js');
+		@@include('../components/product-services/product-services.js');
+		@@include('../components/payment-method/payment-method.js');
+		@@include('../components/history-orders/history-orders.js');
+		@@include('../components/common/copy-link/copy-link.js');
 	}
 
+	initTooltipe() {
+		@@include('../components/common/tooltip/tooltip.js');
+	}
 }
 
 window.addEventListener('DOMContentLoaded', function () {
